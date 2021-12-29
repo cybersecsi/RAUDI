@@ -44,7 +44,7 @@ def build_one(tool_name, push_image):
     current_image = check_if_docker_image_exists("{name}:{tag}".format(name=config['name'], tag=config['version']))
     # Building this specific version of the image
     if not current_image:
-        build(config, path, push_image)
+        build(config, path)
     else:
         print("This version already exists, skipping build.")
 
@@ -62,7 +62,7 @@ def build_all(push_image):
         current_image = check_if_docker_image_exists("{name}:{tag}".format(name=config['name'], tag=config['version']))
         # Building this specific version of the image
         if not current_image:
-            build(config, path, push_image)
+            build(config, path)
         else:
             print("This version already exists, skipping build.")
 
