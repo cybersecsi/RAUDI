@@ -1,5 +1,4 @@
 import requests
-import subprocess
 import re
 import docker
 import os
@@ -9,6 +8,10 @@ import shutil
 DOCKER_API = {
     'base': "https://hub.docker.com/v2/repositories/",
     'tags': "/tags?page=1&page_size=50"
+}
+PYPI_API = {
+    'base': "https://pypi.org/pypi/",
+    'json': "/json"
 }
 GITHUB_API = {
     'base': "https://api.github.com/repos/",
@@ -30,10 +33,8 @@ def get_latest_docker_hub_version(docker_image, org="library/"):
         return 'latest'
 
 def get_latest_pip_version(package):
-    cmd = subprocess.run("python -m pip index versions {package}".format(package=package), capture_output=True)
-    stdout = cmd.stdout.decode('utf-8')
-    lines = stdout.split('\r\n')
-    version = lines[0].split('(')[1].split(')')[0]
+    r = requests.get(PYPI_API['base']+package+PYPI_API['json'])
+    version = r.json()['info']['version']
     return version
 
 def get_latest_github_release(repo, target_string):
