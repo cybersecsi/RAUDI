@@ -39,4 +39,4 @@ jobs:
 
       # Run
       - name: Run my script
-        run: chmod +x $PWD/houdini.py && $PWD/houdini.py
+        run: chmod +x $PWD/houdini.py && python $PWD/houdini.py
