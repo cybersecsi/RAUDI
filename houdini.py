@@ -13,7 +13,7 @@ def sexy_intro():
     print(secsi_art)
 
 def parse_args():
-    parser = argparse.ArgumentParser(prog="RUDI", description='Regularly Updated Docker Images.')
+    parser = argparse.ArgumentParser(prog="HOUDINI", description='Hacking Offensive Updated Docker Images for Network Intrusion.')
     parser.add_argument("--single", help="Run a single tool build", type=str)
     parser.add_argument("--add", help="Bootstrap a new folder for a tool", type=str)
     parser.add_argument("--push", help="Wheter automatically push the new images to the Docker Hub (default=false)", action='store_true')
