@@ -27,10 +27,17 @@ tools = {
     },
     'gobuster': {
         'name': organization+'/gobuster',
-        'version': helper.get_latest_github_release('OJ/gobuster', target_string='linux-amd64')['version'][1:], # Remove the leading 'v',
+        'version': helper.get_latest_github_release('OJ/gobuster', target_string='linux-amd64')['version'][1:], # Remove the leading 'v'
         'buildargs': {
             'LAST_UBUNTU_VERSION': helper.get_latest_docker_hub_version('ubuntu'),
             'GOBUSTER_DOWNLOAD_URL': helper.get_latest_github_release('OJ/gobuster', target_string='linux-amd64')['url']
+        }
+    },
+    'knockpy': {
+        'name': organization+'/knockpy',
+        'version': helper.get_latest_github_release_no_browser_download('guelfoweb/knock')['version'],
+        'buildargs': {
+            'KNOCKPY_DOWNLOAD_URL': helper.get_latest_github_release_no_browser_download('guelfoweb/knock')['url']
         }
     },
     'sublist3r': {
@@ -38,6 +45,14 @@ tools = {
         'version': helper.get_latest_github_release_no_browser_download('aboul3la/Sublist3r')['version'],
         'buildargs': {
             'SUBLIST3R_DOWNLOAD_URL': helper.get_latest_github_release_no_browser_download('aboul3la/Sublist3r')['url']
+        }
+    },
+    'whatweb': {
+        'name': organization+'/whatweb',
+        'version': helper.get_latest_github_release_no_browser_download('urbanadventurer/WhatWeb')['version'][1:], # Remove the leading 'v'
+        'buildargs': {
+            'LAST_UBUNTU_VERSION': helper.get_latest_docker_hub_version('ubuntu'),
+            'WHATWEB_DOWNLOAD_URL': helper.get_latest_github_release_no_browser_download('urbanadventurer/WhatWeb')['url']
         }
     }
 }
