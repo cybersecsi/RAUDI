@@ -1,4 +1,4 @@
-FROM python:3.9
+FROM python:3.9.9-slim
 
 # Build Args
 ARG DIRHUNT_VERSION

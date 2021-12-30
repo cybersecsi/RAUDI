@@ -44,8 +44,16 @@ def get_latest_github_release(repo, target_string):
         if target_string in asset['name']:
             return {
                 'url': asset['browser_download_url'],
-                'version': r.json()['name']
+                'version': r.json()['tag_name']
             }
+
+def get_latest_github_release_no_browser_download(repo):
+    r = requests.get(GITHUB_API['base']+repo+GITHUB_API['latest_release'])
+    data = r.json()
+    return {
+        'url': data['tarball_url'],
+        'version': data['tag_name']
+    }
 
 def check_if_docker_image_exists(docker_image):
     client = docker.from_env()
@@ -54,8 +62,3 @@ def check_if_docker_image_exists(docker_image):
         return res
     except docker.errors.ImageNotFound:
         return None
-
-def find_or_create_tool_dir(tool):
-    current_path = os.path.dirname(os.path.abspath(__file__))
-    if not os.path.exists("{current_path}/tools/{tool}".format(current_path=current_path, tool=tool)):
-        shutil.copytree("{current_path}/default".format(current_path=current_path), "{current_path}/tools/{tool}".format(current_path=current_path, tool=tool))
