@@ -4,7 +4,7 @@ import docker
 import os
 import sys
 from tools.main import get_tools, get_single_tool
-from helper import find_or_create_tool_dir, check_if_docker_image_exists, get_latest_docker_hub_version
+from helper import check_if_docker_image_exists, get_latest_docker_hub_version
 
 # Default vars
 DEFAULT_TOOL_DIR = os.path.dirname(os.path.abspath(__file__))+"/tools/"
