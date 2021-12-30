@@ -33,6 +33,13 @@ tools = {
             'GOBUSTER_DOWNLOAD_URL': helper.get_latest_github_release('OJ/gobuster', target_string='linux-amd64')['url']
         }
     },
+    'hydra': {
+        'name': organization+'/hydra',
+        'version': 'latest',
+        'buildargs': {
+            'LAST_UBUNTU_VERSION': helper.get_latest_docker_hub_version('ubuntu'),
+        }
+    },
     'knockpy': {
         'name': organization+'/knockpy',
         'version': helper.get_latest_github_release_no_browser_download('guelfoweb/knock')['version'],
