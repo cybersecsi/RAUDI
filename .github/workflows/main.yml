@@ -47,4 +47,4 @@ jobs:
 
       # Run
       - name: Run my script
-        run: python $PWD/houdini.py --push
+        run: python $PWD/houdini.py --all --push
