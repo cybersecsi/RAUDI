@@ -12,6 +12,7 @@ api_results = {
     'HYDRA_GITHUB_INFO': helper.get_latest_github_release_no_browser_download('vanhauser-thc/thc-hydra'),
     'KNOCKPY_GITHUB_INFO': helper.get_latest_github_release_no_browser_download('guelfoweb/knock'),
     'RETIRE_NPM_VERSION': helper.get_latest_npm_registry_version('retire'),
+    'MASSCAN_GITHUB_INFO': helper.get_latest_github_release_no_browser_download('robertdavidgraham/masscan'),
     'SUBLIST3R_GITHUB_INFO': helper.get_latest_github_release_no_browser_download('aboul3la/Sublist3r'),
     'WHATWEB_GITHUB_INFO': helper.get_latest_github_release_no_browser_download('urbanadventurer/WhatWeb'),
 }
@@ -82,6 +83,14 @@ tools = {
         'version': api_results['RETIRE_NPM_VERSION'],
         'buildargs': {
             'RETIRE_NPM_VERSION': api_results['RETIRE_NPM_VERSION']
+        }
+    },
+    'masscan': {
+        'name': organization+'/masscan',
+        'version': api_results['MASSCAN_GITHUB_INFO']['version'],
+        'buildargs': {
+            'LAST_UBUNTU_VERSION': api_results['LAST_UBUNTU_VERSION'],
+            'MASSCAN_DOWNLOAD_URL': api_results['MASSCAN_GITHUB_INFO']['url']
         }
     },
     'sublist3r': {
