@@ -16,7 +16,7 @@ api_results = {
 tools = {
     'dirb': {
         'name': organization+'/dirb',
-        'version': 'latest',
+        'version': '2.22',
         'buildargs': {
             'LAST_UBUNTU_VERSION': api_results['LAST_UBUNTU_VERSION']
         }
