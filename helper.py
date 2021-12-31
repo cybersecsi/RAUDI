@@ -58,7 +58,11 @@ def get_latest_github_release(repo, target_string):
 
 def get_latest_github_release_no_browser_download(repo):
     r = requests.get(GITHUB_API['base']+repo+GITHUB_API['latest_release'])
+
     data = r.json()
+    if r.status_code != 200:
+        # TODO Check that an error always return message val
+        raise ConnectionError(data['message'])
     return {
         'url': data['tarball_url'],
         'version': data['tag_name']
@@ -71,3 +75,8 @@ def check_if_docker_image_exists(docker_image):
         return res
     except docker.errors.ImageNotFound:
         return None
+
+def log(m):
+    print("[+] {}".format(m))
+def logErr(m):
+    print("[-] {}".format(m))

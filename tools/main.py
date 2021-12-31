@@ -22,6 +22,13 @@ common_args = {
 
 tools = [bfac, dirb, dirhunt, ffuf, findsploit, gobuster, hydra, knockpy, masscan, retire, sublist3r, whatweb]
 
+def _tool_name(t):
+    return t.__name__.split('.')[1] if hasattr(t, '__name__') else None
+
+def list_tools():
+    return  [_tool_name(t) for t in tools]
+
+
 # List of all imported tools 
 def get_tools():
     configured_tools = [tool.get_config(organization, common_args) for tool in tools]
@@ -29,5 +36,5 @@ def get_tools():
 
 # Get a single tool for specific build
 def get_single_tool(tool_name):    
-    tool = next((t.get_config(organization, common_args) for t in tools if t.__name__.split('.')[1] == tool_name), None) # returns None if tool is not found
+    tool = next((t.get_config(organization, common_args) for t in tools if _tool_name(t) == tool_name), None) # returns None if tool is not found
     return tool 
