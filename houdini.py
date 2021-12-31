@@ -3,8 +3,8 @@ from art import text2art
 import docker
 import os
 import sys
-from tools.main import get_tools, get_single_tool
-from helper import check_if_docker_image_exists, get_latest_docker_hub_version
+from tools.main import get_tools, get_single_tool, list_tools
+from helper import check_if_docker_image_exists, get_latest_docker_hub_version, log, logErr
 
 # Default vars
 DEFAULT_TOOL_DIR = os.path.dirname(os.path.abspath(__file__))+"/tools/"
@@ -12,6 +12,7 @@ DEFAULT_TOOL_DIR = os.path.dirname(os.path.abspath(__file__))+"/tools/"
 # ArgParse
 parser = argparse.ArgumentParser(prog="HOUDINI", description='Hacking Offensive Updated Docker Images for Network Intrusion.')
 parser.add_argument("--all", help="Build all tools", action='store_true')
+parser.add_argument("--list", help="List all tools", action='store_true')
 parser.add_argument("--single", help="Run a single tool build", type=str)
 parser.add_argument("--push", help="Wheter automatically push the new images to the Docker Hub (default=false)", action='store_true')
 
@@ -75,13 +76,19 @@ def main():
     args = parser.parse_args()
 
     # Build everything
-    if args.all:
-        build_all(args.push)
-    # Build a specific Docker Image
-    elif args.single:
-        build_one(args.single, args.push)
-    else:
-        parser.print_help()
+    try:
+        if args.list:
+            log("Available tools")
+            print(list_tools())
+        elif args.all:
+            build_all(args.push)
+        # Build a specific Docker Image
+        elif args.single:
+            build_one(args.single, args.push)
+        else:
+            parser.print_help()
+    except Exception as e:
+        logErr(e)
 
 if __name__ == "__main__":
     main()
