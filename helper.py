@@ -2,6 +2,8 @@ import requests
 import re
 import docker
 import os
+from os import listdir
+from os.path import isfile, join
 import shutil
 
 # Global vars
@@ -75,6 +77,13 @@ def check_if_docker_image_exists(docker_image):
         return res
     except docker.errors.ImageNotFound:
         return None
+
+def get_list_tools():
+    return [f for f in listdir('tools') if not isfile(join('tools', f)) and f != '__pycache__']
+def get_config_names():
+    return ['tools.{}.config'.format(t) for t in get_list_tools()]
+
+
 
 def log(m):
     print("[+] {}".format(m))
