@@ -25,7 +25,6 @@ tools = [bfac, dirb, dirhunt, ffuf, findsploit, gobuster, hydra, knockpy, massca
 # List of all imported tools 
 def get_tools():
     configured_tools = [tool.get_config(organization, common_args) for tool in tools]
-    print(configured_tools)
     return configured_tools
 
 # Get a single tool for specific build
