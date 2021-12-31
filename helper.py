@@ -13,6 +13,10 @@ PYPI_API = {
     'base': "https://pypi.org/pypi/",
     'json': "/json"
 }
+NPM_REGISTRY_API = {
+    'base': "https://registry.npmjs.org/",
+    'latest_release': "/latest"
+}
 GITHUB_API = {
     'base': "https://api.github.com/repos/",
     'latest_release': "/releases/latest"
@@ -35,6 +39,11 @@ def get_latest_docker_hub_version(docker_image, org="library/"):
 def get_latest_pip_version(package):
     r = requests.get(PYPI_API['base']+package+PYPI_API['json'])
     version = r.json()['info']['version']
+    return version
+
+def get_latest_npm_registry_version(package):
+    r = requests.get(NPM_REGISTRY_API['base']+package+NPM_REGISTRY_API['latest_release'])
+    version = r.json()['version']
     return version
 
 def get_latest_github_release(repo, target_string):
