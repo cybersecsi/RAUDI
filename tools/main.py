@@ -2,64 +2,76 @@ import helper
 
 organization = 'secsi'
 
+api_results = {
+    'LAST_UBUNTU_VERSION': helper.get_latest_docker_hub_version('ubuntu'),
+    'DIRHUNT_PIP_VERSION': helper.get_latest_pip_version('dirhunt'),
+    'FFUF_GITHUB_INFO':  helper.get_latest_github_release('ffuf/ffuf', target_string='linux_amd64'),
+    'GOBUSTER_GITHUB_INFO':  helper.get_latest_github_release('OJ/gobuster', target_string='linux-amd64'),
+    'HYDRA_GITHUB_INFO': helper.get_latest_github_release_no_browser_download('vanhauser-thc/thc-hydra'),
+    'KNOCKPY_GITHUB_INFO': helper.get_latest_github_release_no_browser_download('guelfoweb/knock'),
+    'SUBLIST3R_GITHUB_INFO': helper.get_latest_github_release_no_browser_download('aboul3la/Sublist3r'),
+    'WHATWEB_GITHUB_INFO': helper.get_latest_github_release_no_browser_download('urbanadventurer/WhatWeb'),
+}
+
 tools = {
     'dirb': {
         'name': organization+'/dirb',
         'version': 'latest',
         'buildargs': {
-            'LAST_UBUNTU_VERSION': helper.get_latest_docker_hub_version('ubuntu')
+            'LAST_UBUNTU_VERSION': api_results['LAST_UBUNTU_VERSION']
         }
     },
     'dirhunt': {
         'name': organization+'/dirhunt',
-        'version': helper.get_latest_pip_version('dirhunt'),
+        'version': api_results['DIRHUNT_PIP_VERSION'],
         'buildargs': {
-            'DIRHUNT_VERSION': helper.get_latest_pip_version('dirhunt')
+            'DIRHUNT_VERSION': api_results['DIRHUNT_PIP_VERSION']
         }
     },
     'ffuf': {
         'name': organization+'/ffuf',
-        'version': helper.get_latest_github_release('ffuf/ffuf', target_string='linux_amd64')['version'][1:], # Remove the leading 'v'
+        'version': api_results['FFUF_GITHUB_INFO']['version'][1:], # Remove the leading 'v'
         'buildargs': {
-            'LAST_UBUNTU_VERSION': helper.get_latest_docker_hub_version('ubuntu'),
-            'FFUF_DOWNLOAD_URL': helper.get_latest_github_release('ffuf/ffuf', target_string='linux_amd64')['url']
+            'LAST_UBUNTU_VERSION': api_results['LAST_UBUNTU_VERSION'],
+            'FFUF_DOWNLOAD_URL': api_results['FFUF_GITHUB_INFO']['url']
         }
     },
     'gobuster': {
         'name': organization+'/gobuster',
-        'version': helper.get_latest_github_release('OJ/gobuster', target_string='linux-amd64')['version'][1:], # Remove the leading 'v'
+        'version': api_results['GOBUSTER_GITHUB_INFO']['version'][1:], # Remove the leading 'v'
         'buildargs': {
-            'LAST_UBUNTU_VERSION': helper.get_latest_docker_hub_version('ubuntu'),
-            'GOBUSTER_DOWNLOAD_URL': helper.get_latest_github_release('OJ/gobuster', target_string='linux-amd64')['url']
+            'LAST_UBUNTU_VERSION': api_results['LAST_UBUNTU_VERSION'],
+            'GOBUSTER_DOWNLOAD_URL': api_results['GOBUSTER_GITHUB_INFO']['url']
         }
     },
     'hydra': {
         'name': organization+'/hydra',
-        'version': 'latest',
+        'version': api_results['HYDRA_GITHUB_INFO']['version'][1:], # Remove the leading 'v',
         'buildargs': {
-            'LAST_UBUNTU_VERSION': helper.get_latest_docker_hub_version('ubuntu'),
+            'LAST_UBUNTU_VERSION': api_results['LAST_UBUNTU_VERSION'],
+            'HYDRA_DOWNLOAD_URL': api_results['HYDRA_GITHUB_INFO']['url']
         }
     },
     'knockpy': {
         'name': organization+'/knockpy',
-        'version': helper.get_latest_github_release_no_browser_download('guelfoweb/knock')['version'],
+        'version': api_results['KNOCKPY_GITHUB_INFO']['version'],
         'buildargs': {
-            'KNOCKPY_DOWNLOAD_URL': helper.get_latest_github_release_no_browser_download('guelfoweb/knock')['url']
+            'KNOCKPY_DOWNLOAD_URL': api_results['KNOCKPY_GITHUB_INFO']['url']
         }
     },
     'sublist3r': {
         'name': organization+'/sublist3r',
-        'version': helper.get_latest_github_release_no_browser_download('aboul3la/Sublist3r')['version'],
+        'version': api_results['SUBLIST3R_GITHUB_INFO']['version'],
         'buildargs': {
-            'SUBLIST3R_DOWNLOAD_URL': helper.get_latest_github_release_no_browser_download('aboul3la/Sublist3r')['url']
+            'SUBLIST3R_DOWNLOAD_URL': api_results['SUBLIST3R_GITHUB_INFO']['url']
         }
     },
     'whatweb': {
         'name': organization+'/whatweb',
-        'version': helper.get_latest_github_release_no_browser_download('urbanadventurer/WhatWeb')['version'][1:], # Remove the leading 'v'
+        'version': api_results['WHATWEB_GITHUB_INFO']['version'][1:], # Remove the leading 'v'
         'buildargs': {
-            'LAST_UBUNTU_VERSION': helper.get_latest_docker_hub_version('ubuntu'),
-            'WHATWEB_DOWNLOAD_URL': helper.get_latest_github_release_no_browser_download('urbanadventurer/WhatWeb')['url']
+            'LAST_UBUNTU_VERSION': api_results['LAST_UBUNTU_VERSION'],
+            'WHATWEB_DOWNLOAD_URL': api_results['WHATWEB_GITHUB_INFO']['url']
         }
     }
 }
