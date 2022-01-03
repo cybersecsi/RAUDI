@@ -4,7 +4,7 @@ name: HOUDINI
 
 # Controls when the workflow will run
 on:
-  # Run every 5 minutes
+  # Run every night at midnight
   schedule:
     - cron: "0 0 * * *"
 
@@ -47,4 +47,4 @@ jobs:
 
       # Run
       - name: Run my script
-        run: python $PWD/houdini.py --all --push
+        run: python $PWD/houdini.py --all --push --remote
