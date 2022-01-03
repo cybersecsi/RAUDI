@@ -1,13 +1,12 @@
 # Base Distro Arg
-ARG LATEST_UBUNTU_VERSION
+ARG LATEST_ALPINE_VERSION
 
-FROM ubuntu:$LATEST_UBUNTU_VERSION
+FROM alpine:$LATEST_ALPINE_VERSION
 
 # Build Args
 ARG FFUF_DOWNLOAD_URL
 
 # Content
-RUN apt-get update
 ADD $FFUF_DOWNLOAD_URL ffuf.tar.gz
 RUN tar xzvf ffuf.tar.gz && chmod +x ffuf && mv ffuf /bin
 ENTRYPOINT ["ffuf"]

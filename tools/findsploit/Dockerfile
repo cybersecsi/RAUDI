@@ -1,7 +1,7 @@
 # Base Distro Arg
-ARG LATEST_UBUNTU_VERSION
+ARG LATEST_ALPINE_VERSION
 
-FROM ubuntu:$LATEST_UBUNTU_VERSION
+FROM alpine:$LATEST_ALPINE_VERSION
 
 # Build Args
 ARG FINDSPLOIT_DOWNLOAD_URL
@@ -10,7 +10,7 @@ ARG FINDSPLOIT_DOWNLOAD_URL
 RUN mkdir findsploit
 WORKDIR /findsploit
 ADD $FINDSPLOIT_DOWNLOAD_URL findsploit.tar.gz
-RUN tar -xvf findsploit.tar.gz -C /findsploit --strip-components=1
-RUN chmod +x install.sh 
-RUN ./install.sh
+RUN apk add --no-cache bash \
+    && tar -xvf findsploit.tar.gz -C /findsploit --strip-components=1 \
+    && chmod +x install.sh && bash install.sh
 ENTRYPOINT ["findsploit"]

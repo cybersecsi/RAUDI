@@ -9,6 +9,7 @@ def get_config(organization, common_args):
         'name': organization+'/retire',
         'version': api_results['RETIRE_NPM_VERSION'],
         'buildargs': {
+            'NODE_ALPINE_VERSION': common_args['NODE_ALPINE_VERSION'],
             'RETIRE_NPM_VERSION': api_results['RETIRE_NPM_VERSION']
         }
     }
