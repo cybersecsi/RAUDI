@@ -17,19 +17,21 @@ Don't worry anymore, we got you covered.
 ## Available Tools
 This is the current list of tools that have been added. Those are all tools that do not have an official Docker Image provided by the developer:
 
-| Name      | Docker Image    | Source                                       |
-|-----------|-----------------|----------------------------------------------|
-| dirb      | secsi/dirb      | http://dirb.sourceforge.net/                 |
-| dirhunt   | secsi/dirhunt   | https://github.com/Nekmo/dirhunt             |
-| ffuf      | secsi/ffuf      | https://github.com/ffuf/ffuf                 |
-| gobuster  | secsi/gobuster  | https://github.com/OJ/gobuster               |
-| hydra     | secsi/hydra     | https://github.com/vanhauser-thc/thc-hydra   |
-| knock     | secsi/knockpy   | https://github.com/guelfoweb/knock           |
-| MASSCAN   | secsi/masscan   | https://github.com/robertdavidgraham/masscan |
-| MassDNS   | secsi/massdns   | https://github.com/blechschmidt/massdns      |
-| Retire.js | secsi/retire    | https://github.com/RetireJS/retire.js        |
-| Sublist3r | secsi/sublist3r | https://github.com/aboul3la/Sublist3r        |
-| WhatWeb   | secsi/whatweb   | https://github.com/urbanadventurer/WhatWeb   |
+| Name                       | Docker Image    | Source                                       |
+|----------------------------|-----------------|----------------------------------------------|
+| dirb                       | secsi/dirb      | http://dirb.sourceforge.net/                 |
+| dirhunt                    | secsi/dirhunt   | https://github.com/Nekmo/dirhunt             |
+| dirsearch                  | secsi/dirsearch | https://github.com/maurosoria/dirsearch      |
+| ffuf                       | secsi/ffuf      | https://github.com/ffuf/ffuf                 |
+| gobuster                   | secsi/gobuster  | https://github.com/OJ/gobuster               |
+| hydra                      | secsi/hydra     | https://github.com/vanhauser-thc/thc-hydra   |
+| The JSON Web Token Toolkit | secsi/jwt_tool  | https://github.com/ticarpi/jwt_tool          |
+| knock                      | secsi/knockpy   | https://github.com/guelfoweb/knock           |
+| MASSCAN                    | secsi/masscan   | https://github.com/robertdavidgraham/masscan |
+| MassDNS                    | secsi/massdns   | https://github.com/blechschmidt/massdns      |
+| Retire.js                  | secsi/retire    | https://github.com/RetireJS/retire.js        |
+| Sublist3r                  | secsi/sublist3r | https://github.com/aboul3la/Sublist3r        |
+| WhatWeb                    | secsi/whatweb   | https://github.com/urbanadventurer/WhatWeb   |
 
 ## General Usage
 For **every** image created by HOUDINI you may use it with the following syntax:
