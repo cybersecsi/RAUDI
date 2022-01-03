@@ -31,6 +31,7 @@ This is the current list of tools that have been added. Those are all tools that
 | MASSCAN                    | secsi/masscan   | https://github.com/robertdavidgraham/masscan |
 | MassDNS                    | secsi/massdns   | https://github.com/blechschmidt/massdns      |
 | Retire.js                  | secsi/retire    | https://github.com/RetireJS/retire.js        |
+| sqlmap                     | secsi/sqlmap    | https://github.com/sqlmapproject/sqlmap      |
 | Sublist3r                  | secsi/sublist3r | https://github.com/aboul3la/Sublist3r        |
 | WhatWeb                    | secsi/whatweb   | https://github.com/urbanadventurer/WhatWeb   |
 
