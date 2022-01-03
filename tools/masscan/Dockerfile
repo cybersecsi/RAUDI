@@ -1,16 +1,25 @@
 # Base Distro Arg
-ARG LATEST_UBUNTU_VERSION
+ARG LATEST_ALPINE_VERSION
 
-FROM ubuntu:$LATEST_UBUNTU_VERSION as builder
+FROM alpine:$LATEST_ALPINE_VERSION
+
+# Build Args
 ARG MASSCAN_DOWNLOAD_URL
-RUN apt-get update && apt-get install -y make gcc libpcap-dev
-ADD $MASSCAN_DOWNLOAD_URL masscan.tar.gz
-RUN mkdir masscan
-RUN tar xzvf masscan.tar.gz -C /masscan --strip-components=1
-WORKDIR /masscan
-RUN make && make install
 
-FROM ubuntu:$LATEST_UBUNTU_VERSION
-COPY --from=builder /usr/bin /usr/bin
-RUN apt-get update && apt-get install -y libpcap-dev
+# Content
+RUN mkdir masscan
+WORKDIR /masscan
+ADD $MASSCAN_DOWNLOAD_URL masscan.tar.gz
+RUN apk --no-cache add \
+        gcc \
+        musl-dev \
+        make \
+        linux-headers \
+        libpcap-dev \
+    && tar xzvf masscan.tar.gz -C /masscan --strip-components=1 \
+    && make && make install \
+    && apk del --purge \
+        gcc \
+        musl-dev \
+        make
 ENTRYPOINT ["masscan"]

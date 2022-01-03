@@ -9,7 +9,7 @@ def get_config(organization, common_args):
         'name': organization+'/masscan',
         'version': api_results['MASSCAN_GITHUB_INFO']['version'],
         'buildargs': {
-            'LATEST_UBUNTU_VERSION': common_args['LATEST_UBUNTU_VERSION'],
+            'LATEST_ALPINE_VERSION': common_args['LATEST_ALPINE_VERSION'],
             'MASSCAN_DOWNLOAD_URL': api_results['MASSCAN_GITHUB_INFO']['url']
         }
     }

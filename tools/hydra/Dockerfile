@@ -1,32 +1,40 @@
 # Base Distro Arg
-ARG LATEST_UBUNTU_VERSION
+ARG LATEST_ALPINE_VERSION
 
-FROM ubuntu:$LATEST_UBUNTU_VERSION as builder
+FROM alpine:$LATEST_ALPINE_VERSION
+
+# Base Distro Arg
 ARG HYDRA_DOWNLOAD_URL
+
+# Content
 RUN mkdir hydra
 WORKDIR /hydra
-RUN apt-get update && apt-get install -y\
-    default-libmysqlclient-dev \
-    libgpg-error-dev \
-    libgcrypt-dev \
-    libpcre3-dev \
-    libidn11-dev \
-    libssh-dev \
-    libssl-dev \
-    make \
-    gcc
 ADD $HYDRA_DOWNLOAD_URL hydra.tar.gz
-RUN tar -xvf hydra.tar.gz -C /hydra --strip-components=1
-RUN ./configure && make && make install
-
-FROM ubuntu:$LATEST_UBUNTU_VERSION
-COPY --from=builder /usr/local/bin /usr/local/bin
-RUN apt-get update && apt-get install -y \
-    default-libmysqlclient-dev \
-    libgpg-error-dev \
-    libgcrypt-dev \
-    libpcre3-dev \
-    libidn11-dev \
-    libssh-dev \
-    libssl-dev
+RUN apk --no-cache add \
+        gcc \
+        musl-dev \
+        make \
+        openssl-dev \
+        libssh \
+        libssh-dev \
+        mariadb-connector-c \
+        mariadb-connector-c-dev \
+        postgresql-dev \
+        mariadb-dev \
+        libgpg-error-dev \
+        libgcrypt-dev \
+        pcre-dev \
+        libidn \
+        libidn-dev \
+        libpq \
+    && tar -xvf hydra.tar.gz -C /hydra --strip-components=1 \
+    && ./configure && make && make install \
+    && apk del --purge \
+        gcc \
+        musl-dev \
+        libidn-dev \
+        libssh-dev \
+        mariadb-connector-c-dev \
+        mariadb-dev \
+        postgresql-dev
 ENTRYPOINT ["hydra"]

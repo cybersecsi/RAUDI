@@ -9,6 +9,7 @@ organization = 'secsi'
 common_args = {
     'LATEST_UBUNTU_VERSION': helper.get_latest_docker_hub_version('ubuntu'),
     'LATEST_ALPINE_VERSION': helper.get_latest_docker_hub_version('alpine'),
+    'DEBIAN_SLIM_VERSION': '11-slim', # Future LTS
     'NODE_ALPINE_VERSION': '16-alpine', # LTS
     'PYTHON_ALPINE_VERSION': '3.9.9-alpine',
     'PYTHON2_ALPINE_VERSION': '2.7.18-alpine', # Only used for tools not compatible with Python3
