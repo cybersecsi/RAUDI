@@ -26,6 +26,6 @@ def get_tools():
     return configured_tools
 
 # Get a single tool for specific build
-def get_single_tool(tool_name):    
+def get_single_tool(tool_name):
     tool = next((t.get_config(organization, common_args) for t in tools if _tool_name(t) == tool_name), None) # returns None if tool is not found
     return tool 
