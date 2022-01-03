@@ -8,6 +8,7 @@ organization = 'secsi'
 
 common_args = {
     'LAST_UBUNTU_VERSION': helper.get_latest_docker_hub_version('ubuntu'),
+    'LAST_ALPINE_VERSION': helper.get_latest_docker_hub_version('alpine'),
 }
 
 def _tool_name(t):

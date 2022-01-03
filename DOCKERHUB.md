@@ -26,6 +26,7 @@ This is the current list of tools that have been added. Those are all tools that
 | hydra     | secsi/hydra     | https://github.com/vanhauser-thc/thc-hydra   |
 | knock     | secsi/knockpy   | https://github.com/guelfoweb/knock           |
 | MASSCAN   | secsi/masscan   | https://github.com/robertdavidgraham/masscan |
+| MassDNS   | secsi/massdns   | https://github.com/blechschmidt/massdns      |
 | Retire.js | secsi/retire    | https://github.com/RetireJS/retire.js        |
 | Sublist3r | secsi/sublist3r | https://github.com/aboul3la/Sublist3r        |
 | WhatWeb   | secsi/whatweb   | https://github.com/urbanadventurer/WhatWeb   |

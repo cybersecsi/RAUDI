@@ -29,7 +29,7 @@ def get_highest_version_number(version_numbers):
 def get_latest_docker_hub_version(docker_image, org="library/"):
     r = requests.get(DOCKER_API['base']+org+docker_image+DOCKER_API['tags'])
     results = r.json()['results']
-    regex = '^\d+(\.\d+)*$' # Only digits and dots
+    regex = '^\d{1,4}(\.\d+)*$' # Only digits and dots
     tags_with_version_number = [result["name"] for result in results if re.match(regex, result["name"])]
     if len(tags_with_version_number) > 0:
         return get_highest_version_number(tags_with_version_number)
