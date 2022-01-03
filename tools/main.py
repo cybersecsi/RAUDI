@@ -10,6 +10,7 @@ common_args = {
     'LAST_UBUNTU_VERSION': helper.get_latest_docker_hub_version('ubuntu'),
     'LAST_ALPINE_VERSION': helper.get_latest_docker_hub_version('alpine'),
     'PYTHON_ALPINE_VERSION': '3.9.9-alpine',
+    'PYTHON2_ALPINE_VERSION': '2.7.18-alpine', # Only used for tools not compatible with Python3
     'OPENJDK_ALPINE_VERSION': '17-alpine', # LTS
 }
 

@@ -30,7 +30,7 @@ def build(tool_name, config, push_image, remote_src):
     if image_exists == False:
         log("Building {docker_image}...".format(docker_image="{name}:{tag}".format(name=config['name'], tag=config['version'])))
         client = docker.from_env()
-        client.images.build(buildargs=config['buildargs'], path=dirname, tag="{name}:{tag}".format(name=config['name'], tag=config['version']))
+        client.images.build(buildargs=config['buildargs'], path=dirname, tag="{name}:{tag}".format(name=config['name'], tag=config['version']), rm=True)
         # Get the Docker Image to tag it also as latest
         docker_image = client.images.get("{name}:{tag}".format(name=config['name'], tag=config['version']))
         docker_image.tag(repository=config['name'], tag="latest") # Also tag as latest
