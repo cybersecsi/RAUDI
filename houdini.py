@@ -11,21 +11,23 @@ DEFAULT_TOOL_DIR = os.path.dirname(os.path.abspath(__file__))+"/tools/"
 
 # ArgParse
 parser = argparse.ArgumentParser(prog="HOUDINI", description='Hacking Offensive Updated Docker Images for Network Intrusion.')
-parser.add_argument("--all", help="Build all tools", action='store_true')
-parser.add_argument("--list", help="List all tools", action='store_true')
-parser.add_argument("--single", help="Run a single tool build", type=str)
+group = parser.add_mutually_exclusive_group(required=True)
+group.add_argument("--all", help="Build all tools", action='store_true')
+group.add_argument("--single", help="Run a single tool build", type=str)
+group.add_argument("--list", help="List all tools", action='store_true')
 parser.add_argument("--push", help="Wheter automatically push the new images to the Docker Hub (default=false)", action='store_true')
+parser.add_argument("--remote", help="Wheter check against Docker Hub instead of local Docker before build (default=false)", action='store_true')
 
 # Print out a Sexy intro
 def sexy_intro():
     secsi_art=text2art("SecSI",font='big')
-    print()
+    print() 
     print(secsi_art)
 
-def build(tool_name, config, push_image):
+def build(tool_name, config, push_image, remote_src):
     dirname = DEFAULT_TOOL_DIR + tool_name
-    current_image = check_if_docker_image_exists("{name}:{tag}".format(name=config['name'], tag=config['version']))
-    if not current_image:
+    image_exists = check_if_docker_image_exists("{name}:{tag}".format(name=config['name'], tag=config['version']), remote_src)
+    if image_exists == False:
         log("Building {docker_image}...".format(docker_image="{name}:{tag}".format(name=config['name'], tag=config['version'])))
         client = docker.from_env()
         client.images.build(buildargs=config['buildargs'], path=dirname, tag="{name}:{tag}".format(name=config['name'], tag=config['version']))
@@ -39,7 +41,7 @@ def build(tool_name, config, push_image):
     if push_image:
         push(config['name'], config['version'])
 
-def build_one(tool_name, push_image):
+def build_one(tool_name, push_image, remote_src):
     log("Checking if tool exists...")
     config = get_single_tool(tool_name)
     if not config:
@@ -49,14 +51,14 @@ def build_one(tool_name, push_image):
     log("Tool correctly found.")
     log(config)
 
-    build(tool_name, config, push_image)
+    build(tool_name, config, push_image, remote_src)
 
-def build_all(push_image):
+def build_all(push_image, remote_src):
     tools = get_tools()
     log("Getting config for every tool...")
     for tool in tools:
         tool_name = tool['name'].split('/')[1]
-        build(tool_name, tool, push_image)
+        build(tool_name, tool, push_image, remote_src)
 
 def push(repo, version):
     docker_hub_version = get_latest_docker_hub_version(repo, org="")
@@ -75,16 +77,17 @@ def main():
     sexy_intro()
     args = parser.parse_args()
 
-    # Build everything
     try:
+        # List available tools
         if args.list:
             log("Available tools")
             log(list_tools())
+        # Build everything
         elif args.all:
-            build_all(args.push)
+            build_all(args.push, args.remote)
         # Build a specific Docker Image
         elif args.single:
-            build_one(args.single, args.push)
+            build_one(args.single, args.push, args.remote)
         else:
             parser.print_help()
     except Exception as e:
