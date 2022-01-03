@@ -81,7 +81,7 @@ def check_if_docker_image_exists_remote(docker_image_with_version):
     repo = docker_image[0]
     version = docker_image[1]
     latest_ver = get_latest_docker_hub_version(repo, org="")
-    return True if latest_ver != version else None
+    return True if latest_ver == version else False
 
 def check_if_docker_image_exists(docker_image, remote_src):
     # The check can be made against the local Docker or the Docker Hub (mainly for GitHub Actions) based on the value of 'remote_src'
