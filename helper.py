@@ -68,13 +68,30 @@ def get_latest_github_release_no_browser_download(repo):
         'version': data['tag_name']
     }
 
-def check_if_docker_image_exists(docker_image):
+def check_if_docker_image_exists_local(docker_image):
     client = docker.from_env()
     try:
         res = client.images.get(docker_image)
-        return res
+        return True
     except docker.errors.ImageNotFound:
-        return None
+        return False
+
+def check_if_docker_image_exists_remote(docker_image_with_version):
+    docker_image = docker_image_with_version.split(':')
+    repo = docker_image[0]
+    version = docker_image[1]
+    latest_ver = get_latest_docker_hub_version(repo, org="")
+    return True if latest_ver != version else None
+
+def check_if_docker_image_exists(docker_image, remote_src):
+    # The check can be made against the local Docker or the Docker Hub (mainly for GitHub Actions) based on the value of 'remote_src'
+    if not remote_src:
+        log('Checking on local Docker if {image} already exists...'.format(image=docker_image))
+        return check_if_docker_image_exists_local(docker_image)
+    else:
+        log('Checking on Docker Hub if {image} already exists...'.format(image=docker_image))
+        return check_if_docker_image_exists_remote(docker_image)
+    
 
 def get_list_tools():
     return [f for f in listdir('tools') if not isfile(join('tools', f)) and f != '__pycache__']

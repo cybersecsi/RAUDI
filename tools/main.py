@@ -16,7 +16,6 @@ def _tool_name(t):
 def list_tools():
     return  [_tool_name(t) for t in tools]
 
-
 # List of all imported tools 
 def get_tools():
     configured_tools = [tool.get_config(organization, common_args) for tool in tools]
