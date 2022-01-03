@@ -9,7 +9,7 @@ def get_config(organization, common_args):
         'name': organization+'/hydra',
         'version': api_results['HYDRA_GITHUB_INFO']['version'][1:], # Remove the leading 'v',
         'buildargs': {
-            'LATEST_UBUNTU_VERSION': common_args['LATEST_UBUNTU_VERSION'],
+            'LATEST_ALPINE_VERSION': common_args['LATEST_ALPINE_VERSION'],
             'HYDRA_DOWNLOAD_URL': api_results['HYDRA_GITHUB_INFO']['url']
         }
     }

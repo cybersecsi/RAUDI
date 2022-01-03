@@ -3,7 +3,7 @@ def get_config(organization, common_args):
         'name': organization+'/dirb',
         'version': '2.22',
         'buildargs': {
-            'LATEST_UBUNTU_VERSION': common_args['LATEST_UBUNTU_VERSION']
+            'DEBIAN_SLIM_VERSION': common_args['DEBIAN_SLIM_VERSION']
         }
     }
     return config
