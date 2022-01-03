@@ -1,5 +1,4 @@
 import helper
-import os
 import importlib
 # Import all tools config files
 tools = [importlib.import_module(module) for module in helper.get_config_names()]
