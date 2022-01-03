@@ -9,7 +9,7 @@ def get_config(organization, common_args):
         'name': organization+'/massdns',
         'version': api_results['MASSDNS_GITHUB_INFO']['version'][1:], # Remove the leading 'v'
         'buildargs': {
-            'LAST_ALPINE_VERSION': common_args['LAST_ALPINE_VERSION'],
+            'LATEST_ALPINE_VERSION': common_args['LATEST_ALPINE_VERSION'],
             'MASSDNS_DOWNLOAD_URL': api_results['MASSDNS_GITHUB_INFO']['url']
         }
     }

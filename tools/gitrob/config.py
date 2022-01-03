@@ -13,7 +13,7 @@ def get_config(organization, common_args):
         'name': organization+'/gitrob',
         'version': api_results['GITROB_GITHUB_INFO']['version'],
         'buildargs': {
-            'LAST_ALPINE_VERSION': common_args['LAST_ALPINE_VERSION'],
+            'LATEST_ALPINE_VERSION': common_args['LATEST_ALPINE_VERSION'],
             'GITROB_DOWNLOAD_URL': api_results['GITROB_GITHUB_INFO']['url']
         }
     }

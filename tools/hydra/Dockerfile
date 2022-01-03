@@ -1,7 +1,7 @@
 # Base Distro Arg
-ARG LAST_UBUNTU_VERSION
+ARG LATEST_UBUNTU_VERSION
 
-FROM ubuntu:$LAST_UBUNTU_VERSION as builder
+FROM ubuntu:$LATEST_UBUNTU_VERSION as builder
 ARG HYDRA_DOWNLOAD_URL
 RUN mkdir hydra
 WORKDIR /hydra
@@ -19,7 +19,7 @@ ADD $HYDRA_DOWNLOAD_URL hydra.tar.gz
 RUN tar -xvf hydra.tar.gz -C /hydra --strip-components=1
 RUN ./configure && make && make install
 
-FROM ubuntu:$LAST_UBUNTU_VERSION
+FROM ubuntu:$LATEST_UBUNTU_VERSION
 COPY --from=builder /usr/local/bin /usr/local/bin
 RUN apt-get update && apt-get install -y \
     default-libmysqlclient-dev \
