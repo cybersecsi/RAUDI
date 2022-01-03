@@ -37,6 +37,7 @@ This is the current list of tools that have been added. Those are all tools that
 | Retire.js                  | secsi/retire     | https://github.com/RetireJS/retire.js        |
 | sqlmap                     | secsi/sqlmap     | https://github.com/sqlmapproject/sqlmap      |
 | Sublist3r                  | secsi/sublist3r  | https://github.com/aboul3la/Sublist3r        |
+| waybackpy                  | secsi/waybackpy  | https://github.com/akamhy/waybackpy          |
 | WhatWeb                    | secsi/whatweb    | https://github.com/urbanadventurer/WhatWeb   |
 
 ## General Usage
