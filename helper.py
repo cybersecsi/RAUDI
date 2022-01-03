@@ -1,10 +1,8 @@
 import requests
 import re
 import docker
-import os
 from os import listdir
 from os.path import isfile, join
-import shutil
 
 # Global vars
 DOCKER_API = {
@@ -80,12 +78,12 @@ def check_if_docker_image_exists(docker_image):
 
 def get_list_tools():
     return [f for f in listdir('tools') if not isfile(join('tools', f)) and f != '__pycache__']
+
 def get_config_names():
     return ['tools.{}.config'.format(t) for t in get_list_tools()]
 
-
-
 def log(m):
     print("[+] {}".format(m))
+
 def logErr(m):
     print("[-] {}".format(m))
