@@ -11,6 +11,7 @@ def get_config(organization, common_args):
         'buildargs': {
             'PYTHON2_ALPINE_VERSION': common_args['PYTHON2_ALPINE_VERSION'],
             'LFISUITE_DOWNLOAD_URL': api_results['LFISUITE_GITHUB_INFO']['url']
-        }
+        },
+        'tests': []
     }
     return config
