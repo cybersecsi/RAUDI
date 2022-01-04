@@ -11,6 +11,7 @@ def get_config(organization, common_args):
         'buildargs': {
             'OPENJDK_ALPINE_VERSION': common_args['OPENJDK_ALPINE_VERSION'],
             'APKTOOL_DOWNLOAD_URL': api_results['APKTOOL_GITHUB_INFO']['url']
-        }
+        },
+        'tests': ['--version']
     }
     return config

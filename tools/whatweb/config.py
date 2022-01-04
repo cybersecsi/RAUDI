@@ -11,6 +11,7 @@ def get_config(organization, common_args):
         'buildargs': {
             'RUBY_ALPINE_VERSION': common_args['RUBY_ALPINE_VERSION'],
             'WHATWEB_DOWNLOAD_URL': api_results['WHATWEB_GITHUB_INFO']['url']
-        }
+        },
+        'tests': ['--help']
     }
     return config

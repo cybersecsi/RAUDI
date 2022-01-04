@@ -4,7 +4,7 @@ import docker
 import os
 import sys
 from tools.main import get_tools, get_single_tool, list_tools
-from helper import check_if_docker_image_exists, get_latest_docker_hub_version, log, logErr
+from helper import log, logErr, check_if_docker_image_exists, get_latest_docker_hub_version, check_if_container_runs
 
 # Default vars
 DEFAULT_TOOL_DIR = os.path.dirname(os.path.abspath(__file__))+"/tools/"
@@ -24,7 +24,7 @@ def sexy_intro():
     print() 
     print(secsi_art)
 
-def build(tool_name, config, push_image, remote_src):
+def build(tool_name, config, push_image, remote_src, tests):
     dirname = DEFAULT_TOOL_DIR + tool_name
     image_exists = check_if_docker_image_exists("{name}:{tag}".format(name=config['name'], tag=config['version']), remote_src)
     if image_exists == False:
@@ -37,9 +37,16 @@ def build(tool_name, config, push_image, remote_src):
     else:
         log("This version already exists, skipping build.")
     
+
+
     # Pushing, if specified
     if push_image:
-        push(config['name'], config['version'])
+        try:
+            check_if_container_runs(config['name'], config['version'], tests)
+            push(config['name'], config['version'])
+        except docker.errors.ContainerError as e:
+            logErr(e)
+            logErr("Error running container, push aborted for {docker}:{version}.".format(docker=config['name'], version=config['version']))
 
 def build_one(tool_name, push_image, remote_src):
     log("Checking if tool exists...")
@@ -51,14 +58,14 @@ def build_one(tool_name, push_image, remote_src):
     log("Tool correctly found.")
     log(config)
 
-    build(tool_name, config, push_image, remote_src)
+    build(tool_name, config, push_image, remote_src, config['tests'])
 
 def build_all(push_image, remote_src):
     tools = get_tools()
     log("Getting config for every tool...")
     for tool in tools:
         tool_name = tool['name'].split('/')[1]
-        build(tool_name, tool, push_image, remote_src)
+        build(tool_name, tool, push_image, remote_src, tool['tests'])
 
 def push(repo, version):
     docker_hub_version = get_latest_docker_hub_version(repo, org="")
