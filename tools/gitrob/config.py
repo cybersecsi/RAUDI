@@ -16,6 +16,6 @@ def get_config(organization, common_args):
             'LATEST_ALPINE_VERSION': common_args['LATEST_ALPINE_VERSION'],
             'GITROB_DOWNLOAD_URL': api_results['GITROB_GITHUB_INFO']['url']
         },
-        'tests': ['--help']
+        'tests': []
     }
     return config

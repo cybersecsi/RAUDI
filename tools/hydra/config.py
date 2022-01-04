@@ -12,6 +12,6 @@ def get_config(organization, common_args):
             'LATEST_ALPINE_VERSION': common_args['LATEST_ALPINE_VERSION'],
             'HYDRA_DOWNLOAD_URL': api_results['HYDRA_GITHUB_INFO']['url']
         },
-        'tests': ['-h']
+        'tests': []
     }
     return config
