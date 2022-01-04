@@ -12,6 +12,6 @@ def get_config(organization, common_args):
             'LATEST_ALPINE_VERSION': common_args['LATEST_ALPINE_VERSION'],
             'FFUF_DOWNLOAD_URL': api_results['FFUF_GITHUB_INFO']['url']
         },
-        'tests': ['--help']
+        'tests': ['-V']
     }
     return config
