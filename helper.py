@@ -22,6 +22,12 @@ GITHUB_API = {
     'latest_release': "/releases/latest"
 }
 
+def log(m):
+    print("[+] {}".format(m))
+
+def logErr(m):
+    print("[-] {}".format(m))
+
 def get_highest_version_number(version_numbers):
     version_numbers.sort(key=lambda s: list(map(int, s.split('.'))))
     return version_numbers[-1]
@@ -48,13 +54,16 @@ def get_latest_npm_registry_version(package):
 
 def get_latest_github_release(repo, target_string):
     r = requests.get(GITHUB_API['base']+repo+GITHUB_API['latest_release'])
-    assets = r.json()['assets']
-    for asset in assets:
-        if target_string in asset['name']:
-            return {
-                'url': asset['browser_download_url'],
-                'version': r.json()['tag_name']
-            }
+    try:
+        assets = r.json()['assets']
+        for asset in assets:
+            if target_string in asset['name']:
+                return {
+                    'url': asset['browser_download_url'],
+                    'version': r.json()['tag_name']
+                }
+    except:
+        logErr('Error while retriving info from GitHub. Maybe Rate Limiting took place...')
 
 def get_latest_github_release_no_browser_download(repo):
     r = requests.get(GITHUB_API['base']+repo+GITHUB_API['latest_release'])
@@ -91,6 +100,12 @@ def check_if_docker_image_exists(docker_image, remote_src):
     else:
         log('Checking on Docker Hub if {image} already exists...'.format(image=docker_image))
         return check_if_docker_image_exists_remote(docker_image)
+
+def check_if_container_runs(docker_image, version, tests):
+    client = docker.from_env()
+    log('Executing tests for container{docker_image}:{version}'.format(docker_image=docker_image, version=version))
+    for test in tests:
+        client.containers.run('{docker_image}:{version}'.format(docker_image=docker_image, version=version), test, detach=False)
     
 
 def get_list_tools():
@@ -98,9 +113,3 @@ def get_list_tools():
 
 def get_config_names():
     return ['tools.{}.config'.format(t) for t in get_list_tools()]
-
-def log(m):
-    print("[+] {}".format(m))
-
-def logErr(m):
-    print("[-] {}".format(m))

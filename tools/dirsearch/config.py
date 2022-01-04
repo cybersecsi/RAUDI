@@ -11,6 +11,7 @@ def get_config(organization, common_args):
         'buildargs': {
             'PYTHON_ALPINE_VERSION': common_args['PYTHON_ALPINE_VERSION'],
             'DIRSEARCH_DOWNLOAD_URL': api_results['DIRSEARCH_GITHUB_INFO']['url']
-        }
+        },
+        'tests': ['--help']
     }
     return config

@@ -11,6 +11,7 @@ def get_config(organization, common_args):
         'buildargs': {
             'LATEST_ALPINE_VERSION': common_args['LATEST_ALPINE_VERSION'],
             'MASSCAN_DOWNLOAD_URL': api_results['MASSCAN_GITHUB_INFO']['url']
-        }
+        },
+        'tests': ['--help']
     }
     return config

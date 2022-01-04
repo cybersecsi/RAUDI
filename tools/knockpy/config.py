@@ -11,6 +11,7 @@ def get_config(organization, common_args):
         'buildargs': {
             'PYTHON_ALPINE_VERSION': common_args['PYTHON_ALPINE_VERSION'],
             'KNOCKPY_DOWNLOAD_URL': api_results['KNOCKPY_GITHUB_INFO']['url']
-        }
+        },
+        'tests': ['-h']
     }
     return config

@@ -11,6 +11,7 @@ def get_config(organization, common_args):
         'buildargs': {
             'PYTHON_ALPINE_VERSION': common_args['PYTHON_ALPINE_VERSION'],
             'JWT_TOOL_DOWNLOAD_URL': api_results['JWT_TOOL_GITHUB_INFO']['url']
-        }
+        },
+        'tests': ['--help']
     }
     return config

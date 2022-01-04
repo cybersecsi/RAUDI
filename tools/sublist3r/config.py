@@ -11,6 +11,7 @@ def get_config(organization, common_args):
         'buildargs': {
             'PYTHON_ALPINE_VERSION': common_args['PYTHON_ALPINE_VERSION'],
             'SUBLIST3R_DOWNLOAD_URL': api_results['SUBLIST3R_GITHUB_INFO']['url']
-        }
+        },
+        'tests': ['-h']
     }
     return config
