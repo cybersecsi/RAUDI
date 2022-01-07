@@ -1,7 +1,7 @@
 # GoBuster
 
 ## Official Documentation
-Reference: https://github.com/michenriksen/gitrob
+Reference: https://github.com/OJ/gobuster
 ## Description
 
 Gobuster is a tool used to brute-force:
