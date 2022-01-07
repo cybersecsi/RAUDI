@@ -1,5 +1,7 @@
 # Findsploit
 
+## Official Documentation
+Reference: https://github.com/1N3/Findsploit
 ## Description
 
 Finsploit is a simple bash script to quickly and easily search both local and online exploit databases.

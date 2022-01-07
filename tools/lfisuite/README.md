@@ -1,13 +1,29 @@
-# TOOL NAME
+# LFI Suite
 
 ## Official Documentation
-Reference: add here the link to the official documentation
+Reference: https://github.com/D35m0nd142/LFISuite
 
 ## Description
-Add here the description of the specific tool
+
+**LFI Suite** is a totally <b>automatic</b> tool able to scan and exploit Local File Inclusion vulnerabilities using many different methods of attack, listed below:
+
+* Works with Windows, Linux and OS X
+* Automatic Configuration 
+* Automatic Update
+* Provides 8 different Local File Inclusion attack modalities:
+  - /proc/self/environ
+  - php://filter
+  - php://input
+  - /proc/self/fd
+  - access log
+  - phpinfo
+  - data://
+  - expect://
 
 ## Usage
-Add here the usage of the specific tool
+```
+docker run -it --rm -v <pathtotest_src>:<pathtotest_container> secsi/lfisuite
+```
 
 ## 🐳 RAUDI: Regularly and Automatically Updated Docker Images
 

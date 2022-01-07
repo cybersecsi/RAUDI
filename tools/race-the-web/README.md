@@ -1,13 +1,17 @@
-# TOOL NAME
+# Race The Web
 
 ## Official Documentation
-Reference: add here the link to the official documentation
+Reference: https://github.com/TheHackerDev/race-the-web
 
 ## Description
-Add here the description of the specific tool
+
+**Race The Web** tests for race conditions in web applications by sending out a user-specified number of requests to a target URL (or URLs) simultaneously, and then compares the responses from the server for uniqueness. Includes a number of configuration options.
+
 
 ## Usage
-Add here the usage of the specific tool
+```
+docker run -it --rm secsi/race-the-web
+```
 
 ## 🐳 RAUDI: Regularly and Automatically Updated Docker Images
 

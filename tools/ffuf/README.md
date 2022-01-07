@@ -1,5 +1,7 @@
 # ffuf
 
+## Official Documentation
+Reference: https://github.com/ffuf/ffuf
 ## Description
 A fast web fuzzer written in Go.
 

@@ -1,5 +1,7 @@
 # Apktool
 
+## Official Documentation
+Reference: https://github.com/iBotPeaches/Apktool
 ## Description
 It is a tool for reverse engineering 3rd party, closed, binary Android apps. It can decode resources to nearly original form and rebuild them after making some modifications; it makes possible to debug smali code step by step. Also it makes working with app easier because of project-like files structure and automation of some repetitive tasks like building apk, etc.
 

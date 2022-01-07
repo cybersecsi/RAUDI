@@ -1,13 +1,16 @@
-# TOOL NAME
+# MassDNS
 
 ## Official Documentation
-Reference: add here the link to the official documentation
+Reference: https://github.com/blechschmidt/massdns
 
 ## Description
-Add here the description of the specific tool
+
+**MassDNS** is a simple high-performance DNS stub resolver targeting those who seek to resolve a massive amount of domain names in the order of millions or even billions. Without special configuration, MassDNS is capable of resolving over 350,000 names per second using publicly available resolvers.
 
 ## Usage
-Add here the usage of the specific tool
+```
+docker run -it --rm -v <domain_list_src_dir>:<domain_list_container_dir> secsi/massdns <domain_list_container>.txt
+```
 
 ## 🐳 RAUDI: Regularly and Automatically Updated Docker Images
 
