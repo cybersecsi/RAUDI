@@ -1,13 +1,18 @@
-# TOOL NAME
+# theHarvester
 
 ## Official Documentation
-Reference: add here the link to the official documentation
+Reference: https://github.com/laramies/theHarvester
 
 ## Description
-Add here the description of the specific tool
+
+**theHarvester** is a very simple to use, yet powerful and effective tool designed to be used in the early stages of a penetration test or red team engagement. 
+
+Use it for open source intelligence (*OSINT*) gathering to help determine a company's external threat landscape on the internet. The tool gathers emails, names, subdomains, IPs and URLs using multiple public data sources.
 
 ## Usage
-Add here the usage of the specific tool
+```
+docker run -it --rm secsi/theharvester -d <domain> -b all
+```
 
 ## 🐳 RAUDI: Regularly and Automatically Updated Docker Images
 

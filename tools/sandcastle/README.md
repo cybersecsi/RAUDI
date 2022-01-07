@@ -1,13 +1,30 @@
-# TOOL NAME
+# Sandcastle
 
 ## Official Documentation
-Reference: add here the link to the official documentation
+Reference: https://github.com/0xSearches/sandcastle
 
 ## Description
-Add here the description of the specific tool
+
+**Sandcastle** is a Python script for AWS S3 bucket enumeration, formerly known as bucketCrawler.
+
+The script takes a target's name as the stem argument (e.g. `shopify`) and iterates through a file of bucket name permutations, such as the ones below:
+
+```
+-training
+-bucket
+-dev
+-attachments
+-photos
+-elasticsearch
+[...]
+```
 
 ## Usage
-Add here the usage of the specific tool
+```
+docker run -it --rm secsi/sandcastle -t <targetStem> -f bucket-names.txt
+
+docker run -it --rm -v <local_bucket_names>:<container_bucket_names> secsi/sandcastle -t <targetStem> -f <container_bucket_names>
+```
 
 ## 🐳 RAUDI: Regularly and Automatically Updated Docker Images
 

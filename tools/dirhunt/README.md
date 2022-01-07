@@ -1,5 +1,7 @@
 # dirhunt
 
+## Official Documentation
+Reference: https://github.com/Nekmo/dirhunt
 ## Description
 Dirhunt is a web crawler optimize for **search and analyze directories**. This tool can find interesting things if the
 server has the *"index of"* mode enabled. Dirhunt is also useful if the directory listing is not enabled. It detects

@@ -1,5 +1,7 @@
 # JWT Tool
 
+## Official Documentation
+Reference: https://github.com/ticarpi/jwt_tool
 ## Description
 
 jwt_tool.py is a toolkit for validating, forging, scanning and tampering JWTs (JSON Web Tokens).

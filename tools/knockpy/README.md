@@ -1,13 +1,16 @@
-# TOOL NAME
+# Knock
 
 ## Official Documentation
-Reference: add here the link to the official documentation
+Reference: 	https://github.com/guelfoweb/knock
 
 ## Description
-Add here the description of the specific tool
+
+**Knock** is a python3 tool designed to quickly enumerate subdomains on a target domain through dictionary attack.
 
 ## Usage
-Add here the usage of the specific tool
+```
+docker run -it --rm secsi/knockpy <target_url>
+```
 
 ## 🐳 RAUDI: Regularly and Automatically Updated Docker Images
 

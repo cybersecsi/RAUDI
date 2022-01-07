@@ -1,5 +1,7 @@
 # Hydra
 
+## Official Documentation
+Reference: https://github.com/vanhauser-thc/thc-hydra
 ## Description
 
 Number one of the biggest security holes are passwords, as every password security study shows.
