@@ -1,15 +1,15 @@
-# 🐳 HOUDINI: Hacking Offensive Updated Docker Images for Network Intrusion
+# 🐳 RAUDI: Regularly and Automatically Updated Docker Images
 
-Hello, friend. That's the right page, you are not mistaken. This Docker Image has been created by HOUDINI. What is HOUDINI?
+Hello, friend. That's the right page, you are not mistaken. This Docker Image has been created by RAUDI. What is RAUDI?
 
-**HOUDINI** (Hacking Offensive Updated Docker Images for Network Intrusion) automatically generates *Docker Images* for Network Security-related tools that are not provided by the developers. The Images are automatically updated through the GitHub Actions.
+**RAUDI** (Regularly and Automatically Updated Docker Images) automatically generates and keep updated a series of *Docker Images* through *GitHub Actions* tools that are not provided by the developers.
 
-[![Documentation](https://img.shields.io/badge/Documentation-complete-green.svg?style=flat)](https://github.com/cybersecsi/HOUDINI/blob/main/README.md)
-[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://github.com/cybersecsi/HOUDINI/blob/main/LICENSE)
+[![Documentation](https://img.shields.io/badge/Documentation-complete-green.svg?style=flat)](https://github.com/cybersecsi/RAUDI/blob/main/README.md)
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://github.com/cybersecsi/RAUDI/blob/main/LICENSE)
 
 
-## What is HOUDINI
-**HOUDINI** is what will save you from creating and managing a lot of Docker Images manually. Every time a software is updated you need to update the Docker Image if you want to use the latest features, the dependencies are not working anymore. 
+## What is RAUDI
+**RAUDI** is what will save you from creating and managing a lot of Docker Images manually. Every time a software is updated you need to update the Docker Image if you want to use the latest features, the dependencies are not working anymore. 
 
 This is messy and time-consuming. 
 
@@ -45,7 +45,7 @@ This is the current list of tools that have been added. Those are all tools that
 | WhatWeb                    | secsi/whatweb        | https://github.com/urbanadventurer/WhatWeb   |
 
 ## General Usage
-For **every** image created by HOUDINI you may use it with the following syntax:
+For **every** image created by RAUDI you may use it with the following syntax:
 ```
 docker run -it --rm secsi/<tool> <command>
 ```
@@ -63,4 +63,4 @@ If you are a user of the tool and have a suggestion for a new feature or a bug t
 Developed by Angelo Delicato [@SecSI](https://secsi.io)
 
 ## License
-**HOUDINI** is an open-source and free software released under the [MIT License](/LICENSE).
+**RAUDI** is an open-source and free software released under the [MIT License](/LICENSE).
