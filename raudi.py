@@ -10,7 +10,7 @@ from helper import log, logErr, check_if_docker_image_exists, get_latest_docker_
 DEFAULT_TOOL_DIR = os.path.dirname(os.path.abspath(__file__))+"/tools/"
 
 # ArgParse
-parser = argparse.ArgumentParser(prog="HOUDINI", description='Hacking Offensive Updated Docker Images for Network Intrusion.')
+parser = argparse.ArgumentParser(prog="RAUDI", description='Regularly and Automatically Updated Docker Images.')
 group = parser.add_mutually_exclusive_group(required=True)
 group.add_argument("--all", help="Build all tools", action='store_true')
 group.add_argument("--single", help="Run a single tool build", type=str)

@@ -1,6 +1,6 @@
 # Custom Workflow
 
-name: HOUDINI
+name: RAUDI
 
 # Controls when the workflow will run
 on:
@@ -13,8 +13,8 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "houdini"
-  houdini:
+  # This workflow contains a single job called "raudi"
+  raudi:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
@@ -47,4 +47,4 @@ jobs:
 
       # Run
       - name: Run my script
-        run: python $PWD/houdini.py --all --push --remote
+        run: python $PWD/raudi.py --all --push --remote
