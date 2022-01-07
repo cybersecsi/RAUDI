@@ -82,14 +82,20 @@ def get_latest_github_tag_no_browser_download(repo):
     r = requests.get(GITHUB_API['base']+repo+GITHUB_API['tags'])
     regex = '^\d{1,4}(\.\d+)*$' # Only digits and dots (avoid Date-based tags)
     results = r.json()
-    data = [result for result in results if re.match(regex, result['name'])][0]
+
     if r.status_code != 200:
         # TODO Check that an error always return message val
         raise ConnectionError(data['message'])
-    return {
-        'url': data['tarball_url'],
-        'version': data['name']
-    }
+
+    data = [result for result in results if re.match(regex, result['name'])]
+    versions = [d["name"] for d in data]
+    if len(versions) > 0:
+        latest_version = get_highest_version_number(versions)
+        index = next((i for i, item in enumerate(data) if item["name"] == latest_version), -1)
+        return {
+            'url': data[index]['tarball_url'],
+            'version': latest_version
+        }    
 
 def check_if_docker_image_exists_local(docker_image):
     client = docker.from_env()
