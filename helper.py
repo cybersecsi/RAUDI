@@ -30,7 +30,7 @@ def logErr(m):
     print("[-] {}".format(m))
 
 def get_highest_version_number(version_numbers):
-    version_numbers.sort(key=lambda s: list(map(int, s.split('.'))))
+    version_numbers.sort(key=lambda s: list(map(int, s.strip('v').split('.'))))
     return version_numbers[-1]
 
 def get_latest_docker_hub_version(docker_image, org="library/"):
@@ -80,7 +80,7 @@ def get_latest_github_release_no_browser_download(repo):
 
 def get_latest_github_tag_no_browser_download(repo):
     r = requests.get(GITHUB_API['base']+repo+GITHUB_API['tags'])
-    regex = '^\d{1,4}(\.\d+)*$' # Only digits and dots (avoid Date-based tags)
+    regex = '^[v]?\d{1,4}(\.\d+)*$' # Only digits and dots (avoid Date-based tags)
     results = r.json()
 
     if r.status_code != 200:
@@ -95,7 +95,7 @@ def get_latest_github_tag_no_browser_download(repo):
         return {
             'url': data[index]['tarball_url'],
             'version': latest_version
-        }    
+        }
 
 def check_if_docker_image_exists_local(docker_image):
     client = docker.from_env()
@@ -126,7 +126,7 @@ def check_if_container_runs(docker_image, version, tests):
     log('Executing tests for container{docker_image}:{version}'.format(docker_image=docker_image, version=version))
     for test in tests:
         client.containers.run('{docker_image}:{version}'.format(docker_image=docker_image, version=version), test, detach=False)
-    
+
 
 def get_list_tools():
     return [f for f in listdir('tools') if not isfile(join('tools', f)) and f != '__pycache__']
