@@ -4,7 +4,7 @@ import docker
 import os
 import sys
 from tools.main import get_tools, get_single_tool, list_tools
-from helper import log, logErr, check_if_docker_image_exists, get_latest_docker_hub_version, check_if_container_runs
+from helper import log, logErr, check_if_docker_image_exists, get_latest_docker_hub_version, check_if_container_runs, check_if_readme_is_set
 
 # Default vars
 DEFAULT_TOOL_DIR = os.path.dirname(os.path.abspath(__file__))+"/tools/"
@@ -15,6 +15,7 @@ group = parser.add_mutually_exclusive_group(required=True)
 group.add_argument("--all", help="Build all tools", action='store_true')
 group.add_argument("--single", help="Run a single tool build", type=str)
 group.add_argument("--list", help="List all tools", action='store_true')
+group.add_argument("--readme", help="Check if every Image has a description on the Docker Hub", action='store_true')
 parser.add_argument("--push", help="Whether automatically push the new images to the Docker Hub (default=false)", action='store_true')
 parser.add_argument("--remote", help="Whether check against Docker Hub instead of local Docker before build (default=false)", action='store_true')
 parser.add_argument("--force", help="Build the image no matter what (even if the same tag already exists)", action='store_true')
@@ -89,6 +90,15 @@ def push(repo, version):
             client.images.push(repository=repo, tag="latest")
         log("Image successfully pushed")
 
+def check_readme():
+    # Build tools
+    tools = get_tools()
+    log("Getting tools...")
+    for tool in tools:
+        readme_set = check_if_readme_is_set(tool['name'])
+        if not readme_set:
+            log("Missing README for Docker Image {image}".format(image=tool['name']))
+
 def main():
     sexy_intro()
     args = parser.parse_args()
@@ -104,6 +114,9 @@ def main():
         # Build a specific Docker Image
         elif args.single:
             build_one(args)
+        # Check READMEs on Docker Hub
+        elif args.readme:
+            check_readme()
         else:
             parser.print_help()
     except Exception as e:
