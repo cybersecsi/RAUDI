@@ -9,6 +9,8 @@ def get_config(organization, common_args):
         'name': organization+'/puredns',
         'version': api_results['GITHUB_INFO']['version'][1:], # Remove the leading 'v'
         'buildargs': {
+            'DOWNLOAD_URL': api_results['GITHUB_INFO']['url'],
+            'GOLANG_ALPINE_VERSION' : common_args['GOLANG_ALPINE_VERSION']
         },
         'tests': ['-h']
     }
