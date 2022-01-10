@@ -34,14 +34,18 @@ def get_highest_version_number(version_numbers):
     return version_numbers[-1]
 
 def get_latest_docker_hub_version(docker_image, org="library/"):
-    r = requests.get(DOCKER_API['base']+org+docker_image+DOCKER_API['tags'])
-    results = r.json()['results']
-    regex = '^\d{1,4}(\.\d+)*$' # Only digits and dots (avoid Date-based tags)
-    tags_with_version_number = [result["name"] for result in results if re.match(regex, result["name"])]
-    if len(tags_with_version_number) > 0:
-        return get_highest_version_number(tags_with_version_number)
-    else:
-        return 'latest'
+    try:
+        r = requests.get(DOCKER_API['base']+org+docker_image+DOCKER_API['tags'])
+        results = r.json()['results']
+        regex = '^\d{1,4}(\.\d+)*$' # Only digits and dots (avoid Date-based tags)
+        tags_with_version_number = [result["name"] for result in results if re.match(regex, result["name"])]
+        if len(tags_with_version_number) > 0:
+            return get_highest_version_number(tags_with_version_number)
+        else:
+          return 'latest'
+    except requests.exceptions.RequestException as e:
+        logErr('Error while retriving info from Docker Hub.')
+        raise exit(-1)
 
 def get_latest_pip_version(package):
     r = requests.get(PYPI_API['base']+package+PYPI_API['json'])
