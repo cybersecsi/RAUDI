@@ -127,6 +127,10 @@ def check_if_container_runs(docker_image, version, tests):
     for test in tests:
         client.containers.run('{docker_image}:{version}'.format(docker_image=docker_image, version=version), test, detach=False)
 
+def check_if_readme_is_set(docker_image):
+    r = requests.get(DOCKER_API['base']+docker_image)
+    data = r.json()
+    return data['full_description'] != None
 
 def get_list_tools():
     return [f for f in listdir('tools') if not isfile(join('tools', f)) and f != '__pycache__']
