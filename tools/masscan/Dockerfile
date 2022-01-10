@@ -7,7 +7,6 @@ FROM alpine:$LATEST_ALPINE_VERSION
 ARG MASSCAN_DOWNLOAD_URL
 
 # Content
-RUN mkdir masscan
 WORKDIR /masscan
 ADD $MASSCAN_DOWNLOAD_URL masscan.tar.gz
 RUN apk --no-cache add \

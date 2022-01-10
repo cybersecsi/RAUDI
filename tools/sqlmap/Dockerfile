@@ -7,7 +7,6 @@ FROM python:$PYTHON_ALPINE_VERSION
 ARG SQLMAP_DOWNLOAD_URL
 
 # Content
-RUN mkdir sqlmap
 WORKDIR /sqlmap
 ADD $SQLMAP_DOWNLOAD_URL sqlmap.tar.gz
 RUN tar -xvf sqlmap.tar.gz -C /sqlmap --strip-components=1

@@ -7,7 +7,6 @@ FROM python:$PYTHON_ALPINE_VERSION
 ARG DIRSEARCH_DOWNLOAD_URL
 
 # Content
-RUN mkdir dirsearch
 WORKDIR /dirsearch
 ADD $DIRSEARCH_DOWNLOAD_URL dirsearch.tar.gz
 RUN apk --no-cache --virtual .build-deps add \

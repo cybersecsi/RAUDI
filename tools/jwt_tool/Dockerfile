@@ -7,7 +7,6 @@ FROM python:$PYTHON_ALPINE_VERSION
 ARG JWT_TOOL_DOWNLOAD_URL
 
 # Content
-RUN mkdir jwt_tool
 WORKDIR /jwt_tool
 ADD $JWT_TOOL_DOWNLOAD_URL jwt_tool.tar.gz
 RUN apk --no-cache --virtual .build-deps add \

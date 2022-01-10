@@ -6,7 +6,6 @@ FROM python:$PYTHON_ALPINE_VERSION
 ARG THEHARVESTER_DOWNLOAD_URL
 
 # Content
-RUN mkdir /theharvester
 WORKDIR /theharvester
 ADD $THEHARVESTER_DOWNLOAD_URL theharvester.tar.gz
 RUN apk --no-cache add \

@@ -7,7 +7,6 @@ FROM alpine:$LATEST_ALPINE_VERSION
 ARG DOWNLOAD_URL
 
 # Content
-RUN mkdir /code
 WORKDIR /code
 ADD $DOWNLOAD_URL code.tar.gz
 RUN apk --no-cache add \ 
