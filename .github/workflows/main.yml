@@ -47,4 +47,19 @@ jobs:
 
       # Run
       - name: Run my script
-        run: python $PWD/raudi.py --all --push --remote
+        run: |
+          python $PWD/raudi.py --all --push --remote >> /tmp/log.txt
+          chmod +x $PWD/.github/workflows/autocommit.sh && $PWD/.github/workflows/autocommit.sh
+      
+      - name: Get current date
+        id: date
+        run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
+      
+      - name: autocommit
+        id: "auto-commit-action"
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_user_name: RAUDI 
+          commit_user_email: info@secsi.io 
+          commit_author: RAUDI <info@secsi.io>
+          commit_message: Update Docker Images (${{ steps.date.outputs.date }})
