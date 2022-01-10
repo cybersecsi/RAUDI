@@ -1,4 +1,4 @@
-# Fierce
+# VIM
 
 ## Official Documentation
 Reference: https://github.com/vim/vim
