@@ -19,6 +19,7 @@ NPM_REGISTRY_API = {
 }
 GITHUB_API = {
     'base': "https://api.github.com/repos/",
+    'commits': "/commits",
     'latest_release': "/releases/latest",
     'tags': "/tags"
 }
@@ -96,6 +97,18 @@ def get_latest_github_tag_no_browser_download(repo):
             'url': data[index]['tarball_url'],
             'version': latest_version
         }
+
+def get_latest_github_commit(repo):
+    r = requests.get(GITHUB_API['base']+repo+GITHUB_API['commits'])
+    results = r.json()
+
+    if r.status_code != 200:
+        # TODO Check that an error always return message val
+        raise ConnectionError(data['message'])
+    
+    data = results[0]['commit']['author']['date'][:10] # YYYY-MM-DD
+    latest_commit_date = ''.join(data.split('-'))
+    return latest_commit_date
 
 def check_if_docker_image_exists_local(docker_image):
     client = docker.from_env()
