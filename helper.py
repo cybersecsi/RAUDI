@@ -35,10 +35,10 @@ def get_highest_version_number(version_numbers):
     version_numbers.sort(key=lambda s: list(map(int, s.strip('v').split('.'))))
     return version_numbers[-1]
 
-def get_latest_docker_hub_version(docker_image, org="library/"):
+def get_latest_docker_hub_version(docker_image, org="library/", avoid_date=False):
     r = requests.get(DOCKER_API['base']+org+docker_image+DOCKER_API['tags'])
     results = r.json()['results']
-    regex = '^\d+(\.\d+)*$' # Only digits and dots (avoid Date-based tags)
+    regex = '^[v]?\d+(\.\d+)*$' if avoid_date == False else '^[v]?\d{1,4}(\.\d+)*$' # Only digits and dots (avoid Date-based tags)
     tags_with_version_number = [result["name"] for result in results if re.match(regex, result["name"])]
     if len(tags_with_version_number) > 0:
         return get_highest_version_number(tags_with_version_number)

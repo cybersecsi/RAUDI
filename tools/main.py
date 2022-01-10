@@ -7,8 +7,8 @@ tools = [importlib.import_module(module) for module in helper.get_config_names()
 organization = 'secsi'
 
 common_args = {
-    'LATEST_UBUNTU_VERSION': helper.get_latest_docker_hub_version('ubuntu'),
-    'LATEST_ALPINE_VERSION': helper.get_latest_docker_hub_version('alpine'),
+    'LATEST_UBUNTU_VERSION': helper.get_latest_docker_hub_version('ubuntu', avoid_date=True),
+    'LATEST_ALPINE_VERSION': helper.get_latest_docker_hub_version('alpine', avoid_date=True),
     'GOLANG_ALPINE_VERSION': 'alpine',
     'DEBIAN_SLIM_VERSION': '11-slim', # Future LTS
     'NODE_ALPINE_VERSION': '16-alpine', # LTS
