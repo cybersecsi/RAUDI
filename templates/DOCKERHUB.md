@@ -1,13 +1,13 @@
 # TOOL NAME
 
 ## Official Documentation
-Reference: add here the link to the official documentation
+Reference: add here the link to the official documentation.
 
 ## Description
-Add here the description of the specific tool
+Add here the description of the specific tool.
 
 ## Usage
-Add here the usage of the specific tool
+Add here the usage of the specific tool.
 
 ## 🐳 RAUDI: Regularly and Automatically Updated Docker Images
 
