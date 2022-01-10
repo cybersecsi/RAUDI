@@ -85,7 +85,7 @@ def get_latest_github_tag_no_browser_download(repo):
 
     if r.status_code != 200:
         # TODO Check that an error always return message val
-        raise ConnectionError(data['message'])
+        raise ConnectionError(results['message'])
 
     data = [result for result in results if re.match(regex, result['name'])]
     versions = [d["name"] for d in data]
@@ -123,7 +123,7 @@ def check_if_docker_image_exists(docker_image, remote_src):
 
 def check_if_container_runs(docker_image, version, tests):
     client = docker.from_env()
-    log('Executing tests for container{docker_image}:{version}'.format(docker_image=docker_image, version=version))
+    log('Executing tests for container {docker_image}:{version}'.format(docker_image=docker_image, version=version))
     for test in tests:
         client.containers.run('{docker_image}:{version}'.format(docker_image=docker_image, version=version), test, detach=False)
 
