@@ -1,10 +1,12 @@
 import argparse
 from art import text2art
 import docker
+import questionary
 import os
 import sys
 from tools.main import get_tools, get_single_tool, list_tools
-from helper import log, logErr, check_if_docker_image_exists, get_latest_docker_hub_version, check_if_container_runs, check_if_readme_is_set
+from helper import log, logErr
+import helper
 
 # Default vars
 DEFAULT_TOOL_DIR = os.path.dirname(os.path.abspath(__file__))+"/tools/"
@@ -15,6 +17,7 @@ group = parser.add_mutually_exclusive_group(required=True)
 group.add_argument("--all", help="Build all tools", action='store_true')
 group.add_argument("--single", help="Run a single tool build", type=str)
 group.add_argument("--list", help="List all tools", action='store_true')
+group.add_argument("--bootstrap", help="Add a new tool", type=str)
 group.add_argument("--readme", help="Check if every Image has a description on the Docker Hub", action='store_true')
 parser.add_argument("--push", help="Whether automatically push the new images to the Docker Hub (default=false)", action='store_true')
 parser.add_argument("--remote", help="Whether check against Docker Hub instead of local Docker before build (default=false)", action='store_true')
@@ -33,7 +36,7 @@ def build(tool_name, config, args, tests):
     force_build = args.force
     dirname = DEFAULT_TOOL_DIR + tool_name
     
-    image_exists = check_if_docker_image_exists("{name}:{tag}".format(name=config['name'], tag=config['version']), remote_src)
+    image_exists = helper.check_if_docker_image_exists("{name}:{tag}".format(name=config['name'], tag=config['version']), remote_src)
     if image_exists == False or force_build == True:
         log("Building {docker_image}...".format(docker_image="{name}:{tag}".format(name=config['name'], tag=config['version'])))
         client = docker.from_env()
@@ -47,7 +50,7 @@ def build(tool_name, config, args, tests):
     # Pushing, if specified
     if push_image:
         try:
-            check_if_container_runs(config['name'], config['version'], tests)
+            helper.check_if_container_runs(config['name'], config['version'], tests)
             push(config['name'], config['version'])
         except docker.errors.ContainerError as e:
             logErr(e)
@@ -78,7 +81,7 @@ def build_all(args):
         build(tool_name, tool, args, tool['tests'])
 
 def push(repo, version):
-    docker_hub_version = get_latest_docker_hub_version(repo, org="")
+    docker_hub_version =  helper.get_latest_docker_hub_version(repo, org="")
     log("Docker Hub version is {version}".format(version=docker_hub_version))
     if version == docker_hub_version:
         log("Current version on the Docker Hub is the same as this one, skipping push.")
@@ -90,12 +93,25 @@ def push(repo, version):
             client.images.push(repository=repo, tag="latest")
         log("Image successfully pushed")
 
+def bootstrap(args):
+    log("Bootstrapping new tool...")
+    new_tool_name = args.bootstrap
+    config = get_single_tool(new_tool_name)
+    if config != None:
+        logErr("Tool with this name already exists.")
+        sys.exit(-1)
+
+    template = questionary.select("What template do you want to use?", choices=helper.get_list_templates()).ask()
+    helper.create_tool_folder(new_tool_name, template)
+    log("Tool bootstrapped. You may find it at /tools/{tool_name}".format(tool_name=new_tool_name))
+
+
 def check_readme():
     # Build tools
     tools = get_tools()
     log("Getting tools...")
     for tool in tools:
-        readme_set = check_if_readme_is_set(tool['name'])
+        readme_set =  helper.check_if_readme_is_set(tool['name'])
         if not readme_set:
             log("Missing README for Docker Image {image}".format(image=tool['name']))
 
@@ -114,6 +130,8 @@ def main():
         # Build a specific Docker Image
         elif args.single:
             build_one(args)
+        elif args.bootstrap:
+            bootstrap(args)
         # Check READMEs on Docker Hub
         elif args.readme:
             check_readme()

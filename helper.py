@@ -1,6 +1,7 @@
 import requests
 import re
 import docker
+import shutil
 from os import listdir
 from os.path import isfile, join
 
@@ -150,3 +151,10 @@ def get_list_tools():
 
 def get_config_names():
     return ['tools.{}.config'.format(t) for t in get_list_tools()]
+
+def get_list_templates():
+    return [f for f in listdir('templates') if not isfile(join('templates', f)) and f != 'DOCKERHUB.md']
+
+def create_tool_folder(tool_name, template):
+    shutil.copytree('templates/'+template, 'tools/'+tool_name)
+    shutil.copy('templates/DOCKERHUB.md', 'tools/'+tool_name+'/README.md')

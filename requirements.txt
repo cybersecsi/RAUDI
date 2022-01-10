@@ -1,3 +1,4 @@
 docker>=5.0.3
 art>=5.3
 argparse==1.4.0
+questionary>=1.10.0
