@@ -15,8 +15,8 @@ group = parser.add_mutually_exclusive_group(required=True)
 group.add_argument("--all", help="Build all tools", action='store_true')
 group.add_argument("--single", help="Run a single tool build", type=str)
 group.add_argument("--list", help="List all tools", action='store_true')
-parser.add_argument("--push", help="Wheter automatically push the new images to the Docker Hub (default=false)", action='store_true')
-parser.add_argument("--remote", help="Wheter check against Docker Hub instead of local Docker before build (default=false)", action='store_true')
+parser.add_argument("--push", help="Whether automatically push the new images to the Docker Hub (default=false)", action='store_true')
+parser.add_argument("--remote", help="Whether check against Docker Hub instead of local Docker before build (default=false)", action='store_true')
 
 # Print out a Sexy intro
 def sexy_intro():
