@@ -7,7 +7,6 @@ FROM alpine:$LATEST_ALPINE_VERSION
 ARG HYDRA_DOWNLOAD_URL
 
 # Content
-RUN mkdir hydra
 WORKDIR /hydra
 ADD $HYDRA_DOWNLOAD_URL hydra.tar.gz
 RUN apk --no-cache add \

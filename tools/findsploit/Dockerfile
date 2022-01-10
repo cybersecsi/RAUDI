@@ -7,7 +7,6 @@ FROM alpine:$LATEST_ALPINE_VERSION
 ARG FINDSPLOIT_DOWNLOAD_URL
 
 # Content
-RUN mkdir findsploit
 WORKDIR /findsploit
 ADD $FINDSPLOIT_DOWNLOAD_URL findsploit.tar.gz
 RUN apk add --no-cache bash \

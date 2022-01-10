@@ -7,7 +7,6 @@ FROM python:$PYTHON2_ALPINE_VERSION
 ARG LFISUITE_DOWNLOAD_URL
 
 # Content
-RUN mkdir lfisuite
 WORKDIR /lfisuite
 ADD $LFISUITE_DOWNLOAD_URL lfisuite.tar.gz
 RUN tar -xvf lfisuite.tar.gz -C /lfisuite --strip-components=1 \

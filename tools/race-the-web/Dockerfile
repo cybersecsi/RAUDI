@@ -7,7 +7,6 @@ FROM alpine:$LATEST_ALPINE_VERSION
 ARG RACETHEWEB_DOWNLOAD_URL
 
 # Content
-RUN mkdir racetheweb
 WORKDIR /racetheweb
 ADD $RACETHEWEB_DOWNLOAD_URL /racetheweb/racetheweb
 RUN chmod u+x /racetheweb/racetheweb

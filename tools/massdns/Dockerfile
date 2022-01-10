@@ -6,7 +6,6 @@ FROM alpine:$LATEST_ALPINE_VERSION
 # Build args
 ARG MASSDNS_DOWNLOAD_URL
 
-RUN mkdir massdns
 WORKDIR /massdns
 ADD $MASSDNS_DOWNLOAD_URL massdns.tar.gz
 RUN apk --no-cache --virtual .build-deps add build-base \
