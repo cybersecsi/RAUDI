@@ -6,6 +6,7 @@ FROM alpine:$LATEST_ALPINE_VERSION
 ARG NMAP_DOWNLOAD_URL
 
 # Content
+WORKDIR /nmap
 
 # Install dependencies
 RUN apk add --update --no-cache \
@@ -16,31 +17,25 @@ RUN apk add --update --no-cache \
  && update-ca-certificates \
  && rm -rf /var/cache/apk/*
 
-# Clone nmap
-RUN git clone $NMAP_DOWNLOAD_URL
-WORKDIR /nmap
-
 # Compile and install Nmap from sources
 RUN apk add --update --no-cache --virtual .build-deps \
-        libpcap-dev libretls-dev lua-dev linux-headers \
-        autoconf g++ libtool make \
- && ./configure \
-        --prefix=/usr \
-        --sysconfdir=/etc \
-        --mandir=/usr/share/man \
-        --infodir=/usr/share/info \
-        --without-zenmap \
-        --without-nmap-update \
-        --with-openssl=/usr/lib \
-        --with-liblua=/usr/include \
- && make \
- && make install \
-    \
- && apk del .build-deps git\
- && rm -rf /var/cache/apk/* \
+       libpcap-dev libretls-dev lua-dev linux-headers \
+       autoconf g++ libtool make git \
+       && git clone $NMAP_DOWNLOAD_URL /nmap \
+       && ./configure \
+       --prefix=/usr \
+       --sysconfdir=/etc \
+       --mandir=/usr/share/man \
+       --infodir=/usr/share/info \
+       --without-zenmap \
+       --without-nmap-update \
+       --with-openssl=/usr/lib \
+       --with-liblua=/usr/include \
+       && make \
+       && make install \
+       && apk del .build-deps \
+       && rm -rf /var/cache/apk/* \
            /nmap*
 
-ENV NMAPDIR=/nmap
-
-ENTRYPOINT ["nmap"]
+ENTRYPOINT ["/usr/bin/nmap"]
 

@@ -3,7 +3,7 @@ ARG LATEST_ALPINE_VERSION
 
 FROM alpine:$LATEST_ALPINE_VERSION
 
-# Base Distro Arg
+# Build Args
 ARG HYDRA_DOWNLOAD_URL
 
 # Content

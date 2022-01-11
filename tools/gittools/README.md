@@ -24,17 +24,17 @@ Commits are not sorted by date
 
 Finder
 ```
-docker run --rm -ti -v ~/gittools:/tmp/gittools -w /tmp/gittools secsi/gittools gitfinder -i inputfile.txt -o outputfile.txt
+docker run --rm -ti -v <local_dir>:/tmp/gittools -w /tmp/gittools secsi/gittools gitfinder -i <inputfile> -o <outputfile>
 ```
 
 Dumper
 ```
-docker run --rm -ti -v ~/gittools:/tmp/gittools -w /tmp/gittools secsi/gittools gitdumper http://target.tld/.git/ .
+docker run --rm -ti -v <local_dir>:/tmp/gittools -w /tmp/gittools secsi/gittools gitdumper http://target.tld/.git/ .
 ```
 
 Extractor
 ```
-docker run --rm -ti -v ~/gittools:/tmp/gittools -w /tmp/gittools secsi/gittools extractor mygitrepo mygitrepodump
+docker run --rm -ti -v <local_dir>:/tmp/gittools -w /tmp/gittools secsi/gittools extractor <mygitrepo> <mygitrepodump>
 ```
 
 ## 🐳 RAUDI: Regularly and Automatically Updated Docker Images

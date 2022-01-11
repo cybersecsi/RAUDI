@@ -1,4 +1,4 @@
-# TOOL EyeWitness
+# EyeWitness
 
 ## Official Documentation
 Reference: https://www.christophertruncer.com/eyewitness-2-0-release-and-user-guide/
@@ -9,7 +9,7 @@ EyeWitness is designed to take screenshots of websites provide some server heade
 ## Usage
 
 ```
-docker run --rm -it -v ~/EyeWitness:/tmp/EyeWitness secsi/eyewitness --web --single http://www.google.com
+docker run --rm -it -v <local_dir>:/tmp/EyeWitness secsi/eyewitness --web --single <url>
 ```
 
 ## 🐳 RAUDI: Regularly and Automatically Updated Docker Images

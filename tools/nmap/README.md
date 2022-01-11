@@ -7,8 +7,14 @@ Reference: https://nmap.org/docs.html
 Nmap (“Network Mapper”) is an open source tool for network exploration and security auditing. It was designed to rapidly scan large networks, although it works fine against single hosts. Nmap uses raw IP packets in novel ways to determine what hosts are available on the network, what services (application name and version) those hosts are offering, what operating systems (and OS versions) they are running, what type of packet filters/firewalls are in use, and dozens of other characteristics
 ## Usage
 ```
-docker run --rm --privileged -ti secsi/nmap -p 22 127.0.0.1
+docker run -it --rm secsi/nmap -p <port_number> <ip_address>
 ```
+
+For some commands you may need to add the ``privileged`` option:
+```
+docker run -it --rm --privileged secsi/nmap -p <port_number> <ip_address>
+```
+
 ## 🐳 RAUDI: Regularly and Automatically Updated Docker Images
 
 Hello, friend. This Docker Image has been created by RAUDI. What is RAUDI?
