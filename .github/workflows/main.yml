@@ -59,7 +59,7 @@ jobs:
         id: "auto-commit-action"
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          commit_user_name: RAUDI 
+          commit_user_name: cybersecsi 
           commit_user_email: info@secsi.io 
-          commit_author: RAUDI <info@secsi.io>
-          commit_message: Update Docker Images (${{ steps.date.outputs.date }})
+          commit_author: cybersecsi <info@secsi.io>
+          commit_message: Automatic Update Docker Images (${{ steps.date.outputs.date }})
