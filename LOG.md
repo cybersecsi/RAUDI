@@ -10,9 +10,7 @@
 - secsi/nikto updated to version 20211231
 - secsi/retire updated to version 3.0.6
 - secsi/vim updated to version 8.2.4065
-- secsi/impacket updated to version 0_9_24
 
 ### [2022-01-13]
 - secsi/dorks-eye updated to version 20220108
 - secsi/vim updated to version 8.2.4072
-- secsi/impacket updated to version 0_9_24
