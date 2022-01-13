@@ -1,6 +1,6 @@
 import requests
 import re
-import docker
+from python_on_whales import docker
 import shutil
 from os import listdir
 from os.path import isfile, join
@@ -106,18 +106,13 @@ def get_latest_github_commit(repo):
     if r.status_code != 200:
         # TODO Check that an error always return message val
         raise ConnectionError(data['message'])
-    
+
     data = results[0]['commit']['author']['date'][:10] # YYYY-MM-DD
     latest_commit_date = ''.join(data.split('-'))
     return latest_commit_date
 
 def check_if_docker_image_exists_local(docker_image):
-    client = docker.from_env()
-    try:
-        res = client.images.get(docker_image)
-        return True
-    except docker.errors.ImageNotFound:
-        return False
+    return docker.image.exists(docker_image)
 
 def check_if_docker_image_exists_remote(docker_image_with_version):
     docker_image = docker_image_with_version.split(':')
@@ -136,10 +131,11 @@ def check_if_docker_image_exists(docker_image, remote_src):
         return check_if_docker_image_exists_remote(docker_image)
 
 def check_if_container_runs(docker_image, version, tests):
-    client = docker.from_env()
     log('Executing tests for container {docker_image}:{version}'.format(docker_image=docker_image, version=version))
     for test in tests:
-        client.containers.run('{docker_image}:{version}'.format(docker_image=docker_image, version=version), test, detach=False)
+        # docker.run() will try to pull the image if it doesn't exist
+        # `command` should be a list of string(s) - e.g. ['ls'] or ['ls', '-l']
+        docker.run('{docker_image}:{version}'.format(docker_image=docker_image, version=version), command=[test], detach=False)
 
 def check_if_readme_is_set(docker_image):
     r = requests.get(DOCKER_API['base']+docker_image)
