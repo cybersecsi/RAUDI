@@ -1,6 +1,6 @@
 import argparse
 from art import text2art
-import docker
+from python_on_whales import docker, DockerException
 import questionary
 import os
 import sys
@@ -26,7 +26,7 @@ parser.add_argument("--force", help="Build the image no matter what (even if the
 # Print out a Sexy intro
 def sexy_intro():
     secsi_art=text2art("SecSI",font='big')
-    print() 
+    print()
     print(secsi_art)
 
 def build(tool_name, config, args, tests):
@@ -35,15 +35,14 @@ def build(tool_name, config, args, tests):
     remote_src = args.remote
     force_build = args.force
     dirname = DEFAULT_TOOL_DIR + tool_name
-    
+
     image_exists = helper.check_if_docker_image_exists("{name}:{tag}".format(name=config['name'], tag=config['version']), remote_src)
     if image_exists == False or force_build == True:
         log("Building {docker_image}...".format(docker_image="{name}:{tag}".format(name=config['name'], tag=config['version'])))
-        client = docker.from_env()
-        client.images.build(buildargs=config['buildargs'], path=dirname, tag="{name}:{tag}".format(name=config['name'], tag=config['version']), rm=True)
-        # Get the Docker Image to tag it also as latest
-        docker_image = client.images.get("{name}:{tag}".format(name=config['name'], tag=config['version']))
-        docker_image.tag(repository=config['name'], tag="latest") # Also tag as latest
+        # Build image with version tag
+        docker.buildx.build(dirname, build_args=config['buildargs'], tags="{name}:{tag}".format(name=config['name'], tag=config['version']))
+        # Tag image as 'latest'
+        docker.tag("{name}:{tag}".format(name=config['name'], tag=config['version']), "{name}:{tag}".format(name=config['name'], tag='latest'))
     else:
         log("This version already exists, skipping build.")
 
@@ -52,7 +51,7 @@ def build(tool_name, config, args, tests):
         try:
             helper.check_if_container_runs(config['name'], config['version'], tests)
             push(config['name'], config['version'])
-        except docker.errors.ContainerError as e:
+        except DockerException as e:
             logErr(e)
             logErr("Error running container, push aborted for {docker}:{version}.".format(docker=config['name'], version=config['version']))
 
@@ -87,10 +86,9 @@ def push(repo, version):
         log("Current version on the Docker Hub is the same as this one, skipping push.")
     else:
         log("Pushing image on Docker Hub...")
-        client = docker.from_env()
-        client.images.push(repository=repo, tag=version)
+        docker.image.push("{name}:{tag}".format(name=repo, tag=version))
         if version != "latest":
-            client.images.push(repository=repo, tag="latest")
+            docker.image.push("{name}:{tag}".format(name=repo, tag='latest'))
         log("Image successfully pushed")
 
 def bootstrap(args):
