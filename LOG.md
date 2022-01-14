@@ -14,3 +14,8 @@
 ### [2022-01-13]
 - secsi/dorks-eye updated to version 20220108
 - secsi/vim updated to version 8.2.4072
+
+### [2022-01-14]
+- secsi/impacket updated to version 0.9.24
+- secsi/nmap updated to version 20220113
+- secsi/vim updated to version 8.2.4087
