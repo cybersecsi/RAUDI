@@ -1,14 +1,3 @@
-# TOOL NAME
-
-## Official Documentation
-Reference: add here the link to the official documentation.
-
-## Description
-Add here the description of the specific tool.
-
-## Usage
-Add here the usage of the specific tool.
-
 ## 🐳 RAUDI: Regularly and Automatically Updated Docker Images
 
 Hello, friend. This Docker Image has been created by RAUDI. What is RAUDI?
