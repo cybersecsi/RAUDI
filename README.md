@@ -14,6 +14,7 @@
   - [Tool Structure](#tool-structure)
   - [Helpers](#helpers)
   - [Examples](#examples)
+  - [How to Pronounce](#how-to-pronounce)
   - [Contributions](#contributions)
   - [Credits](#credits)
   - [License](#license)
@@ -214,6 +215,13 @@ docker run -it --rm secsi/<tool> <command>
 ```
 docker run -it --rm -v <wordlist_src_dir>:<wordlist_container_dir> secsi/dirb <url> <wordlist_container_dir>/<wordlist_file>
 ```
+
+## How to pronounce
+We are **italians**, so we probably pronounce it in a different manner than yours. The correct pronunciation (using the **phonetic transcription**) is the following:
+```
+/ˈraʊdi/
+```
+Otherwise think about the stuffed dog in the famous TV Show *Scrubs*: [Rowdy](https://tinyurl.com/raudi-pronunciation)
 
 ## Contributions
 Everyone is invited to contribute!
