@@ -135,6 +135,7 @@ This is the current list of tools that have been added. Those are all tools that
 | MassDNS                    | secsi/massdns        | https://github.com/blechschmidt/massdns          |
 | nikto                      | secsi/nikto          | https://github.com/sullo/nikto                   |
 | nmap                       | secsi/nmap           | https://github.com/nmap/nmap                     |
+| oxml_xxe                   | secsi/oxml_xxe       | https://github.com/BuffaloWill/oxml_xxe          |
 | psalm                      | secsi/psalm          | https://github.com/vimeo/psalm                   |
 | pureDNS                    | secsi/puredns        | https://github.com/d3mondev/puredns              |
 | Race The Web               | secsi/race-the-web   | https://github.com/TheHackerDev/race-the-web     |
@@ -147,6 +148,7 @@ This is the current list of tools that have been added. Those are all tools that
 | vim                        | secsi/vim            | https://github.com/vim/vim                       |
 | waybackpy                  | secsi/waybackpy      | https://github.com/akamhy/waybackpy              |
 | WhatWeb                    | secsi/whatweb        | https://github.com/urbanadventurer/WhatWeb       |
+| XXEinjector                | secsi/xxeinjector    | https://github.com/enjoiz/XXEinjector            |
 
 ## Tool Structure
 Every tool in the tools directory contains **at least** two file:
