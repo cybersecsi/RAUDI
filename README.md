@@ -127,6 +127,7 @@ This is the current list of tools that have been added. Those are all tools that
 | MassDNS                    | secsi/massdns        | https://github.com/blechschmidt/massdns          |
 | nikto                      | secsi/nikto          | https://github.com/sullo/nikto                   |
 | nmap                       | secsi/nmap           | https://github.com/nmap/nmap                     |
+| psalm                      | secsi/psalm          | https://github.com/vimeo/psalm                   |
 | pureDNS                    | secsi/puredns        | https://github.com/d3mondev/puredns              |
 | Race The Web               | secsi/race-the-web   | https://github.com/TheHackerDev/race-the-web     |
 | RestfulHarvest             | secsi/restfulharvest | https://github.com/laramies/theHarvester         |
