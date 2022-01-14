@@ -9,6 +9,7 @@
   - [What is RAUDI](#what-is-raudi)
   - [Fork](#fork)
   - [Setup](#setup)
+  - [Test](#test)
   - [Local Usage](#local-usage)
   - [Available Tools](#available-tools)
   - [Tool Structure](#tool-structure)
@@ -51,15 +52,13 @@ pip install -r requirements.txt
 ```
 
 You're ready to go!
-## Testing   
+
+## Test
+To run the test you need to install ``pytest`` with the command ``pip install pytest`` (it is not in ``requirements.txt`` since it is needed only for testing purposes) and then you may run:
 ```
 pytest -s 
 ```  
-To run the tests.   
-
-
-
-
+to run the tests.   
 
 ## Local Usage
 **RAUDI** can build and push all the tools that are put into the *tools* directory. There are different options that can be used when running it.
@@ -217,7 +216,7 @@ docker run -it --rm secsi/<tool> <command>
 docker run -it --rm -v <wordlist_src_dir>:<wordlist_container_dir> secsi/dirb <url> <wordlist_container_dir>/<wordlist_file>
 ```
 
-## How to pronounce
+## How to Pronounce
 We are **italians**, so we probably pronounce it in a different manner than yours. The correct pronunciation (using the **phonetic transcription**) is the following:
 ```
 /ˈraʊdi/
