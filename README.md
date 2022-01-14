@@ -96,11 +96,13 @@ This is the current list of tools that have been added. Those are all tools that
 |----------------------------|----------------------|--------------------------------------------------|
 | Apktool                    | secsi/apktool        | https://github.com/iBotPeaches/Apktool           |
 | bfac                       | secsi/bfac           | https://github.com/mazen160/bfac                 |
+| datasploit                 | secsi/datasploit     | https://github.com/DataSploit/datasploit         |
 | dirb                       | secsi/dirb           | http://dirb.sourceforge.net/                     |
 | dirhunt                    | secsi/dirhunt        | https://github.com/Nekmo/dirhunt                 |
 | dirsearch                  | secsi/dirsearch      | https://github.com/maurosoria/dirsearch          |
 | dnscan                     | secsi/dnscan         | https://github.com/rbsec/dnscan                  |
 | Dorks Eye                  | secsi/dorks-eye      | https://github.com/rbsec/dnscan                  |
+| dvcs-ripper                | secsi/dvcs-ripper    | https://github.com/kost/dvcs-ripper              |
 | EyeWitness                 | secsi/eyewitness     | https://github.com/FortyNorthSecurity/EyeWitness |
 | ffuf                       | secsi/ffuf           | https://github.com/ffuf/ffuf                     |
 | fierce                     | secsi/fierce         | https://github.com/mschwager/fierce              |
