@@ -58,6 +58,11 @@ To run the test you need to install ``pytest`` with the command ``pip install py
 ```
 pytest -s 
 ```  
+or 
+```
+python -m pytest -s
+```
+
 to run the tests.   
 
 ## Local Usage
@@ -108,7 +113,8 @@ This is the current list of tools that have been added. Those are all tools that
 | dirhunt                    | secsi/dirhunt        | https://github.com/Nekmo/dirhunt                 |
 | dirsearch                  | secsi/dirsearch      | https://github.com/maurosoria/dirsearch          |
 | dnscan                     | secsi/dnscan         | https://github.com/rbsec/dnscan                  |
-| Dorks Eye                  | secsi/dorks-eye      | https://github.com/rbsec/dnscan                  |
+| Dorks Eye                  | secsi/dorks-eye      | https://github.com/BullsEye0/dorks-eye           |
+| dvcs-ripper                | secsi/dvcs-ripper    | https://github.com/kost/dvcs-ripper              |
 | EyeWitness                 | secsi/eyewitness     | https://github.com/FortyNorthSecurity/EyeWitness |
 | ffuf                       | secsi/ffuf           | https://github.com/ffuf/ffuf                     |
 | fierce                     | secsi/fierce         | https://github.com/mschwager/fierce              |
