@@ -35,6 +35,8 @@ class Manager(object):
             'OPENJDK8_ALPINE_VERSION': '8-alpine',  #
             'RUBY_ALPINE_VERSION': '3.1.0-alpine',
             'PHP_ALPINE_VERSION': '7.4-cli-alpine',
+            'RUBY2_ALPINE_VERSION': '2.3.8-alpine',
+
         }
 
     def init_tools(self):
