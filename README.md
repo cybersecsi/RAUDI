@@ -9,6 +9,7 @@
   - [What is RAUDI](#what-is-raudi)
   - [Fork](#fork)
   - [Setup](#setup)
+  - [Test](#test)
   - [Local Usage](#local-usage)
   - [Available Tools](#available-tools)
   - [Tool Structure](#tool-structure)
@@ -51,6 +52,18 @@ pip install -r requirements.txt
 ```
 
 You're ready to go!
+
+## Test
+To run the test you need to install ``pytest`` with the command ``pip install pytest`` (it is not in ``requirements.txt`` since it is needed only for testing purposes) and then you may run:
+```
+pytest -s 
+```  
+or 
+```
+python -m pytest -s
+```
+
+to run the tests.   
 
 ## Local Usage
 **RAUDI** can build and push all the tools that are put into the *tools* directory. There are different options that can be used when running it.
@@ -101,7 +114,7 @@ This is the current list of tools that have been added. Those are all tools that
 | dirhunt                    | secsi/dirhunt        | https://github.com/Nekmo/dirhunt                 |
 | dirsearch                  | secsi/dirsearch      | https://github.com/maurosoria/dirsearch          |
 | dnscan                     | secsi/dnscan         | https://github.com/rbsec/dnscan                  |
-| Dorks Eye                  | secsi/dorks-eye      | https://github.com/rbsec/dnscan                  |
+| Dorks Eye                  | secsi/dorks-eye      | https://github.com/BullsEye0/dorks-eye           |
 | dvcs-ripper                | secsi/dvcs-ripper    | https://github.com/kost/dvcs-ripper              |
 | EyeWitness                 | secsi/eyewitness     | https://github.com/FortyNorthSecurity/EyeWitness |
 | ffuf                       | secsi/ffuf           | https://github.com/ffuf/ffuf                     |
@@ -120,6 +133,7 @@ This is the current list of tools that have been added. Those are all tools that
 | MassDNS                    | secsi/massdns        | https://github.com/blechschmidt/massdns          |
 | nikto                      | secsi/nikto          | https://github.com/sullo/nikto                   |
 | nmap                       | secsi/nmap           | https://github.com/nmap/nmap                     |
+| psalm                      | secsi/psalm          | https://github.com/vimeo/psalm                   |
 | pureDNS                    | secsi/puredns        | https://github.com/d3mondev/puredns              |
 | Race The Web               | secsi/race-the-web   | https://github.com/TheHackerDev/race-the-web     |
 | RestfulHarvest             | secsi/restfulharvest | https://github.com/laramies/theHarvester         |
@@ -209,7 +223,7 @@ docker run -it --rm secsi/<tool> <command>
 docker run -it --rm -v <wordlist_src_dir>:<wordlist_container_dir> secsi/dirb <url> <wordlist_container_dir>/<wordlist_file>
 ```
 
-## How to pronounce
+## How to Pronounce
 We are **italians**, so we probably pronounce it in a different manner than yours. The correct pronunciation (using the **phonetic transcription**) is the following:
 ```
 /ˈraʊdi/

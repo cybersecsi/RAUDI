@@ -1,7 +1,8 @@
 import requests
 import re
-import docker
 import shutil
+from errors import Errors
+from python_on_whales import docker
 from os import listdir
 from os.path import isfile, join
 
@@ -36,7 +37,8 @@ def get_highest_version_number(version_numbers):
     return version_numbers[-1]
 
 def get_latest_docker_hub_version(docker_image, org="library/", avoid_date=False):
-    r = requests.get(DOCKER_API['base']+org+docker_image+DOCKER_API['tags'])
+    url = "{base}{org}{image}{tags}".format(base=DOCKER_API['base'], org=org, image=docker_image, tags=DOCKER_API['tags'])
+    r = requests.get(url)
     results = r.json()['results']
     regex = '^[v]?\d+(\.\d+)*$' if avoid_date == False else '^[v]?\d{1,4}(\.\d+)*$' # Only digits and dots (avoid Date-based tags)
     tags_with_version_number = [result["name"] for result in results if re.match(regex, result["name"])]
@@ -46,17 +48,20 @@ def get_latest_docker_hub_version(docker_image, org="library/", avoid_date=False
         return 'latest'
 
 def get_latest_pip_version(package):
-    r = requests.get(PYPI_API['base']+package+PYPI_API['json'])
+    url = "{base}{package}{json}".format(base=PYPI_API['base'], package=package, json=PYPI_API['json'])
+    r = requests.get(url)
     version = r.json()['info']['version']
     return version
 
 def get_latest_npm_registry_version(package):
-    r = requests.get(NPM_REGISTRY_API['base']+package+NPM_REGISTRY_API['latest_release'])
+    url = "{base}{package}{release}".format(base=NPM_REGISTRY_API['base'], package=package, release=NPM_REGISTRY_API['latest_release'])
+    r = requests.get(url)
     version = r.json()['version']
     return version
 
 def get_latest_github_release(repo, target_string):
-    r = requests.get(GITHUB_API['base']+repo+GITHUB_API['latest_release'])
+    url = "{base}{repo}{release}".format(base=GITHUB_API['base'], repo=repo, release=GITHUB_API['latest_release'])
+    r = requests.get(url)
     try:
         assets = r.json()['assets']
         for asset in assets:
@@ -69,25 +74,33 @@ def get_latest_github_release(repo, target_string):
         logErr('Error while retriving info from GitHub. Maybe Rate Limiting took place...')
 
 def get_latest_github_release_no_browser_download(repo):
-    r = requests.get(GITHUB_API['base']+repo+GITHUB_API['latest_release'])
+    try:
+        url = "{base}{repo}{release}".format(base=GITHUB_API['base'], repo=repo, release=GITHUB_API['latest_release'])
+        r = requests.get(url)
+        data = r.json()
+    except Exception as e: 
+        raise Errors.github_json()
 
-    data = r.json()
     if r.status_code != 200:
         # TODO Check that an error always return message val
-        raise ConnectionError(data['message'])
+        raise Errors.connection_error(repo, r.status_code, data['message'])
     return {
         'url': data['tarball_url'],
         'version': data['tag_name']
     }
 
 def get_latest_github_tag_no_browser_download(repo):
-    r = requests.get(GITHUB_API['base']+repo+GITHUB_API['tags'])
-    regex = '^[v]?\d{1,4}(\.\d+)*$' # Only digits and dots (avoid Date-based tags)
-    results = r.json()
+    try:
+        url = "{base}{repo}{tags}".format(base=GITHUB_API['base'], repo=repo, tags=GITHUB_API['tags'])
+        r = requests.get(url)
+        results = r.json()
+    except Exception as e: 
+        raise Errors.github_request()
 
+    regex = '^[v]?\d{1,4}(\.\d+)*$' # Only digits and dots (avoid Date-based tags)
     if r.status_code != 200:
         # TODO Check that an error always return message val
-        raise ConnectionError(results['message'])
+        raise Errors.connection_error(repo, r.status_code, results['message'])
 
     data = [result for result in results if re.match(regex, result['name'])]
     versions = [d["name"] for d in data]
@@ -100,7 +113,8 @@ def get_latest_github_tag_no_browser_download(repo):
         }
 
 def get_latest_github_commit(repo):
-    r = requests.get(GITHUB_API['base']+repo+GITHUB_API['commits'])
+    url = "{base}{repo}{commits}".format(base=GITHUB_API['base'], repo=repo, commits=GITHUB_API['commits'])
+    r = requests.get(url)
     results = r.json()
 
     if r.status_code != 200:
@@ -112,12 +126,7 @@ def get_latest_github_commit(repo):
     return latest_commit_date
 
 def check_if_docker_image_exists_local(docker_image):
-    client = docker.from_env()
-    try:
-        res = client.images.get(docker_image)
-        return True
-    except docker.errors.ImageNotFound:
-        return False
+    return docker.image.exists(docker_image)
 
 def check_if_docker_image_exists_remote(docker_image_with_version):
     docker_image = docker_image_with_version.split(':')
@@ -136,17 +145,21 @@ def check_if_docker_image_exists(docker_image, remote_src):
         return check_if_docker_image_exists_remote(docker_image)
 
 def check_if_container_runs(docker_image, version, tests):
-    client = docker.from_env()
     log('Executing tests for container {docker_image}:{version}'.format(docker_image=docker_image, version=version))
     for test in tests:
-        client.containers.run('{docker_image}:{version}'.format(docker_image=docker_image, version=version), test, detach=False)
+        # docker.run() will try to pull the image if it doesn't exist
+        # `command` should be a list of string(s) - e.g. ['ls'] or ['ls', '-l']
+        command = test.split(' ')
+        docker.run('{docker_image}:{version}'.format(docker_image=docker_image, version=version), command=command, detach=False)
 
 def check_if_readme_is_set(docker_image):
-    r = requests.get(DOCKER_API['base']+docker_image)
+    url = "{base}{image}".format(base=DOCKER_API['base'], image=docker_image)
+    r = requests.get(url)
     data = r.json()
     return data['full_description'] != None
 
 def get_list_tools():
+    """A function to get the tools based on the directory names in /tools"""
     return [f for f in listdir('tools') if not isfile(join('tools', f)) and f != '__pycache__']
 
 def get_config_names():

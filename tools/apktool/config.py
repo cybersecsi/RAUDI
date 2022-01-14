@@ -1,5 +1,4 @@
 import helper
-
 def get_config(organization, common_args):
     api_results = {
         'APKTOOL_GITHUB_INFO': helper.get_latest_github_release('iBotPeaches/Apktool', target_string='apktool'),

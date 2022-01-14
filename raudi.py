@@ -1,10 +1,10 @@
 import argparse
 from art import text2art
-import docker
+from python_on_whales import docker, DockerException
 import questionary
 import os
 import sys
-from tools.main import get_tools, get_single_tool, list_tools
+from manager import Manager
 from helper import log, logErr
 import helper
 
@@ -26,7 +26,7 @@ parser.add_argument("--force", help="Build the image no matter what (even if the
 # Print out a Sexy intro
 def sexy_intro():
     secsi_art=text2art("SecSI",font='big')
-    print() 
+    print()
     print(secsi_art)
 
 def build(tool_name, config, args, tests):
@@ -35,15 +35,14 @@ def build(tool_name, config, args, tests):
     remote_src = args.remote
     force_build = args.force
     dirname = DEFAULT_TOOL_DIR + tool_name
-    
+
     image_exists = helper.check_if_docker_image_exists("{name}:{tag}".format(name=config['name'], tag=config['version']), remote_src)
     if image_exists == False or force_build == True:
         log("Building {docker_image}...".format(docker_image="{name}:{tag}".format(name=config['name'], tag=config['version'])))
-        client = docker.from_env()
-        client.images.build(buildargs=config['buildargs'], path=dirname, tag="{name}:{tag}".format(name=config['name'], tag=config['version']), rm=True)
-        # Get the Docker Image to tag it also as latest
-        docker_image = client.images.get("{name}:{tag}".format(name=config['name'], tag=config['version']))
-        docker_image.tag(repository=config['name'], tag="latest") # Also tag as latest
+        # Build image with version tag
+        docker.buildx.build(dirname, build_args=config['buildargs'], tags="{name}:{tag}".format(name=config['name'], tag=config['version']))
+        # Tag image as 'latest'
+        docker.tag("{name}:{tag}".format(name=config['name'], tag=config['version']), "{name}:{tag}".format(name=config['name'], tag='latest'))
     else:
         log("This version already exists, skipping build.")
 
@@ -52,17 +51,20 @@ def build(tool_name, config, args, tests):
         try:
             helper.check_if_container_runs(config['name'], config['version'], tests)
             push(config['name'], config['version'])
-        except docker.errors.ContainerError as e:
+        except DockerException as e:
             logErr(e)
             logErr("Error running container, push aborted for {docker}:{version}.".format(docker=config['name'], version=config['version']))
 
 def build_one(args):
+    # Get Manager Singleton
+    manager = Manager()
+
     # Arguments
     tool_name = args.single
 
     # Build tool
     log("Checking if tool exists...")
-    config = get_single_tool(tool_name)
+    config = manager.get_single_tool(tool_name)
     if not config:
         logErr("Something is wrong, the tool does not exists!")
         sys.exit(-1)
@@ -73,8 +75,11 @@ def build_one(args):
     build(tool_name, config, args, config['tests'])
 
 def build_all(args):
+    # Get Manager Singleton
+    manager = Manager()
+
     # Build tools
-    tools = get_tools()
+    tools = manager.get_tools()
     log("Getting config for every tool...")
     for tool in tools:
         tool_name = tool['name'].split('/')[1]
@@ -87,16 +92,18 @@ def push(repo, version):
         log("Current version on the Docker Hub is the same as this one, skipping push.")
     else:
         log("Pushing image on Docker Hub...")
-        client = docker.from_env()
-        client.images.push(repository=repo, tag=version)
+        docker.image.push("{name}:{tag}".format(name=repo, tag=version))
         if version != "latest":
-            client.images.push(repository=repo, tag="latest")
+            docker.image.push("{name}:{tag}".format(name=repo, tag='latest'))
         log("Image successfully pushed")
 
 def bootstrap(args):
+    # Get Manager Singleton
+    manager = Manager()
+
     log("Bootstrapping new tool...")
     new_tool_name = args.bootstrap
-    config = get_single_tool(new_tool_name)
+    config = manager.get_single_tool(new_tool_name)
     if config != None:
         logErr("Tool with this name already exists.")
         sys.exit(-1)
@@ -108,7 +115,8 @@ def bootstrap(args):
 
 def check_readme():
     # Build tools
-    tools = get_tools()
+    manager = Manager()
+    tools = manager.get_tools()
     log("Getting tools...")
     for tool in tools:
         readme_set =  helper.check_if_readme_is_set(tool['name'])
@@ -118,12 +126,14 @@ def check_readme():
 def main():
     sexy_intro()
     args = parser.parse_args()
+    manager = Manager()
+    manager.init()
 
     try:
         # List available tools
         if args.list:
             log("Available tools")
-            log(list_tools())
+            log(manager.list_tools())
         # Build everything
         elif args.all:
             build_all(args)
