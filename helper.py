@@ -4,7 +4,6 @@ import docker
 import shutil
 from os import listdir
 from os.path import isfile, join
-import json
 
 # Global vars
 DOCKER_API = {
@@ -106,8 +105,7 @@ def get_latest_github_commit(repo):
 
     if r.status_code != 200:
         # TODO Check that an error always return message val
-        msg = json.loads(r.text)['message']
-        raise ConnectionError(msg)
+        raise ConnectionError(results['message'])
     
     data = results[0]['commit']['author']['date'][:10] # YYYY-MM-DD
     latest_commit_date = ''.join(data.split('-'))
