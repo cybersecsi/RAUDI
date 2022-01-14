@@ -50,6 +50,15 @@ pip install -r requirements.txt
 ```
 
 You're ready to go!
+## Testing   
+```
+pytest -s 
+```  
+To run the tests.   
+
+
+
+
 
 ## Local Usage
 **RAUDI** can build and push all the tools that are put into the *tools* directory. There are different options that can be used when running it.

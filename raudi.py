@@ -4,7 +4,7 @@ from python_on_whales import docker, DockerException
 import questionary
 import os
 import sys
-from tools.main import get_tools, get_single_tool, list_tools
+from tools.main import get_tools, get_single_tool, list_tools, init
 from helper import log, logErr
 import helper
 
@@ -116,6 +116,7 @@ def check_readme():
 def main():
     sexy_intro()
     args = parser.parse_args()
+    init()
 
     try:
         # List available tools

@@ -5,6 +5,14 @@ import shutil
 from os import listdir
 from os.path import isfile, join
 
+
+class Errors: 
+    def github_request():
+        return Exception("[-] ERROR In get_latest_github_tag_no_browser_download: request and parsing json failed.")
+
+    def connection_error(repo, status_code, message):
+        return ConnectionError("repo: \"{}\" status_code: {} error: {}".format(repo, status_code, message))
+
 # Global vars
 DOCKER_API = {
     'base': "https://hub.docker.com/v2/repositories/",
@@ -69,25 +77,32 @@ def get_latest_github_release(repo, target_string):
         logErr('Error while retriving info from GitHub. Maybe Rate Limiting took place...')
 
 def get_latest_github_release_no_browser_download(repo):
-    r = requests.get(GITHUB_API['base']+repo+GITHUB_API['latest_release'])
+    try:
+        r = requests.get(GITHUB_API['base']+repo+GITHUB_API['latest_release'])
+        data = r.json()
+    except Exception as e: 
+        raise Errors.github_json()
 
-    data = r.json()
     if r.status_code != 200:
         # TODO Check that an error always return message val
-        raise ConnectionError(data['message'])
+        raise Errors.connection_error(repo, r.status_code, data['message'])
     return {
         'url': data['tarball_url'],
         'version': data['tag_name']
     }
 
 def get_latest_github_tag_no_browser_download(repo):
-    r = requests.get(GITHUB_API['base']+repo+GITHUB_API['tags'])
-    regex = '^[v]?\d{1,4}(\.\d+)*$' # Only digits and dots (avoid Date-based tags)
-    results = r.json()
+    try:
+        url = GITHUB_API['base']+repo+GITHUB_API['tags']
+        r = requests.get(url)
+        results = r.json()
+    except Exception as e: 
+        raise Errors.github_request()
 
+    regex = '^[v]?\d{1,4}(\.\d+)*$' # Only digits and dots (avoid Date-based tags)
     if r.status_code != 200:
         # TODO Check that an error always return message val
-        raise ConnectionError(results['message'])
+        raise Errors.connection_error(repo, r.status_code, results['message'])
 
     data = [result for result in results if re.match(regex, result['name'])]
     versions = [d["name"] for d in data]
