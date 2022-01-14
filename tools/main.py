@@ -27,6 +27,8 @@ def init():
         'PYTHON2_ALPINE_VERSION': '2.7.18-alpine', # Only used for tools not compatible with Python3
         'OPENJDK_ALPINE_VERSION': '17-alpine', # LTS
         'RUBY_ALPINE_VERSION': '3.1.0-alpine',
+        'PHP_ALPINE_VERSION': '7.4-cli-alpine'
+
     }
 
 def _tool_name(t, depth = 1):
