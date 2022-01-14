@@ -110,6 +110,7 @@ This is the current list of tools that have been added. Those are all tools that
 | Apktool                    | secsi/apktool        | https://github.com/iBotPeaches/Apktool           |
 | bfac                       | secsi/bfac           | https://github.com/mazen160/bfac                 |
 | datasploit                 | secsi/datasploit     | https://github.com/DataSploit/datasploit         |
+| dex2jar                    | secsi/dex2jar        | https://github.com/pxb1988/dex2jar               |
 | dirb                       | secsi/dirb           | http://dirb.sourceforge.net/                     |
 | dirhunt                    | secsi/dirhunt        | https://github.com/Nekmo/dirhunt                 |
 | dirsearch                  | secsi/dirsearch      | https://github.com/maurosoria/dirsearch          |
