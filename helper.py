@@ -4,6 +4,7 @@ import shutil
 from python_on_whales import docker
 from os import listdir
 from os.path import isfile, join
+import json
 
 class Errors: 
     def github_request():
@@ -125,8 +126,9 @@ def get_latest_github_commit(repo):
 
     if r.status_code != 200:
         # TODO Check that an error always return message val
-        raise ConnectionError
-
+        msg = json.loads(r.text)['message']
+        raise ConnectionError(msg)
+    
     data = results[0]['commit']['author']['date'][:10] # YYYY-MM-DD
     latest_commit_date = ''.join(data.split('-'))
     return latest_commit_date
