@@ -44,8 +44,7 @@ def get_env(NAME):
     r = getenv(NAME)
     if not r: 
         # TODO: Alert the user that the variable is unset.
-        return 'raudi'
-        #raise NotImplementedError('{} Environment Variable not found'.format(NAME))
+        raise NotImplementedError('{} Environment Variable not found'.format(NAME))
     return r
 
 def get_highest_version_number(version_numbers):
@@ -75,12 +74,18 @@ def get_latest_npm_registry_version(package):
     version = r.json()['version']
     return version
 
+def get_github_headers():
+    github_token = getenv('GITHUB_TOKEN')
+    if not github_token:
+        return {}
+    else:
+        return {
+            'Authorization': "token {github_token}".format(github_token=github_token)
+        }
+
 def get_latest_github_release(repo, target_string):
     url = "{base}{repo}{release}".format(base=GITHUB_API['base'], repo=repo, release=GITHUB_API['latest_release'])
-    headers = {
-        'Authorization': "token {github_token}".format(github_token=get_env('GITHUB_PERSONAL_TOKEN'))
-    }
-    r = requests.get(url, headers=headers)
+    r = requests.get(url, headers=get_github_headers())
     try:
         assets = r.json()['assets']
         for asset in assets:
@@ -89,16 +94,15 @@ def get_latest_github_release(repo, target_string):
                     'url': asset['browser_download_url'],
                     'version': r.json()['tag_name']
                 }
-    except:
-        logErr('Error while retriving info from GitHub. Maybe Rate Limiting took place...')
+    except KeyError as e:
+        raise Exception('Key {key} not found'.format(key=e))
+    except Exception as e:
+        raise Exception(e)
 
 def get_latest_github_release_no_browser_download(repo):
     try:
         url = "{base}{repo}{release}".format(base=GITHUB_API['base'], repo=repo, release=GITHUB_API['latest_release'])
-        headers = {
-            'Authorization': "token {github_token}".format(github_token=get_env('GITHUB_PERSONAL_TOKEN'))
-        }
-        r = requests.get(url, headers=headers)
+        r = requests.get(url, headers=get_github_headers())
         data = r.json()
     except Exception as e: 
         raise Errors.github_json()
@@ -114,10 +118,7 @@ def get_latest_github_release_no_browser_download(repo):
 def get_latest_github_tag_no_browser_download(repo):
     try:
         url = "{base}{repo}{tags}".format(base=GITHUB_API['base'], repo=repo, tags=GITHUB_API['tags'])
-        headers = {
-            'Authorization': "token {github_token}".format(github_token=get_env('GITHUB_PERSONAL_TOKEN'))
-        }
-        r = requests.get(url, headers=headers)
+        r = requests.get(url, headers=get_github_headers())
         results = r.json()
     except Exception as e: 
         raise Errors.github_request()
@@ -139,10 +140,7 @@ def get_latest_github_tag_no_browser_download(repo):
 
 def get_latest_github_commit(repo):
     url = "{base}{repo}{commits}".format(base=GITHUB_API['base'], repo=repo, commits=GITHUB_API['commits'])
-    headers = {
-        'Authorization': "token {github_token}".format(github_token=get_env('GITHUB_PERSONAL_TOKEN'))
-    }
-    r = requests.get(url, headers=headers)
+    r = requests.get(url, headers=get_github_headers())
     results = r.json()
 
     if r.status_code != 200:
