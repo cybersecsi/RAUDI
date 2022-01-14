@@ -32,6 +32,7 @@ class Manager(object):
             'PYTHON_ALPINE_VERSION': '3.9.9-alpine',
             'PYTHON2_ALPINE_VERSION': '2.7.18-alpine', # Only used for tools not compatible with Python3
             'OPENJDK_ALPINE_VERSION': '17-alpine', # LTS
+            'OPENJDK8_ALPINE_VERSION': '8-alpine',  #
             'RUBY_ALPINE_VERSION': '3.1.0-alpine',
             'PHP_ALPINE_VERSION': '7.4-cli-alpine',
         }
