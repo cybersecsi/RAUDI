@@ -1,14 +1,16 @@
+import pytest
 from unittest.mock import patch
 from unittest.mock import MagicMock
+# Import Helper functions
 from helper import *
-from tools.main import get_tools, get_single_tool, list_tools
-from tools import main
+# Import Manager Singleton
+from manager import Manager
+# Import for specific tools
+from test.tools.raudi import config as raudi
+from test.tools.dsp import config as dsp
 
 
-import pytest
-def fake_invalid_response(url):
-    return []
-
+# Values
 good = [
   {
     "name": "v4.15.0",
@@ -36,6 +38,10 @@ not_found = {
                 "documentation_url": "https://docs.github.com/rest/reference/repos#list-repository-tags"
 }
 
+# Functions
+
+def fake_invalid_response(url):
+    return []
 
 def fake_not_found():
     return not_found
@@ -45,7 +51,9 @@ def test_github_no_json():
     with patch('requests.get', wraps=fake_invalid_response):
         with pytest.raises(Exception) as e_info:
             get_latest_github_tag_no_browser_download("vimeo/psalm")
-    
+  
+# Tests
+
 # Valid request
 @patch('requests.Response')
 @patch('requests.get')
@@ -80,13 +88,14 @@ def test_list_not_call_requests(fake_get, FakeResponse):
     # List method should not call requests
     assert fake_get.assert_not_called
 
-from test.tools.apktool import config as apktool
-from test.tools.bfac import config as bfac
 
-@patch('test.tools.apktool.config.get_config')
-@patch('test.tools.bfac.config.get_config')
+@patch('test.tools.raudi.config.get_config')
+@patch('test.tools.dsp.config.get_config')
 def test_list_not_call_requests_get_tool_name(fake_bf, fake_apk):
-  main.tools = [apktool, bfac]
-  tool = get_single_tool('bfac', 2)
+  # Manager Singleton
+  manager = Manager()
+  manager.init_common_args()
+  manager.set_tools([raudi, dsp])
+  tool = manager.get_single_tool('raudi', 2)
   fake_apk.assert_not_called()
   fake_bf.assert_called_once()

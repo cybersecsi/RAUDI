@@ -4,7 +4,7 @@ from python_on_whales import docker, DockerException
 import questionary
 import os
 import sys
-from tools.main import get_tools, get_single_tool, list_tools, init
+from manager import Manager
 from helper import log, logErr
 import helper
 
@@ -56,12 +56,15 @@ def build(tool_name, config, args, tests):
             logErr("Error running container, push aborted for {docker}:{version}.".format(docker=config['name'], version=config['version']))
 
 def build_one(args):
+    # Get Manager Singleton
+    manager = Manager()
+
     # Arguments
     tool_name = args.single
 
     # Build tool
     log("Checking if tool exists...")
-    config = get_single_tool(tool_name)
+    config = manager.get_single_tool(tool_name)
     if not config:
         logErr("Something is wrong, the tool does not exists!")
         sys.exit(-1)
@@ -72,8 +75,11 @@ def build_one(args):
     build(tool_name, config, args, config['tests'])
 
 def build_all(args):
+    # Get Manager Singleton
+    manager = Manager()
+
     # Build tools
-    tools = get_tools()
+    tools = manager.get_tools()
     log("Getting config for every tool...")
     for tool in tools:
         tool_name = tool['name'].split('/')[1]
@@ -92,9 +98,12 @@ def push(repo, version):
         log("Image successfully pushed")
 
 def bootstrap(args):
+    # Get Manager Singleton
+    manager = Manager()
+
     log("Bootstrapping new tool...")
     new_tool_name = args.bootstrap
-    config = get_single_tool(new_tool_name)
+    config = manager.get_single_tool(new_tool_name)
     if config != None:
         logErr("Tool with this name already exists.")
         sys.exit(-1)
@@ -106,7 +115,8 @@ def bootstrap(args):
 
 def check_readme():
     # Build tools
-    tools = get_tools()
+    manager = Manager()
+    tools = manager.get_tools()
     log("Getting tools...")
     for tool in tools:
         readme_set =  helper.check_if_readme_is_set(tool['name'])
@@ -116,13 +126,14 @@ def check_readme():
 def main():
     sexy_intro()
     args = parser.parse_args()
-    init()
+    manager = Manager()
+    manager.init()
 
     try:
         # List available tools
         if args.list:
             log("Available tools")
-            log(list_tools())
+            log(manager.list_tools())
         # Build everything
         elif args.all:
             build_all(args)
