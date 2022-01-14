@@ -7,6 +7,7 @@ import sys
 from manager import Manager
 from helper import log, logErr
 import helper
+from dotenv import load_dotenv
 
 # Default vars
 DEFAULT_TOOL_DIR = os.path.dirname(os.path.abspath(__file__))+"/tools/"
@@ -126,6 +127,9 @@ def check_readme():
 def main():
     sexy_intro()
     args = parser.parse_args()
+    # Load .env file
+    load_dotenv()
+    # Init Singleton Manager
     manager = Manager()
     manager.init()
 

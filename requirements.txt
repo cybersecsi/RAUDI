@@ -2,3 +2,4 @@ python-on-whales>=0.34.0
 art>=5.3
 argparse==1.4.0
 questionary>=1.10.0
+python-dotenv==0.19.2

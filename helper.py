@@ -3,7 +3,7 @@ import re
 import shutil
 from errors import Errors
 from python_on_whales import docker
-from os import listdir
+from os import listdir, getenv
 from os.path import isfile, join
 
 # Global vars
@@ -31,6 +31,22 @@ def log(m):
 
 def logErr(m):
     print("[-] {}".format(m))
+
+def get_env(NAME):
+    """Returns and environment variable
+    Args:
+        NAME (String): The environment variable to be returned
+    Raises:
+        NotImplementedError: Throws if the env is not found
+    Returns:
+        String: The environment variable value
+    """
+    r = getenv(NAME)
+    if not r: 
+        # TODO: Alert the user that the variable is unset.
+        return 'raudi'
+        #raise NotImplementedError('{} Environment Variable not found'.format(NAME))
+    return r
 
 def get_highest_version_number(version_numbers):
     version_numbers.sort(key=lambda s: list(map(int, s.strip('v').split('.'))))
@@ -61,7 +77,10 @@ def get_latest_npm_registry_version(package):
 
 def get_latest_github_release(repo, target_string):
     url = "{base}{repo}{release}".format(base=GITHUB_API['base'], repo=repo, release=GITHUB_API['latest_release'])
-    r = requests.get(url)
+    headers = {
+        'Authorization': "token {github_token}".format(github_token=get_env('GITHUB_PERSONAL_TOKEN'))
+    }
+    r = requests.get(url, headers=headers)
     try:
         assets = r.json()['assets']
         for asset in assets:
@@ -76,7 +95,10 @@ def get_latest_github_release(repo, target_string):
 def get_latest_github_release_no_browser_download(repo):
     try:
         url = "{base}{repo}{release}".format(base=GITHUB_API['base'], repo=repo, release=GITHUB_API['latest_release'])
-        r = requests.get(url)
+        headers = {
+            'Authorization': "token {github_token}".format(github_token=get_env('GITHUB_PERSONAL_TOKEN'))
+        }
+        r = requests.get(url, headers=headers)
         data = r.json()
     except Exception as e: 
         raise Errors.github_json()
@@ -92,7 +114,10 @@ def get_latest_github_release_no_browser_download(repo):
 def get_latest_github_tag_no_browser_download(repo):
     try:
         url = "{base}{repo}{tags}".format(base=GITHUB_API['base'], repo=repo, tags=GITHUB_API['tags'])
-        r = requests.get(url)
+        headers = {
+            'Authorization': "token {github_token}".format(github_token=get_env('GITHUB_PERSONAL_TOKEN'))
+        }
+        r = requests.get(url, headers=headers)
         results = r.json()
     except Exception as e: 
         raise Errors.github_request()
@@ -114,7 +139,10 @@ def get_latest_github_tag_no_browser_download(repo):
 
 def get_latest_github_commit(repo):
     url = "{base}{repo}{commits}".format(base=GITHUB_API['base'], repo=repo, commits=GITHUB_API['commits'])
-    r = requests.get(url)
+    headers = {
+        'Authorization': "token {github_token}".format(github_token=get_env('GITHUB_PERSONAL_TOKEN'))
+    }
+    r = requests.get(url, headers=headers)
     results = r.json()
 
     if r.status_code != 200:
