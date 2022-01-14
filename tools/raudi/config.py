@@ -5,6 +5,6 @@ def get_config(organization, common_args):
         'buildargs': {
             'LATEST_ALPINE_VERSION': common_args['LATEST_ALPINE_VERSION'],
         },
-        'tests': []
+        'tests': ['-b', '-b hello'] # Just to test multi parameters commands
     }
     return config

@@ -1,7 +1,7 @@
 import requests
 import re
-from python_on_whales import docker
 import shutil
+from python_on_whales import docker
 from os import listdir
 from os.path import isfile, join
 
@@ -150,7 +150,8 @@ def check_if_container_runs(docker_image, version, tests):
     for test in tests:
         # docker.run() will try to pull the image if it doesn't exist
         # `command` should be a list of string(s) - e.g. ['ls'] or ['ls', '-l']
-        docker.run('{docker_image}:{version}'.format(docker_image=docker_image, version=version), command=[test], detach=False)
+        command = test.split(' ')
+        docker.run('{docker_image}:{version}'.format(docker_image=docker_image, version=version), command=command, detach=False)
 
 def check_if_readme_is_set(docker_image):
     r = requests.get(DOCKER_API['base']+docker_image)
