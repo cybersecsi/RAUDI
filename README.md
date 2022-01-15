@@ -83,6 +83,13 @@ python3 ./raudi.py --single <tool_name>
 ```
 *tool_name* MUST be the name of the directory inside the *tools* folder.
 
+#### Test tool
+Since the *tests* parameter has been added to the configuration structure of the tool is can be helpful to test if the inserted commands **do return a 0 status code**. The command to test a specific tool is:
+```
+python3 ./raudi.py --test <tool_name>
+```
+*tool_name* MUST be the name of the directory inside the *tools* folder.
+
 #### Show tools
 If you want to know the available tools you can run this command:
 ```

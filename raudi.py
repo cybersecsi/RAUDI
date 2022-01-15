@@ -17,6 +17,7 @@ parser = argparse.ArgumentParser(prog="RAUDI", description='Regularly and Automa
 group = parser.add_mutually_exclusive_group(required=True)
 group.add_argument("--all", help="Build all tools", action='store_true')
 group.add_argument("--single", help="Run a single tool build", type=str)
+group.add_argument("--test", help="Run tests for a single tool", type=str)
 group.add_argument("--list", help="List all tools", action='store_true')
 group.add_argument("--bootstrap", help="Add a new tool", type=str)
 group.add_argument("--readme", help="Check if every Image has a description on the Docker Hub", action='store_true')
@@ -113,6 +114,36 @@ def bootstrap(args):
     helper.create_tool_folder(new_tool_name, template)
     log("Tool bootstrapped. You may find it at /tools/{tool_name}".format(tool_name=new_tool_name))
 
+def test_commands(args):
+    # Get Manager Singleton
+    manager = Manager()
+
+    # Arguments
+    tool_name = args.test
+
+    log("This command should be executed AFTER building the image and BEFORE pushing it.")
+
+    # Build tool
+    log("Checking if tool exists...")
+    config = manager.get_single_tool(tool_name)
+    if not config:
+        logErr("Something is wrong, the tool does not exists!")
+        sys.exit(-1)
+
+    log("Tool correctly found.")
+    log(config)
+    
+    image_exists = helper.check_if_docker_image_exists("{name}:{tag}".format(name=config['name'], tag=config['version']), False)
+    if not image_exists:
+        logErr("Image does not exist locally, cannot execute tests on it.")
+        sys.exit(-1)
+
+    try:
+        helper.check_if_container_runs(config['name'], config['version'], config['tests'])
+        log("Tests passed, {docker}:{version} can be pushed safely.".format(docker=config['name'], version=config['version']))
+    except DockerException as e:
+        logErr(e)
+        logErr("Error running container, {docker}:{version} cannot be pushed.".format(docker=config['name'], version=config['version']))
 
 def check_readme():
     # Build tools
@@ -144,6 +175,8 @@ def main():
         # Build a specific Docker Image
         elif args.single:
             build_one(args)
+        elif args.test:
+            test_commands(args)
         elif args.bootstrap:
             bootstrap(args)
         # Check READMEs on Docker Hub
