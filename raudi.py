@@ -46,9 +46,9 @@ def build(tool_name, config, args, tests):
         docker.tag("{name}:{tag}".format(name=config['name'], tag=config['version']), "{name}:{tag}".format(name=config['name'], tag='latest'))
     else:
         log("This version already exists, skipping build.")
-
-    # Pushing, if specified
-    if push_image:
+    
+    # Pushing if specified and the image exists LOCALLY
+    if push_image and helper.check_if_docker_image_exists("{name}:{tag}".format(name=config['name'], tag=config['version']), False):
         try:
             helper.check_if_container_runs(config['name'], config['version'], tests)
             push(config['name'], config['version'])
