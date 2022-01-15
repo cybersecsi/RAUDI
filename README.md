@@ -66,7 +66,8 @@ python -m pytest -s
 to run the tests.   
 
 ## Local Usage
-**RAUDI** can build and push all the tools that are put into the *tools* directory. There are different options that can be used when running it.
+**RAUDI** can build and push all the tools that are put into the *tools* directory. There are different options that can be used when running it. Before using it locally you should create a **.env** file (you can just copy the **.env.sample** file) and add your *GitHub Personal Access Token* to avoid Rate Limiting. For unauthenticated users GitHub allows up to 60 requests per hour, while authenticated users are allowed up to 15.000 requests per hour. For this reason we advice you to add it!
+You can also create a personal access token without any scope since anything we do is read some info for every GitHub repo.
 
 ### Execution Modes
 
