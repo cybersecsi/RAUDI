@@ -12,6 +12,6 @@ def get_config(organization, common_args):
             'DEBIAN_SLIM_VERSION': common_args['DEBIAN_SLIM_VERSION'],
             'DVCRIPPER_DOWNLOAD_URL': "https://github.com/kost/dvcs-ripper"
         },
-        'tests': ['-h']
+        'tests': ['rip-git -h']
     }
     return config
