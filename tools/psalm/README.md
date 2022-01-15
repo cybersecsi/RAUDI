@@ -2,20 +2,16 @@
 
 ## Official Documentation
 Reference: https://github.com/vimeo/psalm
+
 ## Description
 
 **Psalm** is a static analysis tool for finding errors in PHP applications.
-
-
 
 ## Usage
 
 ```
 docker run -it --rm -v <folder_to_analyze>:/src secsi/psalm --root=/src
 ```  
-
-
-
 
 ## 🐳 RAUDI: Regularly and Automatically Updated Docker Images
 

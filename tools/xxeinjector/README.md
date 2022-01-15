@@ -1,4 +1,4 @@
-# oxml_xxe
+# XXEInjector
 
 ## Official Documentation
 Reference: https://github.com/enjoiz/XXEinjector
