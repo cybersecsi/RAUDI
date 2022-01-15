@@ -41,7 +41,7 @@ def build(tool_name, config, args, tests):
     if image_exists == False or force_build == True:
         log("Building {docker_image}...".format(docker_image="{name}:{tag}".format(name=config['name'], tag=config['version'])))
         # Build image with version tag
-        docker.buildx.build(dirname, build_args=config['buildargs'], tags="{name}:{tag}".format(name=config['name'], tag=config['version']))
+        docker.buildx.build(dirname, push=True, build_args=config['buildargs'], tags="{name}:{tag}".format(name=config['name'], tag=config['version']))
         # Tag image as 'latest'
         docker.tag("{name}:{tag}".format(name=config['name'], tag=config['version']), "{name}:{tag}".format(name=config['name'], tag='latest'))
     else:
