@@ -55,7 +55,7 @@ jobs:
         id: date
         run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
       
-      - name: autocommit
+      - name: Auto Commit
         id: "auto-commit-action"
         uses: stefanzweifel/git-auto-commit-action@v4
         with:

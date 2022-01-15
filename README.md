@@ -236,7 +236,7 @@ Otherwise think about the stuffed dog in the famous TV Show *Scrubs*: [Rowdy](ht
 
 ## Contributions
 Everyone is invited to contribute!
-If you are a user of the tool and have a suggestion for a new feature or a bug to report, please do so through the issue tracker.
+We created a **very detailed** document to describe [how to contribute to RAUDI](https://github.com/cybersecsi/RAUDI/blob/main/CONTRIBUTING.md).
 
 ## Credits
 RAUDI is proudly developed [@SecSI](https://secsi.io) by:
@@ -245,4 +245,4 @@ RAUDI is proudly developed [@SecSI](https://secsi.io) by:
 - [Gaetano Perrone](https://github.com/giper45)
 
 ## License
-**RAUDI** is an open-source and free software released under the [GNU GPL v3](/LICENSE).
+**RAUDI** is an open-source and free software released under the [GNU GPL v3](https://github.com/cybersecsi/RAUDI/blob/main/LICENSE).
