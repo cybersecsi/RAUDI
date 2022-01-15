@@ -19,3 +19,12 @@
 - secsi/impacket updated to version 0.9.24
 - secsi/nmap updated to version 20220113
 - secsi/vim updated to version 8.2.4087
+
+### [2022-01-15]
+- secsi/dvcs-ripper updated to version 20200817
+- secsi/dex2jar updated to version 2.1
+- secsi/ground-control updated to version 20170612
+- secsi/datasploit updated to version 20180808
+- secsi/xxeinjector updated to version 20200827
+- secsi/oxml_xxe updated to version 20210326
+- secsi/vim updated to version 8.2.4096
