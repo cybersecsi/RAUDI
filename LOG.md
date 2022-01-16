@@ -28,3 +28,7 @@
 - secsi/xxeinjector updated to version 20200827
 - secsi/oxml_xxe updated to version 20210326
 - secsi/vim updated to version 8.2.4096
+
+### [2022-01-16]
+- secsi/theharvester updated to version 4.0.3
+- secsi/vim updated to version 8.2.4103
