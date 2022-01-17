@@ -4,6 +4,7 @@
 
 [![Documentation](https://img.shields.io/badge/Documentation-complete-green.svg?style=flat)](https://github.com/cybersecsi/RAUDI/blob/main/README.md)
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://github.com/cybersecsi/RAUDI/blob/main/LICENSE)
+[![Mentioned in awesome-docker](https://awesome.re/mentioned-badge.svg)](https://github.com/veggiemonk/awesome-docker)
 
 ## Table of Contents
   - [What is RAUDI](#what-is-raudi)
