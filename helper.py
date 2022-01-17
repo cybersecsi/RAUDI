@@ -184,6 +184,12 @@ def check_if_readme_is_set(docker_image):
     data = r.json()
     return data['full_description'] != None
 
+def print_docker_build_command(name, version, buildargs):
+    buildargs_docker_cmd = ['--build-arg {key}={value}'.format(key=key, value=value) for key, value in buildargs.items()]
+    buildargs_cmd = ' '.join(buildargs_docker_cmd)
+    log("The command executed is the following:")
+    log("docker build . {buildargs_cmd} -t {name}:{version}".format(buildargs_cmd=buildargs_cmd, name=name, version=version ))
+
 def get_list_tools():
     """A function to get the tools based on the directory names in /tools"""
     return [f for f in listdir('tools') if not isfile(join('tools', f)) and f != '__pycache__']
