@@ -176,7 +176,7 @@ def check_if_container_runs(docker_image, version, tests):
         # docker.run() will try to pull the image if it doesn't exist
         # `command` should be a list of string(s) - e.g. ['ls'] or ['ls', '-l']
         command = test.split(' ')
-        docker.run('{docker_image}:{version}'.format(docker_image=docker_image, version=version), command=command, detach=False)
+        docker.run('{docker_image}:{version}'.format(docker_image=docker_image, version=version), command=command, remove=True , detach=False)
 
 def check_if_readme_is_set(docker_image):
     url = "{base}{image}".format(base=DOCKER_API['base'], image=docker_image)
