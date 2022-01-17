@@ -32,3 +32,6 @@
 ### [2022-01-16]
 - secsi/theharvester updated to version 4.0.3
 - secsi/vim updated to version 8.2.4103
+
+### [2022-01-17]
+- secsi/vim updated to version 8.2.4118
