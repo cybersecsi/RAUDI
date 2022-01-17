@@ -10,7 +10,7 @@ It is NOT intended for piracy and other non-legal uses. It could be used for loc
 ## Usage
 Here is the command to decompile an apk:
 ```
-docker run -it --rm -v <apk_src_dir>:<apk_container_dir> secsi/apktool d <apk_file>
+docker run -it --rm -v <apk_src_dir>:<apk_container_dir> secsi/apktool d <apk_file> -o <apk_container_dir>
 ```
 
 ## 🐳 RAUDI: Regularly and Automatically Updated Docker Images
