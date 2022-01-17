@@ -13,6 +13,6 @@ def get_config(organization, common_args):
             'OPENJDK8_ALPINE_VERSION': common_args['OPENJDK8_ALPINE_VERSION'],
             'DEX2JAR_DOWNLOAD_URL': api_results['DEX2JAR_GITHUB_INFO']['url']
         },
-        'tests': []
+        'tests': ['-h']
     }
     return config

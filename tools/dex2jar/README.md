@@ -12,19 +12,8 @@ Tools to work with android .dex and java .class files
 4. other tools: d2j-decrypt-string
 ## Usage
 
-Finder
 ```
-docker run --rm -ti -v <local_dir>:/tmp/gittools -w /tmp/gittools secsi/gittools gitfinder -i <inputfile> -o <outputfile>
-```
-
-Dumper
-```
-docker run --rm -ti -v <local_dir>:/tmp/gittools -w /tmp/gittools secsi/gittools gitdumper http://target.tld/.git/ .
-```
-
-Extractor
-```
-docker run --rm -ti -v <local_dir>:/tmp/gittools -w /tmp/gittools secsi/gittools extractor <mygitrepo> <mygitrepodump>
+docker run -it --rm -v <local_dir>:<container_dir> secsi/dex2jar -f <container_dir>/<apk_to_decompile>.apk -o <container_dir>/output.jar
 ```
 
 ## 🐳 RAUDI: Regularly and Automatically Updated Docker Images
