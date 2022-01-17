@@ -13,7 +13,7 @@ If this fails, it will lookup TXT and MX records for the domain, and then perfor
 
 ## Usage
 ```
-docker run -it --rm secsi/dnscan -d <target_url> -w subdomains-10000.txt -t 10 -R 1.0.0.1
+docker run -it --rm secsi/dnscan -d <target_domain> -w subdomains-10000.txt -t 10 -R 1.0.0.1
 ```
 
 ## 🐳 RAUDI: Regularly and Automatically Updated Docker Images
