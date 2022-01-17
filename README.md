@@ -154,7 +154,6 @@ This is the current list of tools that have been added. Those are all tools that
 | sqlmap                     | secsi/sqlmap         | https://github.com/sqlmapproject/sqlmap          |
 | Sublist3r                  | secsi/sublist3r      | https://github.com/aboul3la/Sublist3r            |
 | theHarvester               | secsi/theharvester   | https://github.com/laramies/theHarvester         |
-| vim                        | secsi/vim            | https://github.com/vim/vim                       |
 | waybackpy                  | secsi/waybackpy      | https://github.com/akamhy/waybackpy              |
 | WhatWeb                    | secsi/whatweb        | https://github.com/urbanadventurer/WhatWeb       |
 | XXEinjector                | secsi/xxeinjector    | https://github.com/enjoiz/XXEinjector            |

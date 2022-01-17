@@ -9,16 +9,13 @@
 - secsi/gittools updated to version 0.0.1
 - secsi/nikto updated to version 20211231
 - secsi/retire updated to version 3.0.6
-- secsi/vim updated to version 8.2.4065
 
 ### [2022-01-13]
 - secsi/dorks-eye updated to version 20220108
-- secsi/vim updated to version 8.2.4072
 
 ### [2022-01-14]
 - secsi/impacket updated to version 0.9.24
 - secsi/nmap updated to version 20220113
-- secsi/vim updated to version 8.2.4087
 
 ### [2022-01-15]
 - secsi/dvcs-ripper updated to version 20200817
@@ -27,11 +24,6 @@
 - secsi/datasploit updated to version 20180808
 - secsi/xxeinjector updated to version 20200827
 - secsi/oxml_xxe updated to version 20210326
-- secsi/vim updated to version 8.2.4096
 
 ### [2022-01-16]
 - secsi/theharvester updated to version 4.0.3
-- secsi/vim updated to version 8.2.4103
-
-### [2022-01-17]
-- secsi/vim updated to version 8.2.4118
