@@ -12,6 +12,6 @@ RUN tar -xvf code.tar.gz -C /code --strip-components=1 && go build  && go instal
 
 FROM alpine:$LATEST_ALPINE_VERSION
 
-COPY --from=builder <source_builder_dir> <target_dir>
+COPY --from=builder /go/bin/hakrawler /code/hakrawler 
 WORKDIR /code
-ENTRYPOINT ["<executable>"]
+ENTRYPOINT ["./hakrawler"]

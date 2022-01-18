@@ -136,6 +136,7 @@ This is the current list of tools that have been added. Those are all tools that
 | gobuster                   | secsi/gobuster       | https://github.com/OJ/gobuster                   |
 | GoogD0rker                 | secsi/googd0rker     | https://github.com/ZephrFish/GoogD0rker          |
 | Ground control             | secsi/ground-control | https://github.com/jobertabma/ground-control     |
+| Hakrawler                  | secsi/hakrawler      | https://github.com/hakluke/hakrawler             |
 | hydra                      | secsi/hydra          | https://github.com/vanhauser-thc/thc-hydra       |
 | impacket                   | secsi/impacket       | https://github.com/SecureAuthCorp/impacket       |
 | The JSON Web Token Toolkit | secsi/jwt_tool       | https://github.com/ticarpi/jwt_tool              |
@@ -153,6 +154,8 @@ This is the current list of tools that have been added. Those are all tools that
 | Retire.js                  | secsi/retire         | https://github.com/RetireJS/retire.js            |
 | Sandcastle                 | secsi/sandcastle     | https://github.com/0xSearches/sandcastle         |
 | sqlmap                     | secsi/sqlmap         | https://github.com/sqlmapproject/sqlmap          |
+| Subfinder                  | secsi/subfinder      | https://github.com/projectdiscovery/subfinder    |
+| Subjack                    | secsi/subjack        | https://github.com/haccer/subjack                |
 | Sublist3r                  | secsi/sublist3r      | https://github.com/aboul3la/Sublist3r            |
 | theHarvester               | secsi/theharvester   | https://github.com/laramies/theHarvester         |
 | waybackpy                  | secsi/waybackpy      | https://github.com/akamhy/waybackpy              |
