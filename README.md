@@ -118,6 +118,7 @@ This is the current list of tools that have been added. Those are all tools that
 |----------------------------|----------------------|--------------------------------------------------|
 | Altdns                     | secsi/altdns         | https://github.com/infosec-au/altdns             |
 | Apktool                    | secsi/apktool        | https://github.com/iBotPeaches/Apktool           |
+| Arjun                      | secsi/arjun          | https://github.com/s0md3v/Arjun                  |
 | bfac                       | secsi/bfac           | https://github.com/mazen160/bfac                 |
 | datasploit                 | secsi/datasploit     | https://github.com/DataSploit/datasploit         |
 | dex2jar                    | secsi/dex2jar        | https://github.com/pxb1988/dex2jar               |
@@ -135,6 +136,7 @@ This is the current list of tools that have been added. Those are all tools that
 | GitTools                   | secsi/gittools       | https://github.com/internetwache/GitTool         |
 | gobuster                   | secsi/gobuster       | https://github.com/OJ/gobuster                   |
 | GoogD0rker                 | secsi/googd0rker     | https://github.com/ZephrFish/GoogD0rker          |
+| GoSpider                   | secsi/gospider       | https://github.com/jaeles-project/gospider       |
 | Ground control             | secsi/ground-control | https://github.com/jobertabma/ground-control     |
 | Hakrawler                  | secsi/hakrawler      | https://github.com/hakluke/hakrawler             |
 | hydra                      | secsi/hydra          | https://github.com/vanhauser-thc/thc-hydra       |
@@ -147,6 +149,7 @@ This is the current list of tools that have been added. Those are all tools that
 | nikto                      | secsi/nikto          | https://github.com/sullo/nikto                   |
 | nmap                       | secsi/nmap           | https://github.com/nmap/nmap                     |
 | oxml_xxe                   | secsi/oxml_xxe       | https://github.com/BuffaloWill/oxml_xxe          |
+| photon                     | secsi/photon         | https://github.com/s0md3v/Photon                 |
 | psalm                      | secsi/psalm          | https://github.com/vimeo/psalm                   |
 | pureDNS                    | secsi/puredns        | https://github.com/d3mondev/puredns              |
 | Race The Web               | secsi/race-the-web   | https://github.com/TheHackerDev/race-the-web     |
