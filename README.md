@@ -120,6 +120,7 @@ This is the current list of tools that have been added. Those are all tools that
 | Apktool                    | secsi/apktool        | https://github.com/iBotPeaches/Apktool           |
 | Arjun                      | secsi/arjun          | https://github.com/s0md3v/Arjun                  |
 | bfac                       | secsi/bfac           | https://github.com/mazen160/bfac                 |
+| CMSeeK                     | secsi/cmseek         | https://github.com/Tuhinshubhra/CMSeeK           |
 | datasploit                 | secsi/datasploit     | https://github.com/DataSploit/datasploit         |
 | dex2jar                    | secsi/dex2jar        | https://github.com/pxb1988/dex2jar               |
 | dirb                       | secsi/dirb           | http://dirb.sourceforge.net/                     |
@@ -141,6 +142,7 @@ This is the current list of tools that have been added. Those are all tools that
 | Hakrawler                  | secsi/hakrawler      | https://github.com/hakluke/hakrawler             |
 | hydra                      | secsi/hydra          | https://github.com/vanhauser-thc/thc-hydra       |
 | impacket                   | secsi/impacket       | https://github.com/SecureAuthCorp/impacket       |
+| joomscan                   | secsi/joomscan       | https://github.com/OWASP/joomscan                |
 | The JSON Web Token Toolkit | secsi/jwt_tool       | https://github.com/ticarpi/jwt_tool              |
 | knock                      | secsi/knockpy        | https://github.com/guelfoweb/knock               |
 | LFI Suite                  | secsi/lfisuite       | https://github.com/D35m0nd142/LFISuite           |
