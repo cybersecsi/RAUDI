@@ -116,6 +116,7 @@ This is the current list of tools that have been added. Those are all tools that
 
 | Name                       | Docker Image         | Source                                           |
 |----------------------------|----------------------|--------------------------------------------------|
+| Altdns                     | secsi/altdns         | https://github.com/infosec-au/altdns             |
 | Apktool                    | secsi/apktool        | https://github.com/iBotPeaches/Apktool           |
 | bfac                       | secsi/bfac           | https://github.com/mazen160/bfac                 |
 | datasploit                 | secsi/datasploit     | https://github.com/DataSploit/datasploit         |
