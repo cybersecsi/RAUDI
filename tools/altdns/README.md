@@ -8,7 +8,7 @@ Altdns is a DNS recon tool that allows for the discovery of subdomains that conf
 
 ## Usage
 ```
-docker run -it --rm -v <wordlist_src_dir>:/wordlists -v <output_dir>:/output secsi/altdns /wordlists/<subdomain_file> -o data_output -w /wordlists/<wordlist_file> -r -s /output/outfile
+docker run -it --rm -v <wordlist_src_dir>:/wordlists -v <output_dir>:/output secsi/altdns -i /wordlists/<subdomain_file> -o data_output -w /wordlists/<wordlist_file> -r -s /output/outfile
 ```
 
 ## 🐳 RAUDI: Regularly and Automatically Updated Docker Images
