@@ -27,3 +27,14 @@
 
 ### [2022-01-16]
 - secsi/theharvester updated to version 4.0.3
+
+### [2022-01-19]
+- secsi/altdns updated to version 1.0.2
+- secsi/photon updated to version 1.3.0
+- secsi/subjack updated to version 2.1
+- secsi/cmseek updated to version 1.1.3
+- secsi/gospider updated to version 1.1.6
+- secsi/hakrawler updated to version 2.0
+- secsi/waybackpy updated to version 3.0.0
+- secsi/joomscan updated to version 0.0.7
+- secsi/subfinder updated to version 2.4.9
