@@ -1,14 +1,14 @@
-# fast-recon
+# Striker
 
 ## Official Documentation
-Reference: https://github.com/DanMcInerney/fast-recon
+Reference: https://github.com/s0md3v/Striker
 
 ## Description
-A very simple script to open a bunch of google and pastebin dorks at once. Run it against a domain and it'll google dork for possibly sensitive files.
+Striker 2.0 is still in prototype phase, which means it's not intended to be used by regular users. It has been made public for contrbutions to make the development faster.
 
 ## Usage
 ```
-docker run -it --rm secsi/fast-recon -d "<target_domain>"
+docker run -it --rm secsi/striker <target_domain>
 ```
 
 ## 🐳 RAUDI: Regularly and Automatically Updated Docker Images

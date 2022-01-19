@@ -1,14 +1,16 @@
-# fast-recon
+# pagodo
 
 ## Official Documentation
-Reference: https://github.com/DanMcInerney/fast-recon
+Reference: https://github.com/opsdisk/pagodo
 
 ## Description
-A very simple script to open a bunch of google and pastebin dorks at once. Run it against a domain and it'll google dork for possibly sensitive files.
+pagodo automates Google searching for potentially vulnerable web pages and applications on the Internet. It replaces manually performing Google dork searches with a web GUI browser.
+
+There are 2 parts. The first is ghdb_scraper.py that retrieves the latest Google dorks and the second portion is pagodo.py that leverages the information gathered by ghdb_scraper.py.
 
 ## Usage
 ```
-docker run -it --rm secsi/fast-recon -d "<target_domain>"
+docker run -it --rm secsi/pagodo
 ```
 
 ## 🐳 RAUDI: Regularly and Automatically Updated Docker Images

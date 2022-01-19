@@ -1,14 +1,14 @@
-# fast-recon
+# Pivot Suite
 
 ## Official Documentation
-Reference: https://github.com/DanMcInerney/fast-recon
+Reference: https://github.com/RedTeamOperations/PivotSuite
 
 ## Description
-A very simple script to open a bunch of google and pastebin dorks at once. Run it against a domain and it'll google dork for possibly sensitive files.
+PivotSuite is a portable, platform independent and powerful network pivoting toolkit, Which helps Red Teamers / Penetration Testers to use a compromised system to move around inside a network. It is a Standalone Utility, Which can use as a Server or as a Client.
 
 ## Usage
 ```
-docker run -it --rm secsi/fast-recon -d "<target_domain>"
+docker run -it --rm secsi/pivotsuite [options] <target_ip> <target_port>
 ```
 
 ## 🐳 RAUDI: Regularly and Automatically Updated Docker Images

@@ -157,7 +157,9 @@ This is the current list of tools that have been added. Those are all tools that
 | nikto                      | secsi/nikto          | https://github.com/sullo/nikto                   |
 | nmap                       | secsi/nmap           | https://github.com/nmap/nmap                     |
 | oxml_xxe                   | secsi/oxml_xxe       | https://github.com/BuffaloWill/oxml_xxe          |
+| Pagodo                     | secsi/pagodo         | https://github.com/opsdisk/pagodo                |
 | photon                     | secsi/photon         | https://github.com/s0md3v/Photon                 |
+| PivotSuite                 | secsi/pivotsuite     | https://github.com/RedTeamOperations/PivotSuite  |
 | psalm                      | secsi/psalm          | https://github.com/vimeo/psalm                   |
 | pureDNS                    | secsi/puredns        | https://github.com/d3mondev/puredns              |
 | Race The Web               | secsi/race-the-web   | https://github.com/TheHackerDev/race-the-web     |
@@ -168,6 +170,7 @@ This is the current list of tools that have been added. Those are all tools that
 | scanless                   | secsi/scanless       | https://github.com/vesche/scanless               |
 | spyse.py                   | secsi/spysepy        | https://github.com/zeropwn/spyse.py              |
 | sqlmap                     | secsi/sqlmap         | https://github.com/sqlmapproject/sqlmap          |
+| Striker                    | secsi/striker        | https://github.com/s0md3v/Striker                |
 | Subfinder                  | secsi/subfinder      | https://github.com/projectdiscovery/subfinder    |
 | Subjack                    | secsi/subjack        | https://github.com/haccer/subjack                |
 | Sublist3r                  | secsi/sublist3r      | https://github.com/aboul3la/Sublist3r            |
