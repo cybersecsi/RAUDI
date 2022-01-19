@@ -148,6 +148,7 @@ This is the current list of tools that have been added. Those are all tools that
 | The JSON Web Token Toolkit | secsi/jwt_tool       | https://github.com/ticarpi/jwt_tool              |
 | knock                      | secsi/knockpy        | https://github.com/guelfoweb/knock               |
 | LFI Suite                  | secsi/lfisuite       | https://github.com/D35m0nd142/LFISuite           |
+| LinkFinder                 | secsi/linkfinder     | https://github.com/GerbenJavado/LinkFinder       |
 | MASSCAN                    | secsi/masscan        | https://github.com/robertdavidgraham/masscan     |
 | MassDNS                    | secsi/massdns        | https://github.com/blechschmidt/massdns          |
 | nikto                      | secsi/nikto          | https://github.com/sullo/nikto                   |
@@ -159,6 +160,7 @@ This is the current list of tools that have been added. Those are all tools that
 | Race The Web               | secsi/race-the-web   | https://github.com/TheHackerDev/race-the-web     |
 | RestfulHarvest             | secsi/restfulharvest | https://github.com/laramies/theHarvester         |
 | Retire.js                  | secsi/retire         | https://github.com/RetireJS/retire.js            |
+| RouterSploit               | secsi/routersploit   | https://github.com/threat9/routersploit          |
 | Sandcastle                 | secsi/sandcastle     | https://github.com/0xSearches/sandcastle         |
 | spyse.py                   | secsi/spysepy        | https://github.com/zeropwn/spyse.py              |
 | sqlmap                     | secsi/sqlmap         | https://github.com/sqlmapproject/sqlmap          |
