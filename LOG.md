@@ -34,6 +34,7 @@
 - secsi/subjack updated to version 2.1
 - secsi/cmseek updated to version 1.1.3
 - secsi/gospider updated to version 1.1.6
+- secsi/arjun updated to version 2.1.41
 - secsi/hakrawler updated to version 2.0
 - secsi/waybackpy updated to version 3.0.0
 - secsi/joomscan updated to version 0.0.7

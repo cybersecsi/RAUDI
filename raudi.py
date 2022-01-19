@@ -98,7 +98,7 @@ def push(repo, version):
         docker.image.push("{name}:{tag}".format(name=repo, tag=version))
         if version != "latest":
             docker.image.push("{name}:{tag}".format(name=repo, tag='latest'))
-        log("Image successfully pushed")
+        log("{name}:{tag} successfully pushed to Docker Hub".format(name=repo, tag=version))
 
 def bootstrap(args):
     # Get Manager Singleton
