@@ -122,6 +122,7 @@ This is the current list of tools that have been added. Those are all tools that
 | bfac                       | secsi/bfac           | https://github.com/mazen160/bfac                 |
 | CloudFail                  | secsi/cloudfail      | https://github.com/m0rtem/CloudFail              |
 | CMSeeK                     | secsi/cmseek         | https://github.com/Tuhinshubhra/CMSeeK           |
+| Crowbar                    | secsi/crowbar        | https://github.com/galkan/crowbar                |
 | datasploit                 | secsi/datasploit     | https://github.com/DataSploit/datasploit         |
 | dex2jar                    | secsi/dex2jar        | https://github.com/pxb1988/dex2jar               |
 | dirb                       | secsi/dirb           | http://dirb.sourceforge.net/                     |
@@ -154,6 +155,7 @@ This is the current list of tools that have been added. Those are all tools that
 | LinkFinder                 | secsi/linkfinder     | https://github.com/GerbenJavado/LinkFinder       |
 | MASSCAN                    | secsi/masscan        | https://github.com/robertdavidgraham/masscan     |
 | MassDNS                    | secsi/massdns        | https://github.com/blechschmidt/massdns          |
+| Memcrashed DDoS Exploit    | secsi/memcrashed     | https://github.com/649/Memcrashed-DDoS-Exploit   |
 | nikto                      | secsi/nikto          | https://github.com/sullo/nikto                   |
 | nmap                       | secsi/nmap           | https://github.com/nmap/nmap                     |
 | oxml_xxe                   | secsi/oxml_xxe       | https://github.com/BuffaloWill/oxml_xxe          |
@@ -178,6 +180,7 @@ This is the current list of tools that have been added. Those are all tools that
 | WAFW00F                    | secsi/wafw00f        | https://github.com/EnableSecurity/wafw00f        |
 | waybackpy                  | secsi/waybackpy      | https://github.com/akamhy/waybackpy              |
 | WhatWeb                    | secsi/whatweb        | https://github.com/urbanadventurer/WhatWeb       |
+| xray                       | secsi/xray           | https://github.com/evilsocket/xray               |
 | XXEinjector                | secsi/xxeinjector    | https://github.com/enjoiz/XXEinjector            |
 
 ## Tool Structure
