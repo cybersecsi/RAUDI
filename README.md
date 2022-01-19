@@ -120,6 +120,7 @@ This is the current list of tools that have been added. Those are all tools that
 | Apktool                    | secsi/apktool        | https://github.com/iBotPeaches/Apktool           |
 | Arjun                      | secsi/arjun          | https://github.com/s0md3v/Arjun                  |
 | bfac                       | secsi/bfac           | https://github.com/mazen160/bfac                 |
+| CloudFail                  | secsi/cloudfail      | https://github.com/m0rtem/CloudFail              |
 | CMSeeK                     | secsi/cmseek         | https://github.com/Tuhinshubhra/CMSeeK           |
 | datasploit                 | secsi/datasploit     | https://github.com/DataSploit/datasploit         |
 | dex2jar                    | secsi/dex2jar        | https://github.com/pxb1988/dex2jar               |
@@ -130,6 +131,7 @@ This is the current list of tools that have been added. Those are all tools that
 | Dorks Eye                  | secsi/dorks-eye      | https://github.com/BullsEye0/dorks-eye           |
 | dvcs-ripper                | secsi/dvcs-ripper    | https://github.com/kost/dvcs-ripper              |
 | EyeWitness                 | secsi/eyewitness     | https://github.com/FortyNorthSecurity/EyeWitness |
+| fast-recon                 | secsi/fast-recon     | https://github.com/DanMcInerney/fast-recon       |
 | ffuf                       | secsi/ffuf           | https://github.com/ffuf/ffuf                     |
 | fierce                     | secsi/fierce         | https://github.com/mschwager/fierce              |
 | Findsploit                 | secsi/findsploit     | https://github.com/1N3/Findsploit                |
@@ -145,7 +147,7 @@ This is the current list of tools that have been added. Those are all tools that
 | httprobe                   | secsi/httprobe       | https://github.com/tomnomnom/httprobe            |
 | hydra                      | secsi/hydra          | https://github.com/vanhauser-thc/thc-hydra       |
 | impacket                   | secsi/impacket       | https://github.com/SecureAuthCorp/impacket       |
-| joomscan                   | secsi/joomscan       | https://github.com/OWASP/joomscan                |
+| JoomScan                   | secsi/joomscan       | https://github.com/OWASP/joomscan                |
 | The JSON Web Token Toolkit | secsi/jwt_tool       | https://github.com/ticarpi/jwt_tool              |
 | knock                      | secsi/knockpy        | https://github.com/guelfoweb/knock               |
 | LFI Suite                  | secsi/lfisuite       | https://github.com/D35m0nd142/LFISuite           |
