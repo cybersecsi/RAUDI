@@ -158,11 +158,13 @@ This is the current list of tools that have been added. Those are all tools that
 | RestfulHarvest             | secsi/restfulharvest | https://github.com/laramies/theHarvester         |
 | Retire.js                  | secsi/retire         | https://github.com/RetireJS/retire.js            |
 | Sandcastle                 | secsi/sandcastle     | https://github.com/0xSearches/sandcastle         |
+| spyse.py                   | secsi/spysepy        | https://github.com/zeropwn/spyse.py              |
 | sqlmap                     | secsi/sqlmap         | https://github.com/sqlmapproject/sqlmap          |
 | Subfinder                  | secsi/subfinder      | https://github.com/projectdiscovery/subfinder    |
 | Subjack                    | secsi/subjack        | https://github.com/haccer/subjack                |
 | Sublist3r                  | secsi/sublist3r      | https://github.com/aboul3la/Sublist3r            |
 | theHarvester               | secsi/theharvester   | https://github.com/laramies/theHarvester         |
+| WAFW00F                    | secsi/wafw00f        | https://github.com/EnableSecurity/wafw00f        |
 | waybackpy                  | secsi/waybackpy      | https://github.com/akamhy/waybackpy              |
 | WhatWeb                    | secsi/whatweb        | https://github.com/urbanadventurer/WhatWeb       |
 | XXEinjector                | secsi/xxeinjector    | https://github.com/enjoiz/XXEinjector            |
