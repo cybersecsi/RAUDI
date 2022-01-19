@@ -140,6 +140,8 @@ This is the current list of tools that have been added. Those are all tools that
 | GoSpider                   | secsi/gospider       | https://github.com/jaeles-project/gospider       |
 | Ground control             | secsi/ground-control | https://github.com/jobertabma/ground-control     |
 | Hakrawler                  | secsi/hakrawler      | https://github.com/hakluke/hakrawler             |
+| hakrevdns                  | secsi/hakrevdns      | https://github.com/hakluke/hakrevdns             |
+| httprobe                   | secsi/httprobe       | https://github.com/tomnomnom/httprobe            |
 | hydra                      | secsi/hydra          | https://github.com/vanhauser-thc/thc-hydra       |
 | impacket                   | secsi/impacket       | https://github.com/SecureAuthCorp/impacket       |
 | joomscan                   | secsi/joomscan       | https://github.com/OWASP/joomscan                |
