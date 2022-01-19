@@ -133,6 +133,7 @@ This is the current list of tools that have been added. Those are all tools that
 | ffuf                       | secsi/ffuf           | https://github.com/ffuf/ffuf                     |
 | fierce                     | secsi/fierce         | https://github.com/mschwager/fierce              |
 | Findsploit                 | secsi/findsploit     | https://github.com/1N3/Findsploit                |
+| GetJS                      | secsi/getjs          | https://github.com/003random/getJS               |
 | Gitrob                     | secsi/gitrob         | https://github.com/michenriksen/gitrob           |
 | GitTools                   | secsi/gittools       | https://github.com/internetwache/GitTool         |
 | gobuster                   | secsi/gobuster       | https://github.com/OJ/gobuster                   |
@@ -162,6 +163,7 @@ This is the current list of tools that have been added. Those are all tools that
 | Retire.js                  | secsi/retire         | https://github.com/RetireJS/retire.js            |
 | RouterSploit               | secsi/routersploit   | https://github.com/threat9/routersploit          |
 | Sandcastle                 | secsi/sandcastle     | https://github.com/0xSearches/sandcastle         |
+| scanless                   | secsi/scanless       | https://github.com/vesche/scanless               |
 | spyse.py                   | secsi/spysepy        | https://github.com/zeropwn/spyse.py              |
 | sqlmap                     | secsi/sqlmap         | https://github.com/sqlmapproject/sqlmap          |
 | Subfinder                  | secsi/subfinder      | https://github.com/projectdiscovery/subfinder    |
