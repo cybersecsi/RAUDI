@@ -39,3 +39,22 @@
 - secsi/waybackpy updated to version 3.0.0
 - secsi/joomscan updated to version 0.0.7
 - secsi/subfinder updated to version 2.4.9
+
+### [2022-01-20]
+- secsi/wafw00f updated to version 2.1.0
+- secsi/routersploit updated to version 3.4.0
+- secsi/httprobe updated to version 0.1.2
+- secsi/pagodo updated to version 2.2.0
+- secsi/spysepy updated to version 0.13.3.9
+- secsi/striker updated to version 20190710
+- secsi/crowbar updated to version 4.2
+- secsi/cloudfail updated to version 20210730
+- secsi/hashid updated to version 3.1.4
+- secsi/xray updated to version 20211025
+- secsi/pivotsuite updated to version 1.1
+- secsi/getjs updated to version 20210908
+- secsi/linkfinder updated to version 20210105
+- secsi/hakrevdns updated to version 20211222
+- secsi/memcrashed updated to version 20190924
+- secsi/scanless updated to version 2.1.5
+- secsi/fast-recon updated to version 20200120
