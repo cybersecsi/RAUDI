@@ -185,6 +185,7 @@ This is the current list of tools that have been added. Those are all tools that
 | xray                       | secsi/xray           | https://github.com/evilsocket/xray               |
 | XSSer                      | secsi/xsser          | https://github.com/epsylon/xsser                 |
 | XSSSNIPER                  | secsi/xsssniper      | https://github.com/gbrindisi/xsssniper           |
+| X SStrike                  | secsi/xsstrike       | https://github.com/s0md3v/XSStrike               |
 | XXEinjector                | secsi/xxeinjector    | https://github.com/enjoiz/XXEinjector            |
 
 ## Tool Structure
