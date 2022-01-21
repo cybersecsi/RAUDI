@@ -123,6 +123,7 @@ This is the current list of tools that have been added. Those are all tools that
 | CloudFail                  | secsi/cloudfail      | https://github.com/m0rtem/CloudFail              |
 | CMSeeK                     | secsi/cmseek         | https://github.com/Tuhinshubhra/CMSeeK           |
 | Crowbar                    | secsi/crowbar        | https://github.com/galkan/crowbar                |
+| Dalfox                     | secsi/dalfox         | https://github.com/hahwul/dalfox                 |
 | datasploit                 | secsi/datasploit     | https://github.com/DataSploit/datasploit         |
 | dex2jar                    | secsi/dex2jar        | https://github.com/pxb1988/dex2jar               |
 | dirb                       | secsi/dirb           | http://dirb.sourceforge.net/                     |
@@ -182,6 +183,8 @@ This is the current list of tools that have been added. Those are all tools that
 | waybackpy                  | secsi/waybackpy      | https://github.com/akamhy/waybackpy              |
 | WhatWeb                    | secsi/whatweb        | https://github.com/urbanadventurer/WhatWeb       |
 | xray                       | secsi/xray           | https://github.com/evilsocket/xray               |
+| XSSer                      | secsi/xsser          | https://github.com/epsylon/xsser                 |
+| XSSSNIPER                  | secsi/xsssniper      | https://github.com/gbrindisi/xsssniper           |
 | XXEinjector                | secsi/xxeinjector    | https://github.com/enjoiz/XXEinjector            |
 
 ## Tool Structure
