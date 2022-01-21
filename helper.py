@@ -25,6 +25,13 @@ GITHUB_API = {
     'latest_release': "/releases/latest",
     'tags': "/tags"
 }
+GITLAB_API = {
+    'base': "https://gitlab.com/api/v4/projects/",
+    'commits': "/repository/commits", 
+    'latest_release': "/releases",
+    'tags' : "/repository/tags",
+    'archive': "/repository/archive"
+}
 
 def log(m):
     print("[+] {}".format(m))
@@ -138,6 +145,7 @@ def get_latest_github_tag_no_browser_download(repo):
             'version': latest_version
         }
 
+
 def get_latest_github_commit(repo):
     url = "{base}{repo}{commits}".format(base=GITHUB_API['base'], repo=repo, commits=GITHUB_API['commits'])
     r = requests.get(url, headers=get_github_headers())
@@ -150,6 +158,83 @@ def get_latest_github_commit(repo):
     data = results[0]['commit']['author']['date'][:10] # YYYY-MM-DD
     latest_commit_date = ''.join(data.split('-'))
     return latest_commit_date
+
+
+
+def get_gitlab_id_project(owner, project):
+    """Get id gitlab form projet
+
+    Args:
+        owner (string): The owner
+        project (string): The project name
+
+    Raises:
+        ConnectionError: if a connection error occurs
+        Errors.gitlab_request: if the gitlab req fails
+
+    Returns:
+        [type]: [description]
+    """
+    expected_path = "{}/public/{}".format(owner, project)
+    try:
+        url = "{base}?search={project}".format(base=GITLAB_API['base'], project=project)
+        r = requests.get(url)
+        if r.status_code != 200: 
+            raise ConnectionError("Connection error")
+        results = r.json()
+        for d in results: 
+            if d['path_with_namespace'] == expected_path:
+                return d['id']
+
+        raise Errors.gitlab_not_found()
+    except Exception as e: 
+        raise Errors.gitlab_request()
+    
+# https://gitlab.com/api/v4/projects/7348427/repository/tags
+def get_latest_gitlab_tag(owner, project):
+    try:
+        # Get id_project
+        id_project = get_gitlab_id_project(owner, project)
+        url = "{base}{id_project}{tags}".format(base=GITLAB_API['base'], id_project=id_project, tags=GITLAB_API['tags'])
+        r = requests.get(url)
+        results = r.json()
+        if r.status_code != 200: 
+            raise ConnectionError("Connection error")
+        # latest tag
+        tag = results[0]['name']
+        commid = results[0]['commit']['id']
+        # https://gitlab.com/projects/:id/repository/archive?sha=<commid>
+
+        return {
+            'url' : "{}{}{}?sha={}".format(GITLAB_API['base'], id_project, GITLAB_API['archive'], commid),
+            'version': tag
+        }
+    except Exception as e: 
+        raise Errors.gitlab_request()
+
+
+def get_latest_gitlab_commit(owner, project):
+    try:
+        # Get id_project
+        id_project = get_gitlab_id_project(owner, project)
+        url = "{base}{id_project}{commits}".format(base=GITLAB_API['base'], id_project=id_project, commits=GITLAB_API['commits'])
+        r = requests.get(url)
+        results = r.json()
+        if r.status_code != 200: 
+            raise ConnectionError("Connection error")
+        # latest tag
+        date = results[0]['committed_date'][:10] #YYYY-MM-DD
+        latest_commit_date = ''.join(date.split('-'))
+        return latest_commit_date
+        # https://gitlab.com/projects/:id/repository/archive?sha=<commid>
+
+        return {
+            'url' : "{}{}{}?sha={}".format(GITLAB_API['base'], id_project, GITLAB_API['archive'], commid),
+            'version': tag
+        }
+    except Exception as e: 
+        raise Errors.gitlab_request()
+
 
 def check_if_docker_image_exists_local(docker_image):
     return docker.image.exists(docker_image)

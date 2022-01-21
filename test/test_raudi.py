@@ -89,13 +89,11 @@ def test_list_not_call_requests(fake_get, FakeResponse):
     assert fake_get.assert_not_called
 
 
-@patch('test.tools.raudi.config.get_config')
-@patch('test.tools.dsp.config.get_config')
-def test_list_not_call_requests_get_tool_name(fake_bf, fake_apk):
-  # Manager Singleton
-  manager = Manager()
-  manager.init_common_args()
-  manager.set_tools([raudi, dsp])
-  tool = manager.get_single_tool('raudi', 2)
-  fake_apk.assert_not_called()
-  fake_bf.assert_called_once()
+
+
+
+
+def test_gitlab_id_by_project():
+  exp = 7348427
+  assert get_gitlab_id_project("netify.ai", "netify-agent") == exp
+

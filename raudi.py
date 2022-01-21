@@ -17,6 +17,7 @@ parser = argparse.ArgumentParser(prog="RAUDI", description='Regularly and Automa
 group = parser.add_mutually_exclusive_group(required=True)
 group.add_argument("--all", help="Build all tools", action='store_true')
 group.add_argument("--single", help="Run a single tool build", type=str)
+group.add_argument("--runtest", help="Run a test docker execution", type=str)
 group.add_argument("--test", help="Run tests for a single tool", type=str)
 group.add_argument("--list", help="List all tools", action='store_true')
 group.add_argument("--bootstrap", help="Add a new tool", type=str)
@@ -31,6 +32,14 @@ def sexy_intro():
     print()
     print(secsi_art)
 
+# Execute a test 
+def runtest(args):
+    name = args.runtest
+    manager = Manager()
+    organization = manager._organization
+    cmd = "docker run -it --rm --entrypoint=/bin/sh {}/{}".format(organization, name)
+    log(cmd)
+    os.system(cmd)
 def build(tool_name, config, args, tests):
     # Args and Vars
     push_image = args.push
@@ -171,6 +180,8 @@ def main():
             log("Available tools")
             log(manager.list_tools())
         # Build everything
+        elif args.runtest:
+            runtest(args)
         elif args.all:
             build_all(args)
         # Build a specific Docker Image
