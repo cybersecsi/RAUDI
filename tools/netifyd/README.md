@@ -1,13 +1,25 @@
-# TOOL NAME
+# NETIFY
 
 ## Official Documentation
-Reference: add here the link to the official documentation.
+Reference: https://gitlab.com/netify.ai/public/netify-agent
 
 ## Description
+The Netify Agent is a deep-packet inspection server.  The Agent is built on top of nDPI (formerly OpenDPI) to detect network protocols and applications.  Detections can be saved locally, served over a UNIX or TCP socket, and/or "pushed" (via HTTP POSTs) to a remote third-party server.  Flow metadata, network statistics, and detection classifications are stored using JSON encoding.
 Add here the description of the specific tool.
 
+
 ## Usage
-Add here the usage of the specific tool.
+Run: 
+```
+docker run -it --cap-add=net_admin --rm secsi/netifyd -I/E <interface> -R 
+```
+to execute the script.   
+You can also use in background without the `-R` flag: 
+
+``` 
+docker run -it --cap-add=net_admin --rm secsi/netifyd -I/E <interface> 
+
+```
 
 ## 🐳 RAUDI: Regularly and Automatically Updated Docker Images
 
