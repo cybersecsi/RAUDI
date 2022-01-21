@@ -1,0 +1,19 @@
+# Base Distro Arg
+ARG LATEST
+
+FROM ubuntu:$LATEST
+
+# Build Args
+ARG DOWNLOAD_URL
+
+# Content
+WORKDIR /code
+ADD $DOWNLOAD_URL code.tar.gz
+RUN apk --no-cache add \ 
+    alpine-sdk automake libtool ncurses-dev  autoconf && tar -xvf code.tar.gz -C /code --strip-components=1  
+RUN apk --no-cache add \ 
+libcurl libpcap-dev libmnl-dev conntrack-tools libnetfilter_conntrack-dev
+    
+
+# RUN ./autogen.sh && ./configure && make && make install 
+ENTRYPOINT ["/bin/sh"]

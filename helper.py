@@ -236,6 +236,32 @@ def get_latest_gitlab_commit(owner, project):
         raise Errors.gitlab_request()
 
 
+def get_remote_resource(url, json=False):
+    try:
+        r = requests.get(url)
+        if json:
+            return r.json()
+        else: 
+            return r.text
+    except Exception as e: 
+        raise ConnectionError("Connection error")
+
+def grep(the_output, to_search):
+    """Looks for to_search string and returns a list of found elements
+    Args:
+        the_output (string): the output of a get request
+        to_search (string): The string to be searched
+    Returns:
+        list: The list of strings obtained by grep
+    """
+    lines = the_output.split("\n")
+    found = []
+    for line in lines:
+        if to_search in line:
+            found.append(line.strip())
+    return found
+
+
 def check_if_docker_image_exists_local(docker_image):
     return docker.image.exists(docker_image)
 
