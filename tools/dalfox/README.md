@@ -1,7 +1,7 @@
 # Dalfox
 
 ## Official Documentation
-Reference: [add here the link to the official documentation.](https://github.com/hahwul/dalfox)
+Reference: https://github.com/hahwul/dalfox
 
 ## Description
 DalFox is an powerful open source XSS scanning tool and parameter analyzer and utility that fast the process of detecting and verify XSS flaws. It comes with a powerful testing engine, many niche features for the cool hacker
