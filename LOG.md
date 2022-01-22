@@ -58,3 +58,9 @@
 - secsi/memcrashed updated to version 20190924
 - secsi/scanless updated to version 2.1.5
 - secsi/fast-recon updated to version 20200120
+
+### [2022-01-22]
+- secsi/xsser updated to version 20210919
+- secsi/xsssniper updated to version 20180417
+- secsi/dalfox updated to version 2.7.0
+- secsi/xsstrike updated to version 3.1.5
