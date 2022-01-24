@@ -1,13 +1,11 @@
-# TOOL NAME
+# 3proxy
 
 ## Official Documentation
-Reference: add here the link to the official documentation.
+Reference: http://3proxy.ru/
 
 ## Description
-Add here the description of the specific tool.
-
+A tiny free proxy server
 ## Usage
-Add here the usage of the specific tool.
 ``` 
 docker run --name 3proxy -d -p 3128:3128 --env PROXY_LOGIN=pr0xyUser --env PROXY_PASSWORD=passw0rd secsi/3proxy
 ``` 

@@ -1,4 +1,4 @@
-# TOOL NAME
+# spidy
 
 ## Official Documentation
 Reference: https://github.com/rivermont/spidy
