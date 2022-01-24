@@ -1,7 +1,6 @@
-# Base Distro Arg
 ARG DEBIAN_SLIM_VERSION
-ARG TOOL_NAME 
 
 FROM debian:$DEBIAN_SLIM_VERSION
+ARG DOWNLOAD_URL
 RUN apt-get update &&  apt-get install -y wget && TEMP_DEB="$(mktemp)" && wget -O "$TEMP_DEB" $DOWNLOAD_URL && dpkg -i "$TEMP_DEB" && rm -f "$TEMP_DEB" && apt-get remove -y wget
-ENTRYPOINT ["$TOOL_NAME"]
+ENTRYPOINT ["3proxy"]

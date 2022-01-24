@@ -314,3 +314,6 @@ def get_list_templates():
 def create_tool_folder(tool_name, template):
     shutil.copytree('templates/'+template, 'tools/'+tool_name)
     shutil.copy('templates/DOCKERHUB.md', 'tools/'+tool_name+'/README.md')
+
+def get_deb_from_github(owner, project, version): 
+    return "https://github.com/{}/{}/releases/download/{}/{}-{}.x86_64.deb".format(owner, project, version, project, version)
