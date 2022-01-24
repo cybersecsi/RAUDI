@@ -9,6 +9,7 @@ def get_config(organization, common_args):
         #'GITHUB_INFO': helper.get_latest_github_release('<repo_name>', '<target_string>'),
         #'GITHUB_INFO': helper.get_latest_github_release_no_browser_download('<repo_name>'),
         #'GITHUB_INFO': helper.get_latest_github_tag_no_browser_download('<repo_name>'),
+        #'GITHUB_INFO': helper.get_latest_github_commit('<repo_name>'),
         #'PIP_VERSION': helper.get_latest_pip_version('<package_name>'),
     }
 
