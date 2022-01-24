@@ -92,3 +92,7 @@ def test_gitlab_id_by_project():
   exp = 7348427
   assert get_gitlab_id_project("netify.ai", "netify-agent") == exp
 
+
+def test_version_cleaner():
+  assert clean_version('v1.0') == '1.0'
+  assert clean_version('v1.2.3_4') == '1.2.3.4'

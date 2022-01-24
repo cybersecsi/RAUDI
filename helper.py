@@ -314,3 +314,11 @@ def get_list_templates():
 def create_tool_folder(tool_name, template):
     shutil.copytree('templates/'+template, 'tools/'+tool_name)
     shutil.copy('templates/DOCKERHUB.md', 'tools/'+tool_name+'/README.md')
+
+
+def clean_version(v):
+    v = v.replace('_', '.')
+    if v.startswith('v'):
+        return v[1:]
+
+    return v
