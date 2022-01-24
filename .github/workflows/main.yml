@@ -47,6 +47,8 @@ jobs:
 
       # Run
       - name: Run my script
+        env: 
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           python $PWD/raudi.py --all --push --remote >> /tmp/log.txt
           chmod +x $PWD/.github/workflows/autocommit.sh && $PWD/.github/workflows/autocommit.sh
