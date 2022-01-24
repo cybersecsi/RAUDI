@@ -116,6 +116,7 @@ This is the current list of tools that have been added. Those are all tools that
 
 | Name                       | Docker Image         | Source                                           |
 |----------------------------|----------------------|--------------------------------------------------|
+| 3proxy                     | secsi/3proxy         | https://github.com/3proxy/3proxy                 |
 | Altdns                     | secsi/altdns         | https://github.com/infosec-au/altdns             |
 | Apktool                    | secsi/apktool        | https://github.com/iBotPeaches/Apktool           |
 | Arjun                      | secsi/arjun          | https://github.com/s0md3v/Arjun                  |
@@ -175,6 +176,7 @@ This is the current list of tools that have been added. Those are all tools that
 | scanless                   | secsi/scanless       | https://github.com/vesche/scanless               |
 | spyse.py                   | secsi/spysepy        | https://github.com/zeropwn/spyse.py              |
 | sqlmap                     | secsi/sqlmap         | https://github.com/sqlmapproject/sqlmap          |
+| spidy                      | secsi/spidy          | https://github.com/rivermont/spidy                |
 | Striker                    | secsi/striker        | https://github.com/s0md3v/Striker                |
 | Subfinder                  | secsi/subfinder      | https://github.com/projectdiscovery/subfinder    |
 | Subjack                    | secsi/subjack        | https://github.com/haccer/subjack                |
