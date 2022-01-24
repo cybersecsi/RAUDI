@@ -88,11 +88,6 @@ def test_list_not_call_requests(fake_get, FakeResponse):
     # List method should not call requests
     assert fake_get.assert_not_called
 
-
-
-
-
-
 def test_gitlab_id_by_project():
   exp = 7348427
   assert get_gitlab_id_project("netify.ai", "netify-agent") == exp
