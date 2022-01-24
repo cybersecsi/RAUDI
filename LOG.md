@@ -64,3 +64,6 @@
 - secsi/xsssniper updated to version 20180417
 - secsi/dalfox updated to version 2.7.0
 - secsi/xsstrike updated to version 3.1.5
+
+### [2022-01-24]
+- secsi/dnscan updated to version 20220120
