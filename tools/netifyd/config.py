@@ -12,7 +12,7 @@ def get_config(organization, common_args):
         'name': organization+'/'+DEFAULT_DIRNAME,
         'version': version(),
         'buildargs': {
-            'LATEST': common_args['LATEST_UBUNTU_VERSION'],
+            'KEY_URL': 'http://download.netify.ai/netify/ubuntu/apt-gpg-key-netify.asc'
         },
         'tests': []
     }
