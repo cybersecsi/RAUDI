@@ -19,6 +19,6 @@ def get_config(organization, common_args):
             'DOWNLOAD_URL': helper.get_deb_from_github('3proxy', '3proxy', api_results['GITHUB_INFO']['version'])
             # 'DOWNLOAD_URL': api_results['GITHUB_INFO']['url'],
         },
-        'tests': []
+        'tests': ['--help']
     }
     return config
