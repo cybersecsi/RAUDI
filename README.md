@@ -43,7 +43,9 @@ That's all guys: go to **Action**, enable it for your forked repo, wait until mi
 ## Setup
 This repo can also be executed locally. The requirements to be met are the following:
 - Python 3.x
-- Docker
+- Docker (with BuildX)
+
+Here is the documentation for working with BuildX: https://docs.docker.com/buildx/working-with-buildx/ 
 
 The setup phase is pretty straightforward, you just need the following commands:
 ```
