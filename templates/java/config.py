@@ -13,7 +13,7 @@ def get_config(organization, common_args):
     
     config = {
         'name': organization+'/'+DEFAULT_DIRNAME,
-        # 'version': api_results['NPM_VERSION'], # USE THE APPROPRIATE FN FROM ABOVE (see README for details)
+        # 'version': helper.clean_version(api_results['NPM_VERSION']), # USE THE APPROPRIATE FN FROM ABOVE (see README for details)
         'buildargs': {
             'OPENJDK_ALPINE_VERSION': common_args['OPENJDK_ALPINE_VERSION'],
             #'DOWNLOAD_URL': api_results['GITHUB_INFO']['url'], # USE THE APPROPRIATE FN FROM ABOVE (see README for details)

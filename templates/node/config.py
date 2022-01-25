@@ -11,7 +11,7 @@ def get_config(organization, common_args):
     
     config = {
         'name': organization+'/'+DEFAULT_DIRNAME,
-        # 'version': api_results['NPM_VERSION'], # USE THE APPROPRIATE FN FROM ABOVE (see README for details)
+        # 'version': helper.clean_version(api_results['NPM_VERSION']), # USE THE APPROPRIATE FN FROM ABOVE (see README for details)
         'buildargs': {
             'NODE_ALPINE_VERSION': common_args['NODE_ALPINE_VERSION'],
             #'NPM_VERSION': api_results['RETIRE_NPM_VERSION'], # USE THE APPROPRIATE FN FROM ABOVE (see README for details)
