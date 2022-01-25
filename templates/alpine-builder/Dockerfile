@@ -4,11 +4,11 @@ ARG LATEST_ALPINE_VERSION
 FROM alpine:$LATEST_ALPINE_VERSION AS builder
 
 # Build Args
-ARG DIRB_DOWNLOAD_URL
+ARG DOWNLOAD_URL
 
 # Content
 WORKDIR /code
-ADD $DIRB_DOWNLOAD_URL code.tar.gz
+ADD $DOWNLOAD_URL code.tar.gz
 RUN apk --no-cache add gcc make curl-dev musl-dev libcurl \ 
     && tar -xvf dirb.tar.gz -C /code --strip-components=1 \
     && chmod -R a+x wordlists configure \
