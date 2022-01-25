@@ -10,7 +10,7 @@ def get_config(organization, common_args):
     
     config = {
         'name': organization+'/'+DEFAULT_DIRNAME,
-        'version': api_results['GITHUB_INFO'],
+        'version': helper.clean_version(api_results['GITHUB_INFO']),
         'buildargs': {
             'LATEST_ALPINE_VERSION': common_args['LATEST_ALPINE_VERSION'],
             'DOWNLOAD_URL': 'https://github.com/danielmiessler/SecLists'
