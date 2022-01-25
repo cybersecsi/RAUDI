@@ -96,3 +96,6 @@ def test_gitlab_id_by_project():
 def test_version_cleaner():
   assert clean_version('v1.0') == '1.0'
   assert clean_version('v1.2.3_4') == '1.2.3.4'
+  assert clean_version('v1.2.0-beta') == '1.2.0'
+  assert clean_version(' v.1.2.0-beta') == '1.2.0'
+  assert clean_version(' 1.2-beta') == '1.2'

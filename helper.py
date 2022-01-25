@@ -312,9 +312,9 @@ def create_tool_folder(tool_name, template):
 
 
 def clean_version(v):
-    v = re.sub('[-_]', '.', v)
+    v = re.sub('[-_]', '.', v) # 1.2.0-beta.2
     v = re.sub('[a-zA-Z]', '', v)
     v = v.replace('..', '.')
-    v = v.strip('.')
     v = v.strip()
+    v = v.strip('.')
     return v
