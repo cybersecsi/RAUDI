@@ -7,7 +7,7 @@ def get_config(organization, common_args):
     
     config = {
         'name': organization+'/subfinder',
-        'version': api_results['SUBFINDER_GITHUB_INFO']['version'][1:],
+        'version': helper.clean_version(api_results['SUBFINDER_GITHUB_INFO']['version']),
         'buildargs': {
             'LATEST_ALPINE_VERSION': common_args['LATEST_ALPINE_VERSION'],
             'DOWNLOAD_URL': api_results['SUBFINDER_GITHUB_INFO']['url']

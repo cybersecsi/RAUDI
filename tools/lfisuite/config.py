@@ -7,7 +7,7 @@ def get_config(organization, common_args):
     
     config = {
         'name': organization+'/lfisuite',
-        'version': api_results['LFISUITE_GITHUB_INFO']['version'][1:], # Remove the leading 'v'
+        'version': helper.clean_version(api_results['LFISUITE_GITHUB_INFO']['version']),
         'buildargs': {
             'PYTHON2_ALPINE_VERSION': common_args['PYTHON2_ALPINE_VERSION'],
             'LFISUITE_DOWNLOAD_URL': api_results['LFISUITE_GITHUB_INFO']['url']

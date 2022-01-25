@@ -7,7 +7,7 @@ def get_config(organization, common_args):
     
     config = {
         'name': organization+'/dvcs-ripper',
-        'version': api_results['DVCRIPPER_GITHUB_INFO'],
+        'version': helper.clean_version(api_results['DVCRIPPER_GITHUB_INFO']),
         'buildargs': {
             'DEBIAN_SLIM_VERSION': common_args['DEBIAN_SLIM_VERSION'],
             'DVCRIPPER_DOWNLOAD_URL': "https://github.com/kost/dvcs-ripper"

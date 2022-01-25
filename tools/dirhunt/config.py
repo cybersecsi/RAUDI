@@ -7,7 +7,7 @@ def get_config(organization, common_args):
     
     config = {
         'name': organization+'/dirhunt',
-        'version': api_results['DIRHUNT_PIP_VERSION'],
+        'version': helper.clean_version(api_results['DIRHUNT_PIP_VERSION']),
         'buildargs': {
             'PYTHON_ALPINE_VERSION': common_args['PYTHON_ALPINE_VERSION'],
             'DIRHUNT_VERSION': api_results['DIRHUNT_PIP_VERSION']

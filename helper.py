@@ -227,11 +227,6 @@ def get_latest_gitlab_commit(owner, project):
         latest_commit_date = ''.join(date.split('-'))
         return latest_commit_date
         # https://gitlab.com/projects/:id/repository/archive?sha=<commid>
-
-        return {
-            'url' : "{}{}{}?sha={}".format(GITLAB_API['base'], id_project, GITLAB_API['archive'], commid),
-            'version': tag
-        }
     except Exception as e: 
         raise Errors.gitlab_request()
 
@@ -314,3 +309,12 @@ def get_list_templates():
 def create_tool_folder(tool_name, template):
     shutil.copytree('templates/'+template, 'tools/'+tool_name)
     shutil.copy('templates/DOCKERHUB.md', 'tools/'+tool_name+'/README.md')
+
+
+def clean_version(v):
+    v = re.sub('[-_]', '.', v)
+    v = re.sub('[a-zA-Z]', '', v)
+    v = v.replace('..', '.')
+    v = v.strip('.')
+    v = v.strip()
+    return v

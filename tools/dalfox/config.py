@@ -7,7 +7,7 @@ def get_config(organization, common_args):
     
     config = {
         'name': organization+'/dalfox',
-        'version': api_results['GITHUB_INFO']['version'][1:],
+        'version': helper.clean_version(api_results['GITHUB_INFO']['version']),
         'buildargs': {
             'GOLANG_ALPINE_VERSION': common_args['GOLANG_ALPINE_VERSION'],
         },

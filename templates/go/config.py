@@ -13,7 +13,7 @@ def get_config(organization, common_args):
     
     config = {
         'name': organization+'/'+DEFAULT_DIRNAME,
-        # 'version': api_results['GITHUB_INFO']['version'], # USE THE APPROPRIATE FN FROM ABOVE (see README for details)
+        # 'version': helper.clean_version(api_results['GITHUB_INFO']['version']), # USE THE APPROPRIATE FN FROM ABOVE (see README for details)
         'buildargs': {
             'GOLANG_ALPINE_VERSION': common_args['GOLANG_ALPINE_VERSION'],
             'LATEST_ALPINE_VERSION': common_args['LATEST_ALPINE_VERSION'],

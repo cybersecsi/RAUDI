@@ -7,7 +7,7 @@ def get_config(organization, common_args):
     
     config = {
         'name': organization+'/nmap',
-        'version': api_results['NMAP_GITHUB_INFO'],
+        'version': helper.clean_version(api_results['NMAP_GITHUB_INFO']),
         'buildargs': {
             'LATEST_ALPINE_VERSION': common_args['LATEST_ALPINE_VERSION'],
             'NMAP_DOWNLOAD_URL': "https://github.com/nmap/nmap"
