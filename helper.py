@@ -316,4 +316,5 @@ def clean_version(v):
     v = re.sub('[a-zA-Z]', '', v)
     v = v.replace('..', '.')
     v = v.strip('.')
+    v = v.strip()
     return v
