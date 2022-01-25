@@ -7,7 +7,7 @@ def get_config(organization, common_args):
     
     config = {
         'name': organization+'/theharvester',
-        'version': api_results['THEHARVESTER_GITHUB_INFO']['version'],
+        'version': helper.clean_version(api_results['THEHARVESTER_GITHUB_INFO']['version']),
         'buildargs': {
             'PYTHON_ALPINE_VERSION': common_args['PYTHON_ALPINE_VERSION'],
             'THEHARVESTER_DOWNLOAD_URL': api_results['THEHARVESTER_GITHUB_INFO']['url']

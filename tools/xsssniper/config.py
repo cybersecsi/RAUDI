@@ -7,7 +7,7 @@ def get_config(organization, common_args):
     
     config = {
         'name': organization+'/xsssniper',
-        'version': api_results['VERSION'],
+        'version': helper.clean_version(api_results['VERSION']),
         'buildargs': {
             'PYTHON2_ALPINE_VERSION': common_args['PYTHON2_ALPINE_VERSION'],
             'DOWNLOAD_URL': "https://github.com/gbrindisi/xsssniper"

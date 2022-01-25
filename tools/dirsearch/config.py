@@ -7,7 +7,7 @@ def get_config(organization, common_args):
     
     config = {
         'name': organization+'/dirsearch',
-        'version': api_results['DIRSEARCH_GITHUB_INFO']['version'][1:], # Remove the leading 'v'
+        'version': helper.clean_version(api_results['DIRSEARCH_GITHUB_INFO']['version']),
         'buildargs': {
             'PYTHON_ALPINE_VERSION': common_args['PYTHON_ALPINE_VERSION'],
             'DIRSEARCH_DOWNLOAD_URL': api_results['DIRSEARCH_GITHUB_INFO']['url']

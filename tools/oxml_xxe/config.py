@@ -10,7 +10,7 @@ def get_config(organization, common_args):
     
     config = {
         'name': organization+'/oxml_xxe',
-        'version': api_results['OXMLXXE_GITHUB_INFO'],
+        'version': helper.clean_version(api_results['OXMLXXE_GITHUB_INFO']),
         'buildargs': {
             'RUBY2_ALPINE_VERSION': common_args['RUBY2_ALPINE_VERSION'],
             'OXMLXXE_DOWNLOAD_URL': "https://github.com/BuffaloWill/oxml_xxe",

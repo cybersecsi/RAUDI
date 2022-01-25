@@ -7,7 +7,7 @@ def get_config(organization, common_args):
     
     config = {
         'name': organization+'/googd0rker',
-        'version': api_results['GOOGD0RKER_GITHUB_INFO'],
+        'version': helper.clean_version(api_results['GOOGD0RKER_GITHUB_INFO']),
         'buildargs': {
             'PYTHON_ALPINE_VERSION': common_args['PYTHON_ALPINE_VERSION'],
             'GOOGD0RKER_DOWNLOAD_URL': "https://github.com/ZephrFish/GoogD0rker"

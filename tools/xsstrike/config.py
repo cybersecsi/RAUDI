@@ -7,7 +7,7 @@ def get_config(organization, common_args):
 
     config = {
         'name': organization+'/xsstrike',
-        'version': api_results['GITHUB_INFO']['version'],
+        'version': helper.clean_version(api_results['GITHUB_INFO']['version']),
         'buildargs': {
             'PYTHON_ALPINE_VERSION': common_args['PYTHON_ALPINE_VERSION'],
             'DOWNLOAD_URL': api_results['GITHUB_INFO']['url'],

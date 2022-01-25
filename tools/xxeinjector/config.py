@@ -10,7 +10,7 @@ def get_config(organization, common_args):
     
     config = {
         'name': organization+'/xxeinjector',
-        'version': api_results['XXEINJECTOR_GITHUB_INFO'],
+        'version': helper.clean_version(api_results['XXEINJECTOR_GITHUB_INFO']),
         'buildargs': {
             'RUBY_ALPINE_VERSION': common_args['RUBY_ALPINE_VERSION'],
             'DOWNLOAD_URL': "https://github.com/enjoiz/XXEinjector",

@@ -6,7 +6,7 @@ def get_config(organization, common_args):
     
     config = {
         'name': organization+'/apktool',
-        'version': api_results['APKTOOL_GITHUB_INFO']['version'][1:], # Remove the leading 'v'
+        'version': helper.clean_version(api_results['APKTOOL_GITHUB_INFO']['version']),
         'buildargs': {
             'OPENJDK8_ALPINE_VERSION': common_args['OPENJDK8_ALPINE_VERSION'],
             'APKTOOL_DOWNLOAD_URL': api_results['APKTOOL_GITHUB_INFO']['url']

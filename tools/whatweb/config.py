@@ -7,7 +7,7 @@ def get_config(organization, common_args):
 
     config = {
         'name': organization+'/whatweb',
-        'version': api_results['WHATWEB_GITHUB_INFO']['version'][1:], # Remove the leading 'v'
+        'version': helper.clean_version(api_results['WHATWEB_GITHUB_INFO']['version']),
         'buildargs': {
             'RUBY_ALPINE_VERSION': common_args['RUBY_ALPINE_VERSION'],
             'WHATWEB_DOWNLOAD_URL': api_results['WHATWEB_GITHUB_INFO']['url']

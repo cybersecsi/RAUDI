@@ -8,7 +8,7 @@ def get_config(organization, common_args):
 
     config = {
         'name': organization+'/crowbar',
-        'version': api_results['GITHUB_INFO']['version'][1:],
+        'version': helper.clean_version(api_results['GITHUB_INFO']['version']),
         'buildargs': {
             'PYTHON_ALPINE_VERSION': common_args['PYTHON_ALPINE_VERSION'],
             'DOWNLOAD_URL': api_results['GITHUB_INFO']['url'], 

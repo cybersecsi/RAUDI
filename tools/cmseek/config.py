@@ -8,7 +8,7 @@ def get_config(organization, common_args):
 
     config = {
         'name': organization+'/cmseek',
-        'version': api_results['GITHUB_INFO']['version'][2:], # Remove the leading 'v.'
+        'version': helper.clean_version(api_results['GITHUB_INFO']['version']),
         'buildargs': {
             'PYTHON_ALPINE_VERSION': common_args['PYTHON_ALPINE_VERSION'],
             'CMSEEK_DOWNLOAD_URL': api_results['GITHUB_INFO']['url'],

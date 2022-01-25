@@ -7,7 +7,7 @@ def get_config(organization, common_args):
 
     config = {
         'name': organization+'/bfac',
-        'version': api_results['BFAC_GITHUB_INFO']['version'][1:], # Remove the leading 'v'
+        'version': helper.clean_version(api_results['BFAC_GITHUB_INFO']['version']),
         'buildargs': {
             'PYTHON_ALPINE_VERSION': common_args['PYTHON_ALPINE_VERSION'],
             'BFAC_DOWNLOAD_URL': api_results['BFAC_GITHUB_INFO']['url']

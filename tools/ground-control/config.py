@@ -10,7 +10,7 @@ def get_config(organization, common_args):
     
     config = {
         'name': organization+'/ground-control',
-        'version': api_results['GROUNDCONTROL_GITHUB_INFO'],
+        'version': helper.clean_version(api_results['GROUNDCONTROL_GITHUB_INFO']),
         'buildargs': {
             'RUBY2_ALPINE_VERSION': common_args['RUBY2_ALPINE_VERSION'],
             'DOWNLOAD_URL': "https://github.com/jobertabma/ground-control",

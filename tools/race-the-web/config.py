@@ -7,7 +7,7 @@ def get_config(organization, common_args):
     
     config = {
         'name': organization+'/race-the-web',
-        'version': api_results['RACETHEWEB_GITHUB_INFO']['version'],
+        'version': helper.clean_version(api_results['RACETHEWEB_GITHUB_INFO']['version']),
         'buildargs': {
             'LATEST_ALPINE_VERSION': common_args['LATEST_ALPINE_VERSION'],
             'RACETHEWEB_DOWNLOAD_URL': api_results['RACETHEWEB_GITHUB_INFO']['url']

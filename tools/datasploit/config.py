@@ -8,7 +8,7 @@ def get_config(organization, common_args):
 
     config = {
         'name': organization + '/datasploit',
-        'version': api_results['DATASPLOIT_GITHUB_INFO'],
+        'version': helper.clean_version(api_results['DATASPLOIT_GITHUB_INFO']),
         'buildargs': {
             'PYTHON2_ALPINE_VERSION': common_args['PYTHON2_ALPINE_VERSION'],
             'DATASPLOIT_DOWNLOAD_URL':  "https://github.com/DataSploit/datasploit"

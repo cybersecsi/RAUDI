@@ -7,7 +7,7 @@ def get_config(organization, common_args):
 
     config = {
         'name': organization+'/findsploit',
-        'version': api_results['FINDSPLOIT_GITHUB_INFO']['version'][1:], # Remove the leading 'v'
+        'version': helper.clean_version(api_results['FINDSPLOIT_GITHUB_INFO']['version']),
         'buildargs': {
             'LATEST_ALPINE_VERSION': common_args['LATEST_ALPINE_VERSION'],
             'FINDSPLOIT_DOWNLOAD_URL': api_results['FINDSPLOIT_GITHUB_INFO']['url']

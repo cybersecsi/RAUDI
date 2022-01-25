@@ -7,7 +7,7 @@ def get_config(organization, common_args):
 
     config = {
         'name': organization+'/memcrashed',
-        'version': api_results['GITHUB_INFO'],
+        'version': helper.clean_version(api_results['GITHUB_INFO']),
         'buildargs': {
             'PYTHON_ALPINE_VERSION': common_args['PYTHON_ALPINE_VERSION'],
             'DOWNLOAD_URL': "https://github.com/649/Memcrashed-DDoS-Exploit.git",

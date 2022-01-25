@@ -7,7 +7,7 @@ def get_config(organization, common_args):
     
     config = {
         'name': organization+'/hakrevdns',
-        'version': api_results['GITHUB_INFO'],
+        'version': helper.clean_version(api_results['GITHUB_INFO']),
         'buildargs': {
             'GOLANG_ALPINE_VERSION': common_args['GOLANG_ALPINE_VERSION'],
             'LATEST_ALPINE_VERSION': common_args['LATEST_ALPINE_VERSION'],
