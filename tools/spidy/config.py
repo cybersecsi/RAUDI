@@ -5,11 +5,7 @@ DEFAULT_DIRNAME = os.path.basename(os.path.dirname(__file__))
 
 def get_config(organization, common_args):
     api_results = {
-        # See the README for a detailed documentation of those helpers
         'GITHUB_INFO': helper.get_latest_github_tag_no_browser_download('rivermont/spidy'),
-        #'GITHUB_INFO': helper.get_latest_github_release_no_browser_download('<repo_name>'),
-        #'GITHUB_INFO': helper.get_latest_github_tag_no_browser_download('<repo_name>'),
-        #'PIP_VERSION': helper.get_latest_pip_version('<package_name>'),
     }
 
     config = {

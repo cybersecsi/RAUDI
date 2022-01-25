@@ -11,7 +11,7 @@ Pretty simple!
 
 ## Usage
 ``` 
-docker run --rm -it -v $PWD:/input -v $PWD:/data spidy
+docker run --rm -it -v $PWD/:/input -v $PWD:/data secsi/spidy
 ``` 
 You need to setup a configuration file that you can find in [config](https://github.com/rivermont/spidy/tree/master/spidy/config) folder: 
 
