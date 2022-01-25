@@ -67,3 +67,8 @@
 
 ### [2022-01-24]
 - secsi/dnscan updated to version 20220120
+
+### [2022-01-25]
+- secsi/dnscan updated to version 20220124
+- secsi/eyewitness updated to version 20220124.1
+- secsi/spidy updated to version 1.4.0

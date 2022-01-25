@@ -43,7 +43,9 @@ That's all guys: go to **Action**, enable it for your forked repo, wait until mi
 ## Setup
 This repo can also be executed locally. The requirements to be met are the following:
 - Python 3.x
-- Docker
+- Docker (with BuildX)
+
+Here is the documentation for working with BuildX: https://docs.docker.com/buildx/working-with-buildx/ 
 
 The setup phase is pretty straightforward, you just need the following commands:
 ```
@@ -116,6 +118,7 @@ This is the current list of tools that have been added. Those are all tools that
 
 | Name                       | Docker Image         | Source                                           |
 |----------------------------|----------------------|--------------------------------------------------|
+| 3proxy                     | secsi/3proxy         | https://github.com/3proxy/3proxy                 |
 | Altdns                     | secsi/altdns         | https://github.com/infosec-au/altdns             |
 | Apktool                    | secsi/apktool        | https://github.com/iBotPeaches/Apktool           |
 | Arjun                      | secsi/arjun          | https://github.com/s0md3v/Arjun                  |
@@ -173,8 +176,10 @@ This is the current list of tools that have been added. Those are all tools that
 | RouterSploit               | secsi/routersploit   | https://github.com/threat9/routersploit          |
 | Sandcastle                 | secsi/sandcastle     | https://github.com/0xSearches/sandcastle         |
 | scanless                   | secsi/scanless       | https://github.com/vesche/scanless               |
+| seclists                   | secsi/seclists       | https://github.com/danielmiessler/SecLists       |
 | spyse.py                   | secsi/spysepy        | https://github.com/zeropwn/spyse.py              |
 | sqlmap                     | secsi/sqlmap         | https://github.com/sqlmapproject/sqlmap          |
+| spidy                      | secsi/spidy          | https://github.com/rivermont/spidy               |
 | Striker                    | secsi/striker        | https://github.com/s0md3v/Striker                |
 | Subfinder                  | secsi/subfinder      | https://github.com/projectdiscovery/subfinder    |
 | Subjack                    | secsi/subjack        | https://github.com/haccer/subjack                |

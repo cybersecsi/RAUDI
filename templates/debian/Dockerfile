@@ -2,5 +2,9 @@
 ARG DEBIAN_SLIM_VERSION
 
 FROM debian:$DEBIAN_SLIM_VERSION
-RUN apt-get update && apt-get install -y <package_name>
-ENTRYPOINT ["<package_name>"]
+
+ARG DOWNLOAD_URL
+ADD $DOWNLOAD_URL /target.deb
+RUN dpkg -i /target.deb \
+    && rm -f /target.deb
+ENTRYPOINT ["<executable>"]
