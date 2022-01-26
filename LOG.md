@@ -72,3 +72,8 @@
 - secsi/dnscan updated to version 20220124
 - secsi/eyewitness updated to version 20220124.1
 - secsi/spidy updated to version 1.4.0
+
+### [2022-01-26]
+- secsi/waybackpy updated to version 3.0.2
+- secsi/seclists updated to version 20211126
+- secsi/pagodo updated to version 2.2.1
