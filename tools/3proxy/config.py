@@ -15,6 +15,6 @@ def get_config(organization, common_args):
             'DEBIAN_SLIM_VERSION': common_args['DEBIAN_SLIM_VERSION'],
             'DOWNLOAD_URL': api_results['GITHUB_INFO']['url']
         },
-        'tests': ['--help']
+        'tests': []
     }
     return config

@@ -6,3 +6,4 @@ ADD $DOWNLOAD_URL /3proxy.deb
 RUN dpkg -i /3proxy.deb \
     && rm -f /3proxy.deb
 ENTRYPOINT ["3proxy"]
+CMD ["'--help'"]
