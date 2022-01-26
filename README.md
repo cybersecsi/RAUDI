@@ -135,6 +135,7 @@ This is the current list of tools that have been added. Those are all tools that
 | dnscan                     | secsi/dnscan         | https://github.com/rbsec/dnscan                  |
 | Dorks Eye                  | secsi/dorks-eye      | https://github.com/BullsEye0/dorks-eye           |
 | dvcs-ripper                | secsi/dvcs-ripper    | https://github.com/kost/dvcs-ripper              |
+| ExifTool                   | secsi/exiftool       | https://github.com/exiftool/exiftool             |
 | EyeWitness                 | secsi/eyewitness     | https://github.com/FortyNorthSecurity/EyeWitness |
 | fast-recon                 | secsi/fast-recon     | https://github.com/DanMcInerney/fast-recon       |
 | ffuf                       | secsi/ffuf           | https://github.com/ffuf/ffuf                     |
