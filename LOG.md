@@ -77,3 +77,7 @@
 - secsi/waybackpy updated to version 3.0.2
 - secsi/seclists updated to version 20211126
 - secsi/pagodo updated to version 2.2.1
+
+### [2022-01-27]
+- secsi/jwt_tool updated to version 2.2.5
+- secsi/exiftool updated to version 12.39
