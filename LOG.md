@@ -81,3 +81,6 @@
 ### [2022-01-27]
 - secsi/jwt_tool updated to version 2.2.5
 - secsi/exiftool updated to version 12.39
+
+### [2022-01-29]
+- secsi/psalm updated to version 4.19.0
