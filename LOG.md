@@ -84,3 +84,7 @@
 
 ### [2022-01-29]
 - secsi/psalm updated to version 4.19.0
+
+### [2022-02-01]
+- secsi/nmap updated to version 20220131
+- secsi/seclists updated to version 20220131
