@@ -91,3 +91,7 @@
 
 ### [2022-02-03]
 - secsi/seclists updated to version 20220202
+
+### [2022-02-04]
+- secsi/psalm updated to version 4.20.0
+- secsi/hydra updated to version 9.3
