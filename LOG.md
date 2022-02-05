@@ -95,3 +95,6 @@
 ### [2022-02-04]
 - secsi/psalm updated to version 4.20.0
 - secsi/hydra updated to version 9.3
+
+### [2022-02-05]
+- secsi/nmap updated to version 20220204
