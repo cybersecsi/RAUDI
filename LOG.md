@@ -98,3 +98,7 @@
 
 ### [2022-02-05]
 - secsi/nmap updated to version 20220204
+
+### [2022-02-08]
+- secsi/hakrevdns updated to version 20220207
+- secsi/nmap updated to version 20220208
