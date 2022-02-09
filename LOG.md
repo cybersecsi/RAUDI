@@ -102,3 +102,6 @@
 ### [2022-02-08]
 - secsi/hakrevdns updated to version 20220207
 - secsi/nmap updated to version 20220208
+
+### [2022-02-09]
+- secsi/scanless updated to version 2.1.6
