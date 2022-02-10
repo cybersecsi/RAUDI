@@ -105,3 +105,7 @@
 
 ### [2022-02-09]
 - secsi/scanless updated to version 2.1.6
+
+### [2022-02-10]
+- secsi/waybackpy updated to version 3.0.3
+- secsi/exiftool updated to version 12.40
