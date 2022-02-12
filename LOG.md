@@ -109,3 +109,6 @@
 ### [2022-02-10]
 - secsi/waybackpy updated to version 3.0.3
 - secsi/exiftool updated to version 12.40
+
+### [2022-02-12]
+- secsi/nmap updated to version 20220211
