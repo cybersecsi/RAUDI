@@ -119,3 +119,7 @@
 ### [2022-02-14]
 - secsi/nmap updated to version 20220213
 - secsi/nikto updated to version 20220213
+
+### [2022-02-19]
+- secsi/waybackpy updated to version 3.0.5
+- secsi/nmap updated to version 20220218
