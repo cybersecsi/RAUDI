@@ -123,3 +123,6 @@
 ### [2022-02-19]
 - secsi/waybackpy updated to version 3.0.5
 - secsi/nmap updated to version 20220218
+
+### [2022-02-27]
+- secsi/apktool updated to version 2.6.1
