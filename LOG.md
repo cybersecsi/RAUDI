@@ -126,3 +126,6 @@
 
 ### [2022-02-27]
 - secsi/apktool updated to version 2.6.1
+
+### [2022-02-28]
+- secsi/psalm updated to version 4.22.0
