@@ -129,3 +129,6 @@
 
 ### [2022-02-28]
 - secsi/psalm updated to version 4.22.0
+
+### [2022-03-03]
+- secsi/nikto updated to version 20220302
