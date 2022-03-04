@@ -132,3 +132,6 @@
 
 ### [2022-03-03]
 - secsi/nikto updated to version 20220302
+
+### [2022-03-04]
+- secsi/nmap updated to version 20220303
