@@ -138,3 +138,6 @@
 
 ### [2022-03-05]
 - secsi/eyewitness updated to version 20220304.1
+
+### [2022-03-07]
+- secsi/subfinder updated to version 2.5.0
