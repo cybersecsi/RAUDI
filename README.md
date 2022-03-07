@@ -22,9 +22,9 @@
   - [License](#license)
 
 ## What is RAUDI
-**RAUDI** is what will save you from creating and managing a lot of Docker Images manually. Every time a software is updated you need to update the Docker Image if you want to use the latest features, the dependencies are not working anymore. 
+**RAUDI** is what will save you from creating and managing a lot of Docker Images manually. Every time a software is updated you need to update the Docker Image if you want to use the latest features, the dependencies are not working anymore.
 
-This is messy and time-consuming. 
+This is messy and time-consuming.
 
 Don't worry anymore, we got you covered.
 
@@ -34,9 +34,9 @@ You may either fork this repo and use the GitHub Workflow yourself or use it loc
 If you want to fork this repo you also have to set up some secrets to be able to push your images on your personal Docker Hub account.
 Two GitHub secrets **must** be set:
 - **DOCKER_USER**: Your Docker Hub Username;
-- **DOCKER_API_TOKEN**: Your Docker Hub Password or API Token. 
+- **DOCKER_API_TOKEN**: Your Docker Hub Password or API Token.
 
-After setting those secrets you have to edit the **organization** variable set in the *tools/main.py* file since it is configured to push on the Docker Hub for [SecSI](https://hub.docker.com/u/secsi). 
+After setting those secrets you have to edit the **organization** variable set in the *tools/main.py* file since it is configured to push on the Docker Hub for [SecSI](https://hub.docker.com/u/secsi).
 
 That's all guys: go to **Action**, enable it for your forked repo, wait until midnight, and the Workflow will do the heavy work!
 
@@ -45,7 +45,7 @@ This repo can also be executed locally. The requirements to be met are the follo
 - Python 3.x
 - Docker (with BuildX)
 
-Here is the documentation for working with BuildX: https://docs.docker.com/buildx/working-with-buildx/ 
+Here is the documentation for working with BuildX: https://docs.docker.com/buildx/working-with-buildx/
 
 The setup phase is pretty straightforward, you just need the following commands:
 ```
@@ -59,14 +59,14 @@ You're ready to go!
 ## Test
 To run the test you need to install ``pytest`` with the command ``pip install pytest`` (it is not in ``requirements.txt`` since it is needed only for testing purposes) and then you may run:
 ```
-pytest -s 
-```  
-or 
+pytest -s
+```
+or
 ```
 python -m pytest -s
 ```
 
-to run the tests.   
+to run the tests.
 
 ## Local Usage
 **RAUDI** can build and push all the tools that are put into the *tools* directory. There are different options that can be used when running it. Before using it locally you should create a **.env** file (you can just copy the **.env.sample** file) and add your *GitHub Personal Access Token* to avoid Rate Limiting. For unauthenticated users GitHub allows up to 60 requests per hour, while authenticated users are allowed up to 15.000 requests per hour. For this reason we advice you to add it!
@@ -185,6 +185,7 @@ This is the current list of tools that have been added. Those are all tools that
 | Subfinder                  | secsi/subfinder      | https://github.com/projectdiscovery/subfinder    |
 | Subjack                    | secsi/subjack        | https://github.com/haccer/subjack                |
 | Sublist3r                  | secsi/sublist3r      | https://github.com/aboul3la/Sublist3r            |
+| Subzy                      | secsi/subzy          | https://github.com/LukaSikic/subzy               |
 | theHarvester               | secsi/theharvester   | https://github.com/laramies/theHarvester         |
 | WAFW00F                    | secsi/wafw00f        | https://github.com/EnableSecurity/wafw00f        |
 | waybackpy                  | secsi/waybackpy      | https://github.com/akamhy/waybackpy              |
