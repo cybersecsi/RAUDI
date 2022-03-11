@@ -145,3 +145,6 @@
 ### [2022-03-08]
 - secsi/eyewitness updated to version 20220307.1
 - secsi/subzy updated to version 20220102
+
+### [2022-03-11]
+- secsi/nmap updated to version 20220310
