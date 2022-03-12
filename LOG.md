@@ -148,3 +148,6 @@
 
 ### [2022-03-11]
 - secsi/nmap updated to version 20220310
+
+### [2022-03-12]
+- secsi/hakrevdns updated to version 20220311
