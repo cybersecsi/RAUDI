@@ -151,3 +151,6 @@
 
 ### [2022-03-12]
 - secsi/hakrevdns updated to version 20220311
+
+### [2022-03-15]
+- secsi/subfinder updated to version 2.4.9
