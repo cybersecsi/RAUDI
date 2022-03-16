@@ -154,3 +154,7 @@
 
 ### [2022-03-15]
 - secsi/subfinder updated to version 2.4.9
+
+### [2022-03-16]
+- secsi/eyewitness updated to version 20220315.1
+- secsi/waybackpy updated to version 3.0.6
