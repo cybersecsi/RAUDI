@@ -161,3 +161,6 @@
 
 ### [2022-03-19]
 - secsi/getjs updated to version 20220318
+
+### [2022-03-22]
+- secsi/cloudfail updated to version 20220321
