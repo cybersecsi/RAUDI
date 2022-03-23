@@ -164,3 +164,6 @@
 
 ### [2022-03-22]
 - secsi/cloudfail updated to version 20220321
+
+### [2022-03-23]
+- secsi/nmap updated to version 20220322
