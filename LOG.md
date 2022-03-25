@@ -167,3 +167,6 @@
 
 ### [2022-03-23]
 - secsi/nmap updated to version 20220322
+
+### [2022-03-25]
+- secsi/dalfox updated to version 2.7.2
