@@ -176,3 +176,6 @@
 
 ### [2022-03-30]
 - secsi/dalfox updated to version 2.7.3
+
+### [2022-03-31]
+- secsi/dalfox updated to version 2.7.4
