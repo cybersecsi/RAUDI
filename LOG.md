@@ -179,3 +179,6 @@
 
 ### [2022-03-31]
 - secsi/dalfox updated to version 2.7.4
+
+### [2022-04-04]
+- secsi/ffuf updated to version 1.4.1
