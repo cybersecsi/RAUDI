@@ -186,3 +186,6 @@
 ### [2022-04-08]
 - secsi/subfinder updated to version 2.5.1
 - secsi/exiftool updated to version 12.41
+
+### [2022-04-09]
+- secsi/retire updated to version 3.0.7
