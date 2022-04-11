@@ -189,3 +189,7 @@
 
 ### [2022-04-09]
 - secsi/retire updated to version 3.0.7
+
+### [2022-04-11]
+- secsi/nmap updated to version 20220410
+- secsi/arjun updated to version 2.1.51
