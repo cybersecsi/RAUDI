@@ -199,3 +199,6 @@
 
 ### [2022-04-21]
 - secsi/nmap updated to version 20220420
+
+### [2022-04-24]
+- secsi/dnscan updated to version 20220423
