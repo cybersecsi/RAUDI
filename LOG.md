@@ -205,3 +205,6 @@
 
 ### [2022-04-25]
 - secsi/nmap updated to version 20220424
+
+### [2022-04-26]
+- secsi/nmap updated to version 20220425
