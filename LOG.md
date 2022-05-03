@@ -214,3 +214,6 @@
 
 ### [2022-04-30]
 - secsi/eyewitness updated to version 20220429.1
+
+### [2022-05-03]
+- secsi/eyewitness updated to version 20220502.1
