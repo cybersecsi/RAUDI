@@ -217,3 +217,7 @@
 
 ### [2022-05-03]
 - secsi/eyewitness updated to version 20220502.1
+
+### [2022-05-05]
+- secsi/impacket updated to version 0.10.0
+- secsi/eyewitness updated to version 20220504.1
