@@ -221,3 +221,8 @@
 ### [2022-05-05]
 - secsi/impacket updated to version 0.10.0
 - secsi/eyewitness updated to version 20220504.1
+
+### [2022-05-13]
+- secsi/knockpy updated to version 5.3.0
+- secsi/psalm updated to version 4.23.0
+- secsi/nmap updated to version 20220512
