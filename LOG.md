@@ -226,3 +226,6 @@
 - secsi/knockpy updated to version 5.3.0
 - secsi/psalm updated to version 4.23.0
 - secsi/nmap updated to version 20220512
+
+### [2022-05-14]
+- secsi/dalfox updated to version 2.7.5
