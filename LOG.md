@@ -229,3 +229,6 @@
 
 ### [2022-05-14]
 - secsi/dalfox updated to version 2.7.5
+
+### [2022-05-16]
+- secsi/dirhunt updated to version 0.9.0
