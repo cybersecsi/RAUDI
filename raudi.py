@@ -54,9 +54,15 @@ def build(tool_name, config, args, tests):
         log("Building {docker_image}...".format(docker_image="{name}:{tag}".format(name=config['name'], tag=config['version'])))
         helper.print_docker_build_command(config['name'], config['version'], config['buildargs'])
         # Build image with version tag
-        docker.buildx.build(dirname, load=True, build_args=config['buildargs'], tags="{name}:{tag}".format(name=config['name'], tag=config['version']))
-        # Tag image as 'latest'
-        docker.tag("{name}:{tag}".format(name=config['name'], tag=config['version']), "{name}:{tag}".format(name=config['name'], tag='latest'))
+        enable_progress_env = helper.get_env('DOCKER_BUILD_PROGRESS', False)
+        enable_progress = False if (enable_progress_env == False) or (enable_progress_env == "False") else "auto"
+        try:
+            docker.buildx.build(dirname, load=True, progress=enable_progress, build_args=config['buildargs'], tags="{name}:{tag}".format(name=config['name'], tag=config['version']),)
+            # Tag image as 'latest'
+            docker.tag("{name}:{tag}".format(name=config['name'], tag=config['version']), "{name}:{tag}".format(name=config['name'], tag='latest'))
+        except Exception:
+            logErr(f"Unable to build {config['name']}:{config['version']}")
+            Manager().set_exit_code(1) # only set the exit code to 1, but keep creating Docker images
     else:
         log("This version already exists, skipping build.")
     
@@ -81,7 +87,7 @@ def build_one(args):
     config = manager.get_single_tool(tool_name)
     if not config:
         logErr("Something is wrong, the tool does not exists!")
-        sys.exit(-1)
+        sys.exit(1)
 
     log("Tool correctly found.")
     log(config)
@@ -120,7 +126,7 @@ def bootstrap(args):
     config = manager.get_single_tool(new_tool_name)
     if config != None:
         logErr("Tool with this name already exists.")
-        sys.exit(-1)
+        sys.exit(1)
 
     template = questionary.select("What template do you want to use?", choices=helper.get_list_templates()).ask()
     helper.create_tool_folder(new_tool_name, template)
@@ -140,7 +146,7 @@ def test_commands(args):
     config = manager.get_single_tool(tool_name)
     if not config:
         logErr("Something is wrong, the tool does not exists!")
-        sys.exit(-1)
+        sys.exit(1)
 
     log("Tool correctly found.")
     log(config)
@@ -148,7 +154,7 @@ def test_commands(args):
     image_exists = helper.check_if_docker_image_exists("{name}:{tag}".format(name=config['name'], tag=config['version']), False)
     if not image_exists:
         logErr("Image does not exist locally, cannot execute tests on it.")
-        sys.exit(-1)
+        sys.exit(1)
 
     try:
         helper.check_if_container_runs(config['name'], config['version'], config['tests'])
@@ -200,6 +206,10 @@ def main():
             parser.print_help()
     except Exception as e:
         logErr(e)
+        manager.set_exit_code(1)
+
+    log(f"RAUDI completed, exiting with return code {manager.get_exit_code()}")
+    sys.exit(manager.get_exit_code())
 
 if __name__ == "__main__":
     main()

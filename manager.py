@@ -3,6 +3,7 @@ import importlib
 
 class Manager(object):
     _organization = None
+    _exit_code = 0
     _tools = []
     _common_args = {}
 
@@ -60,3 +61,10 @@ class Manager(object):
     # Set tools (for testing purposes)
     def set_tools(self, tools):
         self._tools = tools
+
+    def get_exit_code(self):
+        return self._exit_code
+
+    # Set exit code (for Github Actions)
+    def set_exit_code(self, exit_code):
+        self._exit_code = exit_code

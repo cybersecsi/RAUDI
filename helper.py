@@ -39,7 +39,7 @@ def log(m):
 def logErr(m):
     print("[-] {}".format(m))
 
-def get_env(NAME):
+def get_env(NAME, default_value=None):
     """Returns and environment variable
     Args:
         NAME (String): The environment variable to be returned
@@ -49,9 +49,11 @@ def get_env(NAME):
         String: The environment variable value
     """
     r = getenv(NAME)
-    if not r: 
+    if not r and not default_value: 
         # TODO: Alert the user that the variable is unset.
         raise NotImplementedError('{} Environment Variable not found'.format(NAME))
+    elif not r and default_value:
+        return default_value
     return r
 
 def get_highest_version_number(version_numbers):
