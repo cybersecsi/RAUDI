@@ -300,7 +300,9 @@ def print_docker_build_command(name, version, buildargs):
 
 def get_list_tools():
     """A function to get the tools based on the directory names in /tools"""
-    return [f for f in listdir('tools') if not isfile(join('tools', f)) and f != '__pycache__']
+    tools=[f for f in listdir('tools') if not isfile(join('tools', f)) and f != '__pycache__']
+    tools.sort()
+    return tools
 
 def get_config_names():
     return ['tools.{}.config'.format(t) for t in get_list_tools()]
