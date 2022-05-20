@@ -232,3 +232,6 @@
 
 ### [2022-05-16]
 - secsi/dirhunt updated to version 0.9.0
+
+### [2022-05-20]
+- secsi/ffuf updated to version 1.5.0
