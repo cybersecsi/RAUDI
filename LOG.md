@@ -235,3 +235,6 @@
 
 ### [2022-05-20]
 - secsi/ffuf updated to version 1.5.0
+
+### [2022-05-22]
+- secsi/dnscan updated to version 20220521
