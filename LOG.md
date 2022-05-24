@@ -238,3 +238,6 @@
 
 ### [2022-05-22]
 - secsi/dnscan updated to version 20220521
+
+### [2022-05-24]
+- secsi/dnscan updated to version 20220523
