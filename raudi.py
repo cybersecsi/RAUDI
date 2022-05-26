@@ -71,9 +71,10 @@ def build(tool_name, config, args, tests):
         try:
             helper.check_if_container_runs(config['name'], config['version'], tests)
             push(config['name'], config['version'])
-        except DockerException as e:
+        except Exception as e:
             logErr(e)
             logErr("Error running container, push aborted for {docker}:{version}.".format(docker=config['name'], version=config['version']))
+            Manager().set_exit_code(1) # only set the exit code to 1, but keep creating Docker images
 
 def build_one(args):
     # Get Manager Singleton
@@ -159,9 +160,9 @@ def test_commands(args):
     try:
         helper.check_if_container_runs(config['name'], config['version'], config['tests'])
         log("Tests passed, {docker}:{version} can be pushed safely.".format(docker=config['name'], version=config['version']))
-    except DockerException as e:
+    except Exception as e:
         logErr(e)
-        logErr("Error running container, {docker}:{version} cannot be pushed.".format(docker=config['name'], version=config['version']))
+        logErr("Error running container, push aborted for {docker}:{version}.".format(docker=config['name'], version=config['version']))
 
 def check_readme():
     # Build tools
