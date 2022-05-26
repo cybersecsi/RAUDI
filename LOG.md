@@ -232,3 +232,12 @@
 
 ### [2022-05-16]
 - secsi/dirhunt updated to version 0.9.0
+
+### [2022-05-20]
+- secsi/ffuf updated to version 1.5.0
+
+### [2022-05-22]
+- secsi/dnscan updated to version 20220521
+
+### [2022-05-24]
+- secsi/dnscan updated to version 20220523
