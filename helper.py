@@ -1,6 +1,7 @@
 import requests
 import re
 import shutil
+import sys
 from errors import Errors
 from python_on_whales import docker
 from os import listdir, getenv
@@ -35,9 +36,17 @@ GITLAB_API = {
 
 def log(m):
     print("[+] {}".format(m))
+    flushIfGithubAction()
 
 def logErr(m):
     print("[-] {}".format(m))
+    flushIfGithubAction()
+
+def flushIfGithubAction():
+    enable_stdout_flush_env = get_env('GITHUB_ACTION', False)
+    enable_stdout_flush = False if (enable_stdout_flush_env == False) or (enable_stdout_flush_env == "False") else True
+    if (enable_stdout_flush):
+        sys.stdout.flush()
 
 def get_env(NAME, default_value=None):
     """Returns and environment variable

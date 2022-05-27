@@ -51,7 +51,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           DOCKER_BUILD_PROGRESS: True
         run: |
-          python $PWD/raudi.py --all --push --remote >> /tmp/log.txt
+          python $PWD/raudi.py --all --push --remote 2>&1 | tee /tmp/log.txt
           chmod +x $PWD/.github/workflows/autocommit.sh && $PWD/.github/workflows/autocommit.sh
       
       - name: Get current date
