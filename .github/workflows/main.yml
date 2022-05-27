@@ -49,6 +49,7 @@ jobs:
       - name: Run my script
         env: 
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_ACTION: True
           DOCKER_BUILD_PROGRESS: True
         run: |
           python $PWD/raudi.py --all --push --remote 2>&1 | tee /tmp/log.txt
