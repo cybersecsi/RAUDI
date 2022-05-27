@@ -13,6 +13,6 @@ def get_config(organization, common_args):
             'GOLANG_ALPINE_VERSION': common_args['GOLANG_ALPINE_VERSION'],
             'DOWNLOAD_URL': api_results['GITHUB_INFO']['url']
         },
-        'tests': ['-h']
+        'tests': []
     }
     return config
