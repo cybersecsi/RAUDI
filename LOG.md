@@ -241,3 +241,6 @@
 
 ### [2022-05-24]
 - secsi/dnscan updated to version 20220523
+
+### [2022-05-28]
+- secsi/hakrawler updated to version 2.1
