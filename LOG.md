@@ -244,3 +244,6 @@
 
 ### [2022-05-28]
 - secsi/hakrawler updated to version 2.1
+
+### [2022-06-02]
+- secsi/exiftool updated to version 12.42
