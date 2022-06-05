@@ -250,3 +250,6 @@
 
 ### [2022-06-03]
 - secsi/nikto updated to version 20220602
+
+### [2022-06-05]
+- secsi/pagodo updated to version 2.3.1
