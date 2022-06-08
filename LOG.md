@@ -253,3 +253,6 @@
 
 ### [2022-06-05]
 - secsi/pagodo updated to version 2.3.1
+
+### [2022-06-08]
+- secsi/subfinder updated to version 2.5.2
