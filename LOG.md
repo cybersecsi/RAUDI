@@ -259,3 +259,6 @@
 
 ### [2022-06-09]
 - secsi/nmap updated to version 20220608
+
+### [2022-06-10]
+- secsi/httprobe updated to version 0.2
