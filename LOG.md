@@ -262,3 +262,6 @@
 
 ### [2022-06-10]
 - secsi/httprobe updated to version 0.2
+
+### [2022-06-13]
+- secsi/pagodo updated to version 2.2.1
