@@ -265,3 +265,7 @@
 
 ### [2022-06-13]
 - secsi/pagodo updated to version 2.2.1
+
+### [2022-06-28]
+- secsi/nmap updated to version 20220627
+- secsi/psalm updated to version 4.24.0
