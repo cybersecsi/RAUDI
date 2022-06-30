@@ -272,3 +272,6 @@
 
 ### [2022-06-29]
 - secsi/nmap updated to version 20220628
+
+### [2022-06-30]
+- secsi/nmap updated to version 20220629
