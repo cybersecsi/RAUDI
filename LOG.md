@@ -275,3 +275,6 @@
 
 ### [2022-06-30]
 - secsi/nmap updated to version 20220629
+
+### [2022-07-02]
+- secsi/xsser updated to version 20220701
