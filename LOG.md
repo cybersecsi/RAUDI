@@ -281,3 +281,6 @@
 
 ### [2022-07-06]
 - secsi/nmap updated to version 20220705
+
+### [2022-07-07]
+- secsi/exiftool updated to version 12.43
