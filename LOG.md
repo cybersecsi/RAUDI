@@ -284,3 +284,6 @@
 
 ### [2022-07-07]
 - secsi/exiftool updated to version 12.43
+
+### [2022-07-14]
+- secsi/eyewitness updated to version 20220713.1
