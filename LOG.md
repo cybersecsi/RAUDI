@@ -287,3 +287,6 @@
 
 ### [2022-07-14]
 - secsi/eyewitness updated to version 20220713.1
+
+### [2022-07-18]
+- secsi/wafw00f updated to version 2.2.0
