@@ -302,3 +302,6 @@
 
 ### [2022-08-01]
 - secsi/dnscan updated to version 20220731
+
+### [2022-08-02]
+- secsi/seclists updated to version 20220801
