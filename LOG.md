@@ -305,3 +305,7 @@
 
 ### [2022-08-02]
 - secsi/seclists updated to version 20220801
+
+### [2022-08-03]
+- secsi/psalm updated to version 4.26.0
+- secsi/seclists updated to version 20220802
