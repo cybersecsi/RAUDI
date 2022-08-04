@@ -309,3 +309,7 @@
 ### [2022-08-03]
 - secsi/psalm updated to version 4.26.0
 - secsi/seclists updated to version 20220802
+
+### [2022-08-04]
+- secsi/eyewitness updated to version 20220803.1
+- secsi/subfinder updated to version 2.5.3
