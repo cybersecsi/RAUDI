@@ -313,3 +313,6 @@
 ### [2022-08-04]
 - secsi/eyewitness updated to version 20220803.1
 - secsi/subfinder updated to version 2.5.3
+
+### [2022-08-06]
+- secsi/dalfox updated to version 2.7.4
