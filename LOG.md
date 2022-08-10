@@ -316,3 +316,6 @@
 
 ### [2022-08-06]
 - secsi/dalfox updated to version 2.7.4
+
+### [2022-08-10]
+- secsi/dnscan updated to version 20220809
