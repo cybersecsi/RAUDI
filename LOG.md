@@ -319,3 +319,7 @@
 
 ### [2022-08-10]
 - secsi/dnscan updated to version 20220809
+
+### [2022-08-14]
+- secsi/restfulharvest updated to version 4.2.0
+- secsi/theharvester updated to version 4.2.0
