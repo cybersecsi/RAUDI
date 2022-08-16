@@ -323,3 +323,7 @@
 ### [2022-08-14]
 - secsi/restfulharvest updated to version 4.2.0
 - secsi/theharvester updated to version 4.2.0
+
+### [2022-08-16]
+- secsi/nmap updated to version 20220815
+- secsi/seclists updated to version 20220815
