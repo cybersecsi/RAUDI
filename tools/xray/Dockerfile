@@ -9,7 +9,6 @@ ARG DOWNLOAD_URL
 WORKDIR /go/src/github.com/xray
 RUN apk --no-cache add git make \
     && git clone $DOWNLOAD_URL /go/src/github.com/xray \
-    && go env -w GO111MODULE=off \
     && make
 
 FROM alpine:$LATEST_ALPINE_VERSION
