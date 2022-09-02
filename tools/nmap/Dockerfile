@@ -12,14 +12,16 @@ WORKDIR /nmap
 RUN apk add --update --no-cache \
             ca-certificates \
             libpcap \
-            libgcc libstdc++ \
-            libretls git \
- && update-ca-certificates \
- && rm -rf /var/cache/apk/*
+            libgcc \ 
+            libstdc++ \
+            openssl3-dev \
+            libretls \
+    && update-ca-certificates \
+    && rm -rf /var/cache/apk/*
 
 # Compile and install Nmap from sources
 RUN apk add --update --no-cache --virtual .build-deps \
-       libpcap-dev libretls-dev lua-dev linux-headers \
+       libpcap-dev lua-dev linux-headers \
        autoconf g++ libtool make git \
        && git clone $NMAP_DOWNLOAD_URL /nmap \
        && ./configure \
