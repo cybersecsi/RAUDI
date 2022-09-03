@@ -327,3 +327,6 @@
 ### [2022-08-16]
 - secsi/nmap updated to version 20220815
 - secsi/seclists updated to version 20220815
+
+### [2022-09-03]
+- secsi/nmap updated to version 20220902
