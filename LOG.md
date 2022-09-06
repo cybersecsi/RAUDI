@@ -330,3 +330,6 @@
 
 ### [2022-09-03]
 - secsi/nmap updated to version 20220902
+
+### [2022-09-06]
+- secsi/nikto updated to version 20220905
