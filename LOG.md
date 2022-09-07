@@ -333,3 +333,6 @@
 
 ### [2022-09-06]
 - secsi/nikto updated to version 20220905
+
+### [2022-09-07]
+- secsi/nmap updated to version 20220906
