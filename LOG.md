@@ -336,3 +336,7 @@
 
 ### [2022-09-07]
 - secsi/nmap updated to version 20220906
+
+### [2022-09-09]
+- secsi/hydra updated to version 9.4
+- secsi/nmap updated to version 20220908
