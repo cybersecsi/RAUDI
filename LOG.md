@@ -343,3 +343,6 @@
 
 ### [2022-09-10]
 - secsi/jwt_tool updated to version 2.2.6
+
+### [2022-09-11]
+- secsi/nmap updated to version 20220910
