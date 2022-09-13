@@ -349,3 +349,6 @@
 
 ### [2022-09-12]
 - secsi/arjun updated to version 2.2.1
+
+### [2022-09-13]
+- secsi/nmap updated to version 20220912
