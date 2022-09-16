@@ -358,3 +358,7 @@
 
 ### [2022-09-15]
 - secsi/retire updated to version 3.1.0
+
+### [2022-09-16]
+- secsi/nmap updated to version 20220915
+- secsi/seclists updated to version 20220915
