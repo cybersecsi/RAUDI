@@ -367,3 +367,7 @@
 - secsi/dalfox updated to version 2.8.1
 - secsi/exiftool updated to version 12.45
 - secsi/nmap updated to version 20220916
+
+### [2022-09-20]
+- secsi/nikto updated to version 20220919
+- secsi/nmap updated to version 20220919
