@@ -371,3 +371,6 @@
 ### [2022-09-20]
 - secsi/nikto updated to version 20220919
 - secsi/nmap updated to version 20220919
+
+### [2022-09-21]
+- secsi/nmap updated to version 20220920
