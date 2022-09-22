@@ -374,3 +374,6 @@
 
 ### [2022-09-21]
 - secsi/nmap updated to version 20220920
+
+### [2022-09-22]
+- secsi/nmap updated to version 20220921
