@@ -377,3 +377,8 @@
 
 ### [2022-09-22]
 - secsi/nmap updated to version 20220921
+
+### [2022-09-23]
+- secsi/cloudfail updated to version 20220922
+- secsi/eyewitness updated to version 20220922.2
+- secsi/nmap updated to version 20220922
