@@ -385,3 +385,7 @@
 
 ### [2022-10-01]
 - secsi/nmap updated to version 20220930
+
+### [2022-10-02]
+- secsi/exiftool updated to version 12.46
+- secsi/seclists updated to version 20221001
