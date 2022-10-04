@@ -389,3 +389,7 @@
 ### [2022-10-02]
 - secsi/exiftool updated to version 12.46
 - secsi/seclists updated to version 20221001
+
+### [2022-10-04]
+- secsi/dirsearch updated to version 0.4.3
+- secsi/exiftool updated to version 12.47
