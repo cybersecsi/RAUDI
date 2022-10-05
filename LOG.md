@@ -393,3 +393,6 @@
 ### [2022-10-04]
 - secsi/dirsearch updated to version 0.4.3
 - secsi/exiftool updated to version 12.47
+
+### [2022-10-05]
+- secsi/nmap updated to version 20221004
