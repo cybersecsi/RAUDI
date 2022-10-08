@@ -399,3 +399,6 @@
 
 ### [2022-10-07]
 - secsi/nmap updated to version 20221006
+
+### [2022-10-08]
+- secsi/psalm updated to version 4.28.0
