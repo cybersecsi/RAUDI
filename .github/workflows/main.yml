@@ -48,9 +48,9 @@ jobs:
       # Run
       - name: Run my script
         env: 
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GITHUB_ACTION: True
-          DOCKER_BUILD_PROGRESS: True
+          RAUDI_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          RAUDI_GITHUB_ACTION: True
+          RAUDI_DOCKER_BUILD_PROGRESS: True
         run: |
           python $PWD/raudi.py --all --push --remote 2>&1 | tee /tmp/log.txt
           chmod +x $PWD/.github/workflows/autocommit.sh && $PWD/.github/workflows/autocommit.sh

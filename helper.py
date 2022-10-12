@@ -43,7 +43,7 @@ def logErr(m):
     flushIfGithubAction()
 
 def flushIfGithubAction():
-    enable_stdout_flush_env = get_env('GITHUB_ACTION', False)
+    enable_stdout_flush_env = get_env('RAUDI_GITHUB_ACTION', False)
     enable_stdout_flush = False if (enable_stdout_flush_env == False) or (enable_stdout_flush_env == "False") else True
     if (enable_stdout_flush):
         sys.stdout.flush()
@@ -93,7 +93,7 @@ def get_latest_npm_registry_version(package):
     return version
 
 def get_github_headers():
-    github_token = getenv('GITHUB_TOKEN')
+    github_token = getenv('RAUDI_GITHUB_TOKEN')
     if not github_token:
         return {}
     else:

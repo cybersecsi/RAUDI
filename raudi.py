@@ -54,7 +54,7 @@ def build(tool_name, config, args, tests):
         log("Building {docker_image}...".format(docker_image="{name}:{tag}".format(name=config['name'], tag=config['version'])))
         helper.print_docker_build_command(config['name'], config['version'], config['buildargs'])
         # Build image with version tag
-        enable_progress_env = helper.get_env('DOCKER_BUILD_PROGRESS', False)
+        enable_progress_env = helper.get_env('RAUDI_DOCKER_BUILD_PROGRESS', False)
         enable_progress = False if (enable_progress_env == False) or (enable_progress_env == "False") else "auto"
         try:
             docker.buildx.build(dirname, load=True, progress=enable_progress, build_args=config['buildargs'], tags="{name}:{tag}".format(name=config['name'], tag=config['version']),)
