@@ -50,7 +50,11 @@ class Manager(object):
 
     # List of all imported tools 
     def get_tools(self):
-        configured_tools = [tool.get_config(self._organization, self._common_args) for tool in self._tools]
+        configured_tools = []
+        for tool in self._tools:
+            fancy_name = tool.__name__.split('.')[1]
+            helper.log(f"Loading {fancy_name}")
+            configured_tools.append(tool.get_config(self._organization, self._common_args))
         return configured_tools
 
     # Get a single tool for specific build
