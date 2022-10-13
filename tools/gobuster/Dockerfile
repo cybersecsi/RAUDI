@@ -1,9 +1,13 @@
 # Base Distro Arg
-ARG GOLANG_ALPINE_VERSION
+ARG LATEST_ALPINE_VERSION
 
-FROM golang:$GOLANG_ALPINE_VERSION 
+FROM alpine:$LATEST_ALPINE_VERSION
 
-RUN go install github.com/OJ/gobuster/v3@latest
+# Build Args
+ARG GOBUSTER_DOWNLOAD_URL
 
-ENTRYPOINT [ "gobuster" ]
-CMD ["-h"]
+# Content
+ADD $GOBUSTER_DOWNLOAD_URL gobuster.tar.gz
+RUN tar xzvf gobuster.tar.gz && chmod +x gobuster && mv gobuster /bin
+ENTRYPOINT ["gobuster"]
+CMD ["--help"]
