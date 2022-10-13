@@ -402,3 +402,6 @@
 
 ### [2022-10-08]
 - secsi/psalm updated to version 4.28.0
+
+### [2022-10-13]
+- secsi/gobuster updated to version 3.2.0
