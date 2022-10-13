@@ -405,3 +405,6 @@
 
 ### [2022-10-13]
 - secsi/gobuster updated to version 3.2.0
+
+### [2022-10-13]
+- secsi/gobuster updated to version 3.2.0
