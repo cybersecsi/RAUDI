@@ -408,3 +408,7 @@
 
 ### [2022-10-13]
 - secsi/gobuster updated to version 3.2.0
+
+### [2022-10-14]
+- secsi/exiftool updated to version 12.48
+- secsi/nmap updated to version 20221014
