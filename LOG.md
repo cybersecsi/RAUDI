@@ -412,3 +412,6 @@
 ### [2022-10-14]
 - secsi/exiftool updated to version 12.48
 - secsi/nmap updated to version 20221014
+
+### [2022-10-16]
+- secsi/seclists updated to version 20221015
