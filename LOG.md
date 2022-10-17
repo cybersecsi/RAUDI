@@ -415,3 +415,6 @@
 
 ### [2022-10-16]
 - secsi/seclists updated to version 20221015
+
+### [2022-10-17]
+- secsi/eyewitness updated to version 20221016.1
