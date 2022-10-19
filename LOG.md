@@ -422,3 +422,6 @@
 ### [2022-10-18]
 - secsi/eyewitness updated to version 20221017.1
 - secsi/subfinder updated to version 2.5.4
+
+### [2022-10-19]
+- secsi/retire updated to version 3.1.3
