@@ -425,3 +425,7 @@
 
 ### [2022-10-19]
 - secsi/retire updated to version 3.1.3
+
+### [2022-10-20]
+- secsi/exiftool updated to version 12.49
+- secsi/eyewitness updated to version 20221019.1
