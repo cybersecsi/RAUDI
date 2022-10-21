@@ -429,3 +429,7 @@
 ### [2022-10-20]
 - secsi/exiftool updated to version 12.49
 - secsi/eyewitness updated to version 20221019.1
+
+### [2022-10-21]
+- secsi/eyewitness updated to version 20221020.1
+- secsi/nmap updated to version 20221020
