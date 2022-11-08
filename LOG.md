@@ -433,3 +433,7 @@
 ### [2022-10-21]
 - secsi/eyewitness updated to version 20221020.1
 - secsi/nmap updated to version 20221020
+
+### [2022-11-08]
+- secsi/eyewitness updated to version 20221107.6
+- secsi/nmap updated to version 20221107
