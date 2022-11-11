@@ -440,3 +440,6 @@
 
 ### [2022-11-09]
 - secsi/exiftool updated to version 12.50
+
+### [2022-11-11]
+- secsi/nmap updated to version 20221110
