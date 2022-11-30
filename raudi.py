@@ -1,5 +1,4 @@
 import argparse
-from art import text2art
 from python_on_whales import docker, DockerException
 import questionary
 import os
@@ -28,9 +27,15 @@ parser.add_argument("--force", help="Build the image no matter what (even if the
 
 # Print out a Sexy intro
 def sexy_intro():
-    secsi_art=text2art("SecSI",font='big')
-    print()
-    print(secsi_art)
+  print(
+    f'''
+    ███████╗███████╗ ██████╗███████╗██╗
+    ██╔════╝██╔════╝██╔════╝██╔════╝██║
+    ███████╗█████╗  ██║     ███████╗██║
+    ╚════██║██╔══╝  ██║     ╚════██║██║
+    ███████║███████╗╚██████╗███████║██║
+    ╚══════╝╚══════╝ ╚═════╝╚══════╝╚═╝
+    ''')   
 
 # Execute a test 
 def runsh(args):
