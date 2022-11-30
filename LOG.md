@@ -443,3 +443,6 @@
 
 ### [2022-11-11]
 - secsi/nmap updated to version 20221110
+
+### [2022-11-30]
+- secsi/nmap updated to version 7.93
