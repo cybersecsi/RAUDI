@@ -405,3 +405,41 @@
 
 ### [2022-10-13]
 - secsi/gobuster updated to version 3.2.0
+
+### [2022-10-13]
+- secsi/gobuster updated to version 3.2.0
+
+### [2022-10-14]
+- secsi/exiftool updated to version 12.48
+- secsi/nmap updated to version 20221014
+
+### [2022-10-16]
+- secsi/seclists updated to version 20221015
+
+### [2022-10-17]
+- secsi/eyewitness updated to version 20221016.1
+
+### [2022-10-18]
+- secsi/eyewitness updated to version 20221017.1
+- secsi/subfinder updated to version 2.5.4
+
+### [2022-10-19]
+- secsi/retire updated to version 3.1.3
+
+### [2022-10-20]
+- secsi/exiftool updated to version 12.49
+- secsi/eyewitness updated to version 20221019.1
+
+### [2022-10-21]
+- secsi/eyewitness updated to version 20221020.1
+- secsi/nmap updated to version 20221020
+
+### [2022-11-08]
+- secsi/eyewitness updated to version 20221107.6
+- secsi/nmap updated to version 20221107
+
+### [2022-11-09]
+- secsi/exiftool updated to version 12.50
+
+### [2022-11-11]
+- secsi/nmap updated to version 20221110
