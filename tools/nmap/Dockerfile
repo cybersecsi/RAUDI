@@ -3,7 +3,7 @@ ARG LATEST_ALPINE_VERSION
 FROM alpine:$LATEST_ALPINE_VERSION
 
 # Build Args
-ARG NMAP_DOWNLOAD_URL
+ARG NMAP_LAST_RELEASE_URL
 
 # Content
 WORKDIR /nmap
@@ -14,7 +14,7 @@ RUN apk add --update --no-cache \
             libpcap \
             libgcc \ 
             libstdc++ \
-            openssl3-dev \
+            openssl-dev \
             libretls \
     && update-ca-certificates \
     && rm -rf /var/cache/apk/*
@@ -22,8 +22,8 @@ RUN apk add --update --no-cache \
 # Compile and install Nmap from sources
 RUN apk add --update --no-cache --virtual .build-deps \
        libpcap-dev lua-dev linux-headers \
-       autoconf g++ libtool make git \
-       && git clone $NMAP_DOWNLOAD_URL /nmap \
+       autoconf g++ libtool make subversion \
+       && svn checkout $NMAP_LAST_RELEASE_URL /nmap \
        && ./configure \
        --prefix=/usr \
        --sysconfdir=/etc \
@@ -37,7 +37,7 @@ RUN apk add --update --no-cache --virtual .build-deps \
        && make install \
        && apk del .build-deps \
        && rm -rf /var/cache/apk/* \
-           /nmap*
+       /nmap*
 
 ENTRYPOINT ["/usr/bin/nmap"]
 
