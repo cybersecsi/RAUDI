@@ -1,5 +1,7 @@
 
 ARG GOLANG_ALPINE_VERSION
+ARG LATEST_ALPINE_VERSION
+
 FROM golang:$GOLANG_ALPINE_VERSION AS builder
 ARG DOWNLOAD_URL
 RUN apk update && apk add --no-cache alpine-sdk git
