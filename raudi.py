@@ -62,7 +62,7 @@ def build(tool_name, config, args, tests):
         enable_progress_env = helper.get_env('RAUDI_DOCKER_BUILD_PROGRESS', False)
         enable_progress = False if (enable_progress_env == False) or (enable_progress_env == "False") else "auto"
         try:
-            docker.buildx.build(dirname, load=True, progress=enable_progress, build_args=config['buildargs'], tags="{name}:{tag}".format(name=config['name'], tag=config['version']),)
+            docker.buildx.build(dirname, load=True, progress=enable_progress, build_args=config['buildargs'], tags="{name}:{tag}".format(name=config['name'], tag=config['version']))
             # Tag image as 'latest'
             docker.tag("{name}:{tag}".format(name=config['name'], tag=config['version']), "{name}:{tag}".format(name=config['name'], tag='latest'))
         except Exception:
@@ -75,7 +75,7 @@ def build(tool_name, config, args, tests):
     if push_image and helper.check_if_docker_image_exists("{name}:{tag}".format(name=config['name'], tag=config['version']), False):
         try:
             helper.check_if_container_runs(config['name'], config['version'], tests)
-            push(config['name'], config['version'])
+            push(dirname, config['name'], config['version'], config['buildargs'])
         except Exception as e:
             logErr(e)
             logErr("Error running container, push aborted for {docker}:{version}.".format(docker=config['name'], version=config['version']))
@@ -111,16 +111,16 @@ def build_all(args):
         tool_name = tool['name'].split('/')[1]
         build(tool_name, tool, args, tool['tests'])
 
-def push(repo, version):
+def push(dirname, repo, version, build_args):
     docker_hub_version =  helper.get_latest_docker_hub_version(repo, org="")
     log("Docker Hub version is {version}".format(version=docker_hub_version))
     if version == docker_hub_version:
         log("Current version on the Docker Hub is the same as this one, skipping push.")
     else:
-        log("Pushing image on Docker Hub...")
-        docker.image.push("{name}:{tag}".format(name=repo, tag=version))
-        if version != "latest":
-            docker.image.push("{name}:{tag}".format(name=repo, tag='latest'))
+        log("Rebuilding and pushing image on Docker Hub...")
+        enable_progress_env = helper.get_env('RAUDI_DOCKER_BUILD_PROGRESS', False)
+        enable_progress = False if (enable_progress_env == False) or (enable_progress_env == "False") else "auto"
+        docker.buildx.build(dirname, load=False, push=True, progress=enable_progress, build_args=build_args, tags=[f"{repo}:{version}",f"{repo}:latest"], platforms=["linux/amd64", "linux/arm64"])
         log("{name}:{tag} successfully pushed to Docker Hub".format(name=repo, tag=version))
 
 def bootstrap(args):
