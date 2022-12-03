@@ -120,8 +120,13 @@ def push(dirname, repo, version, build_args):
         log("Rebuilding and pushing image on Docker Hub...")
         enable_progress_env = helper.get_env('RAUDI_DOCKER_BUILD_PROGRESS', False)
         enable_progress = False if (enable_progress_env == False) or (enable_progress_env == "False") else "auto"
-        docker.buildx.build(dirname, load=False, push=True, progress=enable_progress, build_args=build_args, tags=[f"{repo}:{version}",f"{repo}:latest"], platforms=["linux/amd64", "linux/arm64"])
-        log("{name}:{tag} successfully pushed to Docker Hub".format(name=repo, tag=version))
+        try:
+            docker.buildx.build(dirname, load=False, push=True, progress=enable_progress, build_args=build_args, tags=[f"{repo}:{version}",f"{repo}:latest"], platforms=["linux/amd64", "linux/arm64"])
+            log("{name}:{tag} successfully pushed to Docker Hub for both amd64 and arm64 architectures".format(name=repo, tag=version))
+        except:
+            logErr("Error while pushing both amd64 and arm64, pushing just for amd64")
+            docker.buildx.build(dirname, load=False, push=True, progress=enable_progress, build_args=build_args, tags=[f"{repo}:{version}",f"{repo}:latest"], platforms=["linux/amd64"])
+            log("{name}:{tag} successfully pushed to Docker Hub for amd64 architecture".format(name=repo, tag=version)) 
 
 def bootstrap(args):
     # Get Manager Singleton
