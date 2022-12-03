@@ -452,3 +452,7 @@
 
 ### [2022-12-03]
 - secsi/psalm updated to version 5.1.0
+
+### [2022-12-03]
+- secsi/eyewitness updated to version 20221203.1
+- secsi/httprobe updated to version 0.2
