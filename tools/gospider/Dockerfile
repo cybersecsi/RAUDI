@@ -4,7 +4,7 @@ ARG GOLANG_ALPINE_VERSION
 
 FROM golang:$GOLANG_ALPINE_VERSION as builder
 
-RUN GO111MODULE=on go get -u github.com/jaeles-project/gospider
+RUN GO111MODULE=on go install github.com/jaeles-project/gospider@latest
 
 FROM alpine:$LATEST_ALPINE_VERSION
 
