@@ -456,3 +456,14 @@
 ### [2022-12-03]
 - secsi/eyewitness updated to version 20221203.1
 - secsi/httprobe updated to version 0.2
+
+### [2022-12-04]
+- secsi/3proxy updated to version 0.9.4
+- secsi/dex2jar updated to version 2.1
+- secsi/dirhunt updated to version 0.9.0
+- secsi/dvcs-ripper updated to version 20200817
+- secsi/ground-control updated to version 20170612
+- secsi/netifyd updated to version 3.09.1
+- secsi/restfulharvest updated to version 4.2.0
+- secsi/theharvester updated to version 4.2.0
+- secsi/whatweb updated to version 0.5.5
