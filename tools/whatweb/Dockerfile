@@ -8,6 +8,9 @@ ARG WHATWEB_DOWNLOAD_URL
 # Content
 WORKDIR /whatweb
 ADD $WHATWEB_DOWNLOAD_URL whatweb.tar.gz
-RUN tar -xvf whatweb.tar.gz -C /whatweb --strip-components=1 \
-    && bundle install
+RUN apk --nocache --virtual .build-deps add build-base \
+    && tar -xvf whatweb.tar.gz -C /whatweb --strip-components=1 \
+    && bundle update \
+    && bundle install \
+    && apk del .build-deps
 ENTRYPOINT ["./whatweb"]
