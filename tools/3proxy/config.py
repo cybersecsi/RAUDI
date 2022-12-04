@@ -12,7 +12,7 @@ def get_config(organization, common_args):
         'name': organization+'/'+DEFAULT_DIRNAME,
         'version' : helper.clean_version(api_results['GITHUB_INFO']['version']),
         'buildargs': {
-            'DEBIAN_SLIM_VERSION': common_args['DEBIAN_SLIM_VERSION'],
+            'LATEST_ALPINE_VERSION': common_args['LATEST_ALPINE_VERSION'],
             'DOWNLOAD_URL': api_results['GITHUB_INFO']['url'],
         },
         'tests': []
