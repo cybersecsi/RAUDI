@@ -44,6 +44,11 @@ jobs:
         with:
           username: ${{ secrets.DOCKER_USER }}
           password: ${{ secrets.DOCKER_API_TOKEN }}
+      
+      # Setup QEMU
+      -
+        name: Set up QEMU
+        uses: docker/setup-qemu-action@v2
 
       # Run
       - name: Run my script
