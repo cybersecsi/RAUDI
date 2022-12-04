@@ -4,7 +4,7 @@ def get_config(organization, common_args):
         'version': '2.22',
         'buildargs': {
             'LATEST_ALPINE_VERSION': common_args['LATEST_ALPINE_VERSION'],
-            'DIRB_DOWNLOAD_URL': "https://sourceforge.net/projects/dirb/files/dirb/2.22/dirb222.tar.gz/download"
+            'DIRB_DOWNLOAD_URL': "https://github.com/v0re/dirb.git"
         },
         'tests': []
     }

@@ -8,9 +8,8 @@ ARG DIRB_DOWNLOAD_URL
 
 # Content
 WORKDIR /dirb
-ADD $DIRB_DOWNLOAD_URL dirb.tar.gz
-RUN apk --no-cache add gcc make curl-dev musl-dev libcurl \ 
-    && tar -xvf dirb.tar.gz -C /dirb --strip-components=1 \
+RUN apk --no-cache add gcc make curl-dev musl-dev libcurl git \ 
+    && git clone $DIRB_DOWNLOAD_URL /dirb  \
     && chmod -R a+x wordlists configure \
     && ./configure CFLAGS="-O2 -g -fcommon" \
     && make \
