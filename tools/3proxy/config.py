@@ -12,7 +12,8 @@ def get_config(organization, common_args):
         'name': organization+'/'+DEFAULT_DIRNAME,
         'version' : helper.clean_version(api_results['GITHUB_INFO']['version']),
         'buildargs': {
-            'LATEST_ALPINE_VERSION': common_args['LATEST_ALPINE_VERSION'],
+            'LATEST_GCC_VERSION': common_args['LATEST_GCC_VERSION'],
+            'LATEST_BUSYBOX_GLIBC_VERSION': common_args['LATEST_BUSYBOX_GLIBC_VERSION'],
             'DOWNLOAD_URL': api_results['GITHUB_INFO']['url'],
         },
         'tests': []
