@@ -467,3 +467,6 @@
 - secsi/restfulharvest updated to version 4.2.0
 - secsi/theharvester updated to version 4.2.0
 - secsi/whatweb updated to version 0.5.5
+
+### [2022-12-07]
+- secsi/exiftool updated to version 12.52
