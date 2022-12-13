@@ -470,3 +470,6 @@
 
 ### [2022-12-07]
 - secsi/exiftool updated to version 12.52
+
+### [2022-12-13]
+- secsi/psalm updated to version 5.2.0
