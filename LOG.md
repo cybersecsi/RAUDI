@@ -473,3 +473,6 @@
 
 ### [2022-12-13]
 - secsi/psalm updated to version 5.2.0
+
+### [2022-12-19]
+- secsi/psalm updated to version 5.3.0
