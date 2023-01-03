@@ -480,3 +480,6 @@
 ### [2022-12-20]
 - secsi/gobuster updated to version 3.4.0
 - secsi/psalm updated to version 5.4.0
+
+### [2023-01-03]
+- secsi/sqlmap updated to version 1.7
