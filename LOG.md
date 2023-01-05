@@ -483,3 +483,6 @@
 
 ### [2023-01-03]
 - secsi/sqlmap updated to version 1.7
+
+### [2023-01-05]
+- secsi/exiftool updated to version 12.53
