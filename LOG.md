@@ -486,3 +486,6 @@
 
 ### [2023-01-05]
 - secsi/exiftool updated to version 12.53
+
+### [2023-01-07]
+- secsi/exiftool updated to version 12.54
