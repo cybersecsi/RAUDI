@@ -489,3 +489,6 @@
 
 ### [2023-01-07]
 - secsi/exiftool updated to version 12.54
+
+### [2023-01-10]
+- secsi/knockpy updated to version 5.4.0
