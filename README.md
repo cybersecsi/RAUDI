@@ -289,6 +289,10 @@ RAUDI is proudly developed [@SecSI](https://secsi.io) by:
 - [Angelo Delicato](https://github.com/thelicato)
 - [Daniele Capone](https://github.com/daniele-capone)
 - [Gaetano Perrone](https://github.com/giper45)
+- [Gabriele Previtera](https://github.com/jiin995)
+
+Other contributors:
+- [frost19k](https://github.com/frost19k)
 
 ## License
 **RAUDI** is an open-source and free software released under the [GNU GPL v3](https://github.com/cybersecsi/RAUDI/blob/main/LICENSE).
