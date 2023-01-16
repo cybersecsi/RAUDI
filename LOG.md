@@ -492,3 +492,6 @@
 
 ### [2023-01-10]
 - secsi/knockpy updated to version 5.4.0
+
+### [2023-01-16]
+- secsi/pagodo updated to version 2.4.0
