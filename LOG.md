@@ -495,3 +495,6 @@
 
 ### [2023-01-16]
 - secsi/pagodo updated to version 2.4.0
+
+### [2023-01-18]
+- secsi/exiftool updated to version 12.55
