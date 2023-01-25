@@ -498,3 +498,6 @@
 
 ### [2023-01-18]
 - secsi/exiftool updated to version 12.55
+
+### [2023-01-25]
+- secsi/subzy updated to version 20230123
