@@ -501,3 +501,6 @@
 
 ### [2023-01-25]
 - secsi/subzy updated to version 20230123
+
+### [2023-01-26]
+- secsi/subzy updated to version 20230125
