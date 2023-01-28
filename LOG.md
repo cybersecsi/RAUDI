@@ -504,3 +504,6 @@
 
 ### [2023-01-26]
 - secsi/subzy updated to version 20230125
+
+### [2023-01-28]
+- secsi/joomscan updated to version 0.0.6
