@@ -507,3 +507,6 @@
 
 ### [2023-01-28]
 - secsi/joomscan updated to version 0.0.6
+
+### [2023-02-03]
+- secsi/retire updated to version 3.2.3
