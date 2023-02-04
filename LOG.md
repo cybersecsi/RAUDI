@@ -510,3 +510,6 @@
 
 ### [2023-02-03]
 - secsi/retire updated to version 3.2.3
+
+### [2023-02-04]
+- secsi/subzy updated to version 20230203
