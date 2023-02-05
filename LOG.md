@@ -513,3 +513,6 @@
 
 ### [2023-02-04]
 - secsi/subzy updated to version 20230203
+
+### [2023-02-05]
+- secsi/ffuf updated to version 2.0.0
