@@ -21,4 +21,4 @@ COPY --from=build /opt/sherlock/ /sherlock
 RUN pip3 install --no-cache-dir -r requirements.txt -f /wheels \
   && rm -rf /wheels
 
-ENTRYPOINT ["python", "sherlock.py"]
+ENTRYPOINT ["python", "sherlock"]
