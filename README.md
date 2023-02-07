@@ -183,6 +183,7 @@ This is the current list of tools that have been added. Those are all tools that
 | spyse.py                   | secsi/spysepy        | https://github.com/zeropwn/spyse.py              |
 | sqlmap                     | secsi/sqlmap         | https://github.com/sqlmapproject/sqlmap          |
 | spidy                      | secsi/spidy          | https://github.com/rivermont/spidy               |
+| sslscan                    | secsi/sslscan        | https://github.com/rbsec/sslscan                 |
 | Striker                    | secsi/striker        | https://github.com/s0md3v/Striker                |
 | Subfinder                  | secsi/subfinder      | https://github.com/projectdiscovery/subfinder    |
 | Subjack                    | secsi/subjack        | https://github.com/haccer/subjack                |
