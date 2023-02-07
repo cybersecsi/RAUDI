@@ -162,6 +162,7 @@ This is the current list of tools that have been added. Those are all tools that
 | MASSCAN                    | secsi/masscan        | https://github.com/robertdavidgraham/masscan     |
 | MassDNS                    | secsi/massdns        | https://github.com/blechschmidt/massdns          |
 | Memcrashed DDoS Exploit    | secsi/memcrashed     | https://github.com/649/Memcrashed-DDoS-Exploit   |
+| Metagoofil                 | secsi/metagoofil     | https://github.com/opsdisk/metagoofil            |
 | Netify                     | secsi/netifyd        | https://gitlab.com/netify.ai/public/netify-agent |
 | nikto                      | secsi/nikto          | https://github.com/sullo/nikto                   |
 | nmap                       | secsi/nmap           | https://github.com/nmap/nmap                     |
