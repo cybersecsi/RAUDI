@@ -492,3 +492,27 @@
 
 ### [2023-01-10]
 - secsi/knockpy updated to version 5.4.0
+
+### [2023-01-16]
+- secsi/pagodo updated to version 2.4.0
+
+### [2023-01-18]
+- secsi/exiftool updated to version 12.55
+
+### [2023-01-25]
+- secsi/subzy updated to version 20230123
+
+### [2023-01-26]
+- secsi/subzy updated to version 20230125
+
+### [2023-01-28]
+- secsi/joomscan updated to version 0.0.6
+
+### [2023-02-03]
+- secsi/retire updated to version 3.2.3
+
+### [2023-02-04]
+- secsi/subzy updated to version 20230203
+
+### [2023-02-05]
+- secsi/ffuf updated to version 2.0.0
