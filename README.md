@@ -179,6 +179,7 @@ This is the current list of tools that have been added. Those are all tools that
 | Sandcastle                 | secsi/sandcastle     | https://github.com/0xSearches/sandcastle         |
 | scanless                   | secsi/scanless       | https://github.com/vesche/scanless               |
 | seclists                   | secsi/seclists       | https://github.com/danielmiessler/SecLists       |
+| sherlock                   | secsi/sherlock       | https://github.com/sherlock-project/sherlock     |
 | spyse.py                   | secsi/spysepy        | https://github.com/zeropwn/spyse.py              |
 | sqlmap                     | secsi/sqlmap         | https://github.com/sqlmapproject/sqlmap          |
 | spidy                      | secsi/spidy          | https://github.com/rivermont/spidy               |
