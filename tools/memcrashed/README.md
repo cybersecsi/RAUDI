@@ -8,7 +8,7 @@ This tool allows you to send forged UDP packets to Memcached servers obtained fr
 
 ## Usage
 ```
-docker run -it --rm secsi/memcrashed-ddos-exploit
+docker run -it --rm secsi/memcrashed
 ```
 
 ## 🐳 RAUDI: Regularly and Automatically Updated Docker Images
