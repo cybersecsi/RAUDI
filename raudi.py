@@ -65,7 +65,8 @@ def build(tool_name, config, args, tests):
             docker.buildx.build(dirname, load=True, progress=enable_progress, build_args=config['buildargs'], tags="{name}:{tag}".format(name=config['name'], tag=config['version']))
             # Tag image as 'latest'
             docker.tag("{name}:{tag}".format(name=config['name'], tag=config['version']), "{name}:{tag}".format(name=config['name'], tag='latest'))
-        except Exception:
+        except Exception as e:
+            logErr(e)
             logErr(f"Unable to build {config['name']}:{config['version']}")
             Manager().set_exit_code(1) # only set the exit code to 1, but keep creating Docker images
     else:
