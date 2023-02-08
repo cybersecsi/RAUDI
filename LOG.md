@@ -516,3 +516,8 @@
 
 ### [2023-02-05]
 - secsi/ffuf updated to version 2.0.0
+
+### [2023-02-08]
+- secsi/metagoofil updated to version 20221009
+- secsi/sherlock updated to version 20230205
+- secsi/sslscan updated to version 20230119
