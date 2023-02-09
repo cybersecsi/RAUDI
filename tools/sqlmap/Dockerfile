@@ -8,6 +8,6 @@ ARG SQLMAP_DOWNLOAD_URL
 
 # Content
 WORKDIR /sqlmap
-ADD $SQLMAP_DOWNLOAD_URL sqlmap.tar.gz
-RUN tar -xvf sqlmap.tar.gz -C /sqlmap --strip-components=1
+RUN wget $SQLMAP_DOWNLOAD_URL -O sqlmap.tar.gz  \
+    && tar -xvf sqlmap.tar.gz -C /sqlmap --strip-components=1 && rm sqlmap.tar.gz
 ENTRYPOINT ["python3", "/sqlmap/sqlmap.py"]
