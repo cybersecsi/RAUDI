@@ -8,32 +8,28 @@ ARG HYDRA_DOWNLOAD_URL
 
 # Content
 WORKDIR /hydra
-ADD $HYDRA_DOWNLOAD_URL hydra.tar.gz
-RUN apk --no-cache add \
+#ADD $HYDRA_DOWNLOAD_URL hydra.tar.gz
+RUN apk --no-cache --virtual .build-deps add \
         gcc \
         musl-dev \
+        libidn-dev \
+        libssh-dev \
+        mariadb-connector-c-dev \
+        mariadb-dev \
+        postgresql-dev \
         make \
+        curl \
+    && apk add --no-cache \
         openssl-dev \
         libssh \
-        libssh-dev \
         mariadb-connector-c \
-        mariadb-connector-c-dev \
-        postgresql-dev \
-        mariadb-dev \
         libgpg-error-dev \
         libgcrypt-dev \
         pcre-dev \
         libidn \
-        libidn-dev \
         libpq \
-    && tar -xvf hydra.tar.gz -C /hydra --strip-components=1 \
-    && ./configure && make && make install \
-    && apk del --purge \
-        gcc \
-        musl-dev \
-        libidn-dev \
-        libssh-dev \
-        mariadb-connector-c-dev \
-        mariadb-dev \
-        postgresql-dev
+    && curl -sSL $HYDRA_DOWNLOAD_URL | tar xz -C /hydra --strip-components=1 \
+    && ./configure && make install \
+    && apk del .build-deps \
+    && rm -rf /var/cache/apk/* /hydra
 ENTRYPOINT ["hydra"]
