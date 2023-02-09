@@ -521,3 +521,6 @@
 - secsi/metagoofil updated to version 20221009
 - secsi/sherlock updated to version 20230205
 - secsi/sslscan updated to version 20230119
+
+### [2023-02-09]
+- secsi/sherlock updated to version 20230208
