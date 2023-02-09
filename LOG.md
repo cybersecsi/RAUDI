@@ -524,3 +524,6 @@
 
 ### [2023-02-09]
 - secsi/sherlock updated to version 20230208
+
+### [2023-02-09]
+- secsi/nikto updated to version 20220919
