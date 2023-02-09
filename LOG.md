@@ -531,3 +531,6 @@
 ### [2023-02-09]
 - secsi/exiftool updated to version 12.56
 - secsi/sqlmap updated to version 1.7
+
+### [2023-02-09]
+- secsi/hydra updated to version 9.4
