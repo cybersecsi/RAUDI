@@ -534,3 +534,6 @@
 
 ### [2023-02-09]
 - secsi/hydra updated to version 9.4
+
+### [2023-02-10]
+- secsi/dirsearch updated to version 0.4.3
