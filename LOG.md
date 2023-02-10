@@ -537,3 +537,6 @@
 
 ### [2023-02-10]
 - secsi/dirsearch updated to version 0.4.3
+
+### [2023-02-10]
+- secsi/nmap updated to version 7.93
