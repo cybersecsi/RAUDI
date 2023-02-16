@@ -540,3 +540,6 @@
 
 ### [2023-02-10]
 - secsi/nmap updated to version 7.93
+
+### [2023-02-16]
+- secsi/sherlock updated to version 20230215
