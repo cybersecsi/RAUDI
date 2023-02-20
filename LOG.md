@@ -549,3 +549,7 @@
 
 ### [2023-02-18]
 - secsi/sherlock updated to version 20230217
+
+### [2023-02-20]
+- secsi/psalm updated to version 5.7.0
+- secsi/subzy updated to version 20230219
