@@ -553,3 +553,7 @@
 ### [2023-02-20]
 - secsi/psalm updated to version 5.7.0
 - secsi/subzy updated to version 20230219
+
+### [2023-02-21]
+- secsi/gobuster updated to version 3.5.0
+- secsi/psalm updated to version 5.7.3
