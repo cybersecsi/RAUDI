@@ -557,3 +557,6 @@
 ### [2023-02-21]
 - secsi/gobuster updated to version 3.5.0
 - secsi/psalm updated to version 5.7.3
+
+### [2023-02-22]
+- secsi/psalm updated to version 5.7.5
