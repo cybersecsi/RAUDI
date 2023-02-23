@@ -560,3 +560,6 @@
 
 ### [2023-02-22]
 - secsi/psalm updated to version 5.7.5
+
+### [2023-02-23]
+- secsi/subfinder updated to version 2.5.6
