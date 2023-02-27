@@ -572,3 +572,6 @@
 
 ### [2023-02-26]
 - secsi/sherlock updated to version 20230225
+
+### [2023-02-27]
+- secsi/sherlock updated to version 20230226
