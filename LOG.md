@@ -585,3 +585,7 @@
 ### [2023-03-10]
 - secsi/eyewitness updated to version 20230309.2
 - secsi/seclists updated to version 20230309
+
+### [2023-03-11]
+- secsi/psalm updated to version 5.8.0
+- secsi/sherlock updated to version 20230310
