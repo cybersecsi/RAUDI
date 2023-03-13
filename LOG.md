@@ -589,3 +589,6 @@
 ### [2023-03-11]
 - secsi/psalm updated to version 5.8.0
 - secsi/sherlock updated to version 20230310
+
+### [2023-03-13]
+- secsi/sherlock updated to version 20230312
