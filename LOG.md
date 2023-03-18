@@ -599,3 +599,7 @@
 ### [2023-03-16]
 - secsi/exiftool updated to version 12.58
 - secsi/sherlock updated to version 20230315
+
+### [2023-03-18]
+- secsi/sherlock updated to version 20230317
+- secsi/subfinder updated to version 2.5.7
