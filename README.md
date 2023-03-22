@@ -1,27 +1,29 @@
 # 🐳 RAUDI: Regularly and Automatically Updated Docker Images
 
-**RAUDI** (Regularly and Automatically Updated Docker Images) automatically generates and keep updated a series of *Docker Images* through *GitHub Actions* for tools that are not provided by the developers.
+**RAUDI** (Regularly and Automatically Updated Docker Images) automatically generates and keep updated a series of _Docker Images_ through _GitHub Actions_ for tools that are not provided by the developers.
 
 [![Documentation](https://img.shields.io/badge/Documentation-complete-green.svg?style=flat)](https://github.com/cybersecsi/RAUDI/blob/main/README.md)
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://github.com/cybersecsi/RAUDI/blob/main/LICENSE)
 [![Mentioned in awesome-docker](https://awesome.re/mentioned-badge.svg)](https://github.com/veggiemonk/awesome-docker)
 
 ## Table of Contents
-  - [What is RAUDI](#what-is-raudi)
-  - [Fork](#fork)
-  - [Setup](#setup)
-  - [Test](#test)
-  - [Local Usage](#local-usage)
-  - [Available Tools](#available-tools)
-  - [Tool Structure](#tool-structure)
-  - [Helpers](#helpers)
-  - [Examples](#examples)
-  - [How to Pronounce](#how-to-pronounce)
-  - [Contributions](#contributions)
-  - [Credits](#credits)
-  - [License](#license)
+
+- [What is RAUDI](#what-is-raudi)
+- [Fork](#fork)
+- [Setup](#setup)
+- [Test](#test)
+- [Local Usage](#local-usage)
+- [Available Tools](#available-tools)
+- [Tool Structure](#tool-structure)
+- [Helpers](#helpers)
+- [Examples](#examples)
+- [How to Pronounce](#how-to-pronounce)
+- [Contributions](#contributions)
+- [Credits](#credits)
+- [License](#license)
 
 ## What is RAUDI
+
 **RAUDI** is what will save you from creating and managing a lot of Docker Images manually. Every time a software is updated you need to update the Docker Image if you want to use the latest features, the dependencies are not working anymore.
 
 This is messy and time-consuming.
@@ -31,23 +33,28 @@ Don't worry anymore, we got you covered.
 You may either fork this repo and use the GitHub Workflow yourself or use it locally (and manage its execution the way you want).
 
 ## Fork
+
 If you want to fork this repo you also have to set up some secrets to be able to push your images on your personal Docker Hub account.
 Two GitHub secrets **must** be set:
+
 - **DOCKER_USER**: Your Docker Hub Username;
 - **DOCKER_API_TOKEN**: Your Docker Hub Password or API Token.
 
-After setting those secrets you have to edit the **organization** variable set in the *tools/main.py* file since it is configured to push on the Docker Hub for [SecSI](https://hub.docker.com/u/secsi).
+After setting those secrets you have to edit the **organization** variable set in the _tools/main.py_ file since it is configured to push on the Docker Hub for [SecSI](https://hub.docker.com/u/secsi).
 
 That's all guys: go to **Action**, enable it for your forked repo, wait until midnight, and the Workflow will do the heavy work!
 
 ## Setup
+
 This repo can also be executed locally. The requirements to be met are the following:
+
 - Python 3.x
 - Docker (with BuildX)
 
 Here is the documentation for working with BuildX: https://docs.docker.com/buildx/working-with-buildx/
 
 The setup phase is pretty straightforward, you just need the following commands:
+
 ```
 git clone https://github.com/cybersecsi/RAUDI
 cd RAUDI
@@ -57,11 +64,15 @@ pip install -r requirements.txt
 You're ready to go!
 
 ## Test
-To run the test you need to install ``pytest`` with the command ``pip install pytest`` (it is not in ``requirements.txt`` since it is needed only for testing purposes) and then you may run:
+
+To run the test you need to install `pytest` with the command `pip install pytest` (it is not in `requirements.txt` since it is needed only for testing purposes) and then you may run:
+
 ```
 pytest -s
 ```
+
 or
+
 ```
 python -m pytest -s
 ```
@@ -69,55 +80,70 @@ python -m pytest -s
 to run the tests.
 
 ## Local Usage
-**RAUDI** can build and push all the tools that are put into the *tools* directory. There are different options that can be used when running it. Before using it locally you should create a **.env** file (you can just copy the **.env.sample** file) and add your *GitHub Personal Access Token* to avoid Rate Limiting. For unauthenticated users GitHub allows up to 60 requests per hour, while authenticated users are allowed up to 15.000 requests per hour. For this reason we advice you to add it!
+
+**RAUDI** can build and push all the tools that are put into the _tools_ directory. There are different options that can be used when running it. Before using it locally you should create a **.env** file (you can just copy the **.env.sample** file) and add your _GitHub Personal Access Token_ to avoid Rate Limiting. For unauthenticated users GitHub allows up to 60 requests per hour, while authenticated users are allowed up to 15.000 requests per hour. For this reason we advice you to add it!
 You can also create a personal access token without any scope since anything we do is read some info for every GitHub repo.
 
 ### Execution Modes
 
 #### Normal Execution
+
 In this mode RAUDI tries to build all the tools if needed. The command to run it is simply:
+
 ```
 python3 ./raudi.py --all
 ```
 
 #### Single Build
+
 In this mode RAUDI tries to build only the specified tool. The command in this case is:
+
 ```
 python3 ./raudi.py --single <tool_name>
 ```
-*tool_name* MUST be the name of the directory inside the *tools* folder.
+
+_tool_name_ MUST be the name of the directory inside the _tools_ folder.
 
 #### Test tool
-Since the *tests* parameter has been added to the configuration structure of the tool is can be helpful to test if the inserted commands **do return a 0 status code**. The command to test a specific tool is:
+
+Since the _tests_ parameter has been added to the configuration structure of the tool is can be helpful to test if the inserted commands **do return a 0 status code**. The command to test a specific tool is:
+
 ```
 python3 ./raudi.py --test <tool_name>
 ```
-*tool_name* MUST be the name of the directory inside the *tools* folder.
+
+_tool_name_ MUST be the name of the directory inside the _tools_ folder.
 
 #### Show tools
+
 If you want to know the available tools you can run this command:
+
 ```
 python3 ./raudi.py --list
 ```
 
 #### Bootstrap tool
+
 If you want to quickly add a new tool folder starting from one of the available templates you can run this command:
+
 ```
 python3 ./raudi.py --bootstrap <new_tool_name>
 ```
 
 ### Options
+
 | Option   | Description                                                           | Default Value |
-|----------|-----------------------------------------------------------------------|---------------|
+| -------- | --------------------------------------------------------------------- | ------------- |
 | --push   | Whether automatically push to Docker Hub                              | False         |
 | --remote | Whether check against Docker Hub instead of local Docker before build | False         |
 | --force  | Whether build or not if an image with the same tagname has been found | False         |
 
 ## Available Tools
+
 This is the current list of tools that have been added. Those are all tools that do not have an official Docker Image provided by the developer:
 
 | Name                       | Docker Image         | Source                                           |
-|----------------------------|----------------------|--------------------------------------------------|
+| -------------------------- | -------------------- | ------------------------------------------------ |
 | 3proxy                     | secsi/3proxy         | https://github.com/3proxy/3proxy                 |
 | Altdns                     | secsi/altdns         | https://github.com/infosec-au/altdns             |
 | Apktool                    | secsi/apktool        | https://github.com/iBotPeaches/Apktool           |
@@ -128,6 +154,7 @@ This is the current list of tools that have been added. Those are all tools that
 | Crowbar                    | secsi/crowbar        | https://github.com/galkan/crowbar                |
 | Dalfox                     | secsi/dalfox         | https://github.com/hahwul/dalfox                 |
 | datasploit                 | secsi/datasploit     | https://github.com/DataSploit/datasploit         |
+| devpi                      | secsi/devpi          | https://github.com/devpi/devpi                   |
 | dex2jar                    | secsi/dex2jar        | https://github.com/pxb1988/dex2jar               |
 | dirb                       | secsi/dirb           | http://dirb.sourceforge.net/                     |
 | dirhunt                    | secsi/dirhunt        | https://github.com/Nekmo/dirhunt                 |
@@ -200,12 +227,15 @@ This is the current list of tools that have been added. Those are all tools that
 | XXEinjector                | secsi/xxeinjector    | https://github.com/enjoiz/XXEinjector            |
 
 ## Tool Structure
+
 Every tool in the tools directory contains **at least** two file:
+
 - config.py
 - Dockerfile.
 - README.md (optional README for Docker Hub)
 
-If you want to add a new tool you just have to create a folder for that specific tool inside the *tools* directory. In this folder you have to insert the *Dockerfile* with defined **build args** to customize and automate the build. Once you created the Dockerfile you have to create a *config.py* in the same directory with a function called *get_config(organization, common_args)*. Be careful: the function MUST be called this way and MUST have those two parameters (even if you do not use them). The returning value is the **config** for that specific tool and has the following structure:
+If you want to add a new tool you just have to create a folder for that specific tool inside the _tools_ directory. In this folder you have to insert the _Dockerfile_ with defined **build args** to customize and automate the build. Once you created the Dockerfile you have to create a _config.py_ in the same directory with a function called _get_config(organization, common_args)_. Be careful: the function MUST be called this way and MUST have those two parameters (even if you do not use them). The returning value is the **config** for that specific tool and has the following structure:
+
 ```
 config =  {
     'name': organization+'/<name_of_the_image>',
@@ -215,10 +245,12 @@ config =  {
     'tests': []
   }
 ```
+
 The four keys are:
+
 - **name**: the name of the Docker Image (e.g. secsi/<tool_name>);
-- **version**: the version number of the Docker Image. For this you may use a helper function that **is able to retrieve the latest available version number** (look at *tools/ffuf* for an example);
-- **buildargs**: a dict to specify the parts of the Docker Images that are subject to updates (again: look at *tools/ffuf* for an example);
+- **version**: the version number of the Docker Image. For this you may use a helper function that **is able to retrieve the latest available version number** (look at _tools/ffuf_ for an example);
+- **buildargs**: a dict to specify the parts of the Docker Images that are subject to updates (again: look at _tools/ffuf_ for an example);
 - **tests**: an array of tests (usually just a simple one like '--help').
 
 After doing so you are good to go! Just be careful that the **name** of the tool **MUST BE THE SAME** as the directory in which you placed its Dockerfile.
@@ -226,76 +258,101 @@ After doing so you are good to go! Just be careful that the **name** of the tool
 **There is a NAMING CONVENTION for the versions: use only DOTS and DIGITS; so please remove any trailing 'v' from the version in the specific config.py** (for a working example check **tools/dirsearch/config.py**).
 
 ## Helpers
+
 To get the latest versions and information about **tools** and **base images** a set of helpers has been implemented. If you want to add a new tool you should use these helpers to have a Docker Image that is automatically updated by RAUDI.
 
-### ``get_latest_pip_version``
+### `get_latest_pip_version`
+
 This helper is used to retrieve the latest version of a **pip** package. All it takes is the name of the package and returns the **version number**. Example:
+
 ```
 VERSION = helper.get_latest_pip_version(package_name)
 ```
 
-### ``get_latest_npm_registry_version``
+### `get_latest_npm_registry_version`
+
 This helper is used to retrieve the latest version of a **npm** package. All it takes is the name of the package and returns the **version number**. Example:
+
 ```
 VERSION = helper.get_latest_npm_registry_version(package_name)
 ```
 
-### ``get_latest_github_release``
-This helper is used to retrieve information about a GitHub repo that uses **Releases** and has multiple kind of assets (e.g. executables for different OSes). This helper takes the repo (in the format ``user/repo``) and a target string to be able to identify the correct asset to download. It returns a dict with two keys (**url** and **version**). Example:
+### `get_latest_github_release`
+
+This helper is used to retrieve information about a GitHub repo that uses **Releases** and has multiple kind of assets (e.g. executables for different OSes). This helper takes the repo (in the format `user/repo`) and a target string to be able to identify the correct asset to download. It returns a dict with two keys (**url** and **version**). Example:
+
 ```
 VERSION = helper.get_latest_github_release("user/repo", "linux_amd64")
 ```
 
-### ``get_latest_github_release_no_browser_download``
-This helper is used to retrieve information about a GitHub repo that uses **Releases** and has only the source code (which means there is a **zipball** and a **tarball**). This helper takes the repo (in the format ``user/repo``) and returns a dict with two keys (**url** and **version**). Example:
+### `get_latest_github_release_no_browser_download`
+
+This helper is used to retrieve information about a GitHub repo that uses **Releases** and has only the source code (which means there is a **zipball** and a **tarball**). This helper takes the repo (in the format `user/repo`) and returns a dict with two keys (**url** and **version**). Example:
+
 ```
 VERSION = helper.get_latest_github_release_no_browser_download("user/repo")
 ```
 
-### ``get_latest_github_tag_no_browser_download``
-This helper is used to retrieve information about a GitHub repo that uses **Tags** and has only the source code (which means there is a **zipball** and a **tarball**). This helper takes the repo (in the format ``user/repo``) and returns a dict with two keys (**url** and **version**). Example:
+### `get_latest_github_tag_no_browser_download`
+
+This helper is used to retrieve information about a GitHub repo that uses **Tags** and has only the source code (which means there is a **zipball** and a **tarball**). This helper takes the repo (in the format `user/repo`) and returns a dict with two keys (**url** and **version**). Example:
+
 ```
 VERSION = helper.get_latest_github_tag_no_browser_download("user/repo")
 ```
 
-### ``get_latest_github_commit``
-This helper is used to retrieve information about a GitHub repo that doesn't use **Tags** or **Releases**. In this case, the goal is to retrieve the **latest commit**. This helper takes the repo (in the format ``user/repo``) and returns a string representing the **date** of the last commit in the format ``YYYYYMMDD``.
+### `get_latest_github_commit`
+
+This helper is used to retrieve information about a GitHub repo that doesn't use **Tags** or **Releases**. In this case, the goal is to retrieve the **latest commit**. This helper takes the repo (in the format `user/repo`) and returns a string representing the **date** of the last commit in the format `YYYYYMMDD`.
+
 ```
 VERSION = helper.get_latest_github_commit("user/repo")
 ```
 
 ## Examples
+
 This section provides examples for the currently added Network Security Tools. As you can see the images do provide only the tool, so if you need to use a **wordlist** you need to mount it.
 
 ### Generic Example
+
 ```
 docker run -it --rm secsi/<tool> <command>
 ```
+
 ### Specific example
+
 ```
 docker run -it --rm -v <wordlist_src_dir>:<wordlist_container_dir> secsi/dirb <url> <wordlist_container_dir>/<wordlist_file>
 ```
 
 ## How to Pronounce
+
 We are **italians**, so we probably pronounce it in a different manner than yours. The correct pronunciation (using the **phonetic transcription**) is the following:
+
 ```
 /ˈraʊdi/
 ```
-Otherwise think about the stuffed dog in the famous TV Show *Scrubs*: [Rowdy](https://tinyurl.com/raudi-pronunciation)
+
+Otherwise think about the stuffed dog in the famous TV Show _Scrubs_: [Rowdy](https://tinyurl.com/raudi-pronunciation)
 
 ## Contributions
+
 Everyone is invited to contribute!
 We created a **very detailed** document to describe [how to contribute to RAUDI](https://github.com/cybersecsi/RAUDI/blob/main/CONTRIBUTING.md).
 
 ## Credits
+
 RAUDI is proudly developed [@SecSI](https://secsi.io) by:
+
 - [Angelo Delicato](https://github.com/thelicato)
 - [Daniele Capone](https://github.com/daniele-capone)
 - [Gaetano Perrone](https://github.com/giper45)
 - [Gabriele Previtera](https://github.com/jiin995)
 
 Other contributors:
+
 - [frost19k](https://github.com/frost19k)
 
 ## License
+
 **RAUDI** is an open-source and free software released under the [GNU GPL v3](https://github.com/cybersecsi/RAUDI/blob/main/LICENSE).
