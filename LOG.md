@@ -581,3 +581,25 @@
 
 ### [2023-03-07]
 - secsi/sherlock updated to version 20230306
+
+### [2023-03-10]
+- secsi/eyewitness updated to version 20230309.2
+- secsi/seclists updated to version 20230309
+
+### [2023-03-11]
+- secsi/psalm updated to version 5.8.0
+- secsi/sherlock updated to version 20230310
+
+### [2023-03-13]
+- secsi/sherlock updated to version 20230312
+
+### [2023-03-14]
+- secsi/sherlock updated to version 20230313
+
+### [2023-03-16]
+- secsi/exiftool updated to version 12.58
+- secsi/sherlock updated to version 20230315
+
+### [2023-03-18]
+- secsi/sherlock updated to version 20230317
+- secsi/subfinder updated to version 2.5.7
