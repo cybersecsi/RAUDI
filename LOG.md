@@ -603,3 +603,6 @@
 ### [2023-03-18]
 - secsi/sherlock updated to version 20230317
 - secsi/subfinder updated to version 2.5.7
+
+### [2023-03-23]
+- secsi/devpi updated to version 20230225
