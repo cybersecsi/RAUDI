@@ -11,7 +11,7 @@ RUN apk --no-cache add git \
     && git clone $DOWNLOAD_URL /jsonhero  \
     && npm install \
     && echo "SESSION_SECRET=abc123" > .env \
-    && npm build 
+    && npm run build 
 
 
 FROM node:$NODE_ALPINE_VERSION
