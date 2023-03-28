@@ -182,6 +182,7 @@ This is the current list of tools that have been added. Those are all tools that
 | hydra                      | secsi/hydra          | https://github.com/vanhauser-thc/thc-hydra       |
 | impacket                   | secsi/impacket       | https://github.com/SecureAuthCorp/impacket       |
 | JoomScan                   | secsi/joomscan       | https://github.com/OWASP/joomscan                |
+| JSON Hero                  | secsi/jsonhero       | https://github.com/triggerdotdev/jsonhero-web    |
 | The JSON Web Token Toolkit | secsi/jwt_tool       | https://github.com/ticarpi/jwt_tool              |
 | knock                      | secsi/knockpy        | https://github.com/guelfoweb/knock               |
 | LFI Suite                  | secsi/lfisuite       | https://github.com/D35m0nd142/LFISuite           |
