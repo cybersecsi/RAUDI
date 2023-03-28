@@ -609,3 +609,6 @@
 
 ### [2023-03-24]
 - secsi/scanless updated to version 2.2.1
+
+### [2023-03-28]
+- secsi/devpi updated to version 20230309
