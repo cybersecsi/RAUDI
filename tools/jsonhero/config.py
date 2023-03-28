@@ -7,7 +7,7 @@ def get_config(organization, common_args):
     }
 
     config = {
-        'name': organization+'/jsonhero-web',
+        'name': organization+'/jsonhero',
         'version': helper.clean_version(api_results['GITHUB_INFO']),
         'buildargs': {
             'NODE_ALPINE_VERSION': common_args['NODE_ALPINE_VERSION'],
