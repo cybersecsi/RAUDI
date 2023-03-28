@@ -612,3 +612,6 @@
 
 ### [2023-03-28]
 - secsi/devpi updated to version 20230309
+
+### [2023-03-28]
+- secsi/jsonhero updated to version 20230310
