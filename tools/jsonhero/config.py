@@ -11,7 +11,7 @@ def get_config(organization, common_args):
         'version': helper.clean_version(api_results['GITHUB_INFO']),
         'buildargs': {
             'NODE_ALPINE_VERSION': common_args['NODE_ALPINE_VERSION'],
-            'DOWNLOAD_URL': "triggerdotdev/jsonhero-web"
+            'DOWNLOAD_URL': "https://github.com/triggerdotdev/jsonhero-web"
         },
         'tests': ['']
     }
