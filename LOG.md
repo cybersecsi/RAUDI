@@ -615,3 +615,6 @@
 
 ### [2023-03-28]
 - secsi/jsonhero updated to version 20230310
+
+### [2023-03-29]
+- secsi/exiftool updated to version 12.59
