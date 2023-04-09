@@ -630,3 +630,7 @@
 
 ### [2023-04-06]
 - secsi/exiftool updated to version 12.60
+
+### [2023-04-09]
+- secsi/retire updated to version 4.0.0
+- secsi/sslscan updated to version 20230408
