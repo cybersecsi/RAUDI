@@ -638,3 +638,6 @@
 ### [2023-04-12]
 - secsi/puredns updated to version 2.1.1
 - secsi/retire updated to version 4.1.1
+
+### [2023-04-13]
+- secsi/devpi updated to version 20230309
