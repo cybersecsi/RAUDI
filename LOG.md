@@ -641,3 +641,6 @@
 
 ### [2023-04-13]
 - secsi/devpi updated to version 20230309
+
+### [2023-04-14]
+- secsi/devpi updated to version 20230413
