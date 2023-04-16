@@ -644,3 +644,6 @@
 
 ### [2023-04-14]
 - secsi/devpi updated to version 20230413
+
+### [2023-04-16]
+- secsi/sherlock updated to version 20230415
