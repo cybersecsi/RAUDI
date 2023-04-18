@@ -647,3 +647,7 @@
 
 ### [2023-04-16]
 - secsi/sherlock updated to version 20230415
+
+### [2023-04-18]
+- secsi/jsonhero updated to version 20230417
+- secsi/sslscan updated to version 20230417
