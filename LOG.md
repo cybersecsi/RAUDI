@@ -651,3 +651,6 @@
 ### [2023-04-18]
 - secsi/jsonhero updated to version 20230417
 - secsi/sslscan updated to version 20230417
+
+### [2023-04-19]
+- secsi/jsonhero updated to version 20230418
