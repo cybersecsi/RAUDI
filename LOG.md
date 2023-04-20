@@ -654,3 +654,7 @@
 
 ### [2023-04-19]
 - secsi/jsonhero updated to version 20230418
+
+### [2023-04-20]
+- secsi/devpi updated to version 20230419
+- secsi/eyewitness updated to version 20230419.1
