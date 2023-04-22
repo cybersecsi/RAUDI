@@ -658,3 +658,6 @@
 ### [2023-04-20]
 - secsi/devpi updated to version 20230419
 - secsi/eyewitness updated to version 20230419.1
+
+### [2023-04-22]
+- secsi/sherlock updated to version 20230421
