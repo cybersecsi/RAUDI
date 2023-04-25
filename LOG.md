@@ -661,3 +661,6 @@
 
 ### [2023-04-22]
 - secsi/sherlock updated to version 20230421
+
+### [2023-04-25]
+- secsi/exiftool updated to version 12.61
