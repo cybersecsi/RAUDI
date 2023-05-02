@@ -664,3 +664,7 @@
 
 ### [2023-04-25]
 - secsi/exiftool updated to version 12.61
+
+### [2023-05-02]
+- secsi/devpi updated to version 20230501
+- secsi/subfinder updated to version 2.5.8
