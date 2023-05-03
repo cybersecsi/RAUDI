@@ -668,3 +668,7 @@
 ### [2023-05-02]
 - secsi/devpi updated to version 20230501
 - secsi/subfinder updated to version 2.5.8
+
+### [2023-05-03]
+- secsi/psalm updated to version 5.10.0
+- secsi/retire updated to version 4.2.1
