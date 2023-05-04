@@ -672,3 +672,7 @@
 ### [2023-05-03]
 - secsi/psalm updated to version 5.10.0
 - secsi/retire updated to version 4.2.1
+
+### [2023-05-04]
+- secsi/jsonhero updated to version 20230504
+- secsi/oxml_xxe updated to version 20230504
