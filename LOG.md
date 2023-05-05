@@ -676,3 +676,6 @@
 ### [2023-05-04]
 - secsi/jsonhero updated to version 20230504
 - secsi/oxml_xxe updated to version 20230504
+
+### [2023-05-05]
+- secsi/psalm updated to version 5.11.0
