@@ -36,7 +36,7 @@ class Manager(object):
             'OPENJDK8_ALPINE_VERSION': '8-alpine',  #
             'RUBY_ALPINE_VERSION': '3.1.0-alpine',
             'PHP_ALPINE_VERSION': '7.4-cli-alpine',
-            'RUBY2_ALPINE_VERSION': '2.7.7-alpine',
+            'RUBY2_ALPINE_VERSION': '3.2.2-alpine',
             'LATEST_GCC_VERSION': '9.5.0',
             'LATEST_BUSYBOX_GLIBC_VERSION': '1.34.1-glibc',
 
