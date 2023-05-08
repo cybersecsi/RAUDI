@@ -679,3 +679,6 @@
 
 ### [2023-05-05]
 - secsi/psalm updated to version 5.11.0
+
+### [2023-05-08]
+- secsi/oxml_xxe updated to version 20230505
