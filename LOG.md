@@ -682,3 +682,6 @@
 
 ### [2023-05-08]
 - secsi/oxml_xxe updated to version 20230505
+
+### [2023-05-10]
+- secsi/devpi updated to version 20230509
