@@ -685,3 +685,6 @@
 
 ### [2023-05-10]
 - secsi/devpi updated to version 20230509
+
+### [2023-05-18]
+- secsi/nmap updated to version 7.94
