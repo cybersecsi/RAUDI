@@ -688,3 +688,8 @@
 
 ### [2023-05-18]
 - secsi/nmap updated to version 7.94
+
+### [2023-05-20]
+- secsi/eyewitness updated to version 20230519.1
+- secsi/restfulharvest updated to version 4.3.0
+- secsi/theharvester updated to version 4.3.0
