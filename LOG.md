@@ -693,3 +693,6 @@
 - secsi/eyewitness updated to version 20230519.1
 - secsi/restfulharvest updated to version 4.3.0
 - secsi/theharvester updated to version 4.3.0
+
+### [2023-05-22]
+- secsi/nikto updated to version 20230521
