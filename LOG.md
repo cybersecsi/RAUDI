@@ -696,3 +696,8 @@
 
 ### [2023-05-22]
 - secsi/nikto updated to version 20230521
+
+### [2023-05-23]
+- secsi/hakrevdns updated to version 20230522
+- secsi/psalm updated to version 5.12.0
+- secsi/subzy updated to version 20230522
