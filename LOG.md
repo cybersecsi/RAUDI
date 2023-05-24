@@ -701,3 +701,7 @@
 - secsi/hakrevdns updated to version 20230522
 - secsi/psalm updated to version 5.12.0
 - secsi/subzy updated to version 20230522
+
+### [2023-05-24]
+- secsi/devpi updated to version 20230523
+- secsi/jsonhero updated to version 20230523
