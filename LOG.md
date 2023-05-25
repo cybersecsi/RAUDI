@@ -705,3 +705,6 @@
 ### [2023-05-24]
 - secsi/devpi updated to version 20230523
 - secsi/jsonhero updated to version 20230523
+
+### [2023-05-25]
+- secsi/jsonhero updated to version 20230524
