@@ -712,3 +712,6 @@
 ### [2023-05-26]
 - secsi/eyewitness updated to version 20230525.1
 - secsi/jsonhero updated to version 20230525
+
+### [2023-05-27]
+- secsi/retire updated to version 4.2.2
