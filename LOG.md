@@ -715,3 +715,6 @@
 
 ### [2023-05-27]
 - secsi/retire updated to version 4.2.2
+
+### [2023-05-31]
+- secsi/subfinder updated to version 2.5.9
