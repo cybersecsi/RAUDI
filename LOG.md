@@ -727,3 +727,6 @@
 
 ### [2023-06-09]
 - secsi/exiftool updated to version 12.63
+
+### [2023-06-10]
+- secsi/race-the-web updated to version 2.0.0
