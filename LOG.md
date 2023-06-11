@@ -730,3 +730,6 @@
 
 ### [2023-06-10]
 - secsi/race-the-web updated to version 2.0.0
+
+### [2023-06-11]
+- secsi/metagoofil updated to version 20230610
