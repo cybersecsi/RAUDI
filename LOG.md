@@ -733,3 +733,6 @@
 
 ### [2023-06-11]
 - secsi/metagoofil updated to version 20230610
+
+### [2023-06-13]
+- secsi/hydra updated to version 9.5
