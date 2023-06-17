@@ -736,3 +736,6 @@
 
 ### [2023-06-13]
 - secsi/hydra updated to version 9.5
+
+### [2023-06-17]
+- secsi/sslscan updated to version 20230616
