@@ -739,3 +739,6 @@
 
 ### [2023-06-17]
 - secsi/sslscan updated to version 20230616
+
+### [2023-06-20]
+- secsi/devpi updated to version 20230619
