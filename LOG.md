@@ -757,3 +757,6 @@
 
 ### [2023-07-15]
 - secsi/jsonhero updated to version 20230714
+
+### [2023-07-18]
+- secsi/apktool updated to version 2.8.0
