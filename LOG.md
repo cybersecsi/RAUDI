@@ -768,3 +768,6 @@
 - secsi/apktool updated to version 2.8.1
 - secsi/restfulharvest updated to version 4.4.0
 - secsi/theharvester updated to version 4.4.0
+
+### [2023-07-24]
+- secsi/subfinder updated to version 2.6.1
