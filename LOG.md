@@ -778,3 +778,6 @@
 
 ### [2023-07-31]
 - secsi/psalm updated to version 5.14.0
+
+### [2023-08-02]
+- secsi/psalm updated to version 5.14.1
