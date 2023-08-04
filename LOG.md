@@ -781,3 +781,7 @@
 
 ### [2023-08-02]
 - secsi/psalm updated to version 5.14.1
+
+### [2023-08-04]
+- secsi/devpi updated to version 20230724
+- secsi/impacket updated to version 0.11.0
