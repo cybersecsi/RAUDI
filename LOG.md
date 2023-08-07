@@ -785,3 +785,6 @@
 ### [2023-08-04]
 - secsi/devpi updated to version 20230724
 - secsi/impacket updated to version 0.11.0
+
+### [2023-08-07]
+- secsi/devpi updated to version 20230806
