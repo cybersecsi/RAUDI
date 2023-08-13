@@ -791,3 +791,8 @@
 
 ### [2023-08-11]
 - secsi/exiftool updated to version 12.65
+
+### [2023-08-13]
+- secsi/restfulharvest updated to version 4.4.2
+- secsi/subfinder updated to version 2.6.2
+- secsi/theharvester updated to version 4.4.2
