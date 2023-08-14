@@ -796,3 +796,8 @@
 - secsi/restfulharvest updated to version 4.4.2
 - secsi/subfinder updated to version 2.6.2
 - secsi/theharvester updated to version 4.4.2
+
+### [2023-08-14]
+- secsi/jsonhero updated to version 20230813
+- secsi/restfulharvest updated to version 4.4.3
+- secsi/theharvester updated to version 4.4.3
