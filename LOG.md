@@ -801,3 +801,7 @@
 - secsi/jsonhero updated to version 20230813
 - secsi/restfulharvest updated to version 4.4.3
 - secsi/theharvester updated to version 4.4.3
+
+### [2023-08-15]
+- secsi/dirhunt updated to version 1.0.0
+- secsi/gobuster updated to version 3.6.0
