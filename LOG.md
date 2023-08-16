@@ -805,3 +805,6 @@
 ### [2023-08-15]
 - secsi/dirhunt updated to version 1.0.0
 - secsi/gobuster updated to version 3.6.0
+
+### [2023-08-16]
+- secsi/seclists updated to version 20230815
