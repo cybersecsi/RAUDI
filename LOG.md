@@ -808,3 +808,6 @@
 
 ### [2023-08-16]
 - secsi/seclists updated to version 20230815
+
+### [2023-08-22]
+- secsi/psalm updated to version 5.15.0
