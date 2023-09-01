@@ -814,3 +814,7 @@
 
 ### [2023-08-30]
 - secsi/sherlock updated to version 20230829
+
+### [2023-09-01]
+- secsi/dex2jar updated to version 2.3
+- secsi/retire updated to version 4.3.2
