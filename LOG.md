@@ -818,3 +818,6 @@
 ### [2023-09-01]
 - secsi/dex2jar updated to version 2.3
 - secsi/retire updated to version 4.3.2
+
+### [2023-09-11]
+- secsi/sslscan updated to version 20230905
