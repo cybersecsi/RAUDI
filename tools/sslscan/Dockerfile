@@ -12,7 +12,7 @@ RUN apk --no-cache --virtual .build-deps add git gcc make ca-certificates git li
   && git clone $DOWNLOAD_URL /builddir
 
 # Make a static build of sslscan, then strip it of debugging symbols.
-RUN cd /builddir && make static && strip --strip-all /builddir/sslscan
+RUN cd /builddir && sed -i 's/--version-sort/-V/g' Makefile && make static && strip --strip-all /builddir/sslscan
 
 # Print the output of ldd so we can see what dynamic libraries that sslscan is still dependent upon.
 RUN echo "ldd output:" && ldd /builddir/sslscan \
@@ -22,10 +22,12 @@ RUN echo "ldd output:" && ldd /builddir/sslscan \
 # Start with an empty container for our final build.
 FROM scratch
 
+ARG TARGETPLATFORM
+
 # Copy over the sslscan executable from the intermediate build container, along with the dynamic libraries it is dependent upon (see output of ldd, above).
 COPY --from=builder /builddir/sslscan /sslscan
 COPY --from=builder /lib/libz.so.1 /lib/libz.so.1
-COPY --from=builder /lib/ld-musl-x86_64.so.1 /lib/ld-musl-x86_64.so.1
+COPY --from=builder /lib/ld-musl-${TARGETPLATFORM}.so.1 /lib/ld-musl-${TARGETPLATFORM}.so.1
 
 # Drop root privileges.
 USER 65535:65535
