@@ -20,7 +20,7 @@ RUN echo "ldd output:" && ldd /builddir/sslscan \
 
 
 # Start with an empty container for our final build.
-FROM scratch
+FROM alpine:$LATEST_ALPINE_VERSION
 
 # Copy over the sslscan executable from the intermediate build container, along with the dynamic libraries it is dependent upon (see output of ldd, above).
 COPY --from=builder /builddir/sslscan /sslscan
