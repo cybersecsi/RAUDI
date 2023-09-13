@@ -821,3 +821,6 @@
 
 ### [2023-09-11]
 - secsi/sslscan updated to version 20230905
+
+### [2023-09-13]
+- secsi/subfinder updated to version 2.6.3
