@@ -828,3 +828,6 @@
 ### [2023-09-17]
 - secsi/ffuf updated to version 2.1.0
 - secsi/sslscan updated to version 20230916
+
+### [2023-09-19]
+- secsi/sslscan updated to version 20230918
