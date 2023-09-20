@@ -831,3 +831,7 @@
 
 ### [2023-09-19]
 - secsi/sslscan updated to version 20230918
+
+### [2023-09-20]
+- secsi/exiftool updated to version 12.67
+- secsi/sslscan updated to version 20230919
