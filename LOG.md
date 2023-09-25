@@ -835,3 +835,7 @@
 ### [2023-09-20]
 - secsi/exiftool updated to version 12.67
 - secsi/sslscan updated to version 20230919
+
+### [2023-09-25]
+- secsi/restfulharvest updated to version 4.4.4
+- secsi/theharvester updated to version 4.4.4
