@@ -839,3 +839,6 @@
 ### [2023-09-25]
 - secsi/restfulharvest updated to version 4.4.4
 - secsi/theharvester updated to version 4.4.4
+
+### [2023-09-27]
+- secsi/jsonhero updated to version 20230926
