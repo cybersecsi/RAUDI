@@ -842,3 +842,6 @@
 
 ### [2023-09-27]
 - secsi/jsonhero updated to version 20230926
+
+### [2023-10-04]
+- secsi/dex2jar updated to version 2.4
