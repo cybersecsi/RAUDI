@@ -848,3 +848,6 @@
 
 ### [2023-10-07]
 - secsi/sherlock updated to version 20231006
+
+### [2023-10-09]
+- secsi/apktool updated to version 2.9.0
