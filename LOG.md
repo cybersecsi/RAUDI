@@ -851,3 +851,6 @@
 
 ### [2023-10-09]
 - secsi/apktool updated to version 2.9.0
+
+### [2023-10-23]
+- secsi/devpi updated to version 20231019
