@@ -860,3 +860,6 @@
 
 ### [2023-11-03]
 - secsi/devpi updated to version 20231101
+
+### [2023-11-10]
+- secsi/nikto updated to version 20231109
