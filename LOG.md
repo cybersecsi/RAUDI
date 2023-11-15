@@ -863,3 +863,6 @@
 
 ### [2023-11-10]
 - secsi/nikto updated to version 20231109
+
+### [2023-11-15]
+- secsi/sslscan updated to version 20231114
