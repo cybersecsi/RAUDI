@@ -866,3 +866,6 @@
 
 ### [2023-11-15]
 - secsi/sslscan updated to version 20231114
+
+### [2023-11-17]
+- secsi/arjun updated to version 2.2.2
