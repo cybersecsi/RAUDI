@@ -869,3 +869,6 @@
 
 ### [2023-11-17]
 - secsi/arjun updated to version 2.2.2
+
+### [2023-11-20]
+- secsi/exiftool updated to version 12.70
