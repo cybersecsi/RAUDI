@@ -872,3 +872,6 @@
 
 ### [2023-11-20]
 - secsi/exiftool updated to version 12.70
+
+### [2023-11-21]
+- secsi/devpi updated to version 20231102
