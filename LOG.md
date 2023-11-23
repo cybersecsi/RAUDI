@@ -875,3 +875,7 @@
 
 ### [2023-11-21]
 - secsi/devpi updated to version 20231102
+
+### [2023-11-23]
+- secsi/devpi updated to version 20231122
+- secsi/psalm updated to version 5.16.0
