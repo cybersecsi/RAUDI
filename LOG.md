@@ -883,3 +883,7 @@
 ### [2023-11-24]
 - secsi/devpi updated to version 20231123
 - secsi/seclists updated to version 20231123
+
+### [2023-11-25]
+- secsi/devpi updated to version 20231124
+- secsi/seclists updated to version 20231124
