@@ -887,3 +887,6 @@
 ### [2023-11-25]
 - secsi/devpi updated to version 20231124
 - secsi/seclists updated to version 20231124
+
+### [2023-11-26]
+- secsi/dalfox updated to version 2.9.1
