@@ -890,3 +890,6 @@
 
 ### [2023-11-26]
 - secsi/dalfox updated to version 2.9.1
+
+### [2023-11-27]
+- secsi/seclists updated to version 20231127
