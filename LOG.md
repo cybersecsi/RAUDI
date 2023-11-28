@@ -893,3 +893,6 @@
 
 ### [2023-11-27]
 - secsi/seclists updated to version 20231127
+
+### [2023-11-28]
+- secsi/seclists updated to version 20231128
