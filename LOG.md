@@ -900,3 +900,6 @@
 ### [2023-11-30]
 - secsi/nikto updated to version 20231129
 - secsi/seclists updated to version 20231129
+
+### [2023-12-01]
+- secsi/devpi updated to version 20231130
