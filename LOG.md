@@ -903,3 +903,6 @@
 
 ### [2023-12-01]
 - secsi/devpi updated to version 20231130
+
+### [2023-12-02]
+- secsi/seclists updated to version 20231202
