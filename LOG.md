@@ -909,3 +909,7 @@
 
 ### [2023-12-03]
 - secsi/seclists updated to version 20231203
+
+### [2023-12-04]
+- secsi/nikto updated to version 20231203
+- secsi/seclists updated to version 20231204
