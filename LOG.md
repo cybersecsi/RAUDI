@@ -920,3 +920,7 @@
 
 ### [2023-12-06]
 - secsi/seclists updated to version 20231206
+
+### [2023-12-07]
+- secsi/apktool updated to version 2.9.1
+- secsi/seclists updated to version 20231207
