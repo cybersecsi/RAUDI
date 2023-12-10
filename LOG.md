@@ -930,3 +930,6 @@
 
 ### [2023-12-09]
 - secsi/seclists updated to version 20231209
+
+### [2023-12-10]
+- secsi/seclists updated to version 20231210
