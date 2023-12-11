@@ -933,3 +933,8 @@
 
 ### [2023-12-10]
 - secsi/seclists updated to version 20231210
+
+### [2023-12-11]
+- secsi/nikto updated to version 20231210
+- secsi/seclists updated to version 20231211
+- secsi/sslscan updated to version 20231210
