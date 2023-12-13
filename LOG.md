@@ -942,3 +942,6 @@
 ### [2023-12-12]
 - secsi/cloudfail updated to version 20231211
 - secsi/seclists updated to version 20231212
+
+### [2023-12-13]
+- secsi/seclists updated to version 20231213
