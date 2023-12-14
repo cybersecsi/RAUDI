@@ -945,3 +945,7 @@
 
 ### [2023-12-13]
 - secsi/seclists updated to version 20231213
+
+### [2023-12-14]
+- secsi/pagodo updated to version 2.5.0
+- secsi/seclists updated to version 20231214
