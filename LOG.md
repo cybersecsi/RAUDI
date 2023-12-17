@@ -955,3 +955,7 @@
 
 ### [2023-12-16]
 - secsi/seclists updated to version 20231216
+
+### [2023-12-17]
+- secsi/psalm updated to version 5.18.0
+- secsi/seclists updated to version 20231217
