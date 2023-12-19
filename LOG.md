@@ -962,3 +962,8 @@
 
 ### [2023-12-18]
 - secsi/seclists updated to version 20231218
+
+### [2023-12-19]
+- secsi/restfulharvest updated to version 4.5.0
+- secsi/seclists updated to version 20231219
+- secsi/theharvester updated to version 4.5.0
