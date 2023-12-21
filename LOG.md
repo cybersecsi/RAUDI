@@ -971,3 +971,6 @@
 ### [2023-12-20]
 - secsi/devpi updated to version 20231219
 - secsi/seclists updated to version 20231220
+
+### [2023-12-21]
+- secsi/seclists updated to version 20231221
