@@ -974,3 +974,8 @@
 
 ### [2023-12-21]
 - secsi/seclists updated to version 20231221
+
+### [2023-12-22]
+- secsi/exiftool updated to version 12.71
+- secsi/seclists updated to version 20231222
+- secsi/sherlock updated to version 20231221
