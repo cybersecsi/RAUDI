@@ -985,3 +985,6 @@
 
 ### [2023-12-24]
 - secsi/seclists updated to version 20231224
+
+### [2023-12-25]
+- secsi/seclists updated to version 20231225
