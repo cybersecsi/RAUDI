@@ -992,3 +992,6 @@
 ### [2023-12-26]
 - secsi/seclists updated to version 20231226
 - secsi/sherlock updated to version 20231225
+
+### [2023-12-27]
+- secsi/seclists updated to version 20231227
