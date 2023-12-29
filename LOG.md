@@ -998,3 +998,7 @@
 
 ### [2023-12-28]
 - secsi/seclists updated to version 20231228
+
+### [2023-12-29]
+- secsi/nikto updated to version 20231228
+- secsi/seclists updated to version 20231229
