@@ -1007,3 +1007,7 @@
 - secsi/exiftool updated to version 12.72
 - secsi/nikto updated to version 20231229
 - secsi/seclists updated to version 20231230
+
+### [2023-12-31]
+- secsi/nikto updated to version 20231230
+- secsi/seclists updated to version 20231231
