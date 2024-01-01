@@ -1011,3 +1011,6 @@
 ### [2023-12-31]
 - secsi/nikto updated to version 20231230
 - secsi/seclists updated to version 20231231
+
+### [2024-01-01]
+- secsi/seclists updated to version 20240101
