@@ -1024,3 +1024,6 @@
 ### [2024-01-04]
 - secsi/seclists updated to version 20240104
 - secsi/sqlmap updated to version 1.8
+
+### [2024-01-05]
+- secsi/seclists updated to version 20240105
