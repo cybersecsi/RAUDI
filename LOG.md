@@ -1049,3 +1049,7 @@
 - secsi/exiftool updated to version 12.73
 - secsi/seclists updated to version 20240111
 - secsi/sherlock updated to version 20240110
+
+### [2024-01-12]
+- secsi/seclists updated to version 20240112
+- secsi/subfinder updated to version 2.6.4
