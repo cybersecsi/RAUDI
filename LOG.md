@@ -1056,3 +1056,7 @@
 
 ### [2024-01-13]
 - secsi/seclists updated to version 20240113
+
+### [2024-01-16]
+- secsi/pagodo updated to version 2.6.0
+- secsi/seclists updated to version 20240116
