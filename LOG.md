@@ -1063,3 +1063,8 @@
 
 ### [2024-01-17]
 - secsi/seclists updated to version 20240117
+
+### [2024-01-18]
+- secsi/nikto updated to version 20240117
+- secsi/psalm updated to version 5.19.1
+- secsi/seclists updated to version 20240118
