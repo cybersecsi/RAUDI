@@ -1076,3 +1076,7 @@
 ### [2024-01-20]
 - secsi/seclists updated to version 20240120
 - secsi/sherlock updated to version 20240119
+
+### [2024-01-21]
+- secsi/apktool updated to version 2.9.3
+- secsi/seclists updated to version 20240121
