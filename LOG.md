@@ -1080,3 +1080,7 @@
 ### [2024-01-21]
 - secsi/apktool updated to version 2.9.3
 - secsi/seclists updated to version 20240121
+
+### [2024-01-22]
+- secsi/seclists updated to version 20240122
+- secsi/sslscan updated to version 20240121
