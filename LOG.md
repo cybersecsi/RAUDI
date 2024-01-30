@@ -1107,3 +1107,6 @@
 ### [2024-01-29]
 - secsi/dalfox updated to version 2.9.2
 - secsi/seclists updated to version 20240129
+
+### [2024-01-30]
+- secsi/seclists updated to version 20240130
