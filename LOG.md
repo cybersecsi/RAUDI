@@ -1110,3 +1110,7 @@
 
 ### [2024-01-30]
 - secsi/seclists updated to version 20240130
+
+### [2024-01-31]
+- secsi/psalm updated to version 5.21.0
+- secsi/seclists updated to version 20240131
