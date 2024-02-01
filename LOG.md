@@ -1114,3 +1114,7 @@
 ### [2024-01-31]
 - secsi/psalm updated to version 5.21.0
 - secsi/seclists updated to version 20240131
+
+### [2024-02-01]
+- secsi/exiftool updated to version 12.76
+- secsi/seclists updated to version 20240201
