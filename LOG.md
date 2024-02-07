@@ -1137,3 +1137,6 @@
 - secsi/seclists updated to version 20240206
 - secsi/subfinder updated to version 2.6.5
 - secsi/theharvester updated to version 4.5.1
+
+### [2024-02-07]
+- secsi/seclists updated to version 20240207
