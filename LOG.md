@@ -1158,3 +1158,7 @@
 
 ### [2024-02-13]
 - secsi/seclists updated to version 20240213
+
+### [2024-02-14]
+- secsi/retire updated to version 4.4.2
+- secsi/seclists updated to version 20240214
