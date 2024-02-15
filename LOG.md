@@ -1162,3 +1162,7 @@
 ### [2024-02-14]
 - secsi/retire updated to version 4.4.2
 - secsi/seclists updated to version 20240214
+
+### [2024-02-15]
+- secsi/psalm updated to version 5.22.0
+- secsi/seclists updated to version 20240215
