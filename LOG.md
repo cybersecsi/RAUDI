@@ -1210,3 +1210,6 @@
 ### [2024-02-28]
 - secsi/devpi updated to version 20240227
 - secsi/seclists updated to version 20240228
+
+### [2024-03-04]
+- secsi/knockpy updated to version 7.0.0
