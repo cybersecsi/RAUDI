@@ -1213,3 +1213,6 @@
 
 ### [2024-03-04]
 - secsi/knockpy updated to version 7.0.0
+
+### [2024-03-05]
+- secsi/seclists updated to version 20240305
