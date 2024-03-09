@@ -1226,3 +1226,7 @@
 
 ### [2024-03-08]
 - secsi/seclists updated to version 20240308
+
+### [2024-03-09]
+- secsi/massdns updated to version 1.1.0
+- secsi/seclists updated to version 20240309
