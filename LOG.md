@@ -1230,3 +1230,7 @@
 ### [2024-03-09]
 - secsi/massdns updated to version 1.1.0
 - secsi/seclists updated to version 20240309
+
+### [2024-03-10]
+- secsi/psalm updated to version 5.23.0
+- secsi/seclists updated to version 20240310
