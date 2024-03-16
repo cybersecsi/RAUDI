@@ -1251,3 +1251,9 @@
 
 ### [2024-03-15]
 - secsi/seclists updated to version 20240315
+
+### [2024-03-16]
+- secsi/arjun updated to version 2.2.3
+- secsi/exiftool updated to version 12.79
+- secsi/seclists updated to version 20240316
+- secsi/sherlock updated to version 20240315
