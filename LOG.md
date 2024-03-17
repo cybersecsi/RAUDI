@@ -1257,3 +1257,6 @@
 - secsi/exiftool updated to version 12.79
 - secsi/seclists updated to version 20240316
 - secsi/sherlock updated to version 20240315
+
+### [2024-03-17]
+- secsi/seclists updated to version 20240317
