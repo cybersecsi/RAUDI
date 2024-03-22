@@ -1260,3 +1260,7 @@
 
 ### [2024-03-17]
 - secsi/seclists updated to version 20240317
+
+### [2024-03-22]
+- secsi/restfulharvest updated to version 4.6.0
+- secsi/seclists updated to version 20240322
