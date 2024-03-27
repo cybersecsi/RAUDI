@@ -1276,3 +1276,6 @@
 
 ### [2024-03-26]
 - secsi/seclists updated to version 20240326
+
+### [2024-03-27]
+- secsi/seclists updated to version 20240327
