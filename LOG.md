@@ -1279,3 +1279,8 @@
 
 ### [2024-03-27]
 - secsi/seclists updated to version 20240327
+
+### [2024-03-28]
+- secsi/exiftool updated to version 12.81
+- secsi/seclists updated to version 20240328
+- secsi/subfinder updated to version 2.6.6
