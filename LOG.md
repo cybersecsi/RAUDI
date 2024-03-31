@@ -1291,3 +1291,6 @@
 ### [2024-03-30]
 - secsi/jsonhero updated to version 20240329
 - secsi/seclists updated to version 20240330
+
+### [2024-03-31]
+- secsi/seclists updated to version 20240331
