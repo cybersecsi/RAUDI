@@ -1301,3 +1301,6 @@
 ### [2024-04-02]
 - secsi/arjun updated to version 2.2.5
 - secsi/seclists updated to version 20240402
+
+### [2024-04-03]
+- secsi/seclists updated to version 20240403
