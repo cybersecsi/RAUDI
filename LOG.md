@@ -1318,3 +1318,6 @@
 
 ### [2024-04-07]
 - secsi/seclists updated to version 20240407
+
+### [2024-04-08]
+- secsi/seclists updated to version 20240408
