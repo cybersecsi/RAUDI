@@ -1328,3 +1328,6 @@
 
 ### [2024-04-10]
 - secsi/seclists updated to version 20240410
+
+### [2024-04-11]
+- secsi/seclists updated to version 20240411
