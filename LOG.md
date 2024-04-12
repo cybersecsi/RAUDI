@@ -1331,3 +1331,7 @@
 
 ### [2024-04-11]
 - secsi/seclists updated to version 20240411
+
+### [2024-04-12]
+- secsi/pagodo updated to version 2.6.2
+- secsi/seclists updated to version 20240412
