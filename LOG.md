@@ -1335,3 +1335,6 @@
 ### [2024-04-12]
 - secsi/pagodo updated to version 2.6.2
 - secsi/seclists updated to version 20240412
+
+### [2024-04-15]
+- secsi/nmap updated to version 7.95
