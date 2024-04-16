@@ -1338,3 +1338,6 @@
 
 ### [2024-04-15]
 - secsi/nmap updated to version 7.95
+
+### [2024-04-16]
+- secsi/seclists updated to version 20240416
