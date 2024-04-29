@@ -1383,3 +1383,6 @@
 ### [2024-04-28]
 - secsi/seclists updated to version 20240428
 - secsi/sherlock updated to version 20240427
+
+### [2024-04-29]
+- secsi/seclists updated to version 20240429
