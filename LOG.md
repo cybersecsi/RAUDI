@@ -1416,3 +1416,8 @@
 ### [2024-05-07]
 - secsi/seclists updated to version 20240507
 - secsi/sherlock updated to version 20240506
+
+### [2024-05-08]
+- secsi/nikto updated to version 20240508
+- secsi/seclists updated to version 20240508
+- secsi/sherlock updated to version 20240507
