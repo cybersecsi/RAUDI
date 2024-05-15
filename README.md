@@ -169,6 +169,7 @@ This is the current list of tools that have been added. Those are all tools that
 | fierce                     | secsi/fierce         | https://github.com/mschwager/fierce              |
 | Findsploit                 | secsi/findsploit     | https://github.com/1N3/Findsploit                |
 | GetJS                      | secsi/getjs          | https://github.com/003random/getJS               |
+| gf                         | secsi/gf             | https://github.com/tomnomnom/gf                  |
 | Gitrob                     | secsi/gitrob         | https://github.com/michenriksen/gitrob           |
 | GitTools                   | secsi/gittools       | https://github.com/internetwache/GitTool         |
 | gobuster                   | secsi/gobuster       | https://github.com/OJ/gobuster                   |
