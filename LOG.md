@@ -1451,3 +1451,7 @@
 
 ### [2024-05-15]
 - secsi/gf updated to version latest
+
+### [2024-05-16]
+- secsi/seclists updated to version 20240516
+- secsi/sherlock updated to version 20240515
