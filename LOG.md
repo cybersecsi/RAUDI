@@ -1470,3 +1470,7 @@
 
 ### [2024-05-21]
 - secsi/seclists updated to version 20240521
+
+### [2024-05-22]
+- secsi/exiftool updated to version 12.85
+- secsi/seclists updated to version 20240522
