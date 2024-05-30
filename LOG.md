@@ -1495,3 +1495,9 @@
 
 ### [2024-05-28]
 - secsi/seclists updated to version 20240528
+
+### [2024-05-30]
+- secsi/jwt_tool updated to version 2.2.7
+- secsi/retire updated to version 5.0.0
+- secsi/seclists updated to version 20240530
+- secsi/sherlock updated to version 20240529
