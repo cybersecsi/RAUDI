@@ -1501,3 +1501,7 @@
 - secsi/retire updated to version 5.0.0
 - secsi/seclists updated to version 20240530
 - secsi/sherlock updated to version 20240529
+
+### [2024-05-31]
+- secsi/retire updated to version 5.0.0
+- secsi/seclists updated to version 20240531
