@@ -1530,3 +1530,6 @@
 
 ### [2024-06-06]
 - secsi/seclists updated to version 20240606
+
+### [2024-06-07]
+- secsi/seclists updated to version 20240607
