@@ -1537,3 +1537,7 @@
 ### [2024-06-08]
 - secsi/exiftool updated to version 12.86
 - secsi/seclists updated to version 20240608
+
+### [2024-06-09]
+- secsi/pagodo updated to version 2.6.4
+- secsi/seclists updated to version 20240609
