@@ -1541,3 +1541,7 @@
 ### [2024-06-09]
 - secsi/pagodo updated to version 2.6.4
 - secsi/seclists updated to version 20240609
+
+### [2024-06-12]
+- secsi/seclists updated to version 20240612
+- secsi/sherlock updated to version 0.14.4
