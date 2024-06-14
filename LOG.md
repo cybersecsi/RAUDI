@@ -1549,3 +1549,9 @@
 ### [2024-06-13]
 - secsi/seclists updated to version 20240613
 - secsi/sherlock updated to version 0.14.4
+
+### [2024-06-14]
+- secsi/exiftool updated to version 12.87
+- secsi/retire updated to version 5.0.1
+- secsi/seclists updated to version 20240614
+- secsi/sherlock updated to version 0.14.4
