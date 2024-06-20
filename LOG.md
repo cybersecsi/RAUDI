@@ -1577,3 +1577,8 @@
 - secsi/seclists updated to version 20240619
 - secsi/sherlock updated to version 0.14.4
 - secsi/subzy updated to version 20240618
+
+### [2024-06-20]
+- secsi/psalm updated to version 5.25.0
+- secsi/seclists updated to version 20240620
+- secsi/sherlock updated to version 0.14.4
