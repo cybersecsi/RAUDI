@@ -1611,3 +1611,8 @@
 ### [2024-06-27]
 - secsi/seclists updated to version 20240627
 - secsi/sherlock updated to version 0.14.4
+
+### [2024-06-28]
+- secsi/nikto updated to version 20240627
+- secsi/seclists updated to version 20240628
+- secsi/sherlock updated to version 0.14.4
