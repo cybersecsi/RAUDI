@@ -1620,3 +1620,8 @@
 ### [2024-06-29]
 - secsi/seclists updated to version 20240629
 - secsi/sherlock updated to version 0.14.4
+
+### [2024-06-30]
+- secsi/seclists updated to version 20240630
+- secsi/sherlock updated to version 0.14.4
+- secsi/sslscan updated to version 20240629
