@@ -1634,3 +1634,7 @@
 - secsi/nikto updated to version 20240701
 - secsi/seclists updated to version 20240702
 - secsi/sherlock updated to version 0.14.4
+
+### [2024-07-03]
+- secsi/seclists updated to version 20240703
+- secsi/sslscan updated to version 20240702
