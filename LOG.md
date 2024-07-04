@@ -1638,3 +1638,6 @@
 ### [2024-07-03]
 - secsi/seclists updated to version 20240703
 - secsi/sslscan updated to version 20240702
+
+### [2024-07-04]
+- secsi/seclists updated to version 20240704
