@@ -1645,3 +1645,7 @@
 ### [2024-07-05]
 - secsi/retire updated to version 5.1.1
 - secsi/seclists updated to version 20240705
+
+### [2024-07-06]
+- secsi/devpi updated to version 20240705
+- secsi/seclists updated to version 20240706
