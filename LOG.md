@@ -1656,3 +1656,7 @@
 ### [2024-07-08]
 - secsi/getjs updated to version 20240707
 - secsi/seclists updated to version 20240708
+
+### [2024-07-09]
+- secsi/seclists updated to version 20240709
+- secsi/sherlock updated to version 0.15.0
