@@ -1663,3 +1663,7 @@
 
 ### [2024-07-10]
 - secsi/seclists updated to version 20240710
+
+### [2024-07-11]
+- secsi/seclists updated to version 20240711
+- secsi/xray updated to version 20240710
