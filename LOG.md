@@ -1672,3 +1672,6 @@
 - secsi/exiftool updated to version 12.88
 - secsi/oxml_xxe updated to version 20240711
 - secsi/seclists updated to version 20240712
+
+### [2024-07-13]
+- secsi/seclists updated to version 20240713
