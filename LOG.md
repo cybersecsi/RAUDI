@@ -1689,3 +1689,7 @@
 
 ### [2024-07-17]
 - secsi/seclists updated to version 20240717
+
+### [2024-07-18]
+- secsi/devpi updated to version 20240717
+- secsi/seclists updated to version 20240718
