@@ -1717,3 +1717,6 @@
 - secsi/devpi updated to version 20240724
 - secsi/exiftool updated to version 12.92
 - secsi/seclists updated to version 20240725
+
+### [2024-07-26]
+- secsi/seclists updated to version 20240726
