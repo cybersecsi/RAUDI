@@ -154,7 +154,6 @@ This is the current list of tools that have been added. Those are all tools that
 | Crowbar                    | secsi/crowbar        | https://github.com/galkan/crowbar                |
 | Dalfox                     | secsi/dalfox         | https://github.com/hahwul/dalfox                 |
 | datasploit                 | secsi/datasploit     | https://github.com/DataSploit/datasploit         |
-| devpi                      | secsi/devpi          | https://github.com/devpi/devpi                   |
 | dex2jar                    | secsi/dex2jar        | https://github.com/pxb1988/dex2jar               |
 | dirb                       | secsi/dirb           | http://dirb.sourceforge.net/                     |
 | dirhunt                    | secsi/dirhunt        | https://github.com/Nekmo/dirhunt                 |
