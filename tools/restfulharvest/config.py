@@ -9,6 +9,7 @@ def get_config(organization, common_args):
         'name': organization+'/restfulharvest',
         'version': helper.clean_version(api_results['THEHARVESTER_GITHUB_INFO']['version']),
         'buildargs': {
+            'PYTHON3_SLIM_VERSION': common_args['PYTHON3_SLIM_VERSION'],
             'THEHARVESTER_DOWNLOAD_URL': api_results['THEHARVESTER_GITHUB_INFO']['url']
         },
         'tests': ['-h']
