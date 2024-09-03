@@ -12,6 +12,6 @@ def get_config(organization, common_args):
         'buildargs': {
             'KNOCKPY_DOWNLOAD_URL': api_results['KNOCKPY_GITHUB_INFO']['url']
         },
-        'tests': []
+        'tests': ['-h']
     }
     return config
