@@ -1740,3 +1740,6 @@
 ### [2024-09-03]
 - secsi/knockpy updated to version 7.0.1
 - secsi/seclists updated to version 20240903
+
+### [2024-09-04]
+- secsi/dalfox updated to version 2.9.3
