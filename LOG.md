@@ -1743,3 +1743,6 @@
 
 ### [2024-09-04]
 - secsi/dalfox updated to version 2.9.3
+
+### [2024-09-05]
+- secsi/seclists updated to version 20240904
