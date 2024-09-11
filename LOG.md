@@ -1764,3 +1764,6 @@
 ### [2024-09-10]
 - secsi/psalm updated to version 5.26.1
 - secsi/seclists updated to version 20240909
+
+### [2024-09-11]
+- secsi/subzy updated to version 1.2.1
