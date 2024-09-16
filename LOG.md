@@ -1783,3 +1783,6 @@
 ### [2024-09-15]
 - secsi/seclists updated to version 20240914
 - secsi/subzy updated to version 1.2.1
+
+### [2024-09-16]
+- secsi/seclists updated to version 20240916
