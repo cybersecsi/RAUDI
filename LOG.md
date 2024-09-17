@@ -1786,3 +1786,6 @@
 
 ### [2024-09-16]
 - secsi/seclists updated to version 20240916
+
+### [2024-09-17]
+- secsi/impacket updated to version 0.12.0
