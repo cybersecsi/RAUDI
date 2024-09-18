@@ -1789,3 +1789,8 @@
 
 ### [2024-09-17]
 - secsi/impacket updated to version 0.12.0
+
+### [2024-09-18]
+- secsi/apktool updated to version 2.10.0
+- secsi/seclists updated to version 20240917
+- secsi/xsser updated to version 20240917
