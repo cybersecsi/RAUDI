@@ -1794,3 +1794,6 @@
 - secsi/apktool updated to version 2.10.0
 - secsi/seclists updated to version 20240917
 - secsi/xsser updated to version 20240917
+
+### [2024-09-19]
+- secsi/seclists updated to version 20240918
