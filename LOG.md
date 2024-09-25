@@ -1813,3 +1813,6 @@
 ### [2024-09-24]
 - secsi/retire updated to version 5.2.3
 - secsi/seclists updated to version 20240923
+
+### [2024-09-25]
+- secsi/seclists updated to version 20240924
