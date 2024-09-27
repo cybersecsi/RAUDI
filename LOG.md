@@ -1820,3 +1820,8 @@
 ### [2024-09-26]
 - secsi/exiftool updated to version 12.97
 - secsi/seclists updated to version 20240925
+
+### [2024-09-27]
+- secsi/nikto updated to version 20240926
+- secsi/retire updated to version 5.2.4
+- secsi/seclists updated to version 20240926
