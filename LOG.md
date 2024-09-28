@@ -1825,3 +1825,7 @@
 - secsi/nikto updated to version 20240926
 - secsi/retire updated to version 5.2.4
 - secsi/seclists updated to version 20240926
+
+### [2024-09-28]
+- secsi/nikto updated to version 20240927
+- secsi/seclists updated to version 20240927
