@@ -1835,3 +1835,7 @@
 
 ### [2024-09-30]
 - secsi/seclists updated to version 20240929
+
+### [2024-10-01]
+- secsi/nikto updated to version 20240930
+- secsi/seclists updated to version 20240930
