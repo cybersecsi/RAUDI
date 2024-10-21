@@ -1898,3 +1898,6 @@
 ### [2024-10-20]
 - secsi/exiftool updated to version 12.99
 - secsi/seclists updated to version 20241019
+
+### [2024-10-21]
+- secsi/seclists updated to version 20241020
