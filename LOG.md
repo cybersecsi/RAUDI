@@ -1910,3 +1910,7 @@
 
 ### [2024-10-24]
 - secsi/seclists updated to version 20241023
+
+### [2024-10-25]
+- secsi/nikto updated to version 20241024
+- secsi/seclists updated to version 20241024
