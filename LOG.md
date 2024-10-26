@@ -1914,3 +1914,7 @@
 ### [2024-10-25]
 - secsi/nikto updated to version 20241024
 - secsi/seclists updated to version 20241024
+
+### [2024-10-26]
+- secsi/seclists updated to version 20241025
+- secsi/subfinder updated to version 2.6.7
