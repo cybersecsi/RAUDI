@@ -1918,3 +1918,6 @@
 ### [2024-10-26]
 - secsi/seclists updated to version 20241025
 - secsi/subfinder updated to version 2.6.7
+
+### [2024-10-27]
+- secsi/seclists updated to version 20241026
