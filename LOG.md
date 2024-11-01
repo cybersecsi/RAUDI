@@ -1936,3 +1936,6 @@
 - secsi/nikto updated to version 20241030
 - secsi/retire updated to version 5.2.5
 - secsi/seclists updated to version 20241030
+
+### [2024-11-01]
+- secsi/seclists updated to version 20241031
