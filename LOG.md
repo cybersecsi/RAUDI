@@ -1939,3 +1939,7 @@
 
 ### [2024-11-01]
 - secsi/seclists updated to version 20241031
+
+### [2024-11-04]
+- secsi/arjun updated to version 2.2.7
+- secsi/seclists updated to version 20241103
