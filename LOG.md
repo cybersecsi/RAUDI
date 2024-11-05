@@ -1943,3 +1943,6 @@
 ### [2024-11-04]
 - secsi/arjun updated to version 2.2.7
 - secsi/seclists updated to version 20241103
+
+### [2024-11-05]
+- secsi/seclists updated to version 20241104
