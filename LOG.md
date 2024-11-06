@@ -1946,3 +1946,7 @@
 
 ### [2024-11-05]
 - secsi/seclists updated to version 20241104
+
+### [2024-11-06]
+- secsi/exiftool updated to version 13.02
+- secsi/seclists updated to version 20241105
