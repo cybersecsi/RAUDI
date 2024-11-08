@@ -1953,3 +1953,6 @@
 
 ### [2024-11-07]
 - secsi/seclists updated to version 20241106
+
+### [2024-11-08]
+- secsi/seclists updated to version 20241107
