@@ -1962,3 +1962,6 @@
 
 ### [2024-11-10]
 - secsi/seclists updated to version 20241109
+
+### [2024-11-11]
+- secsi/seclists updated to version 20241110
