@@ -1968,3 +1968,7 @@
 
 ### [2024-11-12]
 - secsi/seclists updated to version 20241111
+
+### [2024-11-13]
+- secsi/exiftool updated to version 13.03
+- secsi/seclists updated to version 20241112
