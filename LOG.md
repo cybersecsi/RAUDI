@@ -1975,3 +1975,6 @@
 
 ### [2024-11-14]
 - secsi/seclists updated to version 20241113
+
+### [2024-11-15]
+- secsi/seclists updated to version 20241114
