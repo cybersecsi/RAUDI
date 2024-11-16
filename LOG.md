@@ -1978,3 +1978,7 @@
 
 ### [2024-11-15]
 - secsi/seclists updated to version 20241114
+
+### [2024-11-16]
+- secsi/nikto updated to version 20241115
+- secsi/seclists updated to version 20241115
