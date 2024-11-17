@@ -1982,3 +1982,6 @@
 ### [2024-11-16]
 - secsi/nikto updated to version 20241115
 - secsi/seclists updated to version 20241115
+
+### [2024-11-17]
+- secsi/seclists updated to version 20241116
