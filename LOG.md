@@ -1985,3 +1985,7 @@
 
 ### [2024-11-17]
 - secsi/seclists updated to version 20241116
+
+### [2024-11-18]
+- secsi/knockpy updated to version 7.0.2
+- secsi/seclists updated to version 20241117
