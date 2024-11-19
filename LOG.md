@@ -1989,3 +1989,7 @@
 ### [2024-11-18]
 - secsi/knockpy updated to version 7.0.2
 - secsi/seclists updated to version 20241117
+
+### [2024-11-19]
+- secsi/seclists updated to version 20241118
+- secsi/sslscan updated to version 20241118
