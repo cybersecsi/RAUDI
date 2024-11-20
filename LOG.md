@@ -1993,3 +1993,6 @@
 ### [2024-11-19]
 - secsi/seclists updated to version 20241118
 - secsi/sslscan updated to version 20241118
+
+### [2024-11-20]
+- secsi/seclists updated to version 20241119
