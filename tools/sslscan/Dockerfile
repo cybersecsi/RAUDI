@@ -24,7 +24,7 @@ FROM alpine:$LATEST_ALPINE_VERSION
 
 # Copy over the sslscan executable from the intermediate build container, along with the dynamic libraries it is dependent upon (see output of ldd, above).
 COPY --from=builder /builddir/sslscan /sslscan
-COPY --from=builder /lib/libz.so.1 /lib/libz.so.1
+COPY --from=builder /usr/lib/libz.so.1 /usr/lib/libz.so.1
 COPY --from=builder /lib/ld-musl-*.so.1 /lib/ld-musl-*.so.1
 
 # Drop root privileges.

@@ -18,7 +18,7 @@ RUN echo 'Installing packages for Nikto.' \
   && echo 'Creating the nikto user.' \
   && adduser -G nikto -g "Nikto user" -s /bin/sh -D nikto \
   && echo 'Changing the ownership.' \
-  && chown -R nikto.nikto /nikto \
+  && chown -R nikto:nikto /nikto \
   && echo 'Finishing image.' \
   && rm -rf /var/cache/apk/* 
 
