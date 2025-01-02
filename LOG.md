@@ -1996,3 +1996,8 @@
 
 ### [2024-11-20]
 - secsi/seclists updated to version 20241119
+
+### [2025-01-02]
+- secsi/nikto updated to version 20241213
+- secsi/seclists updated to version 20250102
+- secsi/sslscan updated to version 20241202
