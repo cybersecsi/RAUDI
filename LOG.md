@@ -2004,3 +2004,6 @@
 
 ### [2025-01-04]
 - secsi/seclists updated to version 20250103
+
+### [2025-01-05]
+- secsi/seclists updated to version 20250104
