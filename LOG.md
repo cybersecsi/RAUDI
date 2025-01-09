@@ -2017,3 +2017,6 @@
 ### [2025-01-08]
 - secsi/nikto updated to version 20250107
 - secsi/seclists updated to version 20250107
+
+### [2025-01-09]
+- secsi/seclists updated to version 20250108
