@@ -2040,3 +2040,7 @@
 ### [2025-01-15]
 - secsi/seclists updated to version 20250114
 - secsi/subfinder updated to version 2.6.8
+
+### [2025-01-16]
+- secsi/apktool updated to version 2.11.0
+- secsi/seclists updated to version 20250115
