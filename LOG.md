@@ -2057,3 +2057,7 @@
 
 ### [2025-01-20]
 - secsi/seclists updated to version 20250119
+
+### [2025-01-21]
+- secsi/exiftool updated to version 13.14
+- secsi/seclists updated to version 20250120
