@@ -2080,3 +2080,6 @@
 
 ### [2025-01-28]
 - secsi/psalm updated to version 6.0.0
+
+### [2025-01-29]
+- secsi/seclists updated to version 20250128
