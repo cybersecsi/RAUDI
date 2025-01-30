@@ -2083,3 +2083,8 @@
 
 ### [2025-01-29]
 - secsi/seclists updated to version 20250128
+
+### [2025-01-30]
+- secsi/exiftool updated to version 13.17
+- secsi/nikto updated to version 20250129
+- secsi/seclists updated to version 20250129
