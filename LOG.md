@@ -2088,3 +2088,7 @@
 - secsi/exiftool updated to version 13.17
 - secsi/nikto updated to version 20250129
 - secsi/seclists updated to version 20250129
+
+### [2025-01-31]
+- secsi/psalm updated to version 6.1.0
+- secsi/seclists updated to version 20250130
