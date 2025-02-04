@@ -2101,3 +2101,8 @@
 
 ### [2025-02-03]
 - secsi/seclists updated to version 20250202
+
+### [2025-02-04]
+- secsi/exiftool updated to version 13.18
+- secsi/psalm updated to version 6.2.0
+- secsi/seclists updated to version 20250203
