@@ -2121,3 +2121,7 @@
 ### [2025-02-08]
 - secsi/psalm updated to version 6.5.0
 - secsi/seclists updated to version 20250207
+
+### [2025-02-09]
+- secsi/metagoofil updated to version 20250208
+- secsi/seclists updated to version 20250208
