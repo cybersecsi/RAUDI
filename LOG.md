@@ -2125,3 +2125,6 @@
 ### [2025-02-09]
 - secsi/metagoofil updated to version 20250208
 - secsi/seclists updated to version 20250208
+
+### [2025-02-10]
+- secsi/seclists updated to version 20250209
