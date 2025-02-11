@@ -2128,3 +2128,8 @@
 
 ### [2025-02-10]
 - secsi/seclists updated to version 20250209
+
+### [2025-02-11]
+- secsi/exiftool updated to version 13.19
+- secsi/psalm updated to version 6.5.1
+- secsi/seclists updated to version 20250210
