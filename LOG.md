@@ -2161,3 +2161,6 @@
 ### [2025-02-19]
 - secsi/dorks-eye updated to version 20250218
 - secsi/seclists updated to version 20250218
+
+### [2025-02-20]
+- secsi/psalm updated to version 6.8.1
