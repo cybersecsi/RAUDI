@@ -2172,3 +2172,6 @@
 
 ### [2025-02-22]
 - secsi/seclists updated to version 20250222
+
+### [2025-02-23]
+- secsi/nikto updated to version 20250222
