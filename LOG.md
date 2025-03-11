@@ -2224,3 +2224,8 @@
 
 ### [2025-03-10]
 - secsi/seclists updated to version 20250309
+
+### [2025-03-11]
+- secsi/3proxy updated to version 0.9.5
+- secsi/apktool updated to version 2.11.1
+- secsi/seclists updated to version 20250310
