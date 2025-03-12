@@ -2229,3 +2229,10 @@
 - secsi/3proxy updated to version 0.9.5
 - secsi/apktool updated to version 2.11.1
 - secsi/seclists updated to version 20250310
+
+### [2025-03-12]
+- secsi/exiftool updated to version 13.25
+- secsi/psalm updated to version 6.8.9
+- secsi/restfulharvest updated to version 4.7.0
+- secsi/seclists updated to version 20250311
+- secsi/theharvester updated to version 4.7.0
