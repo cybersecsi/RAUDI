@@ -2252,3 +2252,7 @@
 ### [2025-03-17]
 - secsi/psalm updated to version 6.9.0
 - secsi/seclists updated to version 20250316
+
+### [2025-03-18]
+- secsi/seclists updated to version 20250317
+- secsi/xsstrike updated to version 3.1.6
