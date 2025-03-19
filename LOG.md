@@ -2256,3 +2256,6 @@
 ### [2025-03-18]
 - secsi/seclists updated to version 20250317
 - secsi/xsstrike updated to version 3.1.6
+
+### [2025-03-19]
+- secsi/seclists updated to version 20250318
