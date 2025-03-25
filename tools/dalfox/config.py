@@ -2,7 +2,7 @@ import helper
 
 def get_config(organization, common_args):
     api_results = {
-        'GITHUB_INFO': helper.get_latest_github_release('hahwul/dalfox', 'linux_amd64'),
+        'GITHUB_INFO': helper.get_latest_github_release_no_browser_download('hahwul/dalfox'),
     }
     
     config = {
