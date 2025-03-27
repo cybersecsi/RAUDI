@@ -2276,3 +2276,7 @@
 ### [2025-03-25]
 - secsi/dalfox updated to version 2.10.0
 - secsi/seclists updated to version 20250325
+
+### [2025-03-27]
+- secsi/psalm updated to version 6.9.5
+- secsi/seclists updated to version 20250326
