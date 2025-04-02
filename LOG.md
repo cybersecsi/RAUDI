@@ -2298,3 +2298,6 @@
 - secsi/exiftool updated to version 13.26
 - secsi/psalm updated to version 6.10.0
 - secsi/seclists updated to version 20250331
+
+### [2025-04-02]
+- secsi/seclists updated to version 20250401
