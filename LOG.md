@@ -2340,3 +2340,6 @@
 - secsi/restfulharvest updated to version 4.7.1
 - secsi/seclists updated to version 20250413
 - secsi/theharvester updated to version 4.7.1
+
+### [2025-04-15]
+- secsi/seclists updated to version 20250414
