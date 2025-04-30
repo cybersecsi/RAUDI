@@ -2390,3 +2390,6 @@
 ### [2025-04-29]
 - secsi/seclists updated to version 20250428
 - secsi/subfinder updated to version 2.7.1
+
+### [2025-04-30]
+- secsi/seclists updated to version 20250429
