@@ -2393,3 +2393,7 @@
 
 ### [2025-04-30]
 - secsi/seclists updated to version 20250429
+
+### [2025-05-01]
+- secsi/nmap updated to version 7.96
+- secsi/seclists updated to version 20250430
