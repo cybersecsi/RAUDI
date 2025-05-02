@@ -2397,3 +2397,7 @@
 ### [2025-05-01]
 - secsi/nmap updated to version 7.96
 - secsi/seclists updated to version 20250430
+
+### [2025-05-02]
+- secsi/jwt_tool updated to version 2.3.0
+- secsi/seclists updated to version 20250501
