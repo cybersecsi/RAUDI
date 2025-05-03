@@ -2401,3 +2401,6 @@
 ### [2025-05-02]
 - secsi/jwt_tool updated to version 2.3.0
 - secsi/seclists updated to version 20250501
+
+### [2025-05-03]
+- secsi/seclists updated to version 20250502
