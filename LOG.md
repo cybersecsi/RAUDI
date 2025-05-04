@@ -2404,3 +2404,8 @@
 
 ### [2025-05-03]
 - secsi/seclists updated to version 20250502
+
+### [2025-05-04]
+- secsi/nikto updated to version 20250503
+- secsi/psalm updated to version 6.10.2
+- secsi/seclists updated to version 20250503
