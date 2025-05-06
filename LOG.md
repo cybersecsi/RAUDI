@@ -2413,3 +2413,8 @@
 ### [2025-05-05]
 - secsi/nikto updated to version 20250504
 - secsi/seclists updated to version 20250504
+
+### [2025-05-06]
+- secsi/nikto updated to version 20250505
+- secsi/psalm updated to version 6.10.3
+- secsi/seclists updated to version 20250505
