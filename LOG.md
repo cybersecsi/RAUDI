@@ -2418,3 +2418,6 @@
 - secsi/nikto updated to version 20250505
 - secsi/psalm updated to version 6.10.3
 - secsi/seclists updated to version 20250505
+
+### [2025-05-07]
+- secsi/seclists updated to version 20250506
