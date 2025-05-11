@@ -2430,3 +2430,6 @@
 
 ### [2025-05-10]
 - secsi/seclists updated to version 20250509
+
+### [2025-05-11]
+- secsi/seclists updated to version 20250510
