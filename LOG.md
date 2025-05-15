@@ -2444,3 +2444,6 @@
 ### [2025-05-14]
 - secsi/nikto updated to version 20250513
 - secsi/seclists updated to version 20250513
+
+### [2025-05-15]
+- secsi/seclists updated to version 20250514
