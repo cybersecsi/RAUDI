@@ -8,5 +8,5 @@ ARG THEHARVESTER_DOWNLOAD_URL
 WORKDIR /theharvester
 ADD $THEHARVESTER_DOWNLOAD_URL theharvester.tar.gz
 RUN tar -xvf theharvester.tar.gz -C /theharvester --strip-components=1 \
-    && pip install -r /theharvester/requirements/base.txt 
+    && pip install .
 ENTRYPOINT ["python", "/theharvester/theHarvester.py"]
