@@ -2480,3 +2480,8 @@
 ### [2025-05-26]
 - secsi/retire updated to version 5.2.6
 - secsi/seclists updated to version 20250525
+
+### [2025-05-29]
+- secsi/nikto updated to version 20250528
+- secsi/restfulharvest updated to version 4.8.0
+- secsi/seclists updated to version 20250528
