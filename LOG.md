@@ -2485,3 +2485,8 @@
 - secsi/nikto updated to version 20250528
 - secsi/restfulharvest updated to version 4.8.0
 - secsi/seclists updated to version 20250528
+
+### [2025-05-30]
+- secsi/nikto updated to version 20250529
+- secsi/psalm updated to version 6.12.0
+- secsi/seclists updated to version 20250529
