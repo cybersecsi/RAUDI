@@ -2500,3 +2500,7 @@
 ### [2025-06-02]
 - secsi/seclists updated to version 20250601
 - secsi/sslscan updated to version 20250601
+
+### [2025-06-03]
+- secsi/retire updated to version 5.2.7
+- secsi/seclists updated to version 20250602
