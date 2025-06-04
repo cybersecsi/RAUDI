@@ -2504,3 +2504,6 @@
 ### [2025-06-03]
 - secsi/retire updated to version 5.2.7
 - secsi/seclists updated to version 20250602
+
+### [2025-06-04]
+- secsi/seclists updated to version 20250603
