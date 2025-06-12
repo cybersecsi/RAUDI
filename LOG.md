@@ -2531,3 +2531,6 @@
 ### [2025-06-11]
 - secsi/nikto updated to version 20250610
 - secsi/seclists updated to version 20250610
+
+### [2025-06-12]
+- secsi/seclists updated to version 20250611
