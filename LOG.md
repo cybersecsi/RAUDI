@@ -2562,3 +2562,7 @@
 ### [2025-06-20]
 - secsi/exiftool updated to version 13.31
 - secsi/seclists updated to version 20250619
+
+### [2025-06-21]
+- secsi/seclists updated to version 20250620
+- secsi/subfinder updated to version 2.8.0
