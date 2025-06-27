@@ -2578,3 +2578,7 @@
 
 ### [2025-06-26]
 - secsi/seclists updated to version 20250625
+
+### [2025-06-27]
+- secsi/seclists updated to version 20250626
+- secsi/sslscan updated to version 20250626
