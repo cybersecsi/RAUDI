@@ -2595,3 +2595,7 @@
 ### [2025-07-01]
 - secsi/gobuster updated to version 3.7.0
 - secsi/seclists updated to version 20250630
+
+### [2025-07-02]
+- secsi/nikto updated to version 20250701
+- secsi/seclists updated to version 20250701
