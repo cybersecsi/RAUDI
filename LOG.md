@@ -2599,3 +2599,7 @@
 ### [2025-07-02]
 - secsi/nikto updated to version 20250701
 - secsi/seclists updated to version 20250701
+
+### [2025-07-03]
+- secsi/exiftool updated to version 13.32
+- secsi/seclists updated to version 20250702
