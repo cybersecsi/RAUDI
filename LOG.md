@@ -2606,3 +2606,8 @@
 
 ### [2025-07-04]
 - secsi/seclists updated to version 20250703
+
+### [2025-07-05]
+- secsi/getjs updated to version 20250704
+- secsi/psalm updated to version 6.12.1
+- secsi/seclists updated to version 20250704
