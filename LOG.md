@@ -2611,3 +2611,7 @@
 - secsi/getjs updated to version 20250704
 - secsi/psalm updated to version 6.12.1
 - secsi/seclists updated to version 20250704
+
+### [2025-07-06]
+- secsi/dalfox updated to version 2.12.0
+- secsi/seclists updated to version 20250705
