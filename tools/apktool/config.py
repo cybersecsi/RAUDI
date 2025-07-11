@@ -11,6 +11,6 @@ def get_config(organization, common_args):
             'OPENJDK8_ALPINE_VERSION': common_args['OPENJDK8_ALPINE_VERSION'],
             'APKTOOL_DOWNLOAD_URL': api_results['APKTOOL_GITHUB_INFO']['url']
         },
-        'tests': ['--version']
+        'tests': ['help']
     }
     return config
