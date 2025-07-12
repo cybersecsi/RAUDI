@@ -2615,3 +2615,7 @@
 ### [2025-07-06]
 - secsi/dalfox updated to version 2.12.0
 - secsi/seclists updated to version 20250705
+
+### [2025-07-12]
+- secsi/apktool updated to version 2.12.0
+- secsi/seclists updated to version 20250711
