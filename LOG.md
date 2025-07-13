@@ -2619,3 +2619,6 @@
 ### [2025-07-12]
 - secsi/apktool updated to version 2.12.0
 - secsi/seclists updated to version 20250711
+
+### [2025-07-13]
+- secsi/seclists updated to version 20250712
