@@ -1,19 +1,16 @@
 import helper
-import os
-
-DEFAULT_DIRNAME = os.path.basename(os.path.dirname(__file__))
 
 def get_config(organization, common_args):
     api_results = {
-        'GITHUB_INFO': helper.get_latest_github_commit('danielmiessler/SecLists'),
+        'SECLISTS_GITHUB_INFO': helper.get_latest_github_release_no_browser_download('danielmiessler/SecLists'),
     }
     
     config = {
-        'name': organization+'/'+DEFAULT_DIRNAME,
-        'version': helper.clean_version(api_results['GITHUB_INFO']),
+        'name': organization+'/seclists',
+        'version': helper.clean_version(api_results['SECLISTS_GITHUB_INFO']['version']),
         'buildargs': {
             'LATEST_ALPINE_VERSION': common_args['LATEST_ALPINE_VERSION'],
-            'DOWNLOAD_URL': 'https://github.com/danielmiessler/SecLists'
+            'SECLISTS_DOWNLOAD_URL': api_results['SECLISTS_GITHUB_INFO']['url']
         },
         'tests': []
     }
