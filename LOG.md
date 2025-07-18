@@ -2635,3 +2635,8 @@
 
 ### [2025-07-17]
 - secsi/seclists updated to version 20250716
+
+### [2025-07-18]
+- secsi/gobuster updated to version 3.8.0
+- secsi/jsonhero updated to version 20250717
+- secsi/seclists updated to version 2025.2
