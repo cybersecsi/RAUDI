@@ -2649,3 +2649,7 @@
 
 ### [2025-07-21]
 - secsi/seclists updated to version 2025.2
+
+### [2025-07-22]
+- secsi/restfulharvest updated to version 4.8.2
+- secsi/theharvester updated to version 4.8.2
