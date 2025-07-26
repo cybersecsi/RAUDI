@@ -2653,3 +2653,6 @@
 ### [2025-07-22]
 - secsi/restfulharvest updated to version 4.8.2
 - secsi/theharvester updated to version 4.8.2
+
+### [2025-07-26]
+- secsi/exiftool updated to version 13.33
