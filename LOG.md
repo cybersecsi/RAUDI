@@ -2660,3 +2660,6 @@
 ### [2025-08-02]
 - secsi/retire updated to version 5.2.8
 - secsi/whatweb updated to version 6.0.1
+
+### [2025-08-06]
+- secsi/nmap updated to version 7.98
