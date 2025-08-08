@@ -2663,3 +2663,6 @@
 
 ### [2025-08-06]
 - secsi/nmap updated to version 7.98
+
+### [2025-08-08]
+- secsi/psalm updated to version 6.13.1
