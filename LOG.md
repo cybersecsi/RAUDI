@@ -2666,3 +2666,6 @@
 
 ### [2025-08-08]
 - secsi/psalm updated to version 6.13.1
+
+### [2025-08-12]
+- secsi/retire updated to version 5.3.0
