@@ -2669,3 +2669,6 @@
 
 ### [2025-08-12]
 - secsi/retire updated to version 5.3.0
+
+### [2025-08-19]
+- secsi/exiftool updated to version 13.34
