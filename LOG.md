@@ -2676,3 +2676,6 @@
 ### [2025-08-26]
 - secsi/sslscan updated to version 20250825
 - secsi/whatweb updated to version 0.6.2
+
+### [2025-08-27]
+- secsi/whatweb updated to version 0.6.2
