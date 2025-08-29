@@ -2683,3 +2683,6 @@
 ### [2025-08-28]
 - secsi/gobuster updated to version 3.8.1
 - secsi/whatweb updated to version 0.6.2
+
+### [2025-08-29]
+- secsi/whatweb updated to version 0.6.2
