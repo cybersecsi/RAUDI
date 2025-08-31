@@ -2686,3 +2686,7 @@
 
 ### [2025-08-29]
 - secsi/whatweb updated to version 0.6.2
+
+### [2025-08-31]
+- secsi/metagoofil updated to version 20250830
+- secsi/pagodo updated to version 2.7.0
