@@ -2690,3 +2690,6 @@
 ### [2025-08-31]
 - secsi/metagoofil updated to version 20250830
 - secsi/pagodo updated to version 2.7.0
+
+### [2025-09-04]
+- secsi/hydra updated to version 9.6
