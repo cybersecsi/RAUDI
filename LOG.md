@@ -2693,3 +2693,6 @@
 
 ### [2025-09-04]
 - secsi/hydra updated to version 9.6
+
+### [2025-09-05]
+- secsi/gobuster updated to version 3.8.2
