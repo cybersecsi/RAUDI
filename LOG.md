@@ -2696,3 +2696,6 @@
 
 ### [2025-09-05]
 - secsi/gobuster updated to version 3.8.2
+
+### [2025-09-07]
+- secsi/exiftool updated to version 13.35
