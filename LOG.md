@@ -2708,3 +2708,6 @@
 
 ### [2025-09-19]
 - secsi/sherlock updated to version 0.16.0
+
+### [2025-09-20]
+- secsi/seclists updated to version 2025.3
