@@ -2726,3 +2726,6 @@
 
 ### [2025-10-13]
 - secsi/sslscan updated to version 20251012
+
+### [2025-10-17]
+- secsi/exiftool updated to version 13.39
