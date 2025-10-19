@@ -2729,3 +2729,6 @@
 
 ### [2025-10-17]
 - secsi/exiftool updated to version 13.39
+
+### [2025-10-19]
+- secsi/whatweb updated to version 0.6.3
