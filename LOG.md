@@ -2732,3 +2732,6 @@
 
 ### [2025-10-19]
 - secsi/whatweb updated to version 0.6.3
+
+### [2025-10-23]
+- secsi/impacket updated to version 0.13.0
