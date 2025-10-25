@@ -2735,3 +2735,6 @@
 
 ### [2025-10-23]
 - secsi/impacket updated to version 0.13.0
+
+### [2025-10-25]
+- secsi/exiftool updated to version 13.40
