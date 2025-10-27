@@ -2738,3 +2738,6 @@
 
 ### [2025-10-25]
 - secsi/exiftool updated to version 13.40
+
+### [2025-10-27]
+- secsi/knockpy updated to version 8.0.0
