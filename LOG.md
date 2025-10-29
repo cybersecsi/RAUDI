@@ -2741,3 +2741,6 @@
 
 ### [2025-10-27]
 - secsi/knockpy updated to version 8.0.0
+
+### [2025-10-29]
+- secsi/dorks-eye updated to version 20251028
