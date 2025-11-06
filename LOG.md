@@ -2744,3 +2744,6 @@
 
 ### [2025-10-29]
 - secsi/dorks-eye updated to version 20251028
+
+### [2025-11-06]
+- secsi/exiftool updated to version 13.41
