@@ -2750,3 +2750,6 @@
 
 ### [2025-11-07]
 - secsi/nikto updated to version 20251106
+
+### [2025-11-10]
+- secsi/dorks-eye updated to version 20251109
