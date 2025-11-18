@@ -2756,3 +2756,6 @@
 
 ### [2025-11-12]
 - secsi/nikto updated to version 20251111
+
+### [2025-11-18]
+- secsi/exiftool updated to version 13.42
