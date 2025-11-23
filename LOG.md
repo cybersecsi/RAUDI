@@ -2762,3 +2762,6 @@
 
 ### [2025-11-20]
 - secsi/subfinder updated to version 2.10.0
+
+### [2025-11-23]
+- secsi/subfinder updated to version 2.10.1
