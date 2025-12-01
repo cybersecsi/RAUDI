@@ -2765,3 +2765,7 @@
 
 ### [2025-11-23]
 - secsi/subfinder updated to version 2.10.1
+
+### [2025-12-01]
+- secsi/dorks-eye updated to version 20251130
+- secsi/sslscan updated to version 20251130
