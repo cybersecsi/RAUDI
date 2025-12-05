@@ -2769,3 +2769,7 @@
 ### [2025-12-01]
 - secsi/dorks-eye updated to version 20251130
 - secsi/sslscan updated to version 20251130
+
+### [2025-12-05]
+- secsi/exiftool updated to version 13.43
+- secsi/retire updated to version 5.4.0
