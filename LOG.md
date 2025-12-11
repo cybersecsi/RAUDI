@@ -2773,3 +2773,6 @@
 ### [2025-12-05]
 - secsi/exiftool updated to version 13.43
 - secsi/retire updated to version 5.4.0
+
+### [2025-12-11]
+- secsi/psalm updated to version 6.14.1
