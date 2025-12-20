@@ -2779,3 +2779,6 @@
 
 ### [2025-12-16]
 - secsi/exiftool updated to version 13.44
+
+### [2025-12-20]
+- secsi/subfinder updated to version 2.11.0
