@@ -2782,3 +2782,7 @@
 
 ### [2025-12-20]
 - secsi/subfinder updated to version 2.11.0
+
+### [2025-12-22]
+- secsi/restfulharvest updated to version 4.9.0
+- secsi/theharvester updated to version 4.9.0
