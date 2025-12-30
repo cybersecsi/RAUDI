@@ -12,7 +12,7 @@ RUN apk add --no-cache --virtual .build-deps git \
 
 # Install dependencies
 RUN echo 'Installing packages for Nikto.' \
-  && apk add --update --no-cache perl -net-ssleay \
+  && apk add --update --no-cache perl-net-ssleay \
   && echo 'Creating the nikto group.' \
   && addgroup nikto \
   && echo 'Creating the nikto user.' \
