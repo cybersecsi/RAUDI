@@ -2789,3 +2789,8 @@
 
 ### [2025-12-24]
 - secsi/psalm updated to version 6.14.3
+
+### [2025-12-31]
+- secsi/nikto updated to version 20251225
+- secsi/restfulharvest updated to version 4.9.1
+- secsi/theharvester updated to version 4.9.1
