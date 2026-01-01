@@ -2794,3 +2794,8 @@
 - secsi/nikto updated to version 20251225
 - secsi/restfulharvest updated to version 4.9.1
 - secsi/theharvester updated to version 4.9.1
+
+### [2026-01-01]
+- secsi/dorks-eye updated to version 20251231
+- secsi/restfulharvest updated to version 4.9.2
+- secsi/theharvester updated to version 4.9.2
