@@ -2799,3 +2799,6 @@
 - secsi/dorks-eye updated to version 20251231
 - secsi/restfulharvest updated to version 4.9.2
 - secsi/theharvester updated to version 4.9.2
+
+### [2026-01-02]
+- secsi/sqlmap updated to version 1.10
