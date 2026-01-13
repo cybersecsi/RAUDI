@@ -2802,3 +2802,6 @@
 
 ### [2026-01-02]
 - secsi/sqlmap updated to version 1.10
+
+### [2026-01-13]
+- secsi/subfinder updated to version 2.12.0
