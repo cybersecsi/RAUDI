@@ -2810,3 +2810,6 @@
 - secsi/restfulharvest updated to version 4.10.0
 - secsi/retire updated to version 5.4.2
 - secsi/theharvester updated to version 4.10.0
+
+### [2026-01-20]
+- secsi/wafw00f updated to version 2.4.0
