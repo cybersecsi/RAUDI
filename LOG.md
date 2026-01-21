@@ -2813,3 +2813,6 @@
 
 ### [2026-01-20]
 - secsi/wafw00f updated to version 2.4.0
+
+### [2026-01-21]
+- secsi/wafw00f updated to version 2.4.1
