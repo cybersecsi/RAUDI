@@ -2816,3 +2816,6 @@
 
 ### [2026-01-21]
 - secsi/wafw00f updated to version 2.4.1
+
+### [2026-01-26]
+- secsi/exiftool updated to version 13.46
