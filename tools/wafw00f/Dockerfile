@@ -9,5 +9,5 @@ ARG DOWNLOAD_URL
 WORKDIR /code
 ADD $DOWNLOAD_URL code.tar.gz
 RUN tar -xvf code.tar.gz -C /code --strip-components=1 \
-    && python3 setup.py install
+    && pip install .
 ENTRYPOINT ["wafw00f"]
