@@ -28,12 +28,12 @@ class Manager(object):
             'LATEST_UBUNTU_VERSION': helper.get_latest_docker_hub_version('ubuntu', avoid_date=True),
             'LATEST_ALPINE_VERSION': helper.get_latest_docker_hub_version('alpine', avoid_date=True),
             'GOLANG_ALPINE_VERSION': 'alpine',
-            'DEBIAN_SLIM_VERSION': '11-slim', # Future LTS
-            'NODE_ALPINE_VERSION': '16-alpine', # LTS
-            'PYTHON_ALPINE_VERSION': '3.9.9-alpine',
+            'DEBIAN_SLIM_VERSION': '13-slim', # Future LTS
+            'NODE_ALPINE_VERSION': 'lts-alpine', # LTS
+            'PYTHON_ALPINE_VERSION': '3.14.2-alpine',
             'PYTHON2_ALPINE_VERSION': '2.7.18-alpine', # Only used for tools not compatible with Python3
-            'PYTHON3_SLIM_VERSION': '3.12-slim-bullseye',
-            'OPENJDK_ALPINE_VERSION': '17-alpine', # LTS
+            'PYTHON3_SLIM_VERSION': '3.14-slim-trixie',
+            'OPENJDK_ALPINE_VERSION': '21-alpine', # LTS
             'OPENJDK8_ALPINE_VERSION': '8-alpine',  #
             'RUBY_ALPINE_VERSION': '3.1.0-alpine',
             'PHP_ALPINE_VERSION': '8.4.3-cli-alpine',
