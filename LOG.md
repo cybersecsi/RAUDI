@@ -2825,3 +2825,6 @@
 
 ### [2026-02-04]
 - secsi/exiftool updated to version 13.49
+
+### [2026-02-08]
+- secsi/exiftool updated to version 13.50
