@@ -31,6 +31,7 @@ class Manager(object):
             'DEBIAN_SLIM_VERSION': '13-slim', # Future LTS
             'NODE_ALPINE_VERSION': 'lts-alpine', # LTS
             'PYTHON_ALPINE_VERSION': '3.14.2-alpine',
+            'PYTHON_LEGACY_ALPINE_VERSION': '3.9.9-alpine',
             'PYTHON2_ALPINE_VERSION': '2.7.18-alpine', # Only used for tools not compatible with Python3
             'PYTHON3_SLIM_VERSION': '3.14-slim-trixie',
             'OPENJDK_ALPINE_VERSION': '21-alpine', # LTS
