@@ -2831,3 +2831,6 @@
 
 ### [2026-02-09]
 - secsi/psalm updated to version 6.15.1
+
+### [2026-02-12]
+- secsi/nikto updated to version 20260211
