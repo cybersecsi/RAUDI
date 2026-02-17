@@ -2843,3 +2843,6 @@
 
 ### [2026-02-15]
 - secsi/knockpy updated to version 9.0.0
+
+### [2026-02-17]
+- secsi/nikto updated to version 20260216
