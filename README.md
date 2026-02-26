@@ -201,7 +201,6 @@ This is the current list of tools that have been added. Those are all tools that
 | psalm                      | secsi/psalm          | https://github.com/vimeo/psalm                   |
 | pureDNS                    | secsi/puredns        | https://github.com/d3mondev/puredns              |
 | Race The Web               | secsi/race-the-web   | https://github.com/TheHackerDev/race-the-web     |
-| RestfulHarvest             | secsi/restfulharvest | https://github.com/laramies/theHarvester         |
 | Retire.js                  | secsi/retire         | https://github.com/RetireJS/retire.js            |
 | RouterSploit               | secsi/routersploit   | https://github.com/threat9/routersploit          |
 | Sandcastle                 | secsi/sandcastle     | https://github.com/0xSearches/sandcastle         |
@@ -217,7 +216,6 @@ This is the current list of tools that have been added. Those are all tools that
 | Subjack                    | secsi/subjack        | https://github.com/haccer/subjack                |
 | Sublist3r                  | secsi/sublist3r      | https://github.com/aboul3la/Sublist3r            |
 | Subzy                      | secsi/subzy          | https://github.com/LukaSikic/subzy               |
-| theHarvester               | secsi/theharvester   | https://github.com/laramies/theHarvester         |
 | WAFW00F                    | secsi/wafw00f        | https://github.com/EnableSecurity/wafw00f        |
 | waybackpy                  | secsi/waybackpy      | https://github.com/akamhy/waybackpy              |
 | WhatWeb                    | secsi/whatweb        | https://github.com/urbanadventurer/WhatWeb       |
