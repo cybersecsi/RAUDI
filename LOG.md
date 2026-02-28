@@ -2856,3 +2856,6 @@
 
 ### [2026-02-26]
 - secsi/apktool updated to version 3.0.1
+
+### [2026-02-28]
+- secsi/exiftool updated to version 13.52
