@@ -2862,3 +2862,6 @@
 
 ### [2026-03-02]
 - secsi/nikto updated to version 20260301
+
+### [2026-03-05]
+- secsi/nikto updated to version 20260304
