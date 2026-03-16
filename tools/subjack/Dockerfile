@@ -6,7 +6,7 @@ FROM golang:$GOLANG_ALPINE_VERSION as builder
 RUN GO111MODULE=on go install github.com/haccer/subjack@latest
 
 FROM alpine:$LATEST_ALPINE_VERSION
-ADD https://raw.githubusercontent.com/haccer/subjack/master/fingerprints.json /code/fingerprints.json
+ADD https://raw.githubusercontent.com/haccer/subjack/refs/heads/master/subjack/fingerprints.json /code/fingerprints.json
 COPY --from=builder /go/bin/subjack /code/subjack
 
 WORKDIR /code
