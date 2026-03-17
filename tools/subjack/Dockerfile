@@ -10,4 +10,4 @@ ADD https://raw.githubusercontent.com/haccer/subjack/refs/heads/master/subjack/f
 COPY --from=builder /go/bin/subjack /code/subjack
 
 WORKDIR /code
-ENTRYPOINT [ "./subjack", "-c", "./fingerprints.json" ]
+ENTRYPOINT [ "./subjack" ]
