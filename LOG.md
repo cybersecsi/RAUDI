@@ -2868,3 +2868,7 @@
 
 ### [2026-03-10]
 - secsi/subfinder updated to version 2.13.0
+
+### [2026-03-18]
+- secsi/psalm updated to version 6.16.0
+- secsi/subjack updated to version 3.0.0
