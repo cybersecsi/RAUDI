@@ -2872,3 +2872,8 @@
 ### [2026-03-18]
 - secsi/psalm updated to version 6.16.0
 - secsi/subjack updated to version 3.0.0
+
+### [2026-03-20]
+- secsi/exiftool updated to version 13.53
+- secsi/nmap updated to version 7.99
+- secsi/psalm updated to version 6.16.1
