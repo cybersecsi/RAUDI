@@ -2877,3 +2877,6 @@
 - secsi/exiftool updated to version 13.53
 - secsi/nmap updated to version 7.99
 - secsi/psalm updated to version 6.16.1
+
+### [2026-03-21]
+- secsi/nikto updated to version 20260320
