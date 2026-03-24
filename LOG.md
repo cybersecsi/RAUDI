@@ -2880,3 +2880,6 @@
 
 ### [2026-03-21]
 - secsi/nikto updated to version 20260320
+
+### [2026-03-24]
+- secsi/seclists updated to version 2026.1
