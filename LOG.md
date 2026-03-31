@@ -2883,3 +2883,6 @@
 
 ### [2026-03-24]
 - secsi/seclists updated to version 2026.1
+
+### [2026-03-31]
+- secsi/sslscan updated to version 20260330
