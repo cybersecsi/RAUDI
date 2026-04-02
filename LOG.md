@@ -2886,3 +2886,7 @@
 
 ### [2026-03-31]
 - secsi/sslscan updated to version 20260330
+
+### [2026-04-02]
+- secsi/dorks-eye updated to version 20260401
+- secsi/exiftool updated to version 13.54
