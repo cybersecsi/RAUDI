@@ -2893,3 +2893,6 @@
 
 ### [2026-04-03]
 - secsi/whatweb updated to version 0.6.4
+
+### [2026-04-07]
+- secsi/nikto updated to version 20260406
