@@ -2896,3 +2896,6 @@
 
 ### [2026-04-07]
 - secsi/nikto updated to version 20260406
+
+### [2026-04-08]
+- secsi/exiftool updated to version 13.55
