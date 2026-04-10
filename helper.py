@@ -75,7 +75,7 @@ def get_latest_docker_hub_version(docker_image, org="library/", avoid_date=False
     if r.status_code != 200:
         return None
     results = r.json()['results']
-    regex = '^[v]?\d+(\.\d+)*$' if avoid_date == False else '^[v]?\d{1,4}(\.\d+)*$' # Only digits and dots (avoid Date-based tags)
+    regex = r'^[v]?\d+(\.\d+)*$' if avoid_date == False else r'^[v]?\d{1,4}(\.\d+)*$' # Only digits and dots (avoid Date-based tags)
     tags_with_version_number = [result["name"] for result in results if re.match(regex, result["name"])]
     if len(tags_with_version_number) > 0:
         return get_highest_version_number(tags_with_version_number)
@@ -143,7 +143,7 @@ def get_latest_github_tag_no_browser_download(repo):
     except Exception as e: 
         raise Errors.github_request()
 
-    regex = '^[v]?\d{1,4}(\.\d+)*$' # Only digits and dots (avoid Date-based tags)
+    regex = r'^[v]?\d{1,4}(\.\d+)*$' # Only digits and dots (avoid Date-based tags)
     if r.status_code != 200:
         # TODO Check that an error always return message val
         raise Errors.connection_error(repo, r.status_code, results['message'])
