@@ -2902,3 +2902,6 @@
 
 ### [2026-04-10]
 - secsi/dorks-eye updated to version 20260409
+
+### [2026-04-12]
+- secsi/3proxy updated to version 0.9.6
