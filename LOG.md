@@ -2905,3 +2905,6 @@
 
 ### [2026-04-12]
 - secsi/3proxy updated to version 0.9.6
+
+### [2026-04-15]
+- secsi/nikto updated to version 20260414
