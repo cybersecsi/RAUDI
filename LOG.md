@@ -2908,3 +2908,6 @@
 
 ### [2026-04-15]
 - secsi/nikto updated to version 20260414
+
+### [2026-04-16]
+- secsi/exiftool updated to version 13.56
