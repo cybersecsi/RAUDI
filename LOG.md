@@ -2914,3 +2914,7 @@
 
 ### [2026-04-18]
 - secsi/exiftool updated to version 13.57
+
+### [2026-04-20]
+- secsi/apktool updated to version 3.0.2
+- secsi/nikto updated to version 20260419
