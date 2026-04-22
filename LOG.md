@@ -2918,3 +2918,6 @@
 ### [2026-04-20]
 - secsi/apktool updated to version 3.0.2
 - secsi/nikto updated to version 20260419
+
+### [2026-04-22]
+- secsi/nikto updated to version 20260421
