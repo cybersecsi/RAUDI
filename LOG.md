@@ -2924,3 +2924,6 @@
 
 ### [2026-04-24]
 - secsi/sslscan updated to version 20260423
+
+### [2026-04-25]
+- secsi/nikto updated to version 20260424
