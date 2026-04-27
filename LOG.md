@@ -2927,3 +2927,6 @@
 
 ### [2026-04-25]
 - secsi/nikto updated to version 20260424
+
+### [2026-04-27]
+- secsi/subfinder updated to version 2.14.0
