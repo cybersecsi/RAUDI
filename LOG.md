@@ -2930,3 +2930,6 @@
 
 ### [2026-04-27]
 - secsi/subfinder updated to version 2.14.0
+
+### [2026-05-04]
+- secsi/hydra updated to version 9.7
