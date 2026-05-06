@@ -2933,3 +2933,6 @@
 
 ### [2026-05-04]
 - secsi/hydra updated to version 9.7
+
+### [2026-05-06]
+- secsi/exiftool updated to version 13.58
