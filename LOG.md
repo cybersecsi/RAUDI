@@ -2936,3 +2936,7 @@
 
 ### [2026-05-06]
 - secsi/exiftool updated to version 13.58
+
+### [2026-05-08]
+- secsi/dalfox updated to version 2.13.0
+- secsi/nikto updated to version 20260508
