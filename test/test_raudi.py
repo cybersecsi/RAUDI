@@ -2,9 +2,9 @@ import pytest
 from unittest.mock import patch
 from unittest.mock import MagicMock
 # Import Helper functions
-from helper import *
+from raudi.helper import *
 # Import Manager Singleton
-from manager import Manager
+from raudi.manager import Manager
 # Import for specific tools
 from test.tools.raudi import config as raudi
 from test.tools.dsp import config as dsp

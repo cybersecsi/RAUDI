@@ -3,13 +3,15 @@ from python_on_whales import docker, DockerException
 import questionary
 import os
 import sys
-from manager import Manager
-from helper import log, logErr
-import helper
+from pathlib import Path
+
+from . import helper
+from .helper import log, logErr
+from .manager import Manager
 from dotenv import load_dotenv
 
 # Default vars
-DEFAULT_TOOL_DIR = os.path.dirname(os.path.abspath(__file__))+"/tools/"
+DEFAULT_TOOL_DIR = Path.cwd() / "tools"
 
 # ArgParse
 parser = argparse.ArgumentParser(prog="RAUDI", description='Regularly and Automatically Updated Docker Images.')
@@ -52,7 +54,7 @@ def build(tool_name, config, args, tests):
     push_image = args.push
     remote_src = args.remote
     force_build = args.force
-    dirname = DEFAULT_TOOL_DIR + tool_name
+    dirname = str(DEFAULT_TOOL_DIR / tool_name)
 
     image_exists = helper.check_if_docker_image_exists("{name}:{tag}".format(name=config['name'], tag=config['version']), remote_src)
     if image_exists == False or force_build == True:

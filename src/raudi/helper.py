@@ -2,7 +2,7 @@ import requests
 import re
 import shutil
 import sys
-from errors import Errors
+from .errors import Errors
 from python_on_whales import docker
 from os import listdir, getenv
 from os.path import isfile, join

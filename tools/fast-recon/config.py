@@ -1,4 +1,4 @@
-import helper
+from raudi import helper
 
 def get_config(organization, common_args):
     api_results = {

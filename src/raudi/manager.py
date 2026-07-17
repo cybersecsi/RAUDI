@@ -1,5 +1,6 @@
-import helper
 import importlib
+
+from . import helper
 
 class Manager(object):
     _organization = None

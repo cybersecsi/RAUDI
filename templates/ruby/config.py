@@ -1,4 +1,4 @@
-import helper
+from raudi import helper
 import os
 
 DEFAULT_DIRNAME = os.path.basename(os.path.dirname(__file__))

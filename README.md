@@ -86,7 +86,7 @@ You can also create a personal access token without any scope since anything we 
 In this mode RAUDI tries to build all the tools if needed. The command to run it is simply:
 
 ```
-uv run --locked python ./raudi.py --all
+uv run --locked raudi --all
 ```
 
 #### Single Build
@@ -94,7 +94,7 @@ uv run --locked python ./raudi.py --all
 In this mode RAUDI tries to build only the specified tool. The command in this case is:
 
 ```
-uv run --locked python ./raudi.py --single <tool_name>
+uv run --locked raudi --single <tool_name>
 ```
 
 _tool_name_ MUST be the name of the directory inside the _tools_ folder.
@@ -104,7 +104,7 @@ _tool_name_ MUST be the name of the directory inside the _tools_ folder.
 Since the _tests_ parameter has been added to the configuration structure of the tool is can be helpful to test if the inserted commands **do return a 0 status code**. The command to test a specific tool is:
 
 ```
-uv run --locked python ./raudi.py --test <tool_name>
+uv run --locked raudi --test <tool_name>
 ```
 
 _tool_name_ MUST be the name of the directory inside the _tools_ folder.
@@ -114,7 +114,7 @@ _tool_name_ MUST be the name of the directory inside the _tools_ folder.
 If you want to know the available tools you can run this command:
 
 ```
-uv run --locked python ./raudi.py --list
+uv run --locked raudi --list
 ```
 
 #### Bootstrap tool
@@ -122,7 +122,7 @@ uv run --locked python ./raudi.py --list
 If you want to quickly add a new tool folder starting from one of the available templates you can run this command:
 
 ```
-uv run --locked python ./raudi.py --bootstrap <new_tool_name>
+uv run --locked raudi --bootstrap <new_tool_name>
 ```
 
 ### Options

@@ -57,7 +57,7 @@ jobs:
           RAUDI_GITHUB_ACTION: True
           RAUDI_DOCKER_BUILD_PROGRESS: True
         run: |
-          uv run --locked python $PWD/raudi.py --all --push --remote 2>&1 | tee /tmp/log.txt
+          uv run --locked raudi --all --push --remote 2>&1 | tee /tmp/log.txt
           chmod +x $PWD/.github/workflows/autocommit.sh && $PWD/.github/workflows/autocommit.sh
       
       - name: Get current date

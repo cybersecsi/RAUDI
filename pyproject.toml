@@ -12,11 +12,17 @@ dependencies = [
     "requests==2.33.0",
 ]
 
+[project.scripts]
+raudi = "raudi.cli:main"
+
+[build-system]
+requires = ["uv_build==0.11.29"]
+build-backend = "uv_build"
+
 [dependency-groups]
 dev = [
     "pytest==9.1.1",
 ]
 
 [tool.uv]
-package = false
 required-version = "==0.11.29"
