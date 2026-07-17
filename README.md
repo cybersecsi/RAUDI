@@ -139,7 +139,6 @@ This is the current list of tools that have been added. Those are all tools that
 
 | Name                       | Docker Image         | Source                                           |
 | -------------------------- | -------------------- | ------------------------------------------------ |
-| 3proxy                     | secsi/3proxy         | https://github.com/3proxy/3proxy                 |
 | Altdns                     | secsi/altdns         | https://github.com/infosec-au/altdns             |
 | Apktool                    | secsi/apktool        | https://github.com/iBotPeaches/Apktool           |
 | Arjun                      | secsi/arjun          | https://github.com/s0md3v/Arjun                  |
