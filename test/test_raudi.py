@@ -1,10 +1,13 @@
 import pytest
+from types import SimpleNamespace
 from unittest.mock import patch
 from unittest.mock import MagicMock
 # Import Helper functions
 from raudi.helper import *
 # Import Manager Singleton
 from raudi.manager import Manager
+from raudi.errors import ToolValidationError
+from raudi import cli
 # Import for specific tools
 from test.tools.raudi import config as raudi
 from test.tools.dsp import config as dsp
@@ -99,3 +102,84 @@ def test_version_cleaner():
   assert clean_version('v1.2.0-beta') == '1.2.0'
   assert clean_version(' v.1.2.0-beta') == '1.2.0'
   assert clean_version(' 1.2-beta') == '1.2'
+
+
+def test_get_env_accepts_false_default(monkeypatch):
+  monkeypatch.delenv("RAUDI_GITHUB_ACTION", raising=False)
+  assert get_env("RAUDI_GITHUB_ACTION", False) is False
+
+
+@pytest.mark.parametrize("missing_file", ["config.py", "Dockerfile"])
+def test_check_tools_reports_missing_required_file(tmp_path, monkeypatch, missing_file):
+  tool_dir = tmp_path / "tools" / "incomplete"
+  tool_dir.mkdir(parents=True)
+
+  for filename in {"config.py", "Dockerfile"} - {missing_file}:
+    (tool_dir / filename).touch()
+
+  monkeypatch.chdir(tmp_path)
+
+  with pytest.raises(ToolValidationError) as error:
+    check_tools()
+
+  assert "tools/incomplete" in str(error.value)
+  assert "missing {}".format(missing_file) in str(error.value)
+
+
+def test_get_config_names_accepts_complete_tool(tmp_path, monkeypatch):
+  tool_dir = tmp_path / "tools" / "complete"
+  tool_dir.mkdir(parents=True)
+  (tool_dir / "config.py").touch()
+  (tool_dir / "Dockerfile").touch()
+
+  monkeypatch.chdir(tmp_path)
+
+  assert get_config_names() == ["tools.complete.config"]
+
+
+def test_manager_loads_config_from_tools_directory(tmp_path, monkeypatch):
+  tool_dir = tmp_path / "tools" / "complete"
+  tool_dir.mkdir(parents=True)
+  (tool_dir / "config.py").write_text(
+    "def get_config(organization, common_args):\n"
+    "    return {'name': organization + '/complete'}\n"
+  )
+  (tool_dir / "Dockerfile").touch()
+
+  manager = Manager()
+  manager.set_tools([])
+  monkeypatch.chdir(tmp_path)
+  manager.init_tools()
+
+  assert manager.list_tools() == ["complete"]
+
+
+def test_list_command_reports_invalid_tool(tmp_path, monkeypatch, capsys):
+  tool_dir = tmp_path / "tools" / "incomplete"
+  tool_dir.mkdir(parents=True)
+  (tool_dir / "Dockerfile").touch()
+
+  args = SimpleNamespace(
+    all=False,
+    single=None,
+    runsh=None,
+    test=None,
+    list=True,
+    bootstrap=None,
+    readme=False,
+    push=False,
+    remote=False,
+    force=False,
+  )
+  manager = Manager()
+  manager.set_exit_code(0)
+  manager.set_tools([])
+  monkeypatch.chdir(tmp_path)
+  monkeypatch.setattr(cli.parser, "parse_args", lambda: args)
+
+  with pytest.raises(SystemExit) as exit_info:
+    cli.main()
+
+  output = capsys.readouterr().out
+  assert exit_info.value.code == 1
+  assert "tools/incomplete: missing config.py" in output

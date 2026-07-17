@@ -194,9 +194,9 @@ def main():
     load_dotenv()
     # Init Singleton Manager
     manager = Manager()
-    manager.init()
 
     try:
+        manager.init()
         # List available tools
         if args.list:
             log("Available tools")

@@ -58,10 +58,10 @@ def get_env(NAME, default_value=None):
         String: The environment variable value
     """
     r = getenv(NAME)
-    if not r and not default_value: 
-        # TODO: Alert the user that the variable is unset.
-        raise NotImplementedError('{} Environment Variable not found'.format(NAME))
-    elif not r and default_value:
+    if not r:
+        if default_value is None:
+            # TODO: Alert the user that the variable is unset.
+            raise NotImplementedError('{} Environment Variable not found'.format(NAME))
         return default_value
     return r
 
@@ -315,7 +315,25 @@ def get_list_tools():
     tools.sort()
     return tools
 
+def check_tools():
+    """Validate that every tool directory contains its required files."""
+    required_files = ('config.py', 'Dockerfile')
+    missing_files = {}
+
+    for tool in get_list_tools():
+        missing = [
+            filename
+            for filename in required_files
+            if not isfile(join('tools', tool, filename))
+        ]
+        if missing:
+            missing_files[tool] = missing
+
+    if missing_files:
+        raise Errors.invalid_tools(missing_files)
+
 def get_config_names():
+    check_tools()
     return ['tools.{}.config'.format(t) for t in get_list_tools()]
 
 def get_list_templates():

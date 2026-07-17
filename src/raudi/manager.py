@@ -21,8 +21,8 @@ class Manager(object):
         return t.__name__.split('.')[depth] if hasattr(t, '__name__') else None
     
     def init(self):
-        self.init_common_args()
         self.init_tools()
+        self.init_common_args()
 
     def init_common_args(self):
         self._common_args = {
@@ -47,8 +47,12 @@ class Manager(object):
 
     def init_tools(self):
         for module_name in helper.get_config_names():
-            if importlib.util.find_spec(module_name):
-                self._tools.append(importlib.import_module(module_name))
+            tool_name = module_name.split('.')[1]
+            config_path = 'tools/{}/config.py'.format(tool_name)
+            spec = importlib.util.spec_from_file_location(module_name, config_path)
+            module = importlib.util.module_from_spec(spec)
+            spec.loader.exec_module(module)
+            self._tools.append(module)
 
     def list_tools(self):
         return  [self._tool_name(t) for t in self._tools]
