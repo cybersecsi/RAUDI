@@ -48,8 +48,9 @@ That's all guys: go to **Action**, enable it for your forked repo, wait until mi
 
 This repo can also be executed locally. The requirements to be met are the following:
 
-- Python 3.x
+- Python 3.10+
 - Docker (with BuildX)
+- uv
 
 Here is the documentation for working with BuildX: https://docs.docker.com/buildx/working-with-buildx/
 
@@ -58,23 +59,17 @@ The setup phase is pretty straightforward, you just need the following commands:
 ```
 git clone https://github.com/cybersecsi/RAUDI
 cd RAUDI
-pip install -r requirements.txt
+uv sync --locked
 ```
 
 You're ready to go!
 
 ## Test
 
-To run the test you need to install `pytest` with the command `pip install pytest` (it is not in `requirements.txt` since it is needed only for testing purposes) and then you may run:
+The development dependencies, including `pytest`, are installed by `uv sync`. Run the tests with:
 
 ```
-pytest -s
-```
-
-or
-
-```
-python -m pytest -s
+uv run --locked pytest -s
 ```
 
 to run the tests.
@@ -91,7 +86,7 @@ You can also create a personal access token without any scope since anything we 
 In this mode RAUDI tries to build all the tools if needed. The command to run it is simply:
 
 ```
-python3 ./raudi.py --all
+uv run --locked python ./raudi.py --all
 ```
 
 #### Single Build
@@ -99,7 +94,7 @@ python3 ./raudi.py --all
 In this mode RAUDI tries to build only the specified tool. The command in this case is:
 
 ```
-python3 ./raudi.py --single <tool_name>
+uv run --locked python ./raudi.py --single <tool_name>
 ```
 
 _tool_name_ MUST be the name of the directory inside the _tools_ folder.
@@ -109,7 +104,7 @@ _tool_name_ MUST be the name of the directory inside the _tools_ folder.
 Since the _tests_ parameter has been added to the configuration structure of the tool is can be helpful to test if the inserted commands **do return a 0 status code**. The command to test a specific tool is:
 
 ```
-python3 ./raudi.py --test <tool_name>
+uv run --locked python ./raudi.py --test <tool_name>
 ```
 
 _tool_name_ MUST be the name of the directory inside the _tools_ folder.
@@ -119,7 +114,7 @@ _tool_name_ MUST be the name of the directory inside the _tools_ folder.
 If you want to know the available tools you can run this command:
 
 ```
-python3 ./raudi.py --list
+uv run --locked python ./raudi.py --list
 ```
 
 #### Bootstrap tool
@@ -127,7 +122,7 @@ python3 ./raudi.py --list
 If you want to quickly add a new tool folder starting from one of the available templates you can run this command:
 
 ```
-python3 ./raudi.py --bootstrap <new_tool_name>
+uv run --locked python ./raudi.py --bootstrap <new_tool_name>
 ```
 
 ### Options

@@ -23,16 +23,16 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
       
-      # Setup python
-      - uses: actions/setup-python@v2
+      # Setup uv and Python
+      - name: Set up uv
+        uses: astral-sh/setup-uv@08807647e7069bb48b6ef5acd8ec9567f424441b # v8.1.0
         with:
-          python-version: '3.10' # Version range or exact version of a Python version to use
+          version: "0.11.29"
+          python-version: "3.10"
       
       # Install dependencies
       - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install -r $PWD/requirements.txt
+        run: uv sync --locked
       
       # Setup Docker
       - name: Setup Docker
@@ -57,7 +57,7 @@ jobs:
           RAUDI_GITHUB_ACTION: True
           RAUDI_DOCKER_BUILD_PROGRESS: True
         run: |
-          python $PWD/raudi.py --all --push --remote 2>&1 | tee /tmp/log.txt
+          uv run --locked python $PWD/raudi.py --all --push --remote 2>&1 | tee /tmp/log.txt
           chmod +x $PWD/.github/workflows/autocommit.sh && $PWD/.github/workflows/autocommit.sh
       
       - name: Get current date
