@@ -323,6 +323,46 @@ def print_docker_build_command(name, version, buildargs):
     log("The command executed is the following:")
     log("docker build . {buildargs_cmd} -t {name}:{version}".format(buildargs_cmd=buildargs_cmd, name=name, version=version ))
 
+def check_and_fill_args(tool_name, buildargs, common_args, tools_dir='tools'):
+    """Fill common Docker build arguments and reject missing required ones."""
+    if not isinstance(buildargs, dict):
+        raise TypeError('buildargs for "{}" must be a dictionary'.format(tool_name))
+    if not isinstance(common_args, dict):
+        raise TypeError('common_args must be a dictionary')
+
+    dockerfile_path = join(tools_dir, tool_name, 'Dockerfile')
+    dockerfile_args = {}
+    arg_pattern = re.compile(r'^\s*ARG\s+([A-Za-z_][A-Za-z0-9_]*)(\s*=)?')
+
+    with open(dockerfile_path, encoding='utf-8') as dockerfile:
+        for line in dockerfile:
+            match = arg_pattern.match(line)
+            if match:
+                name = match.group(1)
+                has_default = match.group(2) is not None
+                dockerfile_args[name] = dockerfile_args.get(name, False) or has_default
+
+    filled_args = dict(buildargs)
+    missing_args = []
+
+    for name, has_default in dockerfile_args.items():
+        if name in filled_args:
+            continue
+        if name in common_args:
+            filled_args[name] = common_args[name]
+        elif not has_default:
+            missing_args.append(name)
+
+    if missing_args:
+        raise ValueError(
+            'Tool "{}" is missing required Docker build argument(s): {}'.format(
+                tool_name,
+                ', '.join(missing_args),
+            )
+        )
+
+    return filled_args
+
 def get_list_tools():
     """A function to get the tools based on the directory names in /tools"""
     tools=[f for f in listdir('tools') if not isfile(join('tools', f)) and f != '__pycache__']

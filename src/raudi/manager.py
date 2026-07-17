@@ -57,19 +57,29 @@ class Manager(object):
     def list_tools(self):
         return  [self._tool_name(t) for t in self._tools]
 
+    def _get_tool_config(self, tool, depth=1):
+        tool_name = self._tool_name(tool, depth)
+        config = tool.get_config(self._organization, self._common_args)
+        config['buildargs'] = helper.check_and_fill_args(
+            tool_name,
+            config.get('buildargs', {}),
+            self._common_args,
+        )
+        return config
+
     # List of all imported tools 
     def get_tools(self):
         configured_tools = []
         for tool in self._tools:
             fancy_name = tool.__name__.split('.')[1]
             helper.log(f"Loading {fancy_name}")
-            configured_tools.append(tool.get_config(self._organization, self._common_args))
+            configured_tools.append(self._get_tool_config(tool))
         return configured_tools
 
     # Get a single tool for specific build
     def get_single_tool(self, tool_name, depth = 1):
-        tool = next((t.get_config(self._organization, self._common_args) for t in self._tools if self._tool_name(t, depth) == tool_name), None) # returns None if tool is not found
-        return tool 
+        tool = next((t for t in self._tools if self._tool_name(t, depth) == tool_name), None)
+        return self._get_tool_config(tool, depth) if tool else None
 
     # Set tools (for testing purposes)
     def set_tools(self, tools):
