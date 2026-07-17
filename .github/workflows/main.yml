@@ -52,13 +52,25 @@ jobs:
 
       # Run
       - name: Run my script
+        shell: bash
         env: 
           RAUDI_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           RAUDI_GITHUB_ACTION: True
           RAUDI_DOCKER_BUILD_PROGRESS: True
         run: |
+          set +e
           uv run --locked raudi --all --push --remote 2>&1 | tee /tmp/log.txt
-          chmod +x $PWD/.github/workflows/autocommit.sh && $PWD/.github/workflows/autocommit.sh
+          raudi_exit_code=${PIPESTATUS[0]}
+          bash "$PWD/.github/workflows/autocommit.sh"
+          changelog_exit_code=$?
+          set -e
+
+          if (( raudi_exit_code != 0 )); then
+            echo "RAUDI failed with exit code $raudi_exit_code"
+            exit "$raudi_exit_code"
+          fi
+
+          exit "$changelog_exit_code"
       
       - name: Get current date
         if: ${{ !cancelled() }}

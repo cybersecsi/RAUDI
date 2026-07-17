@@ -1,12 +1,21 @@
-#!/bin/bash
-echo "[+] Executing autocommit script"
-grep "successfully pushed to Docker Hub" /tmp/log.txt | awk '{print $2}' >> /tmp/updated_images.txt
-if [ -s /tmp/updated_images.txt ] ; then 
-    printf "\n### ["$(date +%F)"]\n" >> $PWD/LOG.md ;
-    for i in `cat /tmp/updated_images.txt`; do split=(${i//:/ }) ; echo "- ${split} updated to version ${split[1]}" >> $PWD/LOG.md ; done
-fi
+#!/usr/bin/env bash
 
-# Use the exit code got from the log
-exit_code=$(grep "RAUDI completed" /tmp/log.txt | awk '{print $8}')
-echo "[+] Exiting with the same exit code got from the logs ($exit_code)"
-exit $exit_code
+set -euo pipefail
+
+echo "[+] Executing autocommit script"
+
+log_file="${1:-/tmp/log.txt}"
+updated_images_file="${2:-/tmp/updated_images.txt}"
+changelog_file="${3:-$PWD/LOG.md}"
+
+awk '/successfully pushed to Docker Hub/ { print $2 }' "$log_file" > "$updated_images_file"
+
+if [[ -s "$updated_images_file" ]]; then
+    printf '\n### [%s]\n' "$(date +%F)" >> "$changelog_file"
+
+    while IFS= read -r image; do
+        image_name="${image%:*}"
+        image_version="${image##*:}"
+        printf -- '- %s updated to version %s\n' "$image_name" "$image_version" >> "$changelog_file"
+    done < "$updated_images_file"
+fi
