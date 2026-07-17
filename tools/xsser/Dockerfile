@@ -10,8 +10,7 @@ WORKDIR /code
 RUN apk add --no-cache curl-dev \
     && apk add --no-cache --virtual .build-deps git build-base libffi-dev \
     && git clone $DOWNLOAD_URL /code \
-    && pip3 install pycurl bs4 pygeoip gobject selenium \
-    && python setup.py install \
+    && pip3 install . pygeoip gobject \
     && apk del .build-deps
 ENTRYPOINT ["xsser"]
 CMD ["--help"]
