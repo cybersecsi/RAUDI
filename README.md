@@ -48,7 +48,7 @@ That's all guys: go to **Action**, enable it for your forked repo, wait until mi
 
 This repo can also be executed locally. The requirements to be met are the following:
 
-- Python 3.10+
+- Python 3.11+
 - Docker (with BuildX)
 - uv
 
