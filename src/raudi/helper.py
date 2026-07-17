@@ -34,6 +34,38 @@ GITLAB_API = {
     'archive': "/repository/archive"
 }
 
+def _response_error_message(response):
+    try:
+        data = response.json()
+    except (TypeError, ValueError):
+        data = None
+
+    if isinstance(data, dict) and data.get('message'):
+        return data['message']
+
+    return getattr(response, 'reason', None) or 'request failed'
+
+def _get_response(url, resource, **kwargs):
+    try:
+        response = requests.get(url, **kwargs)
+    except requests.RequestException as error:
+        raise ConnectionError('Unable to request "{}": {}'.format(resource, error)) from error
+
+    if not 200 <= response.status_code < 300:
+        raise Errors.connection_error(
+            resource,
+            response.status_code,
+            _response_error_message(response),
+        )
+
+    return response
+
+def _get_json(response, resource):
+    try:
+        return response.json()
+    except (TypeError, ValueError) as error:
+        raise ValueError('Invalid JSON response for "{}"'.format(resource)) from error
+
 def log(m):
     print("[+] {}".format(m))
     flushIfGithubAction()
@@ -71,11 +103,9 @@ def get_highest_version_number(version_numbers):
 
 def get_latest_docker_hub_version(docker_image, org="library/", avoid_date=False):
     url = "{base}{org}{image}{tags}".format(base=DOCKER_API['base'], org=org, image=docker_image, tags=DOCKER_API['tags'])
-    r = requests.get(url)
-    if r.status_code != 200:
-        return None
-    results = r.json()['results']
-    regex = '^[v]?\d+(\.\d+)*$' if avoid_date == False else '^[v]?\d{1,4}(\.\d+)*$' # Only digits and dots (avoid Date-based tags)
+    r = _get_response(url, docker_image)
+    results = _get_json(r, docker_image)['results']
+    regex = r'^[v]?\d+(\.\d+)*$' if avoid_date == False else r'^[v]?\d{1,4}(\.\d+)*$' # Only digits and dots (avoid Date-based tags)
     tags_with_version_number = [result["name"] for result in results if re.match(regex, result["name"])]
     if len(tags_with_version_number) > 0:
         return get_highest_version_number(tags_with_version_number)
@@ -84,14 +114,14 @@ def get_latest_docker_hub_version(docker_image, org="library/", avoid_date=False
 
 def get_latest_pip_version(package):
     url = "{base}{package}{json}".format(base=PYPI_API['base'], package=package, json=PYPI_API['json'])
-    r = requests.get(url)
-    version = r.json()['info']['version']
+    r = _get_response(url, package)
+    version = _get_json(r, package)['info']['version']
     return version
 
 def get_latest_npm_registry_version(package):
     url = "{base}{package}{release}".format(base=NPM_REGISTRY_API['base'], package=package, release=NPM_REGISTRY_API['latest_release'])
-    r = requests.get(url)
-    version = r.json()['version']
+    r = _get_response(url, package)
+    version = _get_json(r, package)['version']
     return version
 
 def get_github_headers():
@@ -105,49 +135,38 @@ def get_github_headers():
 
 def get_latest_github_release(repo, target_string):
     url = "{base}{repo}{release}".format(base=GITHUB_API['base'], repo=repo, release=GITHUB_API['latest_release'])
-    r = requests.get(url, headers=get_github_headers())
+    r = _get_response(url, repo, headers=get_github_headers())
     try:
-        assets = r.json()['assets']
+        data = _get_json(r, repo)
+        assets = data['assets']
         for asset in assets:
             if target_string in asset['name']:
                 return {
                     'url': asset['browser_download_url'],
-                    'version': r.json()['tag_name']
+                    'version': data['tag_name']
                 }
     except KeyError as e:
         raise Exception('Key {key} not found'.format(key=e))
     except Exception as e:
         raise Exception(e)
 
-def get_latest_github_release_no_browser_download(repo):
-    try:
-        url = "{base}{repo}{release}".format(base=GITHUB_API['base'], repo=repo, release=GITHUB_API['latest_release'])
-        r = requests.get(url, headers=get_github_headers())
-        data = r.json()
-    except Exception as e: 
-        raise Errors.github_json()
+    raise LookupError('No release asset matching "{}" found for "{}"'.format(target_string, repo))
 
-    if r.status_code != 200:
-        # TODO Check that an error always return message val
-        raise Errors.connection_error(repo, r.status_code, data['message'])
+def get_latest_github_release_no_browser_download(repo):
+    url = "{base}{repo}{release}".format(base=GITHUB_API['base'], repo=repo, release=GITHUB_API['latest_release'])
+    r = _get_response(url, repo, headers=get_github_headers())
+    data = _get_json(r, repo)
     return {
         'url': data['tarball_url'],
         'version': data['tag_name']
     }
 
 def get_latest_github_tag_no_browser_download(repo):
-    try:
-        url = "{base}{repo}{tags}".format(base=GITHUB_API['base'], repo=repo, tags=GITHUB_API['tags'])
-        r = requests.get(url, headers=get_github_headers())
-        results = r.json()
-    except Exception as e: 
-        raise Errors.github_request()
+    url = "{base}{repo}{tags}".format(base=GITHUB_API['base'], repo=repo, tags=GITHUB_API['tags'])
+    r = _get_response(url, repo, headers=get_github_headers())
+    results = _get_json(r, repo)
 
-    regex = '^[v]?\d{1,4}(\.\d+)*$' # Only digits and dots (avoid Date-based tags)
-    if r.status_code != 200:
-        # TODO Check that an error always return message val
-        raise Errors.connection_error(repo, r.status_code, results['message'])
-
+    regex = r'^[v]?\d{1,4}(\.\d+)*$' # Only digits and dots (avoid Date-based tags)
     data = [result for result in results if re.match(regex, result['name'])]
     versions = [d["name"] for d in data]
     if len(versions) > 0:
@@ -158,15 +177,13 @@ def get_latest_github_tag_no_browser_download(repo):
             'version': latest_version
         }
 
+    raise LookupError('No version tags found for "{}"'.format(repo))
+
 
 def get_latest_github_commit(repo):
     url = "{base}{repo}{commits}".format(base=GITHUB_API['base'], repo=repo, commits=GITHUB_API['commits'])
-    r = requests.get(url, headers=get_github_headers())
-    results = r.json()
-
-    if r.status_code != 200:
-        # TODO Check that an error always return message val
-        raise ConnectionError(results['message'])
+    r = _get_response(url, repo, headers=get_github_headers())
+    results = _get_json(r, repo)
     
     data = results[0]['commit']['author']['date'][:10] # YYYY-MM-DD
     latest_commit_date = ''.join(data.split('-'))
@@ -191,15 +208,15 @@ def get_gitlab_id_project(owner, project):
     expected_path = "{}/public/{}".format(owner, project)
     try:
         url = "{base}?search={project}".format(base=GITLAB_API['base'], project=project)
-        r = requests.get(url)
-        if r.status_code != 200: 
-            raise ConnectionError("Connection error")
-        results = r.json()
+        r = _get_response(url, expected_path)
+        results = _get_json(r, expected_path)
         for d in results: 
             if d['path_with_namespace'] == expected_path:
                 return d['id']
 
         raise Errors.gitlab_not_found()
+    except ConnectionError:
+        raise
     except Exception as e: 
         raise Errors.gitlab_request()
     
@@ -209,10 +226,8 @@ def get_latest_gitlab_tag(owner, project):
         # Get id_project
         id_project = get_gitlab_id_project(owner, project)
         url = "{base}{id_project}{tags}".format(base=GITLAB_API['base'], id_project=id_project, tags=GITLAB_API['tags'])
-        r = requests.get(url)
-        results = r.json()
-        if r.status_code != 200: 
-            raise ConnectionError("Connection error")
+        r = _get_response(url, "{}/{}".format(owner, project))
+        results = _get_json(r, "{}/{}".format(owner, project))
         # latest tag
         tag = results[0]['name']
         commid = results[0]['commit']['id']
@@ -222,6 +237,8 @@ def get_latest_gitlab_tag(owner, project):
             'url' : "{}{}{}?sha={}".format(GITLAB_API['base'], id_project, GITLAB_API['archive'], commid),
             'version': tag
         }
+    except ConnectionError:
+        raise
     except Exception as e: 
         raise Errors.gitlab_request()
 
@@ -231,28 +248,25 @@ def get_latest_gitlab_commit(owner, project):
         # Get id_project
         id_project = get_gitlab_id_project(owner, project)
         url = "{base}{id_project}{commits}".format(base=GITLAB_API['base'], id_project=id_project, commits=GITLAB_API['commits'])
-        r = requests.get(url)
-        results = r.json()
-        if r.status_code != 200: 
-            raise ConnectionError("Connection error")
+        r = _get_response(url, "{}/{}".format(owner, project))
+        results = _get_json(r, "{}/{}".format(owner, project))
         # latest tag
         date = results[0]['committed_date'][:10] #YYYY-MM-DD
         latest_commit_date = ''.join(date.split('-'))
         return latest_commit_date
         # https://gitlab.com/projects/:id/repository/archive?sha=<commid>
+    except ConnectionError:
+        raise
     except Exception as e: 
         raise Errors.gitlab_request()
 
 
 def get_remote_resource(url, json=False):
-    try:
-        r = requests.get(url)
-        if json:
-            return r.json()
-        else: 
-            return r.text
-    except Exception as e: 
-        raise ConnectionError("Connection error")
+    r = _get_response(url, url)
+    if json:
+        return _get_json(r, url)
+    else:
+        return r.text
 
 def grep(the_output, to_search):
     """Looks for to_search string and returns a list of found elements
@@ -299,8 +313,8 @@ def check_if_container_runs(docker_image, version, tests):
 
 def check_if_readme_is_set(docker_image):
     url = "{base}{image}".format(base=DOCKER_API['base'], image=docker_image)
-    r = requests.get(url)
-    data = r.json()
+    r = _get_response(url, docker_image)
+    data = _get_json(r, docker_image)
     return data['full_description'] != None
 
 def print_docker_build_command(name, version, buildargs):
