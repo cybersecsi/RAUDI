@@ -61,10 +61,12 @@ jobs:
           chmod +x $PWD/.github/workflows/autocommit.sh && $PWD/.github/workflows/autocommit.sh
       
       - name: Get current date
+        if: ${{ !cancelled() }}
         id: date
         run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
       
       - name: Auto Commit
+        if: ${{ !cancelled() }}
         id: "auto-commit-action"
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
