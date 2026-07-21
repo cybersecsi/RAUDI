@@ -2984,3 +2984,6 @@
 
 ### [2026-07-17]
 - secsi/xsser updated to version 20260709
+
+### [2026-07-21]
+- secsi/apktool updated to version 3.0.3
