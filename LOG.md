@@ -2990,3 +2990,7 @@
 
 ### [2026-08-01]
 - secsi/nikto updated to version 20260731
+
+### [2026-08-03]
+- secsi/dalfox updated to version 3.2.0
+- secsi/dorks-eye updated to version 20260802
