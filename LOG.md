@@ -2994,3 +2994,6 @@
 ### [2026-08-03]
 - secsi/dalfox updated to version 3.2.0
 - secsi/dorks-eye updated to version 20260802
+
+### [2026-08-04]
+- secsi/hakrevdns updated to version 20260803
