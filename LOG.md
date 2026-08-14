@@ -3001,3 +3001,6 @@
 ### [2026-08-06]
 - secsi/hakrevdns updated to version 20260805
 - secsi/subfinder updated to version 2.15.0
+
+### [2026-08-14]
+- secsi/dalfox updated to version 3.2.1
