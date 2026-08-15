@@ -3004,3 +3004,6 @@
 
 ### [2026-08-14]
 - secsi/dalfox updated to version 3.2.1
+
+### [2026-08-15]
+- secsi/dirsearch updated to version 0.5.0
