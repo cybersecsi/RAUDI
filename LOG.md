@@ -3007,3 +3007,6 @@
 
 ### [2026-08-15]
 - secsi/dirsearch updated to version 0.5.0
+
+### [2026-08-16]
+- secsi/nikto updated to version 20260815
