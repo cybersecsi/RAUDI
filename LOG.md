@@ -3010,3 +3010,6 @@
 
 ### [2026-08-16]
 - secsi/nikto updated to version 20260815
+
+### [2026-08-22]
+- secsi/retire updated to version 5.5.0
