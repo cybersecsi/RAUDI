@@ -3013,3 +3013,7 @@
 
 ### [2026-08-22]
 - secsi/retire updated to version 5.5.0
+
+### [2026-08-23]
+- secsi/retire updated to version 5.7.0
+- secsi/subfinder updated to version 2.16.0
