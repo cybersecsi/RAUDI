@@ -3020,3 +3020,6 @@
 
 ### [2026-08-30]
 - secsi/getjs updated to version 20260829
+
+### [2026-08-31]
+- secsi/xsser updated to version 20260830
