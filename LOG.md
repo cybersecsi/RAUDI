@@ -3023,3 +3023,6 @@
 
 ### [2026-08-31]
 - secsi/xsser updated to version 20260830
+
+### [2026-09-01]
+- secsi/dalfox updated to version 3.2.2
