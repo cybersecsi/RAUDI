@@ -3029,3 +3029,6 @@
 
 ### [2026-09-02]
 - secsi/dorks-eye updated to version 20260901
+
+### [2026-09-06]
+- secsi/xsser updated to version 20260905
