@@ -3032,3 +3032,6 @@
 
 ### [2026-09-06]
 - secsi/xsser updated to version 20260905
+
+### [2026-09-07]
+- secsi/sslscan updated to version 20260906
