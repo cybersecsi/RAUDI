@@ -3035,3 +3035,6 @@
 
 ### [2026-09-07]
 - secsi/sslscan updated to version 20260906
+
+### [2026-09-10]
+- secsi/ffuf updated to version 2.3.0
