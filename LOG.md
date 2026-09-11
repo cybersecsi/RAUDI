@@ -3038,3 +3038,7 @@
 
 ### [2026-09-10]
 - secsi/ffuf updated to version 2.3.0
+
+### [2026-09-11]
+- secsi/psalm updated to version 6.17.0
+- secsi/sherlock updated to version 0.16.2
