@@ -3052,3 +3052,6 @@
 ### [2026-09-16]
 - secsi/dalfox updated to version 3.2.3
 - secsi/psalm updated to version 4.25.0
+
+### [2026-09-17]
+- secsi/psalm updated to version 4.25.0
