@@ -2,7 +2,7 @@ from raudi import helper
 
 def get_config(organization, common_args):
     api_results = {
-        'GITHUB_INFO': helper.get_latest_github_tag_no_browser_download('psalm/phar'),
+        'GITHUB_INFO': helper.get_latest_github_release_no_browser_download('vimeo/psalm'),
     }
     
     config = {

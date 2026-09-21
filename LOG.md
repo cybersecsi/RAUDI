@@ -3046,25 +3046,8 @@
 ### [2026-09-13]
 - secsi/psalm updated to version 6.17.1
 
-### [2026-09-15]
-- secsi/psalm updated to version 4.25.0
-
 ### [2026-09-16]
 - secsi/dalfox updated to version 3.2.3
-- secsi/psalm updated to version 4.25.0
-
-### [2026-09-17]
-- secsi/psalm updated to version 4.25.0
 
 ### [2026-09-18]
-- secsi/psalm updated to version 4.25.0
 - secsi/sslscan updated to version 20260917
-
-### [2026-09-19]
-- secsi/psalm updated to version 4.25.0
-
-### [2026-09-20]
-- secsi/psalm updated to version 4.25.0
-
-### [2026-09-21]
-- secsi/psalm updated to version 4.25.0

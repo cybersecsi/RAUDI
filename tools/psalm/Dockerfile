@@ -6,4 +6,4 @@ WORKDIR /code
 ARG DOWNLOAD_URL
 ADD $DOWNLOAD_URL phar.tar.gz
 RUN tar -xvf phar.tar.gz -C /code --strip-components=1 
-ENTRYPOINT ["/code/psalm.phar"]
+ENTRYPOINT ["/code/psalm"]
