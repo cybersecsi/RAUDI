@@ -3063,3 +3063,6 @@
 
 ### [2026-09-28]
 - secsi/sslscan updated to version 20260927
+
+### [2026-09-29]
+- secsi/psalm updated to version 6.19.0
