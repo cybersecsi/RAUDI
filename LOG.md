@@ -3072,3 +3072,7 @@
 
 ### [2026-10-01]
 - secsi/dorks-eye updated to version 20260930
+
+### [2026-10-02]
+- secsi/dorks-eye updated to version 20261001
+- secsi/psalm updated to version 7.0.0.23
