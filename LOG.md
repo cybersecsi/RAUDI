@@ -3079,3 +3079,7 @@
 
 ### [2026-10-06]
 - secsi/psalm updated to version 6.19.1
+
+### [2026-10-07]
+- secsi/psalm updated to version 6.19.1
+- secsi/retire updated to version 6.1.0
