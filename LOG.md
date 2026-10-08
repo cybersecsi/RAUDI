@@ -3083,3 +3083,7 @@
 ### [2026-10-07]
 - secsi/psalm updated to version 6.19.1
 - secsi/retire updated to version 6.1.0
+
+### [2026-10-08]
+- secsi/dalfox updated to version 3.2.4
+- secsi/psalm updated to version 6.19.2
