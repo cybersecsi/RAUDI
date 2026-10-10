@@ -3091,3 +3091,6 @@
 ### [2026-10-09]
 - secsi/psalm updated to version 6.19.2
 - secsi/subfinder updated to version 2.17.0
+
+### [2026-10-10]
+- secsi/psalm updated to version 6.20.0
