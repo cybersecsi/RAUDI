@@ -3100,3 +3100,7 @@
 
 ### [2026-10-12]
 - secsi/psalm updated to version 6.20.0
+
+### [2026-10-13]
+- secsi/psalm updated to version 6.20.0
+- secsi/subjack updated to version 3.1.0
