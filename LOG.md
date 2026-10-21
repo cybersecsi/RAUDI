@@ -3122,3 +3122,6 @@
 
 ### [2026-10-20]
 - secsi/psalm updated to version 6.20.0
+
+### [2026-10-21]
+- secsi/psalm updated to version 6.20.1
