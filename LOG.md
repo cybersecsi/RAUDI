@@ -3154,3 +3154,7 @@
 
 ### [2026-10-31]
 - secsi/psalm updated to version 6.20.4
+
+### [2026-11-01]
+- secsi/metagoofil updated to version 20261031
+- secsi/psalm updated to version 6.20.5
