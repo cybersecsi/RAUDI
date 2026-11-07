@@ -3172,3 +3172,6 @@
 ### [2026-11-06]
 - secsi/exiftool updated to version 13.61
 - secsi/psalm updated to version 7.0.4
+
+### [2026-11-07]
+- secsi/psalm updated to version 7.0.5
