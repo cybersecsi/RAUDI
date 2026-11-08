@@ -3175,3 +3175,7 @@
 
 ### [2026-11-07]
 - secsi/psalm updated to version 7.0.5
+
+### [2026-11-08]
+- secsi/psalm updated to version 7.1.0
+- secsi/sslscan updated to version 20261107
