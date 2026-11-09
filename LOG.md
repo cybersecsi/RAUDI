@@ -3179,3 +3179,6 @@
 ### [2026-11-08]
 - secsi/psalm updated to version 7.1.0
 - secsi/sslscan updated to version 20261107
+
+### [2026-11-09]
+- secsi/dalfox updated to version 3.3.0
