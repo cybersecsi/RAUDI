@@ -3182,3 +3182,7 @@
 
 ### [2026-11-09]
 - secsi/dalfox updated to version 3.3.0
+
+### [2026-11-10]
+- secsi/exiftool updated to version 13.62
+- secsi/psalm updated to version 7.2.1
