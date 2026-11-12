@@ -3190,3 +3190,7 @@
 ### [2026-11-11]
 - secsi/exiftool updated to version 13.63
 - secsi/psalm updated to version 7.3.0
+
+### [2026-11-12]
+- secsi/psalm updated to version 7.3.1
+- secsi/retire updated to version 6.1.1
