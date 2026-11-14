@@ -3197,3 +3197,6 @@
 
 ### [2026-11-13]
 - secsi/psalm updated to version 7.3.2
+
+### [2026-11-14]
+- secsi/psalm updated to version 7.5.0
