@@ -3224,3 +3224,6 @@
 ### [2026-11-21]
 - secsi/psalm updated to version 7.13.2
 - secsi/xxeinjector updated to version 20261120
+
+### [2026-11-22]
+- secsi/psalm updated to version 7.15.0
