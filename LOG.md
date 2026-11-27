@@ -3240,3 +3240,6 @@
 ### [2026-11-26]
 - secsi/psalm updated to version 7.21.1
 - secsi/retire updated to version 6.1.2
+
+### [2026-11-27]
+- secsi/psalm updated to version 7.22.1
