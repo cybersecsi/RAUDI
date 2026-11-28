@@ -3243,3 +3243,8 @@
 
 ### [2026-11-27]
 - secsi/psalm updated to version 7.22.1
+
+### [2026-11-28]
+- secsi/hydra updated to version 9.9
+- secsi/metagoofil updated to version 20261128
+- secsi/psalm updated to version 7.23.0
